@@ -29,6 +29,7 @@ Check out my other art here: https://www.artstation.com/TechnicJelle
 
 
 ## 📝 Scripts:
+[![My AutoHotKey Scripts](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=My-AutoHotKey-Scripts&theme=dark)](https://github.com/TechnicJelle/My-AutoHotKey-Scripts)
 [![Discord Reactor✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordReactor&theme=dark)](https://github.com/TechnicJelle/DiscordReactor)
 
 
