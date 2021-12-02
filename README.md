@@ -2,7 +2,7 @@
 <img alt="animated version of my logo" src="https://raw.githubusercontent.com/TechnicJelle/TechnicJelle/badges/Default(800)0001-0051.gif" width="128">
 
 My name is Jelle (/jɛlə/).
-I'm about to start studying Creative Media and Game Technologies at Saxion University to become a game developer.
+I'm studying Creative Media and Game Technologies at Saxion University to become a game developer.
 
 <details><summary>My programming journey</summary>
 
