@@ -23,11 +23,14 @@ Check out my other art here: https://www.artstation.com/TechnicJelle
 
 
 ## 🎮 Games:
-[![CMGT Intake✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_Intake&theme=dark)](https://github.com/TechnicJelle/CMGT_Intake)
-[![CMGT Point and Click✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_PointAndClick&theme=dark)](https://github.com/TechnicJelle/CMGT_PointAndClick)
+### 💻 Personal Projects:
 [![Wesley Chess✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WesleyChess&theme=dark)](https://github.com/TechnicJelle/WesleyChess)
 [![Flappy Pong🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlappyPong&theme=dark)](https://github.com/TechnicJelle/FlappyPong)
+### 🏫 School Projects:
+[![CMGT Intake✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_Intake&theme=dark)](https://github.com/TechnicJelle/CMGT_Intake)
+[![CMGT Point and Click✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_PointAndClick&theme=dark)](https://github.com/TechnicJelle/CMGT_PointAndClick)
 [![Doom Game🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DoomGame&theme=dark)](https://github.com/TechnicJelle/DoomGame)
+[![CMGT Arcade Game🚧](https://github-readme-stats.vercel.app/api/pin/?username=MythicalSora&repo=Project-Lift-Off&theme=dark)](https://github.com/MythicalSora/Project-Lift-Off)
 
 
 ## 📝 Scripts:
