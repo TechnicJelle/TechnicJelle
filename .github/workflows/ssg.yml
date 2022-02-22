@@ -31,7 +31,12 @@ jobs:
           
       - name: Commit & Push changes
         run: |
+          ls
+          find . -type f -not -path '*/\.git/*';
+          git status
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
           git commit -am "Build website"
+          git status
           git subtree split --branch deploy --prefix build/
