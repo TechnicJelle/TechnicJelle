@@ -40,4 +40,5 @@ jobs:
           git commit -am "Build website"
           git status
           git subtree split --branch deploy --prefix build/
-          git push origin deploy -f
+          git remote add deploy https://github.com/TechnicJelle/technicjelle.github.io.git
+          git push deploy deploy -f
