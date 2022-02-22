@@ -49,5 +49,3 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ### 🌐[BlueMap](https://github.com/BlueMap-Minecraft/BlueMap#readme) Addons:
 [![BlueMap Offline Player Markers🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapOfflinePlayerMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers)
 [![BlueMap Floodgate🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFloodgate&theme=dark)](https://github.com/TechnicJelle/BlueMapFloodgate)
-
-test
