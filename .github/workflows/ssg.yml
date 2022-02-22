@@ -28,13 +28,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build the website
         run: ./generate.sh
-        
-      - name: Remove gitignore (to allow the build/ dir to be uploaded)
-        run: rm .gitignore
           
       - name: Commit & Push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -am "Build website"
-          git subtree push --prefix build build main
+          git subtree split --branch deploy --prefix build/
