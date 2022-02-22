@@ -4,6 +4,7 @@ from pathlib import Path
 from shutil import copytree
 from typing import Union, Callable
 import markdown
+import re
 
 build_dir : Path
 verbose : bool = False
@@ -19,7 +20,7 @@ def main() -> None:
 
 	with open(Path("README.md"), "r", encoding="utf-8") as readme_file:
 		inp: str = readme_file.read()
-		saveHTML(build_dir / "index.html", htmlSnippet_head() + markdown.markdown(inp, extensions=md_extensions) + htmlSnippet_footer())
+		saveHTML(build_dir / "index.html", htmlSnippet_head() + re.sub(r'<img alt="([^"]*)"', r'<img title="\1" alt="\1"', markdown.markdown(inp, extensions=md_extensions)) + htmlSnippet_footer())
 
 	if warnings == 0:
 		print("[Main] ✔️ Finished with no warnings!")

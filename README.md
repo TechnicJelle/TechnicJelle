@@ -1,5 +1,5 @@
 # Hi there! 👋
-<img alt="animated version of my logo" src="https://raw.githubusercontent.com/TechnicJelle/TechnicJelle/badges/Default(800)0001-0051.gif" width="128">
+<img src="https://raw.githubusercontent.com/TechnicJelle/TechnicJelle/badges/Default(800)0001-0051.gif" width="128" alt="animated version of my logo">
 
 My name is Jelle (/jɛlə/).
 I'm studying Creative Media and Game Technologies at Saxion University to become a game developer.
@@ -23,29 +23,29 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 
 
 ## 🎮 Games:
-[![Wesley Chess✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WesleyChess&theme=dark)](https://github.com/TechnicJelle/WesleyChess)
-[![Flappy Pong🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlappyPong&theme=dark)](https://github.com/TechnicJelle/FlappyPong)
+[![✅ Wesley Chess](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WesleyChess&theme=dark)](https://github.com/TechnicJelle/WesleyChess)
+[![🚧 Flappy Pong](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlappyPong&theme=dark)](https://github.com/TechnicJelle/FlappyPong)
 
 ### 🏫 School Assignments:
-[![CMGT Intake✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_Intake&theme=dark)](https://github.com/TechnicJelle/CMGT_Intake)
-[![CMGT Point and Click✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_PointAndClick&theme=dark)](https://github.com/TechnicJelle/CMGT_PointAndClick)
-[![Doom Game🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DoomGame&theme=dark)](https://github.com/TechnicJelle/DoomGame)
-[![CMGT Arcade Game🚧](https://github-readme-stats.vercel.app/api/pin/?username=MythicalSora&repo=Project-Lift-Off&theme=dark)](https://github.com/MythicalSora/Project-Lift-Off)
+[![✅ CMGT Intake](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_Intake&theme=dark)](https://github.com/TechnicJelle/CMGT_Intake)
+[![✅ CMGT Point and Click](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_PointAndClick&theme=dark)](https://github.com/TechnicJelle/CMGT_PointAndClick)
+[![🚧 Doom Game](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DoomGame&theme=dark)](https://github.com/TechnicJelle/DoomGame)
+[![🚧 CMGT Arcade Game](https://github-readme-stats.vercel.app/api/pin/?username=MythicalSora&repo=Project-Lift-Off&theme=dark)](https://github.com/MythicalSora/Project-Lift-Off)
 
 
 ## 📝 Scripts:
-[![My AutoHotKey Scripts](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=My-AutoHotKey-Scripts&theme=dark)](https://github.com/TechnicJelle/My-AutoHotKey-Scripts)
-[![Discord Reactor✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordReactor&theme=dark)](https://github.com/TechnicJelle/DiscordReactor)
+[![✅ My AutoHotKey Scripts](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=My-AutoHotKey-Scripts&theme=dark)](https://github.com/TechnicJelle/My-AutoHotKey-Scripts)
+[![✅ Discord Reactor](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordReactor&theme=dark)](https://github.com/TechnicJelle/DiscordReactor)
 
 
 ## 🌌 Simulations:
-[![Solar System🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SolarSystem&theme=dark)](https://github.com/TechnicJelle/SolarSystem)
-[![PWS✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=PWS&theme=dark)](https://github.com/TechnicJelle/PWS)
+[![🚧 Solar System](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SolarSystem&theme=dark)](https://github.com/TechnicJelle/SolarSystem)
+[![✅ PWS](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=PWS&theme=dark)](https://github.com/TechnicJelle/PWS)
 
 
 ## ⛏ Minecraft Plugins:
-[![Discord Inviter🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordInviter&theme=dark)](https://github.com/TechnicJelle/DiscordInviter)
+[![🚧 Discord Inviter](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordInviter&theme=dark)](https://github.com/TechnicJelle/DiscordInviter)
 
 ### 🌐[BlueMap](https://github.com/BlueMap-Minecraft/BlueMap#readme) Addons:
-[![BlueMap Offline Player Markers🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapOfflinePlayerMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers)
-[![BlueMap Floodgate🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFloodgate&theme=dark)](https://github.com/TechnicJelle/BlueMapFloodgate)
+[![🚧 BlueMap Offline Player Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapOfflinePlayerMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers)
+[![🚧 BlueMap Floodgate](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFloodgate&theme=dark)](https://github.com/TechnicJelle/BlueMapFloodgate)
