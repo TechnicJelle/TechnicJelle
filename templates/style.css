@@ -1,0 +1,61 @@
+body {
+	background: #151515;
+	color: #EEEEEE;
+	max-width: 900px;
+	margin: auto;
+	padding: 0 24px;
+	font-family: "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	font-size: 16px;
+	
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex-grow: 1;
+	
+	margin: auto;
+	padding: 0 24px;
+	
+	border-style: solid;
+	border-width: 2px;
+	border-color: #1C2229;
+	border-radius: 8px;
+}
+
+header {
+	font-family: "JetBrainsMono NF", "JetBrains Mono", "ui-monospace", "SFMono-Regular", "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+	font-size: 14px;
+	padding-top: 6px;
+	padding-left: 4px;
+	margin-bottom: 12px;
+}
+.small {
+	font-size: 12px;
+	color: #8B949E;
+	padding: 0px 4px;
+}
+
+footer {
+	text-align: right;
+	font-size: 14px;
+}
+
+a {
+	color: #58A6FF;
+}
+a:visited {
+	color: #58A6FF;
+}
+a.invisible {
+	color: #eeeeee;
+	text-decoration: none;
+}
+
+h1, h2 {
+	padding-bottom: 4px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-color: #1C2229;
+}

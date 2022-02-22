@@ -4,7 +4,7 @@
 My name is Jelle (/jɛlə/).
 I'm studying Creative Media and Game Technologies at Saxion University to become a game developer.
 
-<details><summary>My programming journey</summary>
+<details markdown="1"><summary style="cursor: pointer; color: #aaaaaa;">My programming journey</summary>
 
 My first start with programming was GameMaker 8.1 Lite when I was eight. I started off only using the visual programming, and I never really got into GML. Sadly, most of the games I made back then have been lost to time.
 
@@ -19,14 +19,14 @@ Then I discovered The Coding Train on YouTube and I started using Processing. Fr
 </details>
 
 My logo was made by myself with Blender.
-Check out my other art here: https://www.artstation.com/TechnicJelle
+Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJelle)
 
 
 ## 🎮 Games:
-### 💻 Personal Projects:
 [![Wesley Chess✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WesleyChess&theme=dark)](https://github.com/TechnicJelle/WesleyChess)
 [![Flappy Pong🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlappyPong&theme=dark)](https://github.com/TechnicJelle/FlappyPong)
-### 🏫 School Projects:
+
+### 🏫 School Assignments:
 [![CMGT Intake✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_Intake&theme=dark)](https://github.com/TechnicJelle/CMGT_Intake)
 [![CMGT Point and Click✅](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_PointAndClick&theme=dark)](https://github.com/TechnicJelle/CMGT_PointAndClick)
 [![Doom Game🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DoomGame&theme=dark)](https://github.com/TechnicJelle/DoomGame)
@@ -46,6 +46,6 @@ Check out my other art here: https://www.artstation.com/TechnicJelle
 ## ⛏ Minecraft Plugins:
 [![Discord Inviter🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordInviter&theme=dark)](https://github.com/TechnicJelle/DiscordInviter)
 
-### 🌐[BlueMap](https://github.com/BlueMap-Minecraft/BlueMap) Addons:
+### 🌐[BlueMap](https://github.com/BlueMap-Minecraft/BlueMap#readme) Addons:
 [![BlueMap Offline Player Markers🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapOfflinePlayerMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers)
 [![BlueMap Floodgate🚧](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFloodgate&theme=dark)](https://github.com/TechnicJelle/BlueMapFloodgate)
