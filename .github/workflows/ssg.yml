@@ -40,4 +40,4 @@ jobs:
           git commit -am "Build website"
           git status
           git subtree split --branch deploy --prefix build/
-          git push origin deploy
+          git push origin deploy -f
