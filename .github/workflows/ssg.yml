@@ -28,17 +28,15 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build the website
         run: ./generate.sh
-          
-      - name: Commit & Push changes
-        run: |
-          ls
-          find . -type f -not -path '*/\.git/*';
-          git status
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -am "Build website"
-          git status
-          git subtree split --branch deploy --prefix build/
-          git remote add deploy https://github.com/TechnicJelle/technicjelle.github.io.git
-          git push deploy deploy -f
+        
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: build
+          destination-github-username: "TechnicJelle"
+          destination-repository-name: "technicjelle.github.io"
+          user-name: "github-actions[bot]"
+          user-email: "41898282+github-actions[bot]@users.noreply.github.com"
+          target-branch: deploy
