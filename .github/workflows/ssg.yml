@@ -39,4 +39,5 @@ jobs:
           git add .
           git commit -am "Build website"
           git status
-          git subtree push --branch deploy --prefix build/
+          git subtree split --branch deploy --prefix build/
+          git push
