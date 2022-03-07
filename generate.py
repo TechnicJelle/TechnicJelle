@@ -20,7 +20,12 @@ def main() -> None:
 
 	with open(Path("README.md"), "r", encoding="utf-8") as readme_file:
 		inp: str = readme_file.read()
-		saveHTML(build_dir / "index.html", htmlSnippet_head() + re.sub(r'<img alt="([^"]*)"', r'<img title="\1" alt="\1"', markdown.markdown(inp, extensions=md_extensions)) + htmlSnippet_footer())
+		saveHTML(build_dir / "index.html",
+			htmlSnippet_head()  # HTML standard head
+			+ re.sub(r'<img alt="([^"]*)"', r'<img title="\1" alt="\1"',  # Copy alt text in pins to their hover text
+			markdown.markdown(inp, extensions=md_extensions))  # Actually convert the markdown
+			.replace("src=\"https://github-readme-stats.vercel.app/api/pin/?username=", "class=\"pin\" src=\"https://github-readme-stats.vercel.app/api/pin/?username=")  # Adds the pin class to GitHub pins
+			+ htmlSnippet_footer())  # HTML standard footer
 
 	if warnings == 0:
 		print("[Main] ✔️ Finished with no warnings!")

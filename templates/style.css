@@ -59,3 +59,15 @@ h1, h2 {
 	border-bottom-width: 1px;
 	border-color: #1C2229;
 }
+
+img.pin{
+	box-sizing: border-box;
+	width:49%;
+}
+
+@media screen and (max-width: 992px) {
+	img.pin {
+		box-sizing: border-box;
+		width:100%;
+	}
+}
