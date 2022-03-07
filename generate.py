@@ -57,7 +57,9 @@ def htmlSnippet_head() -> str:
 
 def htmlSnippet_footer() -> str:
 	with open("templates/footer.html") as ioF:
-		return ioF.read().replace("{{year}}", str(datetime.datetime.now().year))
+		return ioF.read()\
+			.replace("{{year}}", str(datetime.datetime.now().year))\
+			.replace("{{date}}", str(datetime.datetime.now(datetime.timezone.utc).astimezone().isoformat(sep=" ", timespec="seconds")))
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description="A script to generate TechnicJelle's resume website")
