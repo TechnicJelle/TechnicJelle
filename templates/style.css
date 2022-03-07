@@ -65,7 +65,7 @@ img.pin{
 	width:49%;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 600px) {
 	img.pin {
 		box-sizing: border-box;
 		width:100%;
