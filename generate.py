@@ -1,7 +1,7 @@
 import argparse
 import datetime
 from pathlib import Path
-from shutil import copytree
+from shutil import copytree, copy2
 from typing import Union, Callable
 import markdown
 import re
@@ -17,6 +17,7 @@ def main() -> None:
 	build_dir.mkdir(parents=True, exist_ok=True)
 
 	copytree("templates/favicons", build_dir, dirs_exist_ok=True)
+	copy2("templates/CNAME", build_dir)
 
 	with open(Path("README.md"), "r", encoding="utf-8") as readme_file:
 		inp: str = readme_file.read()
