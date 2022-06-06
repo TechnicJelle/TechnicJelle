@@ -4,18 +4,25 @@
 My name is Jelle (/jɛlə/).
 I'm studying Creative Media and Game Technologies at Saxion University to become a game developer.
 
+I love learning fun things and having fun learning things!
+
 <details markdown="1"><summary style="cursor: pointer; color: #aaaaaa;">My programming journey</summary>
 
-My first start with programming was GameMaker 8.1 Lite when I was eight. I started off only using the visual programming, and I never really got into GML. Sadly, most of the games I made back then have been lost to time.
+My first start with programming was GameMaker 8.1 Lite when I was eight. I started off only using the visual programming part, and I never really got into GML. Sadly, most of the games I made back then have been lost to time.
 
-A year or two later I discovered Minecraft with its redstone, and I was sold. When command blocks were added a little later, I was even more hooked. I spent years playing with it, learning and getting better. I also loved the big tech modpacks, though my computer back then couldn't run it at all.
+A year or two later I discovered Minecraft with its redstone, and I was sold. When command blocks were added a little later, I was even more hooked. I spent years playing with it, learning and getting better. I also loved the big tech modpacks, though my computer back then couldn't really run them well.
 
 When I was around eleven, my primary school installed Scratch on their computers. Me being the curious type and seeing that a new icon had appeared on the desktop, I clicked it and almost immediately recognized it as being a similar thing to GameMaker (which I had mostly stopped using by then). I quickly became quite good at it, though sadly most of those projects have also been lost.
 
-For the second half of secondary I had to buy a TI 84 CE-T calculator school and I almost immediately started making useful programs and fun games in TI-Basic. I might put those on here someday too.
+For the second half of secondary school, I had to buy a TI 84 CE-T calculator and I almost immediately started making useful programs and fun games in TI-Basic.
 
-Then I discovered The Coding Train on YouTube and I started using Processing. From there I quickly got more into more serious programming and the results of that are visible here on my GitHub.
+Then I discovered The Coding Train on YouTube and I started using Processing a lot.
+So for the past five or six years I've been using that a lot.
 
+I have also made a few Minecraft plugins in Java, scripts in Python, websites with raw HTML and CSS, and C++ and C programs, among many other things. I like to experiment with a lot of things and learn a lot.
+
+Now I'm almost done with my first year at Saxion and I've been learning C# with their GXP Engine.
+I’m also learning Unity now, and next year we'll be learning C++ and I'm also planning on learning Unreal Engine. Learning Rust also seems like fun!
 </details>
 
 My logo was made by myself with Blender.
