@@ -28,6 +28,12 @@ I’m also learning Unity now, and next year we'll be learning C++ and I'm also 
 My logo was made by myself with Blender.
 Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJelle)
 
+## Find me on other platforms
+![Blog](https://img.shields.io/badge/blog-%2336465D?style=for-the-badge&logo=tumblr&logoColor=white)
+![Twitter](https://img.shields.io/badge/twitter-%231DA1F2?style=for-the-badge&logo=twitter&logoColor=white)
+![Linkedin](https://img.shields.io/badge/LinkedIn-%230A66C2?style=for-the-badge&logo=linkedin&logoColor=white)
+![ArtStation](https://img.shields.io/badge/ArtStation-%2313AFF0?style=for-the-badge&logo=artstation&logoColor=white)
+![YouTube](https://img.shields.io/badge/YouTube-%23FF0000?style=for-the-badge&logo=youtube&logoColor=white)
 
 ## 🎮 Games:
 [![✅ Wesley Chess](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WesleyChess&theme=dark)](https://github.com/TechnicJelle/WesleyChess)
