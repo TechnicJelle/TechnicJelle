@@ -56,6 +56,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Krita](https://img.shields.io/badge/Krita-%233BABFF?style=for-the-badge&logo=krita&logoColor=white)]()
 
 ## 🎮 Games:
+[![🚧 Space Combat 3DX](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SpaceCombat3DX&theme=dark)](https://github.com/TechnicJelle/SpaceCombat3DX)
 [![✅ Wesley Chess](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WesleyChess&theme=dark)](https://github.com/TechnicJelle/WesleyChess)
 [![🚧 Flappy Pong](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlappyPong&theme=dark)](https://github.com/TechnicJelle/FlappyPong)
 [![🚧 Life Wrench](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=LifeWrench&theme=dark)](https://github.com/TechnicJelle/LifeWrench)
