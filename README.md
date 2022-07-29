@@ -8,7 +8,7 @@ I love learning fun things and having fun learning things!
 
 <details markdown="1"><summary style="cursor: pointer; color: #aaaaaa;">Click here to read about my game-dev journey</summary>
 
-My first start with programming was GameMaker 8.1 Lite when I was eight. I started off only using the visual programming programming, and I never really got into GML. Sadly, most of the games I made back then have been lost to time.
+My first start with programming was GameMaker 8.1 Lite when I was eight. I started off only using the visual programming, and I never really got into GML. Sadly, most of the games I made back then have been lost to time.
 
 A year or two later I discovered Minecraft with its redstone, and I was sold. When command blocks were added a little later, I was even more hooked. I spent years playing with it, learning and getting better. I also loved the big tech modpacks, though my computer back then couldn't really run them well.
 
