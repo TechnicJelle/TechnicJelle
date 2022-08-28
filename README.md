@@ -57,17 +57,17 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 
 ## 🎮 Games:
 [![🚧 Space Combat 3DX](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SpaceCombat3DX&theme=dark)](https://github.com/TechnicJelle/SpaceCombat3DX)
-[![✅ Wesley Chess](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WesleyChess&theme=dark)](https://github.com/TechnicJelle/WesleyChess)
 [![🚧 Flappy Pong](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlappyPong&theme=dark)](https://github.com/TechnicJelle/FlappyPong)
-[![🚧 Life Wrench](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=LifeWrench&theme=dark)](https://github.com/TechnicJelle/LifeWrench)
-
-### 🏫 School Assignments:
 [![✅ CMGT Intake](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_Intake&theme=dark)](https://github.com/TechnicJelle/CMGT_Intake)
 [![✅ CMGT Point and Click](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_PointAndClick&theme=dark)](https://github.com/TechnicJelle/CMGT_PointAndClick)
 [![🚧 Doom Game](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DoomGame&theme=dark)](https://github.com/TechnicJelle/DoomGame)
 [![🚧 CMGT Arcade Game](https://github-readme-stats.vercel.app/api/pin/?username=MythicalSora&repo=Project-Lift-Off&theme=dark)](https://github.com/MythicalSora/Project-Lift-Off)
 [![✅ Phurey](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Phurey&theme=dark)](https://github.com/TechnicJelle/Phurey)
 
+## 📱 Apps:
+[![🚧 GitDroid](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=GitDroid&theme=dark)](https://github.com/TechnicJelle/GitDroid)
+[![✅ Wesley Chess](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WesleyChess&theme=dark)](https://github.com/TechnicJelle/WesleyChess)
+[![🚧 Life Wrench](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=LifeWrench&theme=dark)](https://github.com/TechnicJelle/LifeWrench)
 
 ## 📝 Scripts:
 [![✅ My AutoHotKey Scripts](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=My-AutoHotKey-Scripts&theme=dark)](https://github.com/TechnicJelle/My-AutoHotKey-Scripts)
@@ -87,4 +87,5 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 
 ### 🌐[BlueMap](https://github.com/BlueMap-Minecraft/BlueMap#readme) Addons:
 [![🚧 BlueMap Offline Player Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapOfflinePlayerMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers)
+[![🚧 BlueMap Chat Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapChatMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapChatMarkers)
 [![🚧 BlueMap Floodgate](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFloodgate&theme=dark)](https://github.com/TechnicJelle/BlueMapFloodgate)
