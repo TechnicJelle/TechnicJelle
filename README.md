@@ -91,3 +91,4 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![🚧 BlueMap Offline Player Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapOfflinePlayerMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers)
 [![🚧 BlueMap Chat Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapChatMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapChatMarkers)
 [![🚧 BlueMap Floodgate](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFloodgate&theme=dark)](https://github.com/TechnicJelle/BlueMapFloodgate)
+[![🚧 BlueMap Player Control](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapPlayerControl&theme=dark)](https://github.com/TechnicJelle/BlueMapPlayerControl)
