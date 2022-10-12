@@ -31,7 +31,8 @@ My logo was made by myself with Blender.
 Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJelle)
 
 ## Find me on other platforms
-[![Blog](https://img.shields.io/badge/blog-%2336465D?style=for-the-badge&logo=tumblr&logoColor=white)](https://technicjelle.tumblr.com/)
+[![E-Mail](https://img.shields.io/badge/EMail-%23EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:technicjelleplay@gmail.com)
+[![Blog](https://img.shields.io/badge/Blog-%2336465D?style=for-the-badge&logo=tumblr&logoColor=white)](https://technicjelle.tumblr.com/)
 [![Twitter](https://img.shields.io/badge/twitter-%231DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/TechnicJelle/)
 [![Linkedin](https://img.shields.io/badge/LinkedIn-%230A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/technicjelle/)
 [![ArtStation](https://img.shields.io/badge/ArtStation-%2313AFF0?style=for-the-badge&logo=artstation&logoColor=white)](https://www.artstation.com/TechnicJelle)
