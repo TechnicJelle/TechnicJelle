@@ -46,7 +46,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)]()
 
 [![Git](https://img.shields.io/badge/git-%23F05033?style=for-the-badge&logo=git&logoColor=white)]()
-[![GitHub](https://img.shields.io/badge/GitHub-%23303030?style=for-the-badge&logo=github&logoColor=white)]()
+[![GitHub](https://img.shields.io/badge/GitHub-%23303030?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TechnicJelle)
 [![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5?style=for-the-badge&logo=githubactions&logoColor=white)]()
 
 [![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-%23303030?style=for-the-badge&logo=intellijidea&logoColor=white)]()
