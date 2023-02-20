@@ -77,6 +77,9 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ## 🤖 Discord Bots:
 [![🚧 Hydr8](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordHydr8Bot&theme=dark)](https://github.com/TechnicJelle/DiscordHydr8Bot)
 
+## 🎨 Skins:
+[![🚧 Wikipedia Fix](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WikipediaFix&theme=dark)](https://github.com/TechnicJelle/WikipediaFix)
+
 ## 🌌 Simulations:
 [![🚧 Solar System](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SolarSystem&theme=dark)](https://github.com/TechnicJelle/SolarSystem)
 [![🚧 Fireworks Display in PGE](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FireworksPGE&theme=dark)](https://github.com/TechnicJelle/FireworksPGE)
