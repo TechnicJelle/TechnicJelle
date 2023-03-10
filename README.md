@@ -1,6 +1,6 @@
 # Hi there! 👋
 | <img src="https://raw.githubusercontent.com/TechnicJelle/TechnicJelle/badges/Default(800)0001-0051.gif" width="128" alt="animated version of my logo"> |  Programming's my art</br>Empty files are my canvas</br>And code is my brush |
-|-|:-|
+|---|:---|
 
 My name is Jelle (/jɛlə/).
 I'm studying _Creative Media and Game Technologies_ at **Saxion University of Applied Sciences** to become a game developer.

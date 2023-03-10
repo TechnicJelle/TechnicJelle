@@ -10,7 +10,7 @@ build_dir : Path
 verbose : bool = False
 warnings : int = 0
 
-md_extensions = ["md_in_html"]
+md_extensions = ["md_in_html", "tables"]
 
 def main() -> None:
 	print("[Main] ✔️ Starting website generation")
