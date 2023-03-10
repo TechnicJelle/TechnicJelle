@@ -7,13 +7,13 @@ I'm studying _Creative Media and Game Technologies_ at **Saxion University of Ap
 
 I love learning fun things and having fun learning things!
 
-<details markdown="1"><summary style="cursor: pointer; color: #aaaaaa;">Click here to read about my game-dev journey</summary>
+<details markdown="1"><summary style="cursor: pointer; color: #aaaaaa;">Click here to read about my full journey as a developer</summary>
 
 My first start with programming was GameMaker 8.1 Lite when I was eight. I started off only using the visual programming, and I never really got into GML. Sadly, most of the games I made back then have been lost to time.
 
 A year or two later I discovered Minecraft with its redstone, and I was sold. When command blocks were added a little later, I was even more hooked. I spent years playing with it, learning and getting better. I also loved the big tech modpacks, though my computer back then couldn't really run them well.
 
-When I was around eleven, my primary school installed Scratch on their computers. Me being the curious type and seeing that a new icon had appeared on the desktop, I clicked it and almost immediately recognized it as being a similar thing to GameMaker (which I had mostly stopped using by then). I quickly became quite good at it, though sadly most of those projects have also been lost.
+When I was around eleven, my primary school installed Scratch on their computers. Me being the curious type and seeing that a new icon had appeared on the desktop, I clicked it and almost immediately recognized it as being a similar thing to GameMaker. I quickly became quite good at it, though sadly most of those projects have also been lost.
 
 For the second half of secondary school, I had to buy a TI 84 CE-T calculator and I almost immediately started making useful programs and fun games in TI-Basic.
 
@@ -22,8 +22,16 @@ So for the next four or five years I used that for basically all of my programmi
 
 I have also made a few Minecraft plugins in Java, scripts in Python, websites with raw HTML and CSS, and C++ and C programs, among many other things. I like to experiment with a lot of things and learn a lot.
 
-Now I'm almost done with my first year at Saxion and I've been learning C# with their GXP Engine.
-I’m also learning Unity now, and next year we'll be learning C++ and I'm also planning on learning Unreal Engine. Learning Rust also seems like fun!
+During my first year at Saxion I have learnt C# with their GXP Engine, which I'm working on overhauling with a couple of fellow students.
+I also learnt Unity, which I have since made a couple game (prototypes) with.
+
+In the vacation after that first year, I worked a lot on a project that I felt needed to exist: GitDroid. It's an Android app, made with Flutter, that allows you to easily install and update other Android apps from GitHub. It's still in development, but it's already quite usable.
+
+During my second year at Saxion, I officially learnt C++ (I'd been tinkering with it off and on for a couple of years prior) and I'm also learning Unreal Engine.
+Learning Rust also seems like fun!
+
+I've also been continuing my use of Flutter, and I've been making some other things with it as well, such as CMGTwitch.
+During my usage of Flutter, I've naturally been using Dart, which I've grown to like quite a lot.
 </details>
 
 Not only do I really like making games, I also really enjoy making tools for people to make their lives easier in some way. Some examples of things I made for other people are [WesleyChess](https://github.com/TechnicJelle/WesleyChess), [LifeWrench](https://github.com/TechnicJelle/LifeWrench), [Hydr8](https://github.com/TechnicJelle/DiscordHydr8Bot), and [Right Click Command](https://github.com/TechnicJelle/RightClickCommand). Hardly a week goes by where I don't automate some part of my own or someone else's life.
@@ -37,7 +45,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/TechnicJelle/)
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/technicjelle/)
 [![ArtStation](https://img.shields.io/badge/ArtStation-13AFF0?style=for-the-badge&logo=artstation&logoColor=white)](https://www.artstation.com/TechnicJelle)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UC4mHMfrd9kh6M-xq9KQmJWQ/)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@TechnicJelle)
 
 ## Experiences
 [![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)]()
