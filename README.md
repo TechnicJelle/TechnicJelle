@@ -73,6 +73,10 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![✅ Wesley Chess](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WesleyChess&theme=dark)](https://github.com/TechnicJelle/WesleyChess)
 [![🚧 Life Wrench](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=LifeWrench&theme=dark)](https://github.com/TechnicJelle/LifeWrench)
 
+# 🌐 Websites:
+[![🚧 TechnicJelle](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=TechnicJelle&theme=dark)](https://github.com/TechnicJelle/TechnicJelle)
+[![🚧 CMGTwitch](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGTwitch&theme=dark)](https://github.com/TechnicJelle/CMGTwitch)
+
 ## 📝 Scripts:
 [![✅ My AutoHotKey Scripts](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=My-AutoHotKey-Scripts&theme=dark)](https://github.com/TechnicJelle/My-AutoHotKey-Scripts)
 [![✅ Discord Reactor](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordReactor&theme=dark)](https://github.com/TechnicJelle/DiscordReactor)
@@ -86,7 +90,6 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ## 🌌 Simulations:
 [![🚧 Solar System](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SolarSystem&theme=dark)](https://github.com/TechnicJelle/SolarSystem)
 [![🚧 Fireworks Display in PGE](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FireworksPGE&theme=dark)](https://github.com/TechnicJelle/FireworksPGE)
-
 [![✅ PWS](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=PWS&theme=dark)](https://github.com/TechnicJelle/PWS)
 
 
@@ -98,4 +101,5 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![🚧 BlueMap Offline Player Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapOfflinePlayerMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers)
 [![🚧 BlueMap Chat Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapChatMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapChatMarkers)
 [![🚧 BlueMap Floodgate](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFloodgate&theme=dark)](https://github.com/TechnicJelle/BlueMapFloodgate)
+[![🚧 BlueMap Custom Skin Provider](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapCustomSkinProvider&theme=dark)](https://github.com/TechnicJelle/BlueMapCustomSkinProvider)
 [![🚧 BlueMap Player Control](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapPlayerControl&theme=dark)](https://github.com/TechnicJelle/BlueMapPlayerControl)
