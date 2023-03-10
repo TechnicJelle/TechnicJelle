@@ -32,30 +32,32 @@ My logo was made by myself with Blender.
 Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJelle)
 
 ## Find me on other platforms
-[![E-Mail](https://img.shields.io/badge/EMail-%23EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:technicjelleplay@gmail.com)
-[![Blog](https://img.shields.io/badge/Blog-%2336465D?style=for-the-badge&logo=tumblr&logoColor=white)](https://technicjelle.tumblr.com/)
-[![Twitter](https://img.shields.io/badge/twitter-%231DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/TechnicJelle/)
-[![Linkedin](https://img.shields.io/badge/LinkedIn-%230A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/technicjelle/)
-[![ArtStation](https://img.shields.io/badge/ArtStation-%2313AFF0?style=for-the-badge&logo=artstation&logoColor=white)](https://www.artstation.com/TechnicJelle)
-[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UC4mHMfrd9kh6M-xq9KQmJWQ/)
+[![E-Mail](https://img.shields.io/badge/EMail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:technicjelleplay@gmail.com)
+[![Blog](https://img.shields.io/badge/Blog-36465D?style=for-the-badge&logo=tumblr&logoColor=white)](https://technicjelle.tumblr.com/)
+[![Twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/TechnicJelle/)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/technicjelle/)
+[![ArtStation](https://img.shields.io/badge/ArtStation-13AFF0?style=for-the-badge&logo=artstation&logoColor=white)](https://www.artstation.com/TechnicJelle)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/channel/UC4mHMfrd9kh6M-xq9KQmJWQ/)
 
 ## Experiences
-[![C#](https://img.shields.io/badge/C%23-%23239120?style=for-the-badge&logo=csharp&logoColor=white)]()
-[![Unity](https://img.shields.io/badge/Unity-%23303030?style=for-the-badge&logo=unity&logoColor=white)]()
-[![C++](https://img.shields.io/badge/C++-%2300599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)]()
-[![Java](https://img.shields.io/badge/Java-%23ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)]()
-[![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)]()
+[![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)]()
+[![Unity](https://img.shields.io/badge/Unity-303030?style=for-the-badge&logo=unity&logoColor=white)]()
+[![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)]()
+[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)]()
+[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)]()
+[![Python](https://img.shields.io/badge/Python-D1BB27?style=for-the-badge&logo=python&logoColor=white)]()
 
-[![Git](https://img.shields.io/badge/git-%23F05033?style=for-the-badge&logo=git&logoColor=white)]()
-[![GitHub](https://img.shields.io/badge/GitHub-%23303030?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TechnicJelle)
-[![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5?style=for-the-badge&logo=githubactions&logoColor=white)]()
+[![Git](https://img.shields.io/badge/git-F05033?style=for-the-badge&logo=git&logoColor=white)]()
+[![GitHub](https://img.shields.io/badge/GitHub-303030?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TechnicJelle)
+[![GitHub Actions](https://img.shields.io/badge/github%20actions-2671E5?style=for-the-badge&logo=githubactions&logoColor=white)]()
 
-[![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-%23303030?style=for-the-badge&logo=intellijidea&logoColor=white)]()
-[![Rider](https://img.shields.io/badge/Rider-%23dc143c?style=for-the-badge&logo=rider&logoColor=white)]()
+[![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-303030?style=for-the-badge&logo=intellijidea&logoColor=white)]()
+[![Rider](https://img.shields.io/badge/Rider-DC143C?style=for-the-badge&logo=rider&logoColor=white)]()
+[![CLion](https://img.shields.io/badge/CLion-35AB3F?style=for-the-badge&logo=clion&logoColor=white)]()
 [![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91?style=for-the-badge&logo=visual-studio&logoColor=white)]()
 
-[![Blender](https://img.shields.io/badge/Blender-%23F5792A?style=for-the-badge&logo=blender&logoColor=white)]()
-[![Krita](https://img.shields.io/badge/Krita-%233BABFF?style=for-the-badge&logo=krita&logoColor=white)]()
+[![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)]()
+[![Krita](https://img.shields.io/badge/Krita-3BABFF?style=for-the-badge&logo=krita&logoColor=white)]()
 
 ## 🎮 Games:
 [![🚧 Space Combat 3DX](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SpaceCombat3DX&theme=dark)](https://github.com/TechnicJelle/SpaceCombat3DX)
