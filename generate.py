@@ -33,7 +33,7 @@ def main() -> None:
 	else:
 		print("[Main] ⚠️ Finished with", warnings, "warnings")
 
-def verboseLog(*inp):
+def verboseLog(*inp) -> None:
 	if verbose:
 		if len(inp) > 1:
 			log : str = ""
