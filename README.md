@@ -48,24 +48,24 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@TechnicJelle)
 
 ## Experiences
-[![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)]()
-[![Unity](https://img.shields.io/badge/Unity-303030?style=for-the-badge&logo=unity&logoColor=white)]()
-[![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)]()
-[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)]()
-[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)]()
-[![Python](https://img.shields.io/badge/Python-D1BB27?style=for-the-badge&logo=python&logoColor=white)]()
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![Unity](https://img.shields.io/badge/Unity-303030?style=for-the-badge&logo=unity&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Python](https://img.shields.io/badge/Python-D1BB27?style=for-the-badge&logo=python&logoColor=white)
 
-[![Git](https://img.shields.io/badge/git-F05033?style=for-the-badge&logo=git&logoColor=white)]()
+![Git](https://img.shields.io/badge/git-F05033?style=for-the-badge&logo=git&logoColor=white)
 [![GitHub](https://img.shields.io/badge/GitHub-303030?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TechnicJelle)
-[![GitHub Actions](https://img.shields.io/badge/github%20actions-2671E5?style=for-the-badge&logo=githubactions&logoColor=white)]()
+![GitHub Actions](https://img.shields.io/badge/github%20actions-2671E5?style=for-the-badge&logo=githubactions&logoColor=white)
 
-[![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-303030?style=for-the-badge&logo=intellijidea&logoColor=white)]()
-[![Rider](https://img.shields.io/badge/Rider-DC143C?style=for-the-badge&logo=rider&logoColor=white)]()
-[![CLion](https://img.shields.io/badge/CLion-35AB3F?style=for-the-badge&logo=clion&logoColor=white)]()
-[![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91?style=for-the-badge&logo=visual-studio&logoColor=white)]()
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-303030?style=for-the-badge&logo=intellijidea&logoColor=white)
+![Rider](https://img.shields.io/badge/Rider-DC143C?style=for-the-badge&logo=rider&logoColor=white)
+![CLion](https://img.shields.io/badge/CLion-35AB3F?style=for-the-badge&logo=clion&logoColor=white)
+![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91?style=for-the-badge&logo=visual-studio&logoColor=white)
 
-[![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)]()
-[![Krita](https://img.shields.io/badge/Krita-3BABFF?style=for-the-badge&logo=krita&logoColor=white)]()
+![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)
+![Krita](https://img.shields.io/badge/Krita-3BABFF?style=for-the-badge&logo=krita&logoColor=white)
 
 ## 🎮 Games:
 [![Space Combat 3DX](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SpaceCombat3DX&theme=dark)](https://github.com/TechnicJelle/SpaceCombat3DX)
@@ -99,7 +99,6 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Solar System](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SolarSystem&theme=dark)](https://github.com/TechnicJelle/SolarSystem)
 [![Fireworks Display in PGE](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FireworksPGE&theme=dark)](https://github.com/TechnicJelle/FireworksPGE)
 [![PWS](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=PWS&theme=dark)](https://github.com/TechnicJelle/PWS)
-
 
 ## ⛏ Minecraft Plugins:
 [![Discord Inviter](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordInviter&theme=dark)](https://github.com/TechnicJelle/DiscordInviter)
