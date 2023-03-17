@@ -51,7 +51,7 @@ a:visited {
 }
 
 .muted {
-	color: #EEEEEE;
+	color: #EEEEEE !important;
 }
 
 h1, h2 {

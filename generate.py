@@ -66,7 +66,6 @@ def htmlSnippet_card(match: re.Match) -> str:
 	link : str = match.group(1)
 
 	r = gh_api.repos.get(link.split("/")[-2], link.split("/")[-1])
-	verboseLog(r)
 	desc: str = r.description if r.description is not None else "<i>No description</i>"
 	lang: str = r.language
 	stars: int = r.stargazers_count
@@ -79,7 +78,15 @@ def htmlSnippet_card(match: re.Match) -> str:
 			.replace("{{language}}", lang)\
 			.replace("{{class}}", lang.replace("#", "s").replace("+", "p"))\
 			.replace("{{description}}", desc)\
-			.replace("{{stars}}", "" if stars == 0 else f" ⭐{stars}")
+			.replace("{{stars}}", htmlSnippet_stars(stars, link))
+
+def htmlSnippet_stars(stars: int, link: str) -> str:
+	if stars == 0:
+		return ""
+	with open("templates/stars.html") as ioS:
+		return ioS.read()\
+			.replace("{{link}}", link)\
+			.replace("{{stars}}", f"⭐{stars}")
 
 def htmlSnippet_footer() -> str:
 	with open("templates/footer.html") as ioF:
