@@ -5,10 +5,12 @@ from shutil import copytree, copy2
 from typing import Union, Callable
 import markdown
 import re
+from ghapi.all import GhApi
 
 build_dir : Path
 verbose : bool = False
 warnings : int = 0
+gh_api: GhApi
 
 md_extensions = ["md_in_html", "tables"]
 
@@ -19,14 +21,10 @@ def main() -> None:
 	copytree("templates/favicons", build_dir, dirs_exist_ok=True)
 	copy2("templates/CNAME", build_dir)
 
-	with open(Path("README.md"), "r", encoding="utf-8") as readme_file:
-		inp: str = readme_file.read()
-		saveHTML(build_dir / "index.html",
-			htmlSnippet_head()  # HTML standard head
-			+ re.sub(r'<img alt="([^"]*)"', r'<img title="\1" alt="\1"',  # Copy alt text in pins to their hover text
-			markdown.markdown(inp, extensions=md_extensions))  # Actually convert the markdown
-			.replace("src=\"https://github-readme-stats.vercel.app/api/pin/?username=", "class=\"pin\" src=\"https://github-readme-stats.vercel.app/api/pin/?username=")  # Adds the pin class to GitHub pins
-			+ htmlSnippet_footer())  # HTML standard footer
+	saveHTML(build_dir / "index.html",
+		htmlSnippet_head()
+		+ htmlSnippet_markdown()
+		+ htmlSnippet_footer())
 
 	if warnings == 0:
 		print("[Main] ✔️ Finished with no warnings!")
@@ -56,6 +54,33 @@ def htmlSnippet_head() -> str:
 			css : str = ioC.read()
 			return ioH.read().replace("{{css}}", css)
 
+def htmlSnippet_markdown() -> str:
+	with open(Path("README.md"), "r", encoding="utf-8") as readme_file:
+		inp: str = readme_file.read()
+		mdHTML: str = markdown.markdown(inp, extensions=md_extensions)
+		mdHTML = re.sub(r'(?:<p>)?<a.+(https://github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_card, mdHTML)
+		return mdHTML
+
+def htmlSnippet_card(match: re.Match) -> str:
+	title : str = match.group(2)
+	link : str = match.group(1)
+
+	r = gh_api.repos.get(link.split("/")[-2], link.split("/")[-1])
+	verboseLog(r)
+	desc: str = r.description if r.description is not None else "<i>No description</i>"
+	lang: str = r.language
+	stars: int = r.stargazers_count
+
+	verboseLog(f"[Generation] 🖼️ Making card: {link} {title}")
+	with open("templates/card.html") as ioC:
+		return ioC.read()\
+			.replace("{{title}}", title)\
+			.replace("{{link}}", link)\
+			.replace("{{language}}", lang)\
+			.replace("{{class}}", lang.replace("#", "s").replace("+", "p"))\
+			.replace("{{description}}", desc)\
+			.replace("{{stars}}", "" if stars == 0 else f" ⭐{stars}")
+
 def htmlSnippet_footer() -> str:
 	with open("templates/footer.html") as ioF:
 		return ioF.read()\
@@ -66,8 +91,10 @@ if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description="A script to generate TechnicJelle's resume website")
 	parser.add_argument("-b", "--build_dir", help="Overrides the directory where the files get generated to", default="build")
 	parser.add_argument("-v", "--verbose", help="Prints more information about the things the script is currently doing", action="store_true")
+	parser.add_argument("-g", "--github", help="Optional GitHub API token", default="")
 	args = parser.parse_args()
 	verbose = args.verbose
 	build_dir = Path(args.build_dir)
+	gh_api = GhApi(token=args.github)
 
 	main()

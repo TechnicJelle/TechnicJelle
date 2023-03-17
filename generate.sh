@@ -13,4 +13,4 @@ pip3 --version
 pip install markdown
 
 # Actually generate the website
-python3 generate.py -v
+python3 generate.py -v -g "$1"

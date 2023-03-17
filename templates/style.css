@@ -57,7 +57,6 @@ h1, h2 {
 	padding-bottom: 4px;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
-	border-color: #1C2229;
 }
 
 img {
@@ -69,14 +68,45 @@ h1 + table tr>th:nth-child(2) {
 	font-style: italic;
 }
 
-img.pin{
-	box-sizing: border-box;
-	width:49%;
+.card * {
+	padding: 0;
+	margin: 0;
 }
 
-@media screen and (max-width: 600px) {
-	img.pin {
+.card {
+	border: 1px solid;
+	border-radius: 3px;
+	padding: 8px;
+	margin: 2px 0;
+	width: 47%;
+	display: inline-block;
+	position: relative;
+}
+
+@media screen and (max-width: 800px) {
+	.card {
 		box-sizing: border-box;
-		width:100%;
+		width: 100%;
 	}
 }
+
+h1, h2, .card {
+	border-color: #1C2229;
+}
+
+.card .stars {
+	position: absolute;
+	top: 4px;
+	right: 8px;
+}
+
+.card .AutoHotkey {color: #6594B9;}
+.card .C {color: #555555;}
+.card .Cpp {color: #F34B7D;}
+.card .Cs {color: #178600;}
+.card .Dart {color: #00B4AB;}
+.card .Java {color: #B07219;}
+.card .JavaScript {color: #F1E05A;}
+.card .Processing {color: #0096D8;}
+.card .Python {color: #3572A5;}
+.card .Stylus {color: #FF6347;}
