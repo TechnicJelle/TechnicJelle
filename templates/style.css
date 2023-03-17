@@ -44,13 +44,14 @@ footer {
 
 a {
 	color: #58A6FF;
+	text-decoration: none;
 }
 a:visited {
 	color: #58A6FF;
 }
-a.invisible {
-	color: #eeeeee;
-	text-decoration: none;
+
+.muted {
+	color: #EEEEEE;
 }
 
 h1, h2 {
