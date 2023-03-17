@@ -1,5 +1,5 @@
 # Hi there! 👋
-| <img src="https://raw.githubusercontent.com/TechnicJelle/TechnicJelle/badges/Default(800)0001-0051.gif" width="128" alt="animated version of my logo"> |  Programming's my art<br>Empty files are my canvas<br>And code is my brush |
+| <img src="https://raw.githubusercontent.com/TechnicJelle/TechnicJelle/badges/Default(128)0001-0051.gif" alt="animated version of my logo"> |  Programming's my art<br>Empty files are my canvas<br>And code is my brush |
 |---|:---|
 
 My name is Jelle (/jɛlə/).
