@@ -27,7 +27,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build the website
-        run: ./generate.sh
+        run: ./generate.sh ${{ secrets.API_TOKEN_GITHUB }}
         
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main

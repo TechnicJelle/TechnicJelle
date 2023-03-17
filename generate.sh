@@ -10,7 +10,7 @@ sudo apt-get -y install python3-pip
 pip3 --version
 
 # Install dependencies
-pip install markdown
+pip install markdown ghapi
 
 # Actually generate the website
 python3 generate.py -v -g "$1"
