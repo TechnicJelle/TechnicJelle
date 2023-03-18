@@ -59,7 +59,17 @@ def htmlSnippet_markdown() -> str:
 		inp: str = readme_file.read()
 		mdHTML: str = markdown.markdown(inp, extensions=md_extensions)
 		mdHTML = re.sub(r'(?:<p>)?<a.+(https://github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_card, mdHTML)
+		mdHTML = re.sub(r'<h([2-4])>(.+)</h\1>', processHeader, mdHTML)
 		return mdHTML
+
+def processHeader(match: re.Match) -> str:
+	h: str = match.group(1)
+	title: str = match.group(2)
+	titleClean: str = re.sub(r'<a href="(.+)">(.+)</a>', r'\2', title) # Remove links from titles
+	id: str = titleClean.lower().replace(" ", "-")
+	verboseLog(f"[Processing] 📑 Processing header: h{h}  {titleClean} => #{id}")
+	result: str = f'<h{h} id="{id}">{title}<a href="#{id}" class="link"> 🔗</a></h{h}>'
+	return result
 
 def htmlSnippet_card(match: re.Match) -> str:
 	title : str = match.group(2)
