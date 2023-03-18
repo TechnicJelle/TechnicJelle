@@ -2,8 +2,8 @@
 | <img src="https://raw.githubusercontent.com/TechnicJelle/TechnicJelle/badges/Default(128)0001-0051.gif" alt="animated version of my logo"> |  Programming's my art<br>Empty files are my canvas<br>And code is my brush |
 |---|:---|
 
-My name is Jelle (/jɛlə/).
-I'm studying _Creative Media and Game Technologies_ at **Saxion University of Applied Sciences** to become a game developer.
+My name is Jelle ([IPA:](https://en.wikipedia.org/wiki/Help:IPA/Dutch) /jɛlə/), but you can call me Tech, if you prefer.
+I'm currently studying _Creative Media and Game Technologies_ at _Saxion University of Applied Sciences_ to become a better game developer.
 
 I love learning fun things and having fun learning things!
 
