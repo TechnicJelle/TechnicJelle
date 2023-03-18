@@ -15,6 +15,9 @@ A year or two later I discovered Minecraft with its redstone, and I was sold. Wh
 
 When I was around eleven, my primary school installed Scratch on their computers. Me being the curious type and seeing that a new icon had appeared on the desktop, I clicked it and almost immediately recognized it as being a similar thing to GameMaker. I quickly became quite good at it, though sadly most of those projects have also been lost.
 
+Around thirteen, I tried my hand at making Android Apps with Android Studio, which was my first usage of a "real" IDE. It was difficult to suddenly use such a huge, complicated program, but ultimately, I did succeed in making an app that my parents still use to this day.
+I enjoyed learning Java during the process of making these apps, though I probably should have learned Java first, and only then started making apps with it.
+
 For the second half of secondary school, I had to buy a TI 84 CE-T calculator and I almost immediately started making useful programs and fun games in TI-Basic.
 
 Then I discovered The Coding Train on YouTube and I started using Processing a lot.
