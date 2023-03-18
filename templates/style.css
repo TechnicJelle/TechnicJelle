@@ -1,40 +1,89 @@
+/* Global styles */
+:root {
+	--main-text-colour: #EEEEEE;
+}
+
+html {
+	height: 100%;
+}
+
 body {
 	background: #151515;
-	color: #EEEEEE;
+	color: var(--main-text-colour);
+
+	font-family: "Segoe UI", "Roboto", "Helvetica", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	font-size: 16px;
+}
+
+.mono {
+	font-family: "JetBrainsMono NF", "JetBrains Mono", "ui-monospace", "SFMono-Regular", "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+}
+
+h1, h2 {
+	padding-bottom: 4px;
+	border-bottom: solid 1px;
+}
+
+main, h1, h2, .card {
+	border-color: #1C2229 !important;
+}
+
+img, .card {
+	border-radius: 3px;
+}
+
+a, a:visited {
+	color: #58A6FF;
+	text-decoration: none;
+}
+.stealth-link {
+	color: var(--main-text-colour);
+}
+
+summary {
+	cursor: pointer;
+	color: #aaaaaa;
+}
+
+/* Specific styles */
+body {
 	max-width: 900px;
 	margin: auto;
 	padding: 0 24px;
-	font-family: "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-	font-size: 16px;
-	
-	min-height: 100vh;
+
+	/* Push footer to bottom */
+	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 }
 
-main {
-	flex-grow: 1;
-	
-	margin: auto;
-	padding: 0 24px;
-	
-	border-style: solid;
-	border-width: 2px;
-	border-color: #1C2229;
-	border-radius: 8px;
-}
-
 header {
-	font-family: "JetBrainsMono NF", "JetBrains Mono", "ui-monospace", "SFMono-Regular", "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
 	font-size: 14px;
 	padding-top: 6px;
 	padding-left: 4px;
 	margin-bottom: 12px;
 }
-.small {
+
+span.small {
 	font-size: 12px;
 	color: #8B949E;
 	padding: 0 4px;
+}
+
+main {
+	flex-grow: 1; /* Push footer to bottom */
+
+	margin: auto;
+	padding: 0 24px;
+
+	border: solid 2px;
+	border-radius: 8px;
+}
+
+/* Haiku style */
+h1 + table tr>th:nth-child(2) {
+	padding-left: 16px;
+	font-style: italic;
 }
 
 footer {
@@ -42,33 +91,7 @@ footer {
 	font-size: 14px;
 }
 
-a {
-	color: #58A6FF;
-	text-decoration: none;
-}
-a:visited {
-	color: #58A6FF;
-}
-
-.muted {
-	color: #EEEEEE !important;
-}
-
-h1, h2 {
-	padding-bottom: 4px;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-}
-
-img {
-	border-radius: 3px;
-}
-
-h1 + table tr>th:nth-child(2) {
-	padding-left: 16px;
-	font-style: italic;
-}
-
+/* Card styles */
 .card * {
 	padding: 0;
 	margin: 0;
@@ -76,7 +99,6 @@ h1 + table tr>th:nth-child(2) {
 
 .card {
 	border: 1px solid;
-	border-radius: 3px;
 	padding: 8px;
 	margin: 2px 0;
 	width: 47%;
@@ -91,16 +113,13 @@ h1 + table tr>th:nth-child(2) {
 	}
 }
 
-h1, h2, .card {
-	border-color: #1C2229;
-}
-
 .card .stars {
 	position: absolute;
 	top: 4px;
 	right: 8px;
 }
 
+/* Language colours */
 .card .AutoHotkey {color: #6594B9;}
 .card .C {color: #555555;}
 .card .Cpp {color: #F34B7D;}

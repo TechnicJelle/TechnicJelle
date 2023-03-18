@@ -7,7 +7,7 @@ I'm currently studying _Creative Media and Game Technologies_ at _Saxion Univers
 
 I love learning fun things and having fun learning things!
 
-<details markdown="1"><summary style="cursor: pointer; color: #aaaaaa;">Click here to read about my full journey as a developer</summary>
+<details markdown="1"><summary>Click here to read about my full journey as a developer</summary>
 
 My first start with programming was GameMaker 8.1 Lite when I was eight. I started off only using the visual programming, and I never really got into GML. Sadly, most of the games I made back then have been lost to time.
 
