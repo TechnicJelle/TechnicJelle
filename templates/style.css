@@ -37,7 +37,7 @@ a, a:visited {
 	text-decoration: none;
 }
 .stealth-link {
-	color: var(--main-text-colour);
+	color: var(--main-text-colour) !important;
 }
 
 summary {
