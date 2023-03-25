@@ -22,9 +22,11 @@ def main() -> None:
 	copy2("templates/CNAME", build_dir)
 
 	saveHTML(build_dir / "index.html",
-		htmlSnippet_head()
-		+ htmlSnippet_markdown()
-		+ htmlSnippet_footer())
+			 htmlSnippet_head()
+			 + htmlSnippet_markdown_start()
+			 + htmlSnippet_visual()
+			 + htmlSnippet_markdown_main()
+			 + htmlSnippet_footer())
 
 	if warnings == 0:
 		print("[Main] ✔️ Finished with no warnings!")
@@ -42,32 +44,63 @@ def verboseLog(*inp) -> None:
 			print(inp[0])
 
 def saveHTML(location : Path, contents : Union[str, Callable[[], str]]) -> None:
-	verboseLog(f"[Generation] 🖨️ Saving HTML file: {location.__fspath__()}")
+	verboseLog(f"[Output] 🖨️ Saving HTML file: {location.__fspath__()}")
 	if callable(contents):
 		contents = contents()
 	with open(location, "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
 		output_file.write(contents)
 
+def convertMarkdown(inp : str) -> str:
+	return markdown.markdown(inp, extensions=md_extensions)
+
 def htmlSnippet_head() -> str:
+	verboseLog("[HTML] 📄 Getting head")
 	with open("templates/head.html") as ioH:
 		with open("templates/style.css") as ioC:
 			css : str = ioC.read()
 			return ioH.read().replace("{{css}}", css)
 
-def htmlSnippet_markdown() -> str:
+def getMarkdownRegion(region: str) -> str:
+	verboseLog(f"[Markdown] 📃 Getting Markdown region: {region}")
 	with open(Path("README.md"), "r", encoding="utf-8") as readme_file:
 		inp: str = readme_file.read()
-		mdHTML: str = markdown.markdown(inp, extensions=md_extensions)
-		mdHTML = re.sub(r'(?:<p>)?<a.+(https://github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_card, mdHTML)
-		mdHTML = re.sub(r'<h([2-4])>(.+)</h\1>', processHeader, mdHTML)
-		return mdHTML
+		start: int = re.search(f"<!---\s*region:\s*{region}\s*-->", inp).end()
+		endRe = re.search(f"<!---\s*region:\s*", inp[start:])
+		end: int = endRe.start() + start if endRe is not None else len(inp)
+		return inp[start:end]
+
+def htmlSnippet_markdown_start() -> str:
+	verboseLog("[HTML] 📄 Getting Markdown start")
+	md: str = getMarkdownRegion("title")
+	return convertMarkdown(md)
+
+def htmlSnippet_visual() -> str:
+	verboseLog("[HTML] 📄 Getting visual")
+	md: str = getMarkdownRegion("visual")
+	imgLink: str = re.search(r'src="(.+)" ', md).group(1)
+	haiku: str = re.search(r'> \| (.+) \|', md).group(1)
+	with open("templates/visual.html") as ioV:
+		return ioV.read()\
+			.replace("{{image}}", imgLink)\
+			.replace("{{haiku}}", haiku)
+
+def htmlSnippet_markdown_main() -> str:
+	verboseLog("[HTML] 📄 Getting Markdown main")
+	md: str = getMarkdownRegion("intro")\
+			  + getMarkdownRegion("connect")\
+			  + getMarkdownRegion("experiences")\
+			  + getMarkdownRegion("projects")
+	mdHTML: str = convertMarkdown(md)
+	mdHTML = re.sub(r'(?:<p>)?<a.+(https://github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_card, mdHTML)
+	mdHTML = re.sub(r'<h([2-4])>(.+)</h\1>', processHeader, mdHTML)
+	return mdHTML
 
 def processHeader(match: re.Match) -> str:
 	h: str = match.group(1)
 	title: str = match.group(2)
 	titleClean: str = re.sub(r'<a href="(.+)">(.+)</a>', r'\2', title) # Remove links from titles
 	id: str = titleClean.lower().replace(" ", "-")
-	verboseLog(f"[Processing] 📑 Processing header: h{h}  {titleClean} => #{id}")
+	verboseLog(f"[Post-Processing] 📑 Converting header: h{h}  {titleClean} => #{id}")
 	result: str = f'<h{h} id="{id}">{title}<a href="#{id}" class="link"> 🔗</a></h{h}>'
 	return result
 

@@ -1,8 +1,11 @@
+<!--- region: title -->
 # Hi there! 👋
-| <img src="https://raw.githubusercontent.com/TechnicJelle/TechnicJelle/badges/Default(128)0001-0051.gif" alt="animated version of my logo"> |  Programming's my art<br>Empty files are my canvas<br>And code is my brush |
+<!--- region: visual -->
+| <img src="https://raw.githubusercontent.com/TechnicJelle/TechnicJelle/badges/Default(128)0001-0051.gif" alt="animated version of my logo"> | Programming's my art<br>Empty files are my canvas<br>And code is my brush |
 |---|:---|
 
-My name is Jelle ([IPA:](https://en.wikipedia.org/wiki/Help:IPA/Dutch) /jɛlə/), but you can call me Tech, if you prefer.
+<!--- region: intro -->
+My name is Jelle ([IPA:](https://en.wikipedia.org/wiki/Help:IPA/Dutch) /jɛlə/), and I like creating stuff!
 I'm currently studying _Creative Media and Game Technologies_ at _Saxion University of Applied Sciences_ to become a better game developer.
 
 I love learning fun things and having fun learning things!
@@ -42,6 +45,7 @@ Not only do I really like making games, I also really enjoy making tools for peo
 My logo was made by myself with Blender.
 Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJelle)
 
+<!--- region: connect -->
 ## Find me on other platforms
 [![E-Mail](https://img.shields.io/badge/EMail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:technicjelleplay@gmail.com)
 [![Blog](https://img.shields.io/badge/Blog-36465D?style=for-the-badge&logo=tumblr&logoColor=white)](https://technicjelle.tumblr.com/)
@@ -50,6 +54,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![ArtStation](https://img.shields.io/badge/ArtStation-13AFF0?style=for-the-badge&logo=artstation&logoColor=white)](https://www.artstation.com/TechnicJelle)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@TechnicJelle)
 
+<!--- region: experiences -->
 ## Experiences
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
 ![Unity](https://img.shields.io/badge/Unity-303030?style=for-the-badge&logo=unity&logoColor=white)
@@ -70,6 +75,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)
 ![Krita](https://img.shields.io/badge/Krita-3BABFF?style=for-the-badge&logo=krita&logoColor=white)
 
+<!--- region: projects -->
 ## 🎮 Games
 [![Space Combat 3DX](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SpaceCombat3DX&theme=dark)](https://github.com/TechnicJelle/SpaceCombat3DX)
 [![Flappy Pong](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlappyPong&theme=dark)](https://github.com/TechnicJelle/FlappyPong)
