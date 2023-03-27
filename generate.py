@@ -12,7 +12,7 @@ verbose : bool = False
 warnings : int = 0
 gh_api: GhApi
 
-md_extensions = ["md_in_html", "tables"]
+md_extensions = ["md_in_html"]
 
 def main() -> None:
 	print("[Main] ✔️ Starting website generation")
@@ -25,6 +25,7 @@ def main() -> None:
 			 htmlSnippet_head()
 			 + htmlSnippet_markdown_start()
 			 + htmlSnippet_visual()
+			 + htmlSnippet_toc()
 			 + htmlSnippet_markdown_main()
 			 + htmlSnippet_footer())
 
@@ -62,8 +63,8 @@ def htmlSnippet_head() -> str:
 
 def getMarkdownRegion(region: str) -> str:
 	verboseLog(f"[Markdown] 📃 Getting Markdown region: {region}")
-	with open(Path("README.md"), "r", encoding="utf-8") as readme_file:
-		inp: str = readme_file.read()
+	with open(Path("README.md"), "r", encoding="utf-8") as ioR:
+		inp: str = ioR.read()
 		start: int = re.search(f"<!---\s*region:\s*{region}\s*-->", inp).end()
 		endRe = re.search(f"<!---\s*region:\s*", inp[start:])
 		end: int = endRe.start() + start if endRe is not None else len(inp)
@@ -83,6 +84,25 @@ def htmlSnippet_visual() -> str:
 		return ioV.read()\
 			.replace("{{image}}", imgLink)\
 			.replace("{{haiku}}", haiku)
+
+def htmlSnippet_toc() -> str:
+	verboseLog("[HTML] 📄 Getting TOC")
+	toc: str = ""
+	with open("templates/toc-item.html") as ioI:
+		tocTemplate: str = ioI.read()
+		md: str = convertMarkdown(getMarkdownRegion("projects"))
+		for match in re.finditer(r'<h([2-4])>(.+)</h\1>', md):
+			title: str = match.group(2)
+			titleClean: str = re.sub(r'<a href="(.+)">(.+)</a>', r'\2', title) # Remove links from titles
+			id: str = titleClean.lower().replace(" ", "-")
+			verboseLog(f"[TOC] 📑 Adding header: {titleClean}")
+			toc += tocTemplate\
+				.replace("{{link}}", id)\
+				.replace("{{title}}", titleClean)
+
+	with open("templates/toc.html") as ioT:
+		return ioT.read()\
+			.replace("{{toc}}", toc)
 
 def htmlSnippet_markdown_main() -> str:
 	verboseLog("[HTML] 📄 Getting Markdown main")

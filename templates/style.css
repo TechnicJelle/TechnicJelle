@@ -104,6 +104,27 @@ footer {
 	font-size: 14px;
 }
 
+/* Table of Contents style */
+aside h2 {
+	margin-bottom: 0;
+}
+
+aside ul {
+	padding-left: 1em;
+}
+
+aside li {
+	list-style-type: none;
+}
+
+@media screen and (min-width: 1400px) {
+	aside {
+		position: fixed;
+		top: 0;
+		left: 2em;
+	}
+}
+
 /* Card styles */
 .card * {
 	padding: 0;
