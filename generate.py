@@ -7,12 +7,14 @@ import markdown
 import re
 from ghapi.all import GhApi
 
-build_dir : Path
-verbose : bool = False
-warnings : int = 0
+build_dir: Path
+verbose: bool = False
+warnings: int = 0
 gh_api: GhApi
 
 md_extensions = ["md_in_html"]
+
+headers: list[(int, str, str)] = []
 
 def main() -> None:
 	print("[Main] ✔️ Starting website generation")
@@ -21,13 +23,22 @@ def main() -> None:
 	copytree("templates/favicons", build_dir, dirs_exist_ok=True)
 	copy2("templates/CNAME", build_dir)
 
-	saveHTML(build_dir / "index.html",
-			 htmlSnippet_head()
-			 + htmlSnippet_markdown_start()
-			 + htmlSnippet_visual()
-			 + htmlSnippet_toc()
-			 + htmlSnippet_markdown_main()
-			 + htmlSnippet_footer())
+	html: str = htmlSnippet_head()\
+		+ convertMarkdown(getMarkdownRegion("title"))\
+		+ htmlSnippet_visual()\
+		+ convertMarkdown(getMarkdownRegion("intro"))\
+		+ convertMarkdown(getMarkdownRegion("connect"))\
+		+ convertMarkdown(getMarkdownRegion("experiences"))\
+		+ convertMarkdown(getMarkdownRegion("projects"))\
+		+ htmlSnippet_footer()
+
+	html = re.sub(r'(?:<p>)?<a.+(https://github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_card, html)
+
+	html = linkifyHeaders(html)
+
+	html = re.sub(r'(<!---\s*{{toc}}\s*-->)', generateTOC(), html)
+
+	saveHTML(build_dir / "index.html", html)
 
 	if warnings == 0:
 		print("[Main] ✔️ Finished with no warnings!")
@@ -37,28 +48,28 @@ def main() -> None:
 def verboseLog(*inp) -> None:
 	if verbose:
 		if len(inp) > 1:
-			log : str = ""
+			log: str = ""
 			for piece in inp:
 				log += piece + " "
 			print(log.strip())
 		else:
 			print(inp[0])
 
-def saveHTML(location : Path, contents : Union[str, Callable[[], str]]) -> None:
+def saveHTML(location: Path, contents: Union[str, Callable[[], str]]) -> None:
 	verboseLog(f"[Output] 🖨️ Saving HTML file: {location.__fspath__()}")
 	if callable(contents):
 		contents = contents()
 	with open(location, "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
 		output_file.write(contents)
 
-def convertMarkdown(inp : str) -> str:
+def convertMarkdown(inp: str) -> str:
 	return markdown.markdown(inp, extensions=md_extensions)
 
 def htmlSnippet_head() -> str:
 	verboseLog("[HTML] 📄 Getting head")
 	with open("templates/head.html") as ioH:
 		with open("templates/style.css") as ioC:
-			css : str = ioC.read()
+			css: str = ioC.read()
 			return ioH.read().replace("{{css}}", css)
 
 def getMarkdownRegion(region: str) -> str:
@@ -70,11 +81,6 @@ def getMarkdownRegion(region: str) -> str:
 		end: int = endRe.start() + start if endRe is not None else len(inp)
 		return inp[start:end]
 
-def htmlSnippet_markdown_start() -> str:
-	verboseLog("[HTML] 📄 Getting Markdown start")
-	md: str = getMarkdownRegion("title")
-	return convertMarkdown(md)
-
 def htmlSnippet_visual() -> str:
 	verboseLog("[HTML] 📄 Getting visual")
 	md: str = getMarkdownRegion("visual")
@@ -84,45 +90,6 @@ def htmlSnippet_visual() -> str:
 		return ioV.read()\
 			.replace("{{image}}", imgLink)\
 			.replace("{{haiku}}", haiku)
-
-def htmlSnippet_toc() -> str:
-	verboseLog("[HTML] 📄 Getting TOC")
-	toc: str = ""
-	with open("templates/toc-item.html") as ioI:
-		tocTemplate: str = ioI.read()
-		md: str = convertMarkdown(getMarkdownRegion("projects"))
-		for match in re.finditer(r'<h([2-4])>(.+)</h\1>', md):
-			title: str = match.group(2)
-			titleClean: str = re.sub(r'<a href="(.+)">(.+)</a>', r'\2', title) # Remove links from titles
-			id: str = titleClean.lower().replace(" ", "-")
-			verboseLog(f"[TOC] 📑 Adding header: {titleClean}")
-			toc += tocTemplate\
-				.replace("{{link}}", id)\
-				.replace("{{title}}", titleClean)
-
-	with open("templates/toc.html") as ioT:
-		return ioT.read()\
-			.replace("{{toc}}", toc)
-
-def htmlSnippet_markdown_main() -> str:
-	verboseLog("[HTML] 📄 Getting Markdown main")
-	md: str = getMarkdownRegion("intro")\
-			  + getMarkdownRegion("connect")\
-			  + getMarkdownRegion("experiences")\
-			  + getMarkdownRegion("projects")
-	mdHTML: str = convertMarkdown(md)
-	mdHTML = re.sub(r'(?:<p>)?<a.+(https://github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_card, mdHTML)
-	mdHTML = re.sub(r'<h([2-4])>(.+)</h\1>', processHeader, mdHTML)
-	return mdHTML
-
-def processHeader(match: re.Match) -> str:
-	h: str = match.group(1)
-	title: str = match.group(2)
-	titleClean: str = re.sub(r'<a href="(.+)">(.+)</a>', r'\2', title) # Remove links from titles
-	id: str = titleClean.lower().replace(" ", "-")
-	verboseLog(f"[Post-Processing] 📑 Converting header: h{h}  {titleClean} => #{id}")
-	result: str = f'<h{h} id="{id}">{title}<a href="#{id}" class="link"> 🔗</a></h{h}>'
-	return result
 
 def htmlSnippet_card(match: re.Match) -> str:
 	title : str = match.group(2)
@@ -157,8 +124,48 @@ def htmlSnippet_footer() -> str:
 			.replace("{{year}}", str(datetime.datetime.now().year))\
 			.replace("{{date}}", str(datetime.datetime.now(datetime.timezone.utc).astimezone().isoformat(sep=" ", timespec="seconds")))
 
+def linkifyHeaders(html: str) -> str:
+	def processHeader(match: re.Match) -> str:
+		h: str = match.group(1)
+		title: str = match.group(2)
+		titleClean: str = re.sub(r'<a href="(.+)">(.+)</a>', r'\2', title) #Sanitize links from titles
+		id: str = titleClean.lower().replace(" ", "-")
+		verboseLog(f"[Linkify] 🔗 Converting header: h{h}  {titleClean} => #{id}")
+		headers.append((int(h), id, titleClean)) #Save header for TOC
+		result: str = f'<h{h} id="{id}">{title}<a href="#{id}" class="link"> 🔗</a></h{h}>'
+		return result
+
+	verboseLog("[Post-Processing] 📑 Linkifying headers")
+	return re.sub(r'<h([2-4])>(.+)</h\1>', processHeader, html)
+
+def generateTOC() -> str:
+	verboseLog("[Post-Processing] 📑 Generating table of contents")
+	toc: str = "<ul>\n"
+	startLevel: int = headers[0][0]
+	lastLevel: int = startLevel
+	for header in headers:
+		level: int = header[0]
+		id: str = header[1]
+		title: str = header[2]
+		if level > lastLevel:
+			toc += "<li>\n<ul>\n"
+		if level < lastLevel:
+			toc += "</ul>\n</li>\n"
+		lastLevel = level
+		with open("templates/toc-item.html") as ioT:
+			toc += ioT.read()\
+				.replace("{{link}}", id)\
+				.replace("{{title}}", title)
+
+	for i in range(lastLevel - startLevel):
+		toc += "</ul>\n</li>\n"
+
+	toc += "</ul>\n"
+	with open("templates/toc.html") as ioT:
+		return ioT.read().replace("{{toc}}", toc)
+
 if __name__ == "__main__":
-	parser = argparse.ArgumentParser(description="A script to generate TechnicJelle's resume website")
+	parser = argparse.ArgumentParser(description="A script to generate TechnicJelle's portfolio website")
 	parser.add_argument("-b", "--build_dir", help="Overrides the directory where the files get generated to", default="build")
 	parser.add_argument("-v", "--verbose", help="Prints more information about the things the script is currently doing", action="store_true")
 	parser.add_argument("-g", "--github", help="Optional GitHub API token", default="")

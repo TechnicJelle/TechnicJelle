@@ -75,6 +75,8 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)
 ![Krita](https://img.shields.io/badge/Krita-3BABFF?style=for-the-badge&logo=krita&logoColor=white)
 
+<!--- {{toc}} -->
+
 <!--- region: projects -->
 ## 🎮 Games
 [![Space Combat 3DX](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SpaceCombat3DX&theme=dark)](https://github.com/TechnicJelle/SpaceCombat3DX)
