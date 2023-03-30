@@ -21,6 +21,8 @@ When I was around eleven, my primary school installed Scratch on their computers
 Around thirteen, I tried my hand at making Android Apps with Android Studio, which was my first usage of a "real" IDE. It was difficult to suddenly use such a huge, complicated program, but ultimately, I did succeed in making an app that my parents still use to this day.
 I enjoyed learning Java during the process of making these apps, though I probably should have learned Java first, and only then started making apps with it.
 
+Around 2017, I played a lot of the game Scrap Mechanic, and when they released the mod tool, I was one of the first people to release a mod onto the Steam Workshop. [My most popular mod](https://steamcommunity.com/sharedfiles/filedetails/?id=876955273) has been downloaded almost 50 000 times!
+
 For the second half of secondary school, I had to buy a TI 84 CE-T calculator and I almost immediately started making useful programs and fun games in TI-Basic.
 
 Then I discovered The Coding Train on YouTube and I started using Processing a lot.
