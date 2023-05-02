@@ -5,7 +5,7 @@
 |---|:---|
 
 <!--- region: intro -->
-My name is Jelle ([IPA:](https://en.wikipedia.org/wiki/Help:IPA/Dutch) /jɛlə/), and I like creating stuff!
+My name is Jelle ([IPA](https://en.wikipedia.org/wiki/Help:IPA/Dutch): /ˈjɛ.lə/), and I like creating stuff!
 I'm currently studying _Creative Media and Game Technologies_ at _Saxion University of Applied Sciences_ to become a better game developer.
 
 I love learning fun things and having fun learning things!
