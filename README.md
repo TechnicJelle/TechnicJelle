@@ -114,9 +114,12 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Fireworks Display in PGE](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FireworksPGE&theme=dark)](https://github.com/TechnicJelle/FireworksPGE)
 [![PWS](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=PWS&theme=dark)](https://github.com/TechnicJelle/PWS)
 
+## 📚 Libraries
+[![UpdateCheckerJava](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=UpdateCheckerJava&theme=dark)](https://github.com/TechnicJelle/UpdateCheckerJava)
+
 ## ⛏ Minecraft Plugins
-[![Discord Inviter](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordInviter&theme=dark)](https://github.com/TechnicJelle/DiscordInviter)
 [![Right Click Command](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=RightClickCommand&theme=dark)](https://github.com/TechnicJelle/RightClickCommand)
+[![Discord Inviter](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordInviter&theme=dark)](https://github.com/TechnicJelle/DiscordInviter)
 
 ### 🌐 [BlueMap](https://github.com/BlueMap-Minecraft/BlueMap#readme) Addons
 [![BlueMap Offline Player Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapOfflinePlayerMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers)
