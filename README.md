@@ -118,10 +118,12 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Update Checker Java](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=UpdateCheckerJava&theme=dark)](https://github.com/TechnicJelle/UpdateCheckerJava)
 
 ## ⛏ Minecraft Plugins
+[![MCUtils](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=MCUtils&theme=dark)](https://github.com/TechnicJelle/MCUtils)
 [![Right Click Command](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=RightClickCommand&theme=dark)](https://github.com/TechnicJelle/RightClickCommand)
 [![Discord Inviter](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordInviter&theme=dark)](https://github.com/TechnicJelle/DiscordInviter)
 
 ### 🌐 [BlueMap](https://github.com/BlueMap-Minecraft/BlueMap#readme) Addons
+[![BMUtils](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BMUtils&theme=dark)](https://github.com/TechnicJelle/BMUtils)
 [![BlueMap Offline Player Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapOfflinePlayerMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers)
 [![BlueMap Chat Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapChatMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapChatMarkers)
 [![BlueMap Floodgate](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFloodgate&theme=dark)](https://github.com/TechnicJelle/BlueMapFloodgate)
