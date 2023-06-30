@@ -82,11 +82,12 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 <!--- region: projects -->
 ## 🎮 Games
 [![Space Combat 3DX](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SpaceCombat3DX&theme=dark)](https://github.com/TechnicJelle/SpaceCombat3DX)
-[![Flappy Pong](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlappyPong&theme=dark)](https://github.com/TechnicJelle/FlappyPong)
+[![DigiSwamp AG](https://github-readme-stats.vercel.app/api/pin/?username=Unrealitix&repo=Project-Showoff&theme=dark)](https://github.com/Unrealitix/Project-Showoff)
 [![CMGT Intake](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_Intake&theme=dark)](https://github.com/TechnicJelle/CMGT_Intake)
 [![CMGT Point and Click](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_PointAndClick&theme=dark)](https://github.com/TechnicJelle/CMGT_PointAndClick)
+[![Chthonic Metal](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Chthonic_Metal&theme=dark)](https://github.com/TechnicJelle/Chthonic_Metal)
 [![Doom Game](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DoomGame&theme=dark)](https://github.com/TechnicJelle/DoomGame)
-[![CMGT Arcade Game](https://github-readme-stats.vercel.app/api/pin/?username=MythicalSora&repo=Project-Lift-Off&theme=dark)](https://github.com/MythicalSora/Project-Lift-Off)
+[![Flappy Pong](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlappyPong&theme=dark)](https://github.com/TechnicJelle/FlappyPong)
 [![Phurey](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Phurey&theme=dark)](https://github.com/TechnicJelle/Phurey)
 [![She Can VR](https://github-readme-stats.vercel.app/api/pin/?username=Unrealitix&repo=Project-Customer&theme=dark)](https://github.com/Unrealitix/Project-Customer)
 
