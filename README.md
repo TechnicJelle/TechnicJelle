@@ -104,6 +104,9 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![My AutoHotKey Scripts](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=My-AutoHotKey-Scripts&theme=dark)](https://github.com/TechnicJelle/My-AutoHotKey-Scripts)
 [![Discord Reactor](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordReactor&theme=dark)](https://github.com/TechnicJelle/DiscordReactor)
 
+## 🔌 Tech Demos
+[![Vulkan Psychedelic Cloths](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=VulkanPsychedelicCloths&theme=dark)](https://github.com/TechnicJelle/VulkanPsychedelicCloths)
+
 ## 🤖 Discord Bots
 [![Hydr8](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordHydr8Bot&theme=dark)](https://github.com/TechnicJelle/DiscordHydr8Bot)
 
