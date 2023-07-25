@@ -105,6 +105,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Discord Reactor](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordReactor&theme=dark)](https://github.com/TechnicJelle/DiscordReactor)
 
 ## 🔌 Tech Demos
+[![Flutter User Fonts Demo](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlutterUserFontsDemo&theme=dark)](https://github.com/TechnicJelle/FlutterUserFontsDemo)
 [![Vulkan Psychedelic Cloths](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=VulkanPsychedelicCloths&theme=dark)](https://github.com/TechnicJelle/VulkanPsychedelicCloths)
 
 ## 🤖 Discord Bots
