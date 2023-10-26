@@ -68,6 +68,9 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ![Git](https://img.shields.io/badge/git-F05033?style=for-the-badge&logo=git&logoColor=white)
 [![GitHub](https://img.shields.io/badge/GitHub-303030?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TechnicJelle)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-2671E5?style=for-the-badge&logo=githubactions&logoColor=white)
+![Subversion](https://img.shields.io/badge/subversion-304870?style=for-the-badge&logo=subversion&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Jenkins](https://img.shields.io/badge/jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
 
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-303030?style=for-the-badge&logo=intellijidea&logoColor=white)
 ![Rider](https://img.shields.io/badge/Rider-DC143C?style=for-the-badge&logo=rider&logoColor=white)
