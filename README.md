@@ -64,6 +64,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-D1BB27?style=for-the-badge&logo=python&logoColor=white)
+![Unreal Engine](https://img.shields.io/badge/Unreal-0E1128?style=for-the-badge&logo=unrealengine&logoColor=white)
 
 ![Git](https://img.shields.io/badge/git-F05033?style=for-the-badge&logo=git&logoColor=white)
 [![GitHub](https://img.shields.io/badge/GitHub-303030?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TechnicJelle)
@@ -94,6 +95,10 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Phurey](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Phurey&theme=dark)](https://github.com/TechnicJelle/Phurey)
 [![She Can VR](https://github-readme-stats.vercel.app/api/pin/?username=Unrealitix&repo=Project-Customer&theme=dark)](https://github.com/Unrealitix/Project-Customer)
 
+## 💡 Tech Demos
+[![Flutter User Fonts Demo](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlutterUserFontsDemo&theme=dark)](https://github.com/TechnicJelle/FlutterUserFontsDemo)
+[![Vulkan Psychedelic Cloths](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=VulkanPsychedelicCloths&theme=dark)](https://github.com/TechnicJelle/VulkanPsychedelicCloths)
+
 ## 📱 Apps
 [![GitDroid](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=GitDroid&theme=dark)](https://github.com/TechnicJelle/GitDroid)
 [![Wesley Chess](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WesleyChess&theme=dark)](https://github.com/TechnicJelle/WesleyChess)
@@ -102,14 +107,14 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ## 🌐 Websites
 [![TechnicJelle](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=TechnicJelle&theme=dark)](https://github.com/TechnicJelle/TechnicJelle)
 [![CMGTwitch](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGTwitch&theme=dark)](https://github.com/TechnicJelle/CMGTwitch)
+[![BlueMap Marker generator](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapMarkerGenerator&theme=dark)](https://github.com/TechnicJelle/BlueMapMarkerGenerator)
+
+## 🔌 Server Software
+[![Post To Websocket Broadcaster (Dart)](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=PostToWebsocketBroadcasterDart&theme=dark)](https://github.com/TechnicJelle/PostToWebsocketBroadcasterDart)
 
 ## 📝 Scripts
 [![My AutoHotKey Scripts](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=My-AutoHotKey-Scripts&theme=dark)](https://github.com/TechnicJelle/My-AutoHotKey-Scripts)
 [![Discord Reactor](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordReactor&theme=dark)](https://github.com/TechnicJelle/DiscordReactor)
-
-## 🔌 Tech Demos
-[![Flutter User Fonts Demo](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlutterUserFontsDemo&theme=dark)](https://github.com/TechnicJelle/FlutterUserFontsDemo)
-[![Vulkan Psychedelic Cloths](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=VulkanPsychedelicCloths&theme=dark)](https://github.com/TechnicJelle/VulkanPsychedelicCloths)
 
 ## 🤖 Discord Bots
 [![Hydr8](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordHydr8Bot&theme=dark)](https://github.com/TechnicJelle/DiscordHydr8Bot)
@@ -127,7 +132,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 
 ## ⛏ Minecraft Plugins
 [![MCUtils](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=MCUtils&theme=dark)](https://github.com/TechnicJelle/MCUtils)
-[![Right Click Command](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=RightClickCommand&theme=dark)](https://github.com/TechnicJelle/RightClickCommand)
+[![Simple Block Commands](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SimpleBlockCommands&theme=dark)](https://github.com/TechnicJelle/SimpleBlockCommands)
 [![Discord Inviter](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordInviter&theme=dark)](https://github.com/TechnicJelle/DiscordInviter)
 
 ### 🌐 [BlueMap](https://github.com/BlueMap-Minecraft/BlueMap#readme) Addons
