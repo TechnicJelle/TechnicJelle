@@ -42,7 +42,7 @@ I've also been continuing my use of Flutter, and I've been making some other thi
 During my usage of Flutter, I've naturally been using Dart, which I've grown to like quite a lot.
 </details>
 
-Not only do I really like making games, I also really enjoy making tools for people to make their lives easier in some way. Some examples of things I made for other people are [WesleyChess](https://github.com/TechnicJelle/WesleyChess), [LifeWrench](https://github.com/TechnicJelle/LifeWrench), [Hydr8](https://github.com/TechnicJelle/DiscordHydr8Bot), and [Right Click Command](https://github.com/TechnicJelle/RightClickCommand). Hardly a week goes by where I don't automate some part of my own or someone else's life.
+Not only do I really like making games, I also really enjoy making tools for people to make their lives easier in some way. Some examples of things I made for other people are [WesleyChess](https://github.com/TechnicJelle/WesleyChess), [LifeWrench](https://github.com/TechnicJelle/LifeWrench), [Hydr8](https://github.com/TechnicJelle/DiscordHydr8Bot), and [Simple Block Commands](https://github.com/TechnicJelle/SimpleBlockCommands). Hardly a week goes by where I don't automate some part of my own or someone else's life.
 
 My logo was made by myself with Blender.
 Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJelle)
