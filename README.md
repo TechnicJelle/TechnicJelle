@@ -91,10 +91,10 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Chthonic Metal](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Chthonic_Metal&theme=dark)](https://github.com/TechnicJelle/Chthonic_Metal)
 [![CMGT Intake](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_Intake&theme=dark)](https://github.com/TechnicJelle/CMGT_Intake)
 [![Afterparty](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_PointAndClick&theme=dark)](https://github.com/TechnicJelle/CMGT_PointAndClick)
-[![Phurey](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Phurey&theme=dark)](https://github.com/TechnicJelle/Phurey)
-[![Doom Game](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DoomGame&theme=dark)](https://github.com/TechnicJelle/DoomGame)
 [![Flappy Pong](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlappyPong&theme=dark)](https://github.com/TechnicJelle/FlappyPong)
+[![Doom Game](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DoomGame&theme=dark)](https://github.com/TechnicJelle/DoomGame)
 [![She Can VR](https://github-readme-stats.vercel.app/api/pin/?username=Unrealitix&repo=Project-Customer&theme=dark)](https://github.com/Unrealitix/Project-Customer)
+[![Phurey](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Phurey&theme=dark)](https://github.com/TechnicJelle/Phurey)
 
 ## 💡 Tech Demos
 [![Flutter User Fonts Demo](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlutterUserFontsDemo&theme=dark)](https://github.com/TechnicJelle/FlutterUserFontsDemo)
