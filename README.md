@@ -147,5 +147,5 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![BlueMap Death Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapDeathMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapDeathMarkers)
 [![BlueMap BlueMap Area Control](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapAreaControl&theme=dark)](https://github.com/TechnicJelle/BlueMapAreaControl)
 [![BlueMap Player Control](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapPlayerControl&theme=dark)](https://github.com/TechnicJelle/BlueMapPlayerControl)
-[![BlueMap Player Control](https://github-readme-stats.vercel.app/api/gist?id=6ae16856e8060b3bd9142c6d6dcbe3d2&theme=dark)](https://gist.github.com/TechnicJelle/6ae16856e8060b3bd9142c6d6dcbe3d2/)
+[![BlueMap Distance Measurer](https://github-readme-stats.vercel.app/api/gist?id=6ae16856e8060b3bd9142c6d6dcbe3d2&theme=dark)](https://gist.github.com/TechnicJelle/6ae16856e8060b3bd9142c6d6dcbe3d2/)
 [![BlueMap Custom Skin Provider](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapCustomSkinProvider&theme=dark)](https://github.com/TechnicJelle/BlueMapCustomSkinProvider)
