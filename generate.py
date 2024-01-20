@@ -33,7 +33,8 @@ def main() -> None:
 		+ convertMarkdown(getMarkdownRegion("projects"))\
 		+ htmlSnippet_footer()
 
-	html = re.sub(r'(?:<p>)?<a.+(https://github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_card, html)
+	html = re.sub(r'(?:<p>)?<a.+(https://github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_cardRepo, html)
+	html = re.sub(r'(?:<p>)?<a.+(https://gist\.github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_cardGist, html)
 
 	html = linkifyHeaders(html)
 
@@ -78,6 +79,10 @@ def htmlSnippet_head() -> str:
 			return ioH.read().replace("{{css}}", css)
 
 
+def langToCSSClass(lang: str) -> str:
+	return lang.replace("#", "s").replace("+", "p")
+
+
 def getMarkdownRegion(region: str) -> str:
 	verboseLog(f"[Markdown] 📃 Getting Markdown region: {region}")
 	with open(Path("README.md"), "r", encoding="utf-8") as ioR:
@@ -99,24 +104,60 @@ def htmlSnippet_visual() -> str:
 			.replace("{{haiku}}", haiku)
 
 
-def htmlSnippet_card(match: re.Match) -> str:
-	title: str = match.group(2)
+def htmlSnippet_cardRepo(match: re.Match) -> str:
 	link: str = match.group(1)
+	link: str = link.rstrip("/")  # Remove potential trailing slash
+	title: str = match.group(2)
+	owner: str = link.split("/")[-2]
+	repoName: str = link.split("/")[-1]
 
-	r = gh_api.repos.get(link.split("/")[-2], link.split("/")[-1])
+	r = gh_api.repos.get(owner, repoName)
 	desc: str = r.description if r.description is not None else "<i>No description</i>"
 	lang: str = r.language
 	stars: int = r.stargazers_count
 
-	verboseLog(f"[Generation] 🖼️ Making card: {link} {title}")
+	verboseLog(f"[Generation] 🖼️ Making card for repo: {link} {title}")
 	with open("templates/card.html") as ioC:
 		return ioC.read()\
 			.replace("{{title}}", title)\
 			.replace("{{link}}", link)\
 			.replace("{{language}}", lang)\
-			.replace("{{class}}", lang.replace("#", "s").replace("+", "p"))\
+			.replace("{{class}}", langToCSSClass(lang))\
 			.replace("{{description}}", desc)\
 			.replace("{{stars}}", htmlSnippet_stars(stars, link))
+
+
+def htmlSnippet_cardGist(match: re.Match) -> str:
+	link: str = match.group(1)
+	link: str = link.rstrip("/")  # Remove potential trailing slash
+	gist_id: str = link.split("/")[-1]
+	title: str = match.group(2)
+
+	g = gh_api.gists.get(gist_id)
+	desc: str = g.description if g.description is not None else "<i>No description</i>"
+
+	files = g.files
+	# Count all languages in gist
+	langs: dict[str, int] = {}
+	for file in files.values():
+		lang: str = file.language
+		if lang in langs:
+			langs[lang] += 1
+		else:
+			langs[lang] = 1
+
+	# Get most common language
+	lang: str = max(langs, key=langs.get)
+
+	verboseLog(f"[Generation] 🖼️ Making card for gist: {link} {title}")
+	with open("templates/card.html") as ioC:
+		return ioC.read()\
+			.replace("{{title}}", title)\
+			.replace("{{link}}", link)\
+			.replace("{{language}}", lang)\
+			.replace("{{class}}", langToCSSClass(lang))\
+			.replace("{{description}}", desc)\
+			.replace("{{stars}}", "")
 
 
 def htmlSnippet_stars(stars: int, link: str) -> str:
