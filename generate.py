@@ -198,6 +198,8 @@ def generateTOC() -> str:
 	lastLevel: int = startLevel
 	for header in headers:
 		level: int = header[0]
+		if level > 3:
+			continue
 		id: str = header[1]
 		title: str = header[2]
 		if level > lastLevel:
