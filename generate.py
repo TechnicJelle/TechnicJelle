@@ -16,6 +16,7 @@ md_extensions = ["md_in_html"]
 
 headers: list[(int, str, str)] = []
 
+
 def main() -> None:
 	print("[Main] ✔️ Starting website generation")
 	build_dir.mkdir(parents=True, exist_ok=True)
@@ -45,6 +46,7 @@ def main() -> None:
 	else:
 		print("[Main] ⚠️ Finished with", warnings, "warnings")
 
+
 def verboseLog(*inp) -> None:
 	if verbose:
 		if len(inp) > 1:
@@ -55,6 +57,7 @@ def verboseLog(*inp) -> None:
 		else:
 			print(inp[0])
 
+
 def saveHTML(location: Path, contents: Union[str, Callable[[], str]]) -> None:
 	verboseLog(f"[Output] 🖨️ Saving HTML file: {location.__fspath__()}")
 	if callable(contents):
@@ -62,8 +65,10 @@ def saveHTML(location: Path, contents: Union[str, Callable[[], str]]) -> None:
 	with open(location, "w", encoding="utf-8", errors="xmlcharrefreplace") as output_file:
 		output_file.write(contents)
 
+
 def convertMarkdown(inp: str) -> str:
 	return markdown.markdown(inp, extensions=md_extensions)
+
 
 def htmlSnippet_head() -> str:
 	verboseLog("[HTML] 📄 Getting head")
@@ -71,6 +76,7 @@ def htmlSnippet_head() -> str:
 		with open("templates/style.css") as ioC:
 			css: str = ioC.read()
 			return ioH.read().replace("{{css}}", css)
+
 
 def getMarkdownRegion(region: str) -> str:
 	verboseLog(f"[Markdown] 📃 Getting Markdown region: {region}")
@@ -80,6 +86,7 @@ def getMarkdownRegion(region: str) -> str:
 		endRe = re.search(f"<!---\s*region:\s*", inp[start:])
 		end: int = endRe.start() + start if endRe is not None else len(inp)
 		return inp[start:end]
+
 
 def htmlSnippet_visual() -> str:
 	verboseLog("[HTML] 📄 Getting visual")
@@ -91,9 +98,10 @@ def htmlSnippet_visual() -> str:
 			.replace("{{image}}", imgLink)\
 			.replace("{{haiku}}", haiku)
 
+
 def htmlSnippet_card(match: re.Match) -> str:
-	title : str = match.group(2)
-	link : str = match.group(1)
+	title: str = match.group(2)
+	link: str = match.group(1)
 
 	r = gh_api.repos.get(link.split("/")[-2], link.split("/")[-1])
 	desc: str = r.description if r.description is not None else "<i>No description</i>"
@@ -110,6 +118,7 @@ def htmlSnippet_card(match: re.Match) -> str:
 			.replace("{{description}}", desc)\
 			.replace("{{stars}}", htmlSnippet_stars(stars, link))
 
+
 def htmlSnippet_stars(stars: int, link: str) -> str:
 	if stars == 0:
 		return ""
@@ -118,25 +127,28 @@ def htmlSnippet_stars(stars: int, link: str) -> str:
 			.replace("{{link}}", link)\
 			.replace("{{stars}}", f"⭐{stars}")
 
+
 def htmlSnippet_footer() -> str:
 	with open("templates/footer.html") as ioF:
 		return ioF.read()\
 			.replace("{{year}}", str(datetime.datetime.now().year))\
 			.replace("{{date}}", str(datetime.datetime.now(datetime.timezone.utc).astimezone().isoformat(sep=" ", timespec="seconds")))
 
+
 def linkifyHeaders(html: str) -> str:
 	def processHeader(match: re.Match) -> str:
 		h: str = match.group(1)
 		title: str = match.group(2)
-		titleClean: str = re.sub(r'<a href="(.+)">(.+)</a>', r'\2', title) #Sanitize links from titles
+		titleClean: str = re.sub(r'<a href="(.+)">(.+)</a>', r'\2', title)  # Sanitize links from titles
 		id: str = titleClean.lower().replace(" ", "-")
 		verboseLog(f"[Linkify] 🔗 Converting header: h{h}  {titleClean} => #{id}")
-		headers.append((int(h), id, titleClean)) #Save header for TOC
+		headers.append((int(h), id, titleClean))  # Save header for TOC
 		result: str = f'<h{h} id="{id}">{title}<a href="#{id}" class="link"> 🔗</a></h{h}>'
 		return result
 
 	verboseLog("[Post-Processing] 📑 Linkifying headers")
 	return re.sub(r'<h([2-4])>(.+)</h\1>', processHeader, html)
+
 
 def generateTOC() -> str:
 	verboseLog("[Post-Processing] 📑 Generating table of contents")
@@ -163,6 +175,7 @@ def generateTOC() -> str:
 	toc += "</ul>\n"
 	with open("templates/toc.html") as ioT:
 		return ioT.read().replace("{{toc}}", toc)
+
 
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description="A script to generate TechnicJelle's portfolio website")
