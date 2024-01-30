@@ -23,6 +23,7 @@ def main() -> None:
 
 	copytree("templates/favicons", build_dir, dirs_exist_ok=True)
 	copy2("templates/CNAME", build_dir)
+	copy2("templates/.nojekyll", build_dir)
 
 	html: str = htmlSnippet_head()\
 		+ convertMarkdown(getMarkdownRegion("title"))\
