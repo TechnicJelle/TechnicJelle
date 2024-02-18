@@ -142,6 +142,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![BlueMap Offline Player Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapOfflinePlayerMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers)
 [![BlueMap Sign Extractor](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapSignExtractor&theme=dark)](https://github.com/TechnicJelle/BlueMapSignExtractor)
 [![BlueMap Chat Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapChatMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapChatMarkers)
+[![BlueMap MC Map Sync](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapMCMapSync&theme=dark)](https://github.com/TechnicJelle/BlueMapMCMapSync)
 [![BlueMap Floodgate](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFloodgate&theme=dark)](https://github.com/TechnicJelle/BlueMapFloodgate)
 [![BlueMap Structures](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapStructures&theme=dark)](https://github.com/TechnicJelle/BlueMapStructures)
 [![BlueMap Death Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapDeathMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapDeathMarkers)
