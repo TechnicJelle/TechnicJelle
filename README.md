@@ -145,6 +145,8 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![BlueMap Filtered Entities](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFilteredEntities&theme=dark)](https://github.com/TechnicJelle/BlueMapFilteredEntities)
 [![BlueMap MC Map Sync](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapMCMapSync&theme=dark)](https://github.com/TechnicJelle/BlueMapMCMapSync)
 [![BlueMap Floodgate](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFloodgate&theme=dark)](https://github.com/TechnicJelle/BlueMapFloodgate)
+[![BlueMap Spawn Marker](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapSpawnMarker&theme=dark)](https://github.com/TechnicJelle/BlueMapSpawnMarker)
+[![BlueMap Native Addon Template](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapNativeAddonTemplate&theme=dark)](https://github.com/TechnicJelle/BlueMapNativeAddonTemplate)
 [![BlueMap Structures](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapStructures&theme=dark)](https://github.com/TechnicJelle/BlueMapStructures)
 [![BlueMap Death Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapDeathMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapDeathMarkers)
 [![BlueMap BlueMap Area Control](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapAreaControl&theme=dark)](https://github.com/TechnicJelle/BlueMapAreaControl)
