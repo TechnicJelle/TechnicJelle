@@ -183,10 +183,15 @@ def linkifyHeaders(html: str) -> str:
 		h: str = match.group(1)
 		title: str = match.group(2)
 		titleClean: str = re.sub(r'<a href="(.+)">(.+)</a>', r'\2', title)  # Sanitize links from titles
-		id: str = titleClean.lower().replace(" ", "-")
+		legacy_id: str = titleClean.lower().replace(" ", "-")
+		id: str = re.sub(r'[^a-z ]', '', titleClean.lower()).strip().replace(" ", "-")
+		if id != legacy_id:
+			legacy_tag = f'<span id="{legacy_id}"></span>'
+		else:
+			legacy_tag = ""  # Don't need to supply a legacy tag if they're the same
 		verboseLog(f"[Linkify] 🔗 Converting header: h{h}  {titleClean} => #{id}")
 		headers.append((int(h), id, titleClean))  # Save header for TOC
-		result: str = f'<h{h} id="{id}">{title}<a href="#{id}" class="link"> 🔗</a></h{h}>'
+		result: str = f'<h{h} id="{id}">{legacy_tag}{title}<a href="#{id}" class="link"> 🔗</a></h{h}>'
 		return result
 
 	verboseLog("[Post-Processing] 📑 Linkifying headers")
