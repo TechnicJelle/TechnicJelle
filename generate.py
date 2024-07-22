@@ -88,8 +88,8 @@ def getMarkdownRegion(region: str) -> str:
 	verboseLog(f"[Markdown] 📃 Getting Markdown region: {region}")
 	with open(Path("README.md"), "r", encoding="utf-8") as ioR:
 		inp: str = ioR.read()
-		start: int = re.search(f"<!---\s*region:\s*{region}\s*-->", inp).end()
-		endRe = re.search(f"<!---\s*region:\s*", inp[start:])
+		start: int = re.search(rf"<!---\s*region:\s*{region}\s*-->", inp).end()
+		endRe = re.search(rf"<!---\s*region:\s*", inp[start:])
 		end: int = endRe.start() + start if endRe is not None else len(inp)
 		return inp[start:end]
 
