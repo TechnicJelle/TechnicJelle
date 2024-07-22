@@ -119,13 +119,14 @@ def htmlSnippet_cardRepo(match: re.Match) -> str:
 
 	verboseLog(f"[Generation] 🖼️ Making card for repo: {link} {title}")
 	with open("templates/card.html") as ioC:
-		return ioC.read()\
+		result = ioC.read()\
 			.replace("{{title}}", title)\
 			.replace("{{link}}", link)\
 			.replace("{{language}}", lang)\
 			.replace("{{class}}", langToCSSClass(lang))\
 			.replace("{{description}}", desc)\
 			.replace("{{stars}}", htmlSnippet_stars(stars, link))
+		return re.sub(r'\n\s*\n', '\n', result)  # Remove empty lines
 
 
 def htmlSnippet_cardGist(match: re.Match) -> str:
