@@ -184,7 +184,7 @@ def linkifyHeaders(html: str) -> str:
 		title: str = match.group(2)
 		titleClean: str = re.sub(r'<a href="(.+)">(.+)</a>', r'\2', title)  # Sanitize links from titles
 		legacy_id: str = titleClean.lower().replace(" ", "-")
-		id: str = re.sub(r'[^a-z ]', '', titleClean.lower()).strip().replace(" ", "-")
+		id: str = re.sub(r'[^a-z0-9 ]', '', titleClean.lower()).strip().replace(" ", "-")
 		if id != legacy_id:
 			legacy_tag = f'<span id="{legacy_id}"></span>'
 		else:
