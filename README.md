@@ -104,6 +104,9 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Flutter User Fonts Demo](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlutterUserFontsDemo&theme=dark)](https://github.com/TechnicJelle/FlutterUserFontsDemo)
 [![Vulkan Psychedelic Cloths](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=VulkanPsychedelicCloths&theme=dark)](https://github.com/TechnicJelle/VulkanPsychedelicCloths)
 
+## 🖥️ Desktop Software Tools
+[![BlueMap GUI](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapGUI&theme=dark)](https://github.com/TechnicJelle/BlueMapGUI)
+
 ## 📱 Apps
 [![GitDroid](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=GitDroid&theme=dark)](https://github.com/TechnicJelle/GitDroid)
 [![Wesley Chess](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WesleyChess&theme=dark)](https://github.com/TechnicJelle/WesleyChess)
