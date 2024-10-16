@@ -133,7 +133,6 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ## 🌌 Simulations
 [![Solar System](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SolarSystem&theme=dark)](https://github.com/TechnicJelle/SolarSystem)
 [![Fireworks Display in PGE](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FireworksPGE&theme=dark)](https://github.com/TechnicJelle/FireworksPGE)
-[![PWS](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=PWS&theme=dark)](https://github.com/TechnicJelle/PWS)
 
 ## 📚 Libraries
 [![Update Checker Java](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=UpdateCheckerJava&theme=dark)](https://github.com/TechnicJelle/UpdateCheckerJava)
