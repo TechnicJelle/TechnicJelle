@@ -156,5 +156,6 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![BlueMap Death Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapDeathMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapDeathMarkers)
 [![BlueMap BlueMap Area Control](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapAreaControl&theme=dark)](https://github.com/TechnicJelle/BlueMapAreaControl)
 [![BlueMap Player Control](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapPlayerControl&theme=dark)](https://github.com/TechnicJelle/BlueMapPlayerControl)
+[![BlueMap New Map](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapNewMap&theme=dark)](https://github.com/TechnicJelle/BlueMapNewMap)
 [![BlueMap Web Addons](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapWebAddons&theme=dark)](https://github.com/TechnicJelle/BlueMapWebAddons)
 [![BlueMap Custom Skin Provider](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapCustomSkinProvider&theme=dark)](https://github.com/TechnicJelle/BlueMapCustomSkinProvider)
