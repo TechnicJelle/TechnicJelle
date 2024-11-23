@@ -97,8 +97,9 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Afterparty](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_PointAndClick&theme=dark)](https://github.com/TechnicJelle/CMGT_PointAndClick)
 [![Flappy Pong](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlappyPong&theme=dark)](https://github.com/TechnicJelle/FlappyPong)
 [![Doom Game](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DoomGame&theme=dark)](https://github.com/TechnicJelle/DoomGame)
-[![She Can VR](https://github-readme-stats.vercel.app/api/pin/?username=Unrealitix&repo=Project-Customer&theme=dark)](https://github.com/Unrealitix/Project-Customer)
 [![Phurey](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Phurey&theme=dark)](https://github.com/TechnicJelle/Phurey)
+[![LEADLEG 2069](https://github-readme-stats.vercel.app/api/pin/?username=ameijboom&repo=GGJ2024&theme=dark)](https://github.com/ameijboom/GGJ2024)
+[![She Can VR](https://github-readme-stats.vercel.app/api/pin/?username=Unrealitix&repo=Project-Customer&theme=dark)](https://github.com/Unrealitix/Project-Customer)
 
 ## 💡 Tech Demos
 [![Flutter User Fonts Demo](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlutterUserFontsDemo&theme=dark)](https://github.com/TechnicJelle/FlutterUserFontsDemo)
