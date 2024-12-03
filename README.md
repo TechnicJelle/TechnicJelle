@@ -100,6 +100,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Phurey](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Phurey&theme=dark)](https://github.com/TechnicJelle/Phurey)
 [![LEADLEG 2069](https://github-readme-stats.vercel.app/api/pin/?username=ameijboom&repo=GGJ2024&theme=dark)](https://github.com/ameijboom/GGJ2024)
 [![She Can VR](https://github-readme-stats.vercel.app/api/pin/?username=Unrealitix&repo=Project-Customer&theme=dark)](https://github.com/Unrealitix/Project-Customer)
+[![Tetsaw](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Tetsaw&theme=dark)](https://github.com/TechnicJelle/Tetsaw)
 
 ## 💡 Tech Demos
 [![Flutter User Fonts Demo](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlutterUserFontsDemo&theme=dark)](https://github.com/TechnicJelle/FlutterUserFontsDemo)
