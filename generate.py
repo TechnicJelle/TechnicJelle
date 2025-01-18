@@ -115,6 +115,7 @@ def htmlSnippet_cardRepo(match: re.Match) -> str:
 	r = gh_api.repos.get(owner, repoName)
 	desc: str = r.description if r.description is not None else "<i>No description</i>"
 	lang: str = r.language
+	if lang == "ShaderLab": lang = "C#"
 	stars: int = r.stargazers_count
 
 	verboseLog(f"[Generation] 🖼️ Making card for repo: {link} {title}")
