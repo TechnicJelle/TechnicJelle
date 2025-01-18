@@ -114,7 +114,7 @@ def htmlSnippet_cardRepo(match: re.Match) -> str:
 
 	r = gh_api.repos.get(owner, repoName)
 	desc: str = r.description if r.description is not None else "<i>No description</i>"
-	lang: str = r.language
+	lang: str|None = r.language
 	if lang == "ShaderLab": lang = "C#"
 	stars: int = r.stargazers_count
 
@@ -123,10 +123,16 @@ def htmlSnippet_cardRepo(match: re.Match) -> str:
 		result = ioC.read()\
 			.replace("{{title}}", title)\
 			.replace("{{link}}", link)\
-			.replace("{{language}}", lang)\
-			.replace("{{class}}", langToCSSClass(lang))\
 			.replace("{{description}}", desc)\
 			.replace("{{stars}}", htmlSnippet_stars(stars, link))
+		if lang is None:
+			result = result \
+				.replace("{{language}}", "n/a") \
+				.replace("{{class}}", "None")
+		else:
+			result = result \
+				.replace("{{language}}", lang) \
+				.replace("{{class}}", langToCSSClass(lang))
 		return re.sub(r'\n\s*\n', '\n', result)  # Remove empty lines
 
 
