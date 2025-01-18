@@ -19,6 +19,10 @@ body {
 	font-family: "JetBrainsMono NF", "JetBrains Mono", "ui-monospace", "SFMono-Regular", "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	scroll-margin-top: 2em;
+}
+
 h1, h2 {
 	padding-bottom: 4px;
 	border-bottom: solid 1px;
