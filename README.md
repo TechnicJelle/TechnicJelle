@@ -12,31 +12,49 @@ I love learning fun things and having fun learning things!
 
 <details markdown="1"><summary>Click here to read about my full journey as a developer</summary>
 
-My first start with programming was GameMaker 8.1 Lite when I was eight. I started off only using the visual programming, and I never really got into GML. Sadly, most of the games I made back then have been lost to time.
+My first start with programming was GameMaker 8.1 Lite when I was eight.
+I started off only using the visual programming, and I never really got into GML.
+Sadly, most of the games I made back then have been lost to time.
 
-A year or two later I discovered Minecraft with its redstone, and I was sold. When command blocks were added a little later, I was even more hooked. I spent years playing with it, learning and getting better. I also loved the big tech modpacks, though my computer back then couldn't really run them well.
+A year or two later I discovered Minecraft with its redstone, and I was sold.
+When command blocks were added a little later, I was even more hooked.
+I spent years playing with it, learning and getting better.
+I also loved the big tech modpacks, though my computer back then couldn't really run them well.
 
-When I was around eleven, my primary school installed Scratch on their computers. Me being the curious type and seeing that a new icon had appeared on the desktop, I clicked it and almost immediately recognized it as being a similar thing to GameMaker. I quickly became quite good at it, though sadly most of those projects have also been lost.
+When I was around eleven, my primary school installed Scratch on their computers.
+Me being the curious type and seeing that a new icon had appeared on the desktop,
+I clicked it and almost immediately recognized it as being a similar thing to GameMaker.
+I quickly became quite good at it, though sadly most of those projects have also been lost.
 
-Around thirteen, I tried my hand at making Android Apps with Android Studio, which was my first usage of a "real" IDE. It was difficult to suddenly use such a huge, complicated program, but ultimately, I did succeed in making an app that my parents still use to this day.
-I enjoyed learning Java during the process of making these apps, though I probably should have learned Java first, and only then started making apps with it.
+Around thirteen, I tried my hand at making Android Apps with Android Studio, which was my first usage of a "real" IDE.
+It was difficult to suddenly use such a huge, complicated program, but ultimately,
+I did succeed in making an app that my parents still use to this day.
+I enjoyed learning Java during the process of making these apps, though I probably should have learned Java first,
+and only then started making apps with it.
 
-Around 2017, I played a lot of the game Scrap Mechanic, and when they released the mod tool, I was one of the first people to release a mod onto the Steam Workshop. [My most popular mod](https://steamcommunity.com/sharedfiles/filedetails/?id=876955273) has been downloaded almost 50 000 times!
+Around 2017, I played a lot of the game Scrap Mechanic, and when they released the mod tool,
+I was one of the first people to release a mod onto the Steam Workshop.
+[My most popular mod](https://steamcommunity.com/sharedfiles/filedetails/?id=876955273) has been downloaded almost 50 000 times!
 
-For the second half of secondary school, I had to buy a TI 84 CE-T calculator and I almost immediately started making useful programs and fun games in TI-Basic.
+For the second half of secondary school, I had to buy a TI 84 CE-T calculator
+and I almost immediately started making useful programs and fun games in TI-Basic.
 
 Then I discovered The Coding Train on YouTube and I started using Processing a lot.
-So for the next four or five years I used that for basically all of my programming. I don't use it that much anymore these days, but I still really like it.
+So for the next four or five years I used that for basically all of my programming.
+I don't use it that much anymore these days, but I still really like it.
 
-I have also made a few Minecraft plugins in Java, scripts in Python, websites with raw HTML and CSS, and C++ and C programs, among many other things. I like to experiment with a lot of things and learn a lot.
+I have also made a few Minecraft plugins in Java, scripts in Python, websites with raw HTML and CSS,
+and C++ and C programs, among many other things. I like to experiment with a lot of things and learn a lot.
 
 During my first year at Saxion I have learnt C# with their GXP Engine, which I'm working on overhauling with a couple of fellow students.
 I also learnt Unity, which I have since made a couple game (prototypes) with.
 
-In the vacation after that first year, I worked a lot on a project that I felt needed to exist: GitDroid. It's an Android app, made with Flutter, that allows you to easily install and update other Android apps from GitHub. It's still in development, but it's already quite usable.
+In the holiday after that first year, I worked a lot on a project that I felt needed to exist: GitDroid.
+It's an Android app, made with Flutter, that allows you to easily install and update other Android apps from GitHub.
+It's still in development, but it's already quite usable.
 
-During my second year at Saxion, I officially learnt C++ (I'd been tinkering with it off and on for a couple of years prior) and I'm also learning Unreal Engine.
-Learning Rust also seems like fun!
+During my second year at Saxion, I officially learnt C++ (I'd been tinkering with it off and on for a couple of years prior)
+and I'm also learning Unreal Engine. Learning Rust also seems like fun!
 
 I've also been continuing my use of Flutter, and I've been making some other things with it as well, such as CMGTwitch.
 During my usage of Flutter, I've naturally been using Dart, which I've grown to like quite a lot.
@@ -45,7 +63,10 @@ During my third year at Saxion, I had my first internship at a company that deve
 It was a lot of fun to work there, with such friendly and knowledgeable colleagues. I learnt a lot there.
 </details>
 
-Not only do I really like making games, I also really enjoy making tools for people to make their lives easier in some way. Some examples of things I made for other people are [WesleyChess](https://github.com/TechnicJelle/WesleyChess), [LifeWrench](https://github.com/TechnicJelle/LifeWrench), [Hydr8](https://github.com/TechnicJelle/DiscordHydr8Bot), and [Simple Block Commands](https://github.com/TechnicJelle/SimpleBlockCommands). Hardly a week goes by where I don't automate some part of my own or someone else's life.
+Not only do I really like making games, I also really enjoy making tools for people to make their lives easier in some way.
+Some examples of things I made for other people are [WesleyChess](https://github.com/TechnicJelle/WesleyChess), [LifeWrench](https://github.com/TechnicJelle/LifeWrench),
+[Hydr8](https://github.com/TechnicJelle/DiscordHydr8Bot), and [Simple Block Commands](https://github.com/TechnicJelle/SimpleBlockCommands).
+Hardly a week goes by where I don't automate some part of my own or someone else's life.
 
 My logo was made by myself with Blender.
 Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJelle)
