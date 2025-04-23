@@ -46,11 +46,11 @@ h4:hover > a.link {
 	font-size: 0.7em;
 	margin-left: 0.3em;
 	position: absolute; /*do not actually take up any space, to prevent layout shifts*/
-	bottom: 0.3em;
+	top: 0.2em;
 }
 /* h2 needs a bit more offset */
 h2:hover > a.link {
-	bottom: 1em;
+	top: 0.3em;
 }
 
 main, h1, h2, .card {

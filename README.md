@@ -172,7 +172,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ## 📚 Libraries
 [![Update Checker Java](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=UpdateCheckerJava&theme=dark)](https://github.com/TechnicJelle/UpdateCheckerJava)
 
-## ⛏ Minecraft Plugins
+## ⛏️ Minecraft Plugins
 [![MCUtils](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=MCUtils&theme=dark)](https://github.com/TechnicJelle/MCUtils)
 [![Simple Block Commands](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SimpleBlockCommands&theme=dark)](https://github.com/TechnicJelle/SimpleBlockCommands)
 [![Discord Inviter](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordInviter&theme=dark)](https://github.com/TechnicJelle/DiscordInviter)
