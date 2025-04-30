@@ -150,7 +150,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ## 🌐 Websites
 [![TechnicJelle](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=TechnicJelle&theme=dark)](https://github.com/TechnicJelle/TechnicJelle)
 [![CMGTwitch](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGTwitch&theme=dark)](https://github.com/TechnicJelle/CMGTwitch)
-[![BlueMap Marker generator](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapMarkerGenerator&theme=dark)](https://github.com/TechnicJelle/BlueMapMarkerGenerator)
+[![BlueMap Marker Generator](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapMarkerGenerator&theme=dark)](https://github.com/TechnicJelle/BlueMapMarkerGenerator)
 
 ## 🔌 Server Software
 [![Post To Websocket Broadcaster (Dart)](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=PostToWebsocketBroadcasterDart&theme=dark)](https://github.com/TechnicJelle/PostToWebsocketBroadcasterDart)
