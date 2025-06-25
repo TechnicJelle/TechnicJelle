@@ -78,7 +78,7 @@ summary {
 body {
 	max-width: 900px;
 	margin: auto;
-	padding: 0 24px;
+	padding: 0 2px;
 
 	/* Push footer to bottom */
 	min-height: 100%;
