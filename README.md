@@ -80,7 +80,7 @@ Some examples of things I made for other people are [WesleyChess](https://github
 Hardly a week goes by where I don't automate some part of my own or someone else's life.
 
 My logo was made by myself with Blender.
-Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJelle)
+Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJelle).
 
 <!--- region: connect -->
 ## Find me on other platforms
