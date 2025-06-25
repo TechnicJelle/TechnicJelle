@@ -188,14 +188,14 @@ aside li {
 }
 
 /* Language colours */
-.card .AutoHotkey {color: #6594B9;}
-.card .C {color: #555555;}
-.card .Cpp {color: #F34B7D;}
-.card .Cs {color: #178600;}
-.card .Dart {color: #00B4AB;}
-.card .Java {color: #B07219;}
-.card .JavaScript {color: #F1E05A;}
-.card .Processing {color: #0096D8;}
-.card .Python {color: #3572A5;}
-.card .Stylus {color: #FF6347;}
-.card .None {color: rgba(255, 255, 255, 0.5);}
+.lang.AutoHotkey {color: #6594B9;}
+.lang.C {color: #555555;}
+.lang.Cpp {color: #F34B7D;}
+.lang.Cs {color: #178600;}
+.lang.Dart {color: #00B4AB;}
+.lang.Java {color: #B07219;}
+.lang.JavaScript {color: #F1E05A;}
+.lang.Processing {color: #0096D8;}
+.lang.Python {color: #3572A5;}
+.lang.Stylus {color: #FF6347;}
+.lang.None {color: rgba(255, 255, 255, 0.5);}
