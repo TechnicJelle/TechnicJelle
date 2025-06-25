@@ -11,7 +11,7 @@ body {
 	background: #151515;
 	color: var(--main-text-colour);
 
-	font-family: "Segoe UI", "Roboto", "Helvetica", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+	font-family: "Segoe UI", "Roboto", "Helvetica", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
 	font-size: 16px;
 }
 
