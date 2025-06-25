@@ -25,17 +25,22 @@ def main() -> None:
 	copy2("templates/CNAME", build_dir)
 	copy2("templates/.nojekyll", build_dir)
 
+	projects: str = convertMarkdown(getMarkdownRegion("projects"))
+	projects: str = re.sub(r'(?:<p>)?<a.+(https://github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_cardRepo, projects)
+	projects: str = re.sub(r'(?:<p>)?<a.+(https://gist\.github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_cardGist, projects)
+	projects: str = re.sub(r'(\s*<h([23])>.*</h\2>)', r'\n</div>\1<div class="two-col">', projects)  # Remove the first ending div that was added by the previous regex
+	projects: str = "\n" + re.sub(r'^\s*</div.*?>', "", projects) + "</div>\n\n"  # Close the last div
+
+	print(projects)
+
 	html: str = htmlSnippet_head()\
 		+ convertMarkdown(getMarkdownRegion("title"))\
 		+ htmlSnippet_visual()\
 		+ convertMarkdown(getMarkdownRegion("intro"))\
 		+ convertMarkdown(getMarkdownRegion("connect"))\
 		+ convertMarkdown(getMarkdownRegion("experiences"))\
-		+ convertMarkdown(getMarkdownRegion("projects"))\
+		+ projects\
 		+ htmlSnippet_footer()
-
-	html = re.sub(r'(?:<p>)?<a.+(https://github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_cardRepo, html)
-	html = re.sub(r'(?:<p>)?<a.+(https://gist\.github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_cardGist, html)
 
 	html = linkifyHeaders(html)
 
