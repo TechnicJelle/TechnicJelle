@@ -62,11 +62,15 @@ During my usage of Flutter, I've naturally been using Dart, which I've grown to 
 During my third year at Saxion, I had my first internship at a company that develops XR trainings for other businesses.
 It was a lot of fun to work there, with such friendly and knowledgeable colleagues. I learnt a lot there.
 
-In my fourth and last year at Saxion, I was a part of a ten-person group,
+In the first half of my fourth and last year at Saxion, I was a part of a ten-person team,
 where we worked on an [Unreal Engine VR Experience](https://technicjelle.tumblr.com/tagged/Weaving%20Factory) together.
 My role in the project was of Infrastructure Engineer, and as part of that, I set up Perforce Helix Core as Version Control System for us all to use.
 In addition to that, I set up automated builds with Jenkins, to keep track of build-breaking bugs that might slip in.  
 In that same time, I also worked as a Teacher's Assistant for Saxion, helping with the C++ and 3D Rendering courses.
+
+In the second half, I did a Graduation Internship at [Rythe Interactive](https://github.com/Rythe-Interactive), as a Graphics Programmer.
+I was tasked with creating prototypes for the new Low Level Rendring Interface for the next rewrite of the engine.
+During this project, I solidified my knowledge of the basics of modern GPU Programming with Vulkan, but also SDL3's GPU API.
 
 </details>
 
