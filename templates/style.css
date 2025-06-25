@@ -170,18 +170,19 @@ aside li {
 	padding: 8px;
 	position: relative;
 }
+
+.card .stars {
+	position: absolute;
+	top: 4px;
+	right: 8px;
+}
+
 @media screen and (min-width: 700px) {
 	.two-col {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 4px;
 	}
-}
-
-.card .stars {
-	position: absolute;
-	top: 4px;
-	right: 8px;
 }
 
 /* Language colours */
