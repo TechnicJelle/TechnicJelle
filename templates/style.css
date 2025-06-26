@@ -169,6 +169,9 @@ aside li {
 	border: 1px solid;
 	padding: 8px;
 	position: relative;
+
+	display: flex;
+	flex-direction: column;
 }
 
 .card .stars {
@@ -177,12 +180,21 @@ aside li {
 	right: 8px;
 }
 
+.card h4 {
+	margin-bottom: 2px;
+}
+
 @media screen and (min-width: 700px) {
 	.two-col {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 4px;
 	}
+}
+
+.lang {
+	padding-top: 4px;
+	margin-top: auto;
 }
 
 /* Language colours */
