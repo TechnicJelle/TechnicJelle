@@ -23,6 +23,7 @@ def main() -> None:
 	build_dir.mkdir(parents=True, exist_ok=True)
 
 	copytree("copy", build_dir, dirs_exist_ok=True)
+	copytree("images", build_dir / "images", dirs_exist_ok=True)
 
 	projects: str = convertMarkdown(getMarkdownRegion("projects"))
 	projects: str = re.sub(r'(?:<p>)?<a.+(https://github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_cardRepo, projects)

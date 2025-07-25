@@ -5,8 +5,10 @@
 |---|:---|
 
 <!--- region: intro -->
-My name is Jelle ([IPA](https://en.wikipedia.org/wiki/Help:IPA/Dutch): /ˈjɛ.lə/), and I like creating stuff!
-I'm currently studying _Creative Media and Game Technologies_ at _Saxion University of Applied Sciences_ to become a better game developer.
+My name is Jelle ([IPA](https://en.wikipedia.org/wiki/Help:IPA/Dutch): /ˈjɛ.lə/), and I like creating stuff!  
+I am currently looking for a Game Graphics Programming job.  
+In July 2025, I graduated [Cum Laude (With Honours)](https://en.wikipedia.org/wiki/Latin_honors#Netherlands)
+the study _Creative Media and Game Technologies_ at _Saxion University of Applied Sciences_.
 
 I love learning fun things and having fun learning things!
 
@@ -72,6 +74,10 @@ In the second half, I did a Graduation Internship at [Rythe Interactive](https:/
 I was tasked with creating prototypes for the new Low Level Rendring Interface for the next rewrite of the engine.
 During this project, I solidified my knowledge of the basics of modern GPU Programming with Vulkan, but also SDL3's GPU API.
 You can read the graduation thesis I wrote for this [here](https://github.com/TechnicJelle/CMGT_GraduationReport)!
+
+In July 2025, I graduated [Cum Laude (With Honours)](https://en.wikipedia.org/wiki/Latin_honors#Netherlands)
+the study _Creative Media and Game Technologies_ at _Saxion University of Applied Sciences_.
+![A photo of a Saxion diploma, showing the study name "Creative Media and Game Technologies", the personal name "Jelle", and the degree type "Bachelor of Science"](images/cmgt_diploma.webp)
 
 </details>
 
