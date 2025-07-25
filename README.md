@@ -87,7 +87,6 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ## Find me on other platforms
 [![E-Mail](https://img.shields.io/badge/EMail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:technicjelleplay@gmail.com)
 [![Blog](https://img.shields.io/badge/Blog-36465D?style=for-the-badge&logo=tumblr&logoColor=white)](https://technicjelle.tumblr.com/)
-[![Twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/TechnicJelle/)
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/technicjelle/)
 [![ArtStation](https://img.shields.io/badge/ArtStation-13AFF0?style=for-the-badge&logo=artstation&logoColor=white)](https://www.artstation.com/TechnicJelle)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@TechnicJelle)
