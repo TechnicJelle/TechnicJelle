@@ -1,10 +1,11 @@
 import argparse
 import datetime
-from pathlib import Path
-from shutil import copytree, copy2
-from typing import Union, Callable
-import markdown
 import re
+from pathlib import Path
+from shutil import copytree
+from typing import Union, Callable
+
+import markdown
 from ghapi.all import GhApi
 
 build_dir: Path
