@@ -21,9 +21,7 @@ def main() -> None:
 	print("[Main] ✔️ Starting website generation")
 	build_dir.mkdir(parents=True, exist_ok=True)
 
-	copytree("templates/favicons", build_dir, dirs_exist_ok=True)
-	copy2("templates/CNAME", build_dir)
-	copy2("templates/.nojekyll", build_dir)
+	copytree("copy", build_dir, dirs_exist_ok=True)
 
 	projects: str = convertMarkdown(getMarkdownRegion("projects"))
 	projects: str = re.sub(r'(?:<p>)?<a.+(https://github.com/.+/.+)">.+img alt="(.+)" src=.+vercel.+/a>(?:</p>)?', htmlSnippet_cardRepo, projects)
