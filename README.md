@@ -130,6 +130,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 [![Space Combat 3DX](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SpaceCombat3DX&theme=dark)](https://github.com/TechnicJelle/SpaceCombat3DX)
 [![DigiSwamp AG](https://github-readme-stats.vercel.app/api/pin/?username=Unrealitix&repo=Project-Showoff&theme=dark)](https://github.com/Unrealitix/Project-Showoff)
 [![Sea Spelunking](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT-Project-Innovation&theme=dark)](https://github.com/TechnicJelle/CMGT-Project-Innovation)
+[![Fox Hunt](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DWM_WARLOCK&theme=dark)](https://github.com/TechnicJelle/DWM_WARLOCK)
 [![Geodesic](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=TEA_TEB&theme=dark)](https://github.com/TechnicJelle/TEA_TEB)
 [![CMGT Intake](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_Intake&theme=dark)](https://github.com/TechnicJelle/CMGT_Intake)
 [![Afterparty](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_PointAndClick&theme=dark)](https://github.com/TechnicJelle/CMGT_PointAndClick)
@@ -175,6 +176,7 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 
 ## 🤖 Discord Bots
 [![Hydr8](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordHydr8Bot&theme=dark)](https://github.com/TechnicJelle/DiscordHydr8Bot)
+[![Glyfi](https://github-readme-stats.vercel.app/api/pin/?username=glyphs-fi&repo=GlyfiBot&theme=dark)](https://github.com/glyphs-fi/GlyfiBot)
 
 ## 🎨 Skins
 [![Wikipedia Fix](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WikipediaFix&theme=dark)](https://github.com/TechnicJelle/WikipediaFix)
