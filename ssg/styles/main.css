@@ -214,14 +214,14 @@ aside li {
 .lang.Stylus {color: #FF6347;}
 .lang.None {color: rgba(255, 255, 255, 0.5);}
 
-.card>p.tags {
+p.tags {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	gap: 0.3em;
 }
 
-.card>p.tags>span {
+p.tags>span {
 	background: black;
 	border-radius: 4px;
 	padding: 1px 4px;

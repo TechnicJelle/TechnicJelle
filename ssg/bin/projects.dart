@@ -4,12 +4,6 @@ import "package:checked_yaml/checked_yaml.dart";
 import "package:ssg/html.dart";
 import "package:ssg/utils.dart";
 
-class ProjectCategory {
-  List<Project> projects;
-
-  ProjectCategory({required this.projects});
-}
-
 class Project {
   String name;
   String url;
@@ -19,10 +13,15 @@ class Project {
   Project({required this.name, required this.url, required this.tags, required this.blog});
 }
 
-Map<String, ProjectCategory> read(Map<dynamic, dynamic>? m) {
+final Map<String, List<Project>> categoriesProjectsMap = checkedYamlDecode(
+  File("projects.yml").readAsStringSync(),
+  _parse,
+);
+
+Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
   if (m == null) throw Exception("Somehow, m was null!?");
 
-  final Map<String, ProjectCategory> categories = {};
+  final Map<String, List<Project>> categories = {};
   m.forEach((key, value) {
     if (key is! String || value is! List) throw Exception("Unexpected element 1");
 
@@ -50,9 +49,34 @@ Map<String, ProjectCategory> read(Map<dynamic, dynamic>? m) {
       projects.add(Project(name: key2, url: value2, tags: projectTags, blog: blog));
     }
 
-    categories[key] = ProjectCategory(projects: projects);
+    categories[key] = projects;
   });
   return categories;
+}
+
+Section generateTags() {
+  final Set<String> tagsSet = {};
+  categoriesProjectsMap.forEach(
+    (String category, List<Project> projects) {
+      for (final project in projects) {
+        tagsSet.addAll(project.tags);
+      }
+    },
+  );
+
+  final List<String> tagsList = tagsSet.toList()..sort();
+
+  return Section(
+    children: [
+      P(
+        classes: ["tags"],
+        children: [
+          T("Tags: "),
+          ...tagsList.map((String tag) => Span(children: [T(tag)])),
+        ],
+      ),
+    ],
+  );
 }
 
 Element generateProjectCard(Project project) {
@@ -65,6 +89,7 @@ Element generateProjectCard(Project project) {
           A(href: project.url, children: [T(project.name)]),
         ],
       ),
+      P.text("Description goes here!"),
       if (project.blog != null) A(href: project.blog!, children: [T("Blog →")]),
       P(
         classes: ["tags"],
@@ -78,17 +103,17 @@ Element generateProjectCard(Project project) {
 }
 
 List<Element> generateProjects() {
-  final List<Element> elements = [];
-  checkedYamlDecode(
-    File("projects.yml").readAsStringSync(),
-    read,
-  ).forEach((String key, ProjectCategory value) {
+  final List<Element> elements = [
+    H2(children: [T("Projects")]),
+    generateTags(),
+  ];
+  categoriesProjectsMap.forEach((String category, List<Project> projects) {
     elements.addAll([
-      H2(children: [T(key)]),
+      H3(children: [T(category)]),
       Div(
         classes: ["two-col"],
         children: [
-          ...value.projects.map(generateProjectCard),
+          ...projects.map(generateProjectCard),
         ],
       ),
     ]);
