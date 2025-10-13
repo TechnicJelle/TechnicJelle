@@ -15,7 +15,7 @@ jobs:
 
       - name: Install Dart SDK
         run: |
-          wget "https://storage.googleapis.com/dart-archive/channels/stable/release/latest/linux_packages/dart_${{ env.DART_SDK_VERSION }}_amd64.deb"
+          wget --quiet "https://storage.googleapis.com/dart-archive/channels/stable/release/latest/linux_packages/dart_${{ env.DART_SDK_VERSION }}_amd64.deb"
           sudo dpkg -i "dart_${{ env.DART_SDK_VERSION }}_amd64.deb"
 
       - name: Download SSG dependencies
