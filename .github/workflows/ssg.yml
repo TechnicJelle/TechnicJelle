@@ -17,10 +17,13 @@ jobs:
           echo 'deb [signed-by=/usr/share/keyrings/dart.gpg arch=amd64] https://storage.googleapis.com/download.dartlang.org/linux/debian stable main' | sudo tee /etc/apt/sources.list.d/dart_stable.list
           sudo apt-get update && sudo apt-get install dart
 
-      - name: Build the website
+      - name: Download SSG dependencies
+        run: cd ssg && dart pub get
+
+      - name: Build the Website
         run: dart run ssg/bin/main.dart
 
-      - name: Upload a build artifact
+      - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4
         with:
           path: 'build'
