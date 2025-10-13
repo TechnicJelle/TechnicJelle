@@ -57,8 +57,8 @@ class Span extends Element {
 
   @override
   String build() {
-    return "<span${classes.classes()}>\n"
-        '${children.map((el) => el.build()).join("\n\n")}\n'
+    return "<span${classes.classes()}>"
+        '${children.map((el) => el.build()).join(" ")}'
         "</span>";
   }
 }
