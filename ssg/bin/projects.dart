@@ -1,8 +1,8 @@
 import "dart:io";
 
-import "package:bindings_html/html.dart";
-import "package:bindings_html/utils.dart";
 import "package:checked_yaml/checked_yaml.dart";
+import "package:ssg/html.dart";
+import "package:ssg/utils.dart";
 
 class ProjectCategory {
   List<Project> projects;

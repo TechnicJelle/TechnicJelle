@@ -1,5 +1,5 @@
-import "package:bindings_html/html/base.dart";
-import "package:bindings_html/utils.dart";
+import "package:ssg/html/base.dart";
+import "package:ssg/utils.dart";
 
 class H1 extends Element {
   String? id;

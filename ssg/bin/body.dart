@@ -1,7 +1,7 @@
 import "dart:io";
 
-import "package:bindings_html/html.dart";
-import "package:bindings_html/markdown.dart";
+import "package:ssg/html.dart";
+import "package:ssg/markdown.dart";
 
 import "projects.dart";
 

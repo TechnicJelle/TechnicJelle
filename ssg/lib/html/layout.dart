@@ -1,5 +1,5 @@
-import "package:bindings_html/html.dart";
-import "package:bindings_html/utils.dart";
+import "package:ssg/html.dart";
+import "package:ssg/utils.dart";
 
 class Div extends Element {
   List<Element> children;

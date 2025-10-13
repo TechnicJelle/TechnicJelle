@@ -1,5 +1,5 @@
-import "package:bindings_html/html/body.dart";
-import "package:bindings_html/html/head.dart";
+import "package:ssg/html/body.dart";
+import "package:ssg/html/head.dart";
 
 abstract class Element {
   String build();

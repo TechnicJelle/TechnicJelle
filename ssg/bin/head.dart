@@ -1,6 +1,6 @@
 import "dart:io";
 
-import "package:bindings_html/html.dart";
+import "package:ssg/html.dart";
 
 Head generateHead() => Head(
   title: "TechnicJelle",
@@ -28,6 +28,6 @@ Head generateHead() => Head(
     ),
   ],
   styles: [
-    Style(css: File("styles/main.css").readAsStringSync()),
+    Style(css: File("ssg/styles/main.css").readAsStringSync()),
   ],
 );

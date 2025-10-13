@@ -1,7 +1,7 @@
 import "dart:io";
 
-import "package:bindings_html/html.dart";
 import "package:path/path.dart" as p;
+import "package:ssg/html.dart";
 
 import "body.dart";
 import "head.dart";
@@ -15,7 +15,7 @@ void main(List<String> arguments) {
 
   final Directory build = Directory("build")..createSync();
 
-  final Directory copy = Directory("copy");
+  final Directory copy = Directory("ssg/copy");
   for (final FileSystemEntity fse in copy.listSync()) {
     if (fse is File) {
       fse.copySync(p.join(build.path, p.basename(fse.path)));

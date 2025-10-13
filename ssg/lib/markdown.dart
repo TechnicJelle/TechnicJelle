@@ -1,6 +1,6 @@
 import "dart:io";
 
-import "package:bindings_html/html.dart";
+import "package:ssg/html.dart";
 
 //TODO: Make not terrible
 

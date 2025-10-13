@@ -1,4 +1,4 @@
-import "package:bindings_html/html/base.dart";
+import "package:ssg/html/base.dart";
 
 class Head extends Element {
   String title;
