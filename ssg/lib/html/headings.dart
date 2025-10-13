@@ -1,92 +1,42 @@
 import "package:ssg/html/base.dart";
 import "package:ssg/utils.dart";
 
-class H1 extends Element {
+class Hn extends Element {
+  int level;
   String? id;
   List<Element> children;
   List<String>? classes;
 
-  H1({required this.children, this.classes, this.id});
+  Hn({required this.level, required this.children, this.classes, this.id});
 
   @override
   String build() {
-    return "<h1${id.id()}${classes.classes()}>"
+    return "<h$level${id.id()}${classes.classes()}>"
         '${children.map((el) => el.build()).join("\n\n")}'
-        "</h1>";
+        "</h$level>";
   }
 }
 
-class H2 extends Element {
-  String? id;
-  List<Element> children;
-  List<String>? classes;
-
-  H2({required this.children, this.classes, this.id});
-
-  @override
-  String build() {
-    return "<h2${id.id()}${classes.classes()}>"
-        '${children.map((el) => el.build()).join("\n\n")}'
-        "</h2>";
-  }
+class H1 extends Hn {
+  H1({required super.children, super.classes, super.id}) : super(level: 1);
 }
 
-class H3 extends Element {
-  String? id;
-  List<Element> children;
-  List<String>? classes;
-
-  H3({required this.children, this.classes, this.id});
-
-  @override
-  String build() {
-    return "<h3${id.id()}${classes.classes()}>"
-        '${children.map((el) => el.build()).join("\n\n")}'
-        "</h3>";
-  }
+class H2 extends Hn {
+  H2({required super.children, super.classes, super.id}) : super(level: 2);
 }
 
-class H4 extends Element {
-  String? id;
-  List<Element> children;
-  List<String>? classes;
-
-  H4({required this.children, this.classes, this.id});
-
-  @override
-  String build() {
-    return "<h4${id.id()}${classes.classes()}>"
-        '${children.map((el) => el.build()).join("\n\n")}'
-        "</h4>";
-  }
+class H3 extends Hn {
+  H3({required super.children, super.classes, super.id}) : super(level: 3);
 }
 
-class H5 extends Element {
-  String? id;
-  List<Element> children;
-  List<String>? classes;
-
-  H5({required this.children, this.classes, this.id});
-
-  @override
-  String build() {
-    return "<h5${id.id()}${classes.classes()}>"
-        '${children.map((el) => el.build()).join("\n\n")}'
-        "</h5>";
-  }
+class H4 extends Hn {
+  H4({required super.children, super.classes, super.id}) : super(level: 4);
 }
 
-class H6 extends Element {
-  String? id;
-  List<Element> children;
-  List<String>? classes;
+class H5 extends Hn {
+  H5({required super.children, super.classes, super.id}) : super(level: 5);
+}
 
-  H6({required this.children, this.classes, this.id});
-
-  @override
-  String build() {
-    return "<h6${id.id()}${classes.classes()}>"
-        '${children.map((el) => el.build()).join("\n\n")}'
-        "</h6>";
-  }
+class H6 extends Hn {
+  H6({required super.children, super.classes, super.id}) : super(level: 6);
 }
