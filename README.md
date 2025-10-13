@@ -71,7 +71,7 @@ In addition to that, I set up automated builds with Jenkins, to keep track of bu
 In that same time, I also worked as a Teacher's Assistant for Saxion, helping with the C++ and 3D Rendering courses.
 
 In the second half, I did a Graduation Internship at [Rythe Interactive](https://github.com/Rythe-Interactive), as a Graphics Programmer.
-I was tasked with creating prototypes for the new Low Level Rendring Interface for the next rewrite of the engine.
+I was tasked with creating prototypes for the new Low Level Rendering Interface for the next rewrite of the engine.
 During this project, I solidified my knowledge of the basics of modern GPU Programming with Vulkan, but also SDL3's GPU API.
 You can read the graduation thesis I wrote for this [here](https://github.com/TechnicJelle/CMGT_GraduationReport)!
 
