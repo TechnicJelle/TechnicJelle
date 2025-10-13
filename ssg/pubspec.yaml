@@ -1,0 +1,15 @@
+name: bindings_html
+description: HTML bindings for Dart
+version: 0.0.1
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  checked_yaml: ^2.0.4
+  json_serializable: ^6.11.1
+  path: ^1.9.0
+
+dev_dependencies:
+  very_good_analysis: ^10.0.0

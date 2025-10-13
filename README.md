@@ -1,7 +1,8 @@
 <!--- region: title -->
 # Hi there! 👋
+
 <!--- region: visual -->
-| <img src="https://raw.githubusercontent.com/TechnicJelle/TechnicJelle/badges/Default(128)0001-0051.gif" alt="animated version of my logo"> | Programming's my art<br>Empty files are my canvas<br>And code is my brush |
+| <img src="images/logo-128.gif" alt="animated version of my logo"> | Programming's my art<br>Empty files are my canvas<br>And code is my brush |
 |---|:---|
 
 <!--- region: intro -->
@@ -122,91 +123,3 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 
 ![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)
 ![Krita](https://img.shields.io/badge/Krita-3BABFF?style=for-the-badge&logo=krita&logoColor=white)
-
-<!--- {{toc}} -->
-
-<!--- region: projects -->
-## 🎮 Games
-[![Space Combat 3DX](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SpaceCombat3DX&theme=dark)](https://github.com/TechnicJelle/SpaceCombat3DX)
-[![DigiSwamp AG](https://github-readme-stats.vercel.app/api/pin/?username=Unrealitix&repo=Project-Showoff&theme=dark)](https://github.com/Unrealitix/Project-Showoff)
-[![Sea Spelunking](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT-Project-Innovation&theme=dark)](https://github.com/TechnicJelle/CMGT-Project-Innovation)
-[![Fox Hunt](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DWM_WARLOCK&theme=dark)](https://github.com/TechnicJelle/DWM_WARLOCK)
-[![Geodesic](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=TEA_TEB&theme=dark)](https://github.com/TechnicJelle/TEA_TEB)
-[![CMGT Intake](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_Intake&theme=dark)](https://github.com/TechnicJelle/CMGT_Intake)
-[![Afterparty](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGT_PointAndClick&theme=dark)](https://github.com/TechnicJelle/CMGT_PointAndClick)
-[![Chthonic Metal](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Chthonic_Metal&theme=dark)](https://github.com/TechnicJelle/Chthonic_Metal)
-[![Phurey](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Phurey&theme=dark)](https://github.com/TechnicJelle/Phurey)
-[![Doom Game](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DoomGame&theme=dark)](https://github.com/TechnicJelle/DoomGame)
-[![Flappy Pong](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlappyPong&theme=dark)](https://github.com/TechnicJelle/FlappyPong)
-[![LEADLEG 2069](https://github-readme-stats.vercel.app/api/pin/?username=ameijboom&repo=GGJ2024&theme=dark)](https://github.com/ameijboom/GGJ2024)
-[![Catoms](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Project-Final-Approach&theme=dark)](https://github.com/TechnicJelle/Project-Final-Approach)
-[![She Can VR](https://github-readme-stats.vercel.app/api/pin/?username=Unrealitix&repo=Project-Customer&theme=dark)](https://github.com/Unrealitix/Project-Customer)
-[![Tetsaw](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=Tetsaw&theme=dark)](https://github.com/TechnicJelle/Tetsaw)
-
-## ⚙️ Game Engines
-[![NeoGXP](https://github-readme-stats.vercel.app/api/pin/?username=NeoGXP&repo=NeoGXP&theme=dark)](https://github.com/NeoGXP/NeoGXP)
-[![LLRI2 Experiments](https://github-readme-stats.vercel.app/api/pin/?username=Rythe-Interactive&repo=LLRI2-Experiments&theme=dark)](https://github.com/Rythe-Interactive/LLRI2-Experiments)
-
-## 💡 Tech Demos
-[![Unreal Engine 5 GitHub Actions VR Template](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=UE5_GHActions_VRTemplate&theme=dark)](https://github.com/TechnicJelle/UE5_GHActions_VRTemplate)
-[![Flutter User Fonts Demo](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FlutterUserFontsDemo&theme=dark)](https://github.com/TechnicJelle/FlutterUserFontsDemo)
-[![Vulkan Psychedelic Cloths](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=VulkanPsychedelicCloths&theme=dark)](https://github.com/TechnicJelle/VulkanPsychedelicCloths)
-
-## 🖥️ Desktop Software Tools
-[![BlueMap GUI](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapGUI&theme=dark)](https://github.com/TechnicJelle/BlueMapGUI)
-
-## 📱 Apps
-[![GitDroid](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=GitDroid&theme=dark)](https://github.com/TechnicJelle/GitDroid)
-[![Wesley Chess](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WesleyChess&theme=dark)](https://github.com/TechnicJelle/WesleyChess)
-[![TwitDirect](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=TwitDirect&theme=dark)](https://github.com/TechnicJelle/TwitDirect)
-[![Vanir (UIMS)](https://github-readme-stats.vercel.app/api/pin/?username=Unrealitix&repo=UIMS.App&theme=dark)](https://github.com/Unrealitix/UIMS.App)
-[![Life Wrench](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=LifeWrench&theme=dark)](https://github.com/TechnicJelle/LifeWrench)
-
-## 🌐 Websites
-[![TechnicJelle](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=TechnicJelle&theme=dark)](https://github.com/TechnicJelle/TechnicJelle)
-[![CMGTwitch](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=CMGTwitch&theme=dark)](https://github.com/TechnicJelle/CMGTwitch)
-[![BlueMap Marker Generator](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapMarkerGenerator&theme=dark)](https://github.com/TechnicJelle/BlueMapMarkerGenerator)
-
-## 🔌 Server Software
-[![Post To Websocket Broadcaster (Dart)](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=PostToWebsocketBroadcasterDart&theme=dark)](https://github.com/TechnicJelle/PostToWebsocketBroadcasterDart)
-
-## 📝 Scripts
-[![My AutoHotKey Scripts](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=My-AutoHotKey-Scripts&theme=dark)](https://github.com/TechnicJelle/My-AutoHotKey-Scripts)
-[![Discord Reactor](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordReactor&theme=dark)](https://github.com/TechnicJelle/DiscordReactor)
-
-## 🤖 Discord Bots
-[![Hydr8](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordHydr8Bot&theme=dark)](https://github.com/TechnicJelle/DiscordHydr8Bot)
-[![Glyfi](https://github-readme-stats.vercel.app/api/pin/?username=glyphs-fi&repo=GlyfiBot&theme=dark)](https://github.com/glyphs-fi/GlyfiBot)
-
-## 🎨 Skins
-[![Wikipedia Fix](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=WikipediaFix&theme=dark)](https://github.com/TechnicJelle/WikipediaFix)
-
-## 🌌 Simulations
-[![Solar System](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SolarSystem&theme=dark)](https://github.com/TechnicJelle/SolarSystem)
-[![Fireworks Display in PGE](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=FireworksPGE&theme=dark)](https://github.com/TechnicJelle/FireworksPGE)
-
-## 📚 Libraries
-[![Update Checker Java](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=UpdateCheckerJava&theme=dark)](https://github.com/TechnicJelle/UpdateCheckerJava)
-
-## ⛏️ Minecraft Plugins
-[![MCUtils](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=MCUtils&theme=dark)](https://github.com/TechnicJelle/MCUtils)
-[![Simple Block Commands](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=SimpleBlockCommands&theme=dark)](https://github.com/TechnicJelle/SimpleBlockCommands)
-[![Discord Inviter](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=DiscordInviter&theme=dark)](https://github.com/TechnicJelle/DiscordInviter)
-
-### 🌐 [BlueMap](https://github.com/BlueMap-Minecraft/BlueMap#readme) Addons
-[![BMUtils](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BMUtils&theme=dark)](https://github.com/TechnicJelle/BMUtils)
-[![BlueMap Offline Player Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapOfflinePlayerMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers)
-[![BlueMap Sign Extractor](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapSignExtractor&theme=dark)](https://github.com/TechnicJelle/BlueMapSignExtractor)
-[![BlueMap Chat Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapChatMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapChatMarkers)
-[![BlueMap Filtered Entities](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFilteredEntities&theme=dark)](https://github.com/TechnicJelle/BlueMapFilteredEntities)
-[![BlueMap MC Map Sync](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapMCMapSync&theme=dark)](https://github.com/TechnicJelle/BlueMapMCMapSync)
-[![BlueMap Floodgate](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapFloodgate&theme=dark)](https://github.com/TechnicJelle/BlueMapFloodgate)
-[![BlueMap Spawn Marker](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapSpawnMarker&theme=dark)](https://github.com/TechnicJelle/BlueMapSpawnMarker)
-[![BlueMap Native Addon Template](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapNativeAddonTemplate&theme=dark)](https://github.com/TechnicJelle/BlueMapNativeAddonTemplate)
-[![BlueMap Structures](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapStructures&theme=dark)](https://github.com/TechnicJelle/BlueMapStructures)
-[![BlueMap Death Markers](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapDeathMarkers&theme=dark)](https://github.com/TechnicJelle/BlueMapDeathMarkers)
-[![BlueMap BlueMap Area Control](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapAreaControl&theme=dark)](https://github.com/TechnicJelle/BlueMapAreaControl)
-[![BlueMap Player Control](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapPlayerControl&theme=dark)](https://github.com/TechnicJelle/BlueMapPlayerControl)
-[![BlueMap New Map](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapNewMap&theme=dark)](https://github.com/TechnicJelle/BlueMapNewMap)
-[![BlueMap Web Addons](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapWebAddons&theme=dark)](https://github.com/TechnicJelle/BlueMapWebAddons)
-[![BlueMap Custom Skin Provider](https://github-readme-stats.vercel.app/api/pin/?username=TechnicJelle&repo=BlueMapCustomSkinProvider&theme=dark)](https://github.com/TechnicJelle/BlueMapCustomSkinProvider)
