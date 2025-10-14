@@ -5,8 +5,13 @@ import "package:ssg/html.dart";
 
 import "body.dart";
 import "head.dart";
+import "log.dart";
+import "projects.dart";
 
-void main(List<String> arguments) {
+Future<void> main(List<String> arguments) async {
+  await setupProjectRepository();
+
+  log.info("Starting generation...");
   final String html = HTML(
     lang: "en",
     head: generateHead(),
@@ -31,4 +36,5 @@ void main(List<String> arguments) {
   }
 
   File(p.join(build.path, "index.html")).writeAsStringSync(html);
+  log.info("Done with generation!");
 }
