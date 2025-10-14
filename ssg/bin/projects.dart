@@ -1,8 +1,11 @@
 import "dart:io";
 
 import "package:checked_yaml/checked_yaml.dart";
+import "package:github/github.dart";
 import "package:ssg/html.dart";
 import "package:ssg/utils.dart";
+
+import "log.dart";
 
 class Project {
   String name;
@@ -17,6 +20,25 @@ final Map<String, List<Project>> categoriesProjectsMap = checkedYamlDecode(
   File("projects.yml").readAsStringSync(),
   _parse,
 );
+
+final Map<Project, Repository> projectRepository = {};
+
+final GitHub _gh = GitHub(auth: findAuthenticationFromEnvironment());
+
+Future<void> setupProjectRepository() async {
+  log.info("Retrieving project repository information...");
+  for (final projects in categoriesProjectsMap.values) {
+    for (final project in projects) {
+      final List<String> parts = project.url.split("/").where((element) => element.isNotEmpty).toList();
+      final name = parts.removeLast();
+      final owner = parts.removeLast();
+      final repo = await _gh.repositories.getRepository(RepositorySlug(owner, name));
+      log.info("Retrieved information for ${repo.slug()}");
+      projectRepository[project] = repo;
+    }
+  }
+  log.info("Finished retrieving project repository information!");
+}
 
 Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
   if (m == null) throw Exception("Somehow, m was null!?");
@@ -89,7 +111,7 @@ Element generateProjectCard(Project project) {
           A(href: project.url, children: [T(project.name)]),
         ],
       ),
-      P.text("Description goes here!"),
+      P.text(projectRepository[project]?.description ?? "No description"),
       if (project.blog != null) A(href: project.blog!, children: [T("Blog →")]),
       P(
         classes: ["tags"],
