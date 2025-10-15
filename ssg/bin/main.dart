@@ -1,5 +1,6 @@
 import "dart:io";
 
+import "package:github/github.dart";
 import "package:path/path.dart" as p;
 import "package:ssg/html.dart";
 
@@ -7,6 +8,8 @@ import "body.dart";
 import "head.dart";
 import "log.dart";
 import "projects.dart";
+
+final GitHub github = GitHub(auth: findAuthenticationFromEnvironment());
 
 Future<void> main(List<String> arguments) async {
   await setupProjectRepository();
@@ -36,5 +39,7 @@ Future<void> main(List<String> arguments) async {
   }
 
   File(p.join(build.path, "index.html")).writeAsStringSync(html);
+
+  github.dispose();
   log.info("Done with generation!");
 }

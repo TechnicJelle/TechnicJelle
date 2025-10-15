@@ -6,6 +6,7 @@ import "package:ssg/html.dart";
 import "package:ssg/utils.dart";
 
 import "log.dart";
+import "main.dart";
 
 class Project {
   String name;
@@ -23,8 +24,6 @@ final Map<String, List<Project>> categoriesProjectsMap = checkedYamlDecode(
 
 final Map<Project, Repository> projectRepository = {};
 
-final GitHub _gh = GitHub(auth: findAuthenticationFromEnvironment());
-
 Future<void> setupProjectRepository() async {
   log.info("Retrieving project repository information...");
   for (final projects in categoriesProjectsMap.values) {
@@ -32,7 +31,7 @@ Future<void> setupProjectRepository() async {
       final List<String> parts = project.url.split("/").where((element) => element.isNotEmpty).toList();
       final name = parts.removeLast();
       final owner = parts.removeLast();
-      final repo = await _gh.repositories.getRepository(RepositorySlug(owner, name));
+      final repo = await github.repositories.getRepository(RepositorySlug(owner, name));
       log.info("Retrieved information for ${repo.slug()}");
       projectRepository[project] = repo;
     }
