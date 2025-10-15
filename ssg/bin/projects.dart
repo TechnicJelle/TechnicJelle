@@ -25,6 +25,9 @@ final Map<String, List<Project>> categoriesProjectsMap = checkedYamlDecode(
 final Map<Project, Repository> projectRepository = {};
 
 Future<void> setupProjectRepository() async {
+  // If not authenticated, we won't make requests, to speed up the build process.
+  if (github.auth.isAnonymous) return;
+
   log.info("Retrieving project repository information...");
   for (final projects in categoriesProjectsMap.values) {
     for (final project in projects) {
