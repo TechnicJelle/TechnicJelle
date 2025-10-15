@@ -3,6 +3,7 @@ export "html/body.dart";
 export "html/head.dart";
 export "html/headings.dart";
 export "html/layout.dart";
+export "html/lists.dart";
 export "html/media.dart";
 export "html/table.dart";
 export "html/text.dart";
