@@ -3,9 +3,9 @@ import "package:ssg/html/base.dart";
 class Head extends Element {
   String title;
 
-  List<Meta> metas;
-  List<Link> links;
-  List<Style> styles;
+  Iterable<Meta> metas;
+  Iterable<Link> links;
+  Iterable<Style> styles;
 
   Head({
     required this.title,
@@ -16,10 +16,10 @@ class Head extends Element {
 
   @override
   String build() {
-    final List<List<Element>> categories = [metas, links, styles];
+    final Iterable<Iterable<Element>> categories = [metas, links, styles];
     final String concatenated = categories
         .map(
-          (List<Element> els) => els.map((Element el) => el.build()).join("\n"),
+          (Iterable<Element> els) => els.map((Element el) => el.build()).join("\n"),
         )
         .join("\n\n");
     return "<head>\n"

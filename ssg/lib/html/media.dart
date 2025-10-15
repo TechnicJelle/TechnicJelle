@@ -14,7 +14,7 @@ class Image extends Element {
 }
 
 class Em extends Element {
-  List<Element> children;
+  Iterable<Element> children;
 
   Em({required this.children});
 

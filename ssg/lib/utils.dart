@@ -8,15 +8,15 @@ extension HtmlEscaping on String {
   }
 }
 
-extension Embedding1 on List<String>? {
+extension Embedding1 on Iterable<String>? {
   String classes() {
-    final List<String>? classes = this;
+    final Iterable<String>? classes = this;
     if (classes == null) return "";
     return ' class="${classes.join(" ")}"';
   }
 
   String styles() {
-    final List<String>? styles = this;
+    final Iterable<String>? styles = this;
     if (styles == null) return "";
     return ' style="${styles.join("; ")};"';
   }

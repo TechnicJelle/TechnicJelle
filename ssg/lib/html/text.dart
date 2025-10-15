@@ -6,11 +6,11 @@ class T extends Element {
 
   T(this.text);
 
-  T.single(List<Element> elements)
-    : text = elements.map((el) => el.build()).join();
+  T.single(Iterable<Element> elements)
+      : text = elements.map((el) => el.build()).join();
 
-  T.multiline(List<Element> lines)
-    : text = lines.map((el) => el.build()).join("<br>\n");
+  T.multiline(Iterable<Element> lines)
+      : text = lines.map((el) => el.build()).join("<br>\n");
 
   @override
   String build() {
@@ -19,8 +19,8 @@ class T extends Element {
 }
 
 class P extends Element {
-  List<Element> children;
-  List<String>? classes;
+  Iterable<Element> children;
+  Iterable<String>? classes;
 
   P({required this.children, this.classes});
 
@@ -36,8 +36,8 @@ class P extends Element {
 
 class A extends Element {
   String href;
-  List<Element> children;
-  List<String>? classes;
+  Iterable<Element> children;
+  Iterable<String>? classes;
 
   A({required this.href, required this.children, this.classes});
 
@@ -50,8 +50,8 @@ class A extends Element {
 }
 
 class Span extends Element {
-  List<Element> children;
-  List<String>? classes;
+  Iterable<Element> children;
+  Iterable<String>? classes;
 
   Span({required this.children, this.classes});
 
@@ -76,7 +76,7 @@ class Summary extends Element {
 
 class Details extends Element {
   Summary summary;
-  List<Element> children;
+  Iterable<Element> children;
 
   Details({required this.summary, required this.children});
 

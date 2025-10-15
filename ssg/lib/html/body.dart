@@ -19,8 +19,8 @@ class Body extends Element {
 }
 
 class Header extends Element {
-  List<Element> children;
-  List<String>? classes;
+  Iterable<Element> children;
+  Iterable<String>? classes;
 
   Header({required this.children, this.classes});
 
@@ -33,8 +33,8 @@ class Header extends Element {
 }
 
 class Main extends Element {
-  List<Element> children;
-  List<String>? classes;
+  Iterable<Element> children;
+  Iterable<String>? classes;
 
   Main({required this.children, this.classes});
 
@@ -47,8 +47,8 @@ class Main extends Element {
 }
 
 class Footer extends Element {
-  List<Element> children;
-  List<String>? classes;
+  Iterable<Element> children;
+  Iterable<String>? classes;
 
   Footer({required this.children, this.classes});
 

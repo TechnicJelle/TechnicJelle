@@ -30,7 +30,7 @@ class TableHead extends Element {
 }
 
 class TableRowH extends Element {
-  List<TableHeader> headers;
+  Iterable<TableHeader> headers;
 
   TableRowH({required this.headers});
 
@@ -43,8 +43,8 @@ class TableRowH extends Element {
 }
 
 class TableHeader extends Element {
-  List<Element> children;
-  List<String>? styles;
+  Iterable<Element> children;
+  Iterable<String>? styles;
 
   TableHeader({required this.children, this.styles});
 
@@ -57,7 +57,7 @@ class TableHeader extends Element {
 }
 
 class TableBody extends Element {
-  List<TableRowB> rows;
+  Iterable<TableRowB> rows;
 
   TableBody(this.rows);
 
@@ -70,7 +70,7 @@ class TableBody extends Element {
 }
 
 class TableRowB extends Element {
-  List<TableCell> cells;
+  Iterable<TableCell> cells;
 
   TableRowB(this.cells);
 

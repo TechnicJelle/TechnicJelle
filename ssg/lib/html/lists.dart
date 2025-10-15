@@ -2,8 +2,8 @@ import "package:ssg/html/base.dart";
 import "package:ssg/utils.dart";
 
 class ListItem extends Element {
-  List<Element> children;
-  List<String>? classes;
+  Iterable<Element> children;
+  Iterable<String>? classes;
 
   ListItem({required this.children, this.classes});
 
@@ -16,8 +16,8 @@ class ListItem extends Element {
 }
 
 class UnorderedList extends Element {
-  List<ListItem> children;
-  List<String>? classes;
+  Iterable<ListItem> children;
+  Iterable<String>? classes;
 
   UnorderedList({required this.children, this.classes});
 
@@ -30,8 +30,8 @@ class UnorderedList extends Element {
 }
 
 class OrderedList extends Element {
-  List<ListItem> children;
-  List<String>? classes;
+  Iterable<ListItem> children;
+  Iterable<String>? classes;
 
   OrderedList({required this.children, this.classes});
 

@@ -4,8 +4,8 @@ import "package:ssg/utils.dart";
 class Hn extends Element {
   int level;
   String? id;
-  List<Element> children;
-  List<String>? classes;
+  Iterable<Element> children;
+  Iterable<String>? classes;
 
   Hn({required this.level, required this.children, this.classes, this.id});
 

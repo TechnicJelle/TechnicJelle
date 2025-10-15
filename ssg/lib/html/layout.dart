@@ -2,8 +2,8 @@ import "package:ssg/html.dart";
 import "package:ssg/utils.dart";
 
 class Div extends Element {
-  List<Element> children;
-  List<String>? classes;
+  Iterable<Element> children;
+  Iterable<String>? classes;
 
   Div({required this.children, this.classes});
 
@@ -16,8 +16,8 @@ class Div extends Element {
 }
 
 class Section extends Element {
-  List<Element> children;
-  List<String>? classes;
+  Iterable<Element> children;
+  Iterable<String>? classes;
 
   Section({required this.children, this.classes});
 
