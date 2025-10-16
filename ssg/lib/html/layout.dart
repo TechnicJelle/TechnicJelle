@@ -11,7 +11,7 @@ class Div extends Element {
   @override
   String build() {
     return "<div$modifiers>\n"
-        '${children.map((el) => el.build()).join("\n\n")}\n'
+        '${children.map((el) => el.build()).join("\n")}\n'
         "</div>";
   }
 }
@@ -27,7 +27,7 @@ class Section extends Element {
   @override
   String build() {
     return "<section$modifiers>\n"
-        '${children.map((el) => el.build()).join("\n\n")}\n'
+        '${children.map((el) => el.build()).join("\n")}\n'
         "</section>";
   }
 }

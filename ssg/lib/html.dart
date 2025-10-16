@@ -1,5 +1,6 @@
 export "html/base.dart";
 export "html/body.dart";
+export "html/data.dart";
 export "html/head.dart";
 export "html/headings.dart";
 export "html/layout.dart";
