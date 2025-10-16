@@ -24,13 +24,8 @@ Body generateBody() => Body(
   header: generateHeader(),
   main: Main(
     children: [
-      P(children: [T("hello world!")]),
       ...markdown(File("README.md")),
       ...generateProjects(),
-      P(children: [T("hello world!")]),
-      P(children: [T("hello world!")]),
-      P(children: [T("hello world!")]),
-      P(children: [T("hello world!")]),
     ],
   ),
   footer: Footer(children: []),
