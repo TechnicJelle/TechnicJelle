@@ -9,8 +9,8 @@ class ListItem extends Element {
 
   @override
   String build() {
-    return "<li${classes.classes()}>\n"
-        '${children.map((el) => el.build()).join("\n\n")}\n'
+    return "<li${classes.classes()}>"
+        '${children.map((el) => el.build()).join("\n")}'
         "</li>";
   }
 }
@@ -24,7 +24,7 @@ class UnorderedList extends Element {
   @override
   String build() {
     return "<ul${classes.classes()}>\n"
-        '${children.map((el) => el.build()).join("\n\n")}\n'
+        '${children.map((el) => el.build()).join("\n")}\n'
         "</ul>";
   }
 }
@@ -38,7 +38,7 @@ class OrderedList extends Element {
   @override
   String build() {
     return "<ol${classes.classes()}>\n"
-        '${children.map((el) => el.build()).join("\n\n")}\n'
+        '${children.map((el) => el.build()).join("\n")}\n'
         "</ol>";
   }
 }
