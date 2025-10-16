@@ -1,15 +1,20 @@
 import "package:ssg/html/base.dart";
-import "package:ssg/utils.dart";
 
 class Table extends Element {
   TableHead head;
   TableBody body;
 
-  Table({required this.head, required this.body});
+  Table({
+    required this.head,
+    required this.body,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  }) : super(children: []);
 
   @override
   String build() {
-    return "<table>\n"
+    return "<table$modifiers>\n"
         "${head.build()}\n"
         "${body.build()}\n"
         "</table>";
@@ -19,11 +24,16 @@ class Table extends Element {
 class TableHead extends Element {
   TableRowH row;
 
-  TableHead(this.row);
+  TableHead({
+    required this.row,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  }) : super(children: []);
 
   @override
   String build() {
-    return "<thead>\n"
+    return "<thead$modifiers>\n"
         "${row.build()}\n"
         "</thead>";
   }
@@ -32,25 +42,32 @@ class TableHead extends Element {
 class TableRowH extends Element {
   Iterable<TableHeader> headers;
 
-  TableRowH({required this.headers});
+  TableRowH({
+    required this.headers,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  }) : super(children: []);
 
   @override
   String build() {
-    return "<tr>\n"
+    return "<tr$modifiers>\n"
         '${headers.map((el) => el.build()).join("\n")}\n'
         "</tr>";
   }
 }
 
 class TableHeader extends Element {
-  Iterable<Element> children;
-  Iterable<String>? styles;
-
-  TableHeader({required this.children, this.styles});
+  TableHeader({
+    required super.children,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  });
 
   @override
   String build() {
-    return "<th${styles.styles()}>"
+    return "<th$modifiers>"
         "${children.map((el) => el.build()).join()}"
         "</th>";
   }
@@ -59,11 +76,16 @@ class TableHeader extends Element {
 class TableBody extends Element {
   Iterable<TableRowB> rows;
 
-  TableBody(this.rows);
+  TableBody({
+    required this.rows,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  }) : super(children: []);
 
   @override
   String build() {
-    return "<tbody>\n"
+    return "<tbody$modifiers>\n"
         '${rows.map((el) => el.build()).join("\n")}\n'
         "</tbody>";
   }
@@ -72,19 +94,33 @@ class TableBody extends Element {
 class TableRowB extends Element {
   Iterable<TableCell> cells;
 
-  TableRowB(this.cells);
+  TableRowB({
+    required this.cells,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  }) : super(children: []);
 
   @override
   String build() {
-    return "<tr>\n"
+    return "<tr$modifiers>\n"
         '${cells.map((el) => el.build()).join("\n")}\n'
         "</tr>";
   }
 }
 
 class TableCell extends Element {
+  TableCell({
+    required super.children,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  });
+
   @override
   String build() {
-    return "<td></td>";
+    return "<td$modifiers>"
+        '${children.map((el) => el.build()).join("\n")}\n'
+        "</td>";
   }
 }

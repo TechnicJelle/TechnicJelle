@@ -1,16 +1,13 @@
 import "package:ssg/html/base.dart";
-import "package:ssg/utils.dart";
 
 class T extends Element {
   String text;
 
-  T(this.text);
+  T(this.text) : super(children: []);
 
-  T.single(Iterable<Element> elements)
-      : text = elements.map((el) => el.build()).join();
+  T.single(Iterable<Element> elements) : text = elements.map((el) => el.build()).join(), super(children: []);
 
-  T.multiline(Iterable<Element> lines)
-      : text = lines.map((el) => el.build()).join("<br>\n");
+  T.multiline(Iterable<Element> lines) : text = lines.map((el) => el.build()).join("<br>\n"), super(children: []);
 
   @override
   String build() {
@@ -19,16 +16,18 @@ class T extends Element {
 }
 
 class P extends Element {
-  Iterable<Element> children;
-  Iterable<String>? classes;
+  P({
+    required super.children,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  });
 
-  P({required this.children, this.classes});
-
-  P.text(String text) : children = [T(text)];
+  P.text(String text) : super(children: [T(text)]);
 
   @override
   String build() {
-    return "<p${classes.classes()}>"
+    return "<p$modifiers>"
         '${children.map((el) => el.build()).join("\n")}'
         "</p>";
   }
@@ -36,28 +35,34 @@ class P extends Element {
 
 class A extends Element {
   String href;
-  Iterable<Element> children;
-  Iterable<String>? classes;
 
-  A({required this.href, required this.children, this.classes});
+  A({
+    required this.href,
+    required super.children,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  });
 
   @override
   String build() {
-    return '<a href="$href"${classes.classes()}>\n'
+    return '<a href="$href"$modifiers>\n'
         '${children.map((el) => el.build()).join("\n\n")}\n'
         "</a>";
   }
 }
 
 class Span extends Element {
-  Iterable<Element> children;
-  Iterable<String>? classes;
-
-  Span({required this.children, this.classes});
+  Span({
+    required super.children,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  });
 
   @override
   String build() {
-    return "<span${classes.classes()}>"
+    return "<span$modifiers>"
         '${children.map((el) => el.build()).join(" ")}'
         "</span>";
   }
@@ -66,25 +71,46 @@ class Span extends Element {
 class Summary extends Element {
   String summary;
 
-  Summary(this.summary);
+  Summary(
+    this.summary, {
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  }) : super(children: []);
 
   @override
   String build() {
-    return "<summary>$summary</summary>";
+    return "<summary$modifiers>$summary</summary>";
   }
 }
 
 class Details extends Element {
   Summary summary;
-  Iterable<Element> children;
 
-  Details({required this.summary, required this.children});
+  Details({
+    required this.summary,
+    required super.children,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  });
 
   @override
   String build() {
-    return "<details>\n"
+    return "<details$modifiers>\n"
         "${summary.build()}\n"
         '${children.map((el) => el.build()).join("\n")}\n'
         "</details>";
+  }
+}
+
+class Em extends Element {
+  Em({required super.children});
+
+  @override
+  String build() {
+    return "<em>"
+        "${children.map((el) => el.build()).join()}"
+        "</em>";
   }
 }

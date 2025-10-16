@@ -12,15 +12,13 @@ class Head extends Element {
     required this.metas,
     required this.links,
     required this.styles,
-  });
+  }) : super(children: []);
 
   @override
   String build() {
     final Iterable<Iterable<Element>> categories = [metas, links, styles];
     final String concatenated = categories
-        .map(
-          (Iterable<Element> els) => els.map((Element el) => el.build()).join("\n"),
-        )
+        .map((Iterable<Element> els) => els.map((Element el) => el.build()).join("\n"))
         .join("\n\n");
     return "<head>\n"
         '<meta charset="UTF-8">\n'
@@ -36,11 +34,19 @@ class Meta extends Element {
 
   String? content;
 
-  Meta.name({required String name, required String this.content}) : key = "name", value = name;
+  Meta.name({
+    required String name,
+    required this.content,
+  }) : key = "name",
+       value = name,
+       super(children: []);
 
-  Meta.httpEquiv({required String httpEquiv, required String this.content})
-    : key = "http-equiv",
-      value = httpEquiv;
+  Meta.httpEquiv({
+    required String httpEquiv,
+    required this.content,
+  }) : key = "http-equiv",
+       value = httpEquiv,
+       super(children: []);
 
   @override
   String build() {
@@ -62,7 +68,7 @@ class Link extends Element {
     required this.type,
     required this.sizes,
     required this.href,
-  });
+  }) : super(children: []);
 
   @override
   String build() {
@@ -73,7 +79,9 @@ class Link extends Element {
 class Style extends Element {
   String css;
 
-  Style({required this.css});
+  Style({
+    required this.css,
+  }) : super(children: []);
 
   @override
   String build() {

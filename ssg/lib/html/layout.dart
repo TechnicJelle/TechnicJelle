@@ -1,29 +1,32 @@
 import "package:ssg/html.dart";
-import "package:ssg/utils.dart";
 
 class Div extends Element {
-  Iterable<Element> children;
-  Iterable<String>? classes;
-
-  Div({required this.children, this.classes});
+  Div({
+    required super.children,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  });
 
   @override
   String build() {
-    return "<div${classes.classes()}>\n"
+    return "<div$modifiers>\n"
         '${children.map((el) => el.build()).join("\n\n")}\n'
         "</div>";
   }
 }
 
 class Section extends Element {
-  Iterable<Element> children;
-  Iterable<String>? classes;
-
-  Section({required this.children, this.classes});
+  Section({
+    required super.children,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  });
 
   @override
   String build() {
-    return "<section${classes.classes()}>\n"
+    return "<section$modifiers>\n"
         '${children.map((el) => el.build()).join("\n\n")}\n'
         "</section>";
   }
