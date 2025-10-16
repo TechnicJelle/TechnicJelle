@@ -92,10 +92,10 @@
     tags: [ Script, Python, Discord ]
 
 🤖 Discord Bots:
-  - Hydr8: https://github.com/TechnicJelle/DiscordHydr8Bot
-    tags: [ Discord, Python ]
   - Glyfi: https://github.com/glyphs-fi/GlyfiBot
     tags: [ Discord, C# ]
+  - Hydr8: https://github.com/TechnicJelle/DiscordHydr8Bot
+    tags: [ Discord, Python ]
 
 🌌 Simulations:
   - Solar System: https://github.com/TechnicJelle/SolarSystem
