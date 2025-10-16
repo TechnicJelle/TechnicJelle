@@ -7,15 +7,21 @@ import "projects.dart";
 import "webrings.dart";
 
 Header generateHeader() => Header(
-  classes: ["mono-font"],
   children: [
-    A(href: "https://github.com/TechnicJelle?tab=repositories&type=source", children: [T("TechnicJelle")]),
-    Span(classes: ["small"], children: [T("/")]),
-    A(
-      href: "https://github.com/TechnicJelle/TechnicJelle",
+    Div(
+      classes: ["mono-font"],
+      inlineStyles: ["display: flex", "align-items: center"],
       children: [
-        Span(classes: ["stealth-link"], children: [T("README")]),
-        Span(classes: ["small"], children: [T(".md")]),
+        A(href: "https://github.com/TechnicJelle?tab=repositories&type=source", children: [T("TechnicJelle")]),
+        Span(classes: ["small"], children: [T("/")]),
+        A(
+          inlineStyles: ["display: flex", "align-items: end"],
+          href: "https://github.com/TechnicJelle/TechnicJelle",
+          children: [
+            Span(classes: ["stealth-link"], children: [T("README")]),
+            Span(classes: ["small"], children: [T(".md")]),
+          ],
+        ),
       ],
     ),
   ],
