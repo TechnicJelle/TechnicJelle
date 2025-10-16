@@ -32,6 +32,6 @@ extension Embedding2 on String? {
 
 extension Embedding3 on String {
   String clean() {
-    return replaceAll(r"\W+", " ").trim().replaceAll(" ", "-").toLowerCase();
+    return toLowerCase().replaceAll(RegExp("[^a-z ]"), "").trim().replaceAll(" ", "-");
   }
 }
