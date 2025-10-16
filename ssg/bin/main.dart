@@ -7,7 +7,7 @@ import "package:ssg/html.dart";
 import "body.dart";
 import "head.dart";
 import "log.dart";
-import "projects.dart";
+import "projects_loading.dart";
 
 final GitHub github = GitHub(auth: findAuthenticationFromEnvironment());
 

@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 	scroll-margin-top: 2em;
 }
 
-h1, h2 {
+h1, h2, h3 {
 	padding-bottom: 4px;
 	border-bottom: solid 1px;
 }
@@ -57,7 +57,7 @@ h2:hover > a.link {
 	top: 0.3em;
 }
 
-main, h1, h2, .card {
+main, h1, h2, h3, .card {
 	border-color: #1C2229 !important;
 }
 
@@ -69,6 +69,7 @@ a, a:visited {
 	color: #58A6FF;
 	text-decoration: none;
 }
+
 .stealth-link {
 	color: var(--main-text-colour) !important;
 }
@@ -114,7 +115,7 @@ main {
 }
 
 /* Haiku style */
-h1 + table tr>th:nth-child(2) {
+h1 + table tr > th:nth-child(2) {
 	padding-left: 16px;
 	font-style: italic;
 }
@@ -180,12 +181,12 @@ aside li {
 
 .card .stars {
 	position: absolute;
-	top: 4px;
+	top: 6px;
 	right: 8px;
 }
 
 .card h4 {
-	margin-bottom: 2px;
+	margin-bottom: 0.2em;
 }
 
 @media screen and (min-width: 700px) {
@@ -196,33 +197,63 @@ aside li {
 	}
 }
 
-.lang {
-	padding-top: 4px;
-	margin-top: auto;
+.blog-link {
+	margin-top: 0.3em;
+	font-style: italic;
+	padding-left: 1ch;
+	font-size: 0.9em;
 }
 
-/* Language colours */
-.lang.AutoHotkey {color: #6594B9;}
-.lang.C {color: #555555;}
-.lang.Cpp {color: #F34B7D;}
-.lang.Cs {color: #178600;}
-.lang.Dart {color: #00B4AB;}
-.lang.Java {color: #B07219;}
-.lang.JavaScript {color: #F1E05A;}
-.lang.Processing {color: #0096D8;}
-.lang.Python {color: #3572A5;}
-.lang.Stylus {color: #FF6347;}
-.lang.None {color: rgba(255, 255, 255, 0.5);}
-
-p.tags {
+.tags {
+	margin-top: auto;
+	padding: 0.8em 0 0.4em;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	gap: 0.3em;
+	gap: 1.0em 0.3em;
 }
 
-p.tags>span {
-	background: black;
-	border-radius: 4px;
-	padding: 1px 4px;
+.tags li {
+	display: inline;
 }
+
+.tags a, .tags a:visited {
+	background: black;
+	border-radius: 100vw;
+	padding: 0.4em 0.8em;
+	color: unset;
+}
+
+.tags a:hover {
+	background: #333;
+}
+
+/* Tag colours */
+/* Language colours from: https://github.com/github-linguist/linguist/blob/main/lib/linguist/languages.yml */
+.tags > .Android {color: #32DE84;}
+.tags > .AutoHotkey {color: #6594B9;}
+.tags > .C {color: #555555;}
+.tags > .Cpp {color: #F34B7D;}
+.tags > .Cs {color: #178600;}
+.tags > .Dart {color: #00B4AB;}
+.tags > .Flutter {color: #02569B;}
+.tags > .Java {color: #B07219;}
+.tags > .JavaScript {color: #F1E05A;}
+.tags > .Processing {color: #0096D8;}
+.tags > .Python {color: #3572A5;}
+.tags > .Stylus {color: #FF6347;}
+.tags > .BlueMap {color: #006EDE;}
+.tags > .Minecraft {color: #3CA92E;}
+.tags > .CSS {color: #663399;}
+.tags > .HTML {color: #e34c26;}
+.tags > .Prize {color: #FFD701;}
+.tags > .Premake, .tags > .Lua {color: #000080;}
+.tags > .SFML {color: #8BC34B;}
+.tags > .p5js {color: #ED225D;}
+.tags > .Vulkan {color: #AC162C;}
+.tags > .SDL_GPU {color: #6595b6;}
+.tags > .Unreal-Engine {color: #313b7e;}
+.tags > .Unity {color: #888888;}
+.tags > .GitHub {color: #888888;}
+.tags > .Discord {color: #5661EB;}
+

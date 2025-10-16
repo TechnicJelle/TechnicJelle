@@ -1,105 +1,28 @@
-import "dart:io";
-
-import "package:checked_yaml/checked_yaml.dart";
-import "package:github/github.dart";
 import "package:ssg/html.dart";
-import "package:ssg/utils.dart";
 
-import "log.dart";
-import "main.dart";
+import "projects_loading.dart";
 
-class Project {
-  String name;
-  String url;
-  List<String> tags;
-  String? blog;
-
-  Project({required this.name, required this.url, required this.tags, required this.blog});
+String tagToCSSClass(String tag) {
+  return tag.replaceAll(" ", "-").replaceAll("#", "s").replaceAll("+", "p");
 }
 
-final Map<String, List<Project>> categoriesProjectsMap = checkedYamlDecode(
-  File("projects.yml").readAsStringSync(),
-  _parse,
-);
-
-final Map<Project, Repository> projectRepository = {};
-
-Future<void> setupProjectRepository() async {
-  // If not authenticated, we won't make requests, to speed up the build process.
-  if (github.auth.isAnonymous) return;
-
-  log.info("Retrieving project repository information...");
-  for (final projects in categoriesProjectsMap.values) {
-    for (final project in projects) {
-      final List<String> parts = project.url.split("/").where((element) => element.isNotEmpty).toList();
-      final name = parts.removeLast();
-      final owner = parts.removeLast();
-      final repo = await github.repositories.getRepository(RepositorySlug(owner, name));
-      log.info("Retrieved information for ${repo.slug()}");
-      projectRepository[project] = repo;
-    }
-  }
-  log.info("Finished retrieving project repository information!");
-}
-
-Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
-  if (m == null) throw Exception("Somehow, m was null!?");
-
-  final Map<String, List<Project>> categories = {};
-  m.forEach((key, value) {
-    if (key is! String || value is! List) throw Exception("Unexpected element 1");
-
-    final List<Project> projects = [];
-    for (final projectMap in value) {
-      if (projectMap is! Map) throw Exception("Unexpected element 2");
-
-      final mapEntry = projectMap.entries.first;
-      final key2 = mapEntry.key;
-      final value2 = mapEntry.value;
-      if (key2 is! String || value2 is! String) throw Exception("Unexpected element 3");
-
-      final tags = projectMap["tags"];
-      if (tags is! List) throw Exception("Unexpected element 4");
-
-      final blog = projectMap["blog"];
-      if (blog is! String?) throw Exception("Unexpected element 5");
-
-      final List<String> projectTags = [];
-      for (final tag in tags) {
-        if (tag is! String) throw Exception("Unexpected element 6");
-
-        projectTags.add(tag);
-      }
-      projects.add(Project(name: key2, url: value2, tags: projectTags, blog: blog));
-    }
-
-    categories[key] = projects;
-  });
-  return categories;
-}
-
-Section generateTags() {
-  final Set<String> tagsSet = {};
-  categoriesProjectsMap.forEach(
-    (String category, List<Project> projects) {
-      for (final project in projects) {
-        tagsSet.addAll(project.tags);
-      }
-    },
-  );
-
-  final List<String> tagsList = tagsSet.toList()..sort();
-
-  return Section(
-    children: [
-      P(
-        classes: ["tags"],
+Element generateTagsList(Iterable<String> tags, {bool withUsageAmount = false}) {
+  return UnorderedList(
+    classes: ["tags"],
+    children: tags.map(
+      (String tag) => ListItem(
+        classes: [tagToCSSClass(tag)],
         children: [
-          T("Tags: "),
-          ...tagsList.map((String tag) => Span(children: [T(tag)])),
+          A(
+            href: "#",
+            children: [
+              T(tag),
+              if (withUsageAmount) T("(${tagsAndTheirUsages[tag]})"),
+            ],
+          ),
         ],
       ),
-    ],
+    ),
   );
 }
 
@@ -108,28 +31,40 @@ Element generateProjectCard(Project project) {
     classes: ["card"],
     children: [
       H4(
-        id: project.name.clean(),
         children: [
           A(href: project.url, children: [T(project.name)]),
         ],
       ),
-      P.text(projectRepository[project]?.description ?? "No description"),
-      if (project.blog != null) A(href: project.blog!, children: [T("Blog →")]),
-      P(
-        classes: ["tags"],
-        children: [
-          T("Tags: "),
-          ...project.tags.map((String tag) => Span(children: [T(tag)])),
-        ],
-      ),
+      P.text(project.description ?? "No description"),
+      if (project.blog != null)
+        A(
+          href: project.blog!,
+          classes: ["blog-link"],
+          children: [T("Read about this project on my blog →")],
+        ),
+      generateTagsList(project.tags),
+      if (project.stars > 0)
+        P(
+          classes: ["stars"],
+          children: [
+            A(
+              classes: ["stealth-link"],
+              href: project.starsUrl!,
+              children: [T("⭐${project.stars}")],
+            ),
+          ],
+        ),
     ],
   );
 }
 
 List<Element> generateProjects() {
+  final List<String> allTagsList = tagsAndTheirUsages.keys.toList()
+    ..sort((a, b) => a.toLowerCase().compareTo(b.toLowerCase()));
+
   final List<Element> elements = [
     H2(children: [T("Projects")]),
-    generateTags(),
+    generateTagsList(allTagsList, withUsageAmount: true),
   ];
   categoriesProjectsMap.forEach((String category, List<Project> projects) {
     elements.addAll([
@@ -142,5 +77,5 @@ List<Element> generateProjects() {
       ),
     ]);
   });
-  return elements;
+  return [...elements, P(children: [])];
 }
