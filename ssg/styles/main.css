@@ -104,11 +104,15 @@ span.small {
 	padding: 0 4px;
 }
 
+h1 {
+	margin-top: 0;
+}
+
 main {
 	flex-grow: 1; /* Push footer to bottom */
 
 	margin: auto;
-	padding: 0 24px;
+	padding: 24px;
 
 	border: solid 2px;
 	border-radius: 8px;
@@ -125,23 +129,27 @@ footer {
 	font-size: 14px;
 }
 
-footer #webrings-container {
+.webrings {
 	text-align: center;
-	font-size: 1rem;
-}
-footer #webrings-container div {
-	font-size: 1.2rem;
 }
 
-footer #webrings-container h2 {
-	font-size: 1.3rem;
+.webrings h3 {
+	border: none;
+	margin-bottom: 0.2em;
 }
 
-footer #webrings-container h2,
-footer #webrings-container h4 {
-	margin-block: 0.7em;
-}
+/* Webrings */
+.webring {
+	display: flex;
+	gap: 0.25rem;
+	justify-content: center;
+	align-items: center;
 
+	font-size: 1.2em;
+}
+.webring img {
+	height: 1.5em;
+}
 
 /* Table of Contents style */
 aside h2 {

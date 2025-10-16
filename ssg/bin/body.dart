@@ -4,6 +4,7 @@ import "package:ssg/html.dart";
 import "package:ssg/markdown.dart";
 
 import "projects.dart";
+import "webrings.dart";
 
 Header generateHeader() => Header(
   classes: ["mono-font"],
@@ -26,6 +27,7 @@ Body generateBody() => Body(
     children: [
       ...markdown(File("README.md")),
       ...generateProjects(),
+      generateWebrings(),
     ],
   ),
   footer: generateFooter(),
@@ -34,42 +36,6 @@ Body generateBody() => Body(
 Footer generateFooter() {
   return Footer(
     children: [
-      Section(
-        id: "webrings-container",
-        children: [
-          H2(children: [T("Webrings")]),
-          H4(children: [T("Graphics Programming")]),
-          Div(
-            inlineStyles: [
-              "display: flex",
-              "gap: 0.25rem",
-              "justify-content: center",
-              "align-items: center",
-            ],
-            children: [
-              A(
-                href: "https://graphics-programming.org/webring/frogs/technicjelle/prev",
-                children: [T("⬅️")],
-              ),
-              A(
-                href: "https://graphics-programming.org/webring/",
-                inlineStyles: ["height: 1.5em"],
-                children: [
-                  Image(
-                    src: "https://graphics-programming.org/img/froge.webp",
-                    alt: "a friendly froge",
-                    inlineStyles: ["object-fit: contain", "height: 1.5em"],
-                  ),
-                ],
-              ),
-              A(
-                href: "https://graphics-programming.org/webring/frogs/technicjelle/next",
-                children: [T("➡️")],
-              ),
-            ],
-          ),
-        ],
-      ),
       P(
         children: [
           T("Last updated on"),

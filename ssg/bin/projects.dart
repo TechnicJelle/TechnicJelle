@@ -77,5 +77,5 @@ List<Element> generateProjects() {
       ),
     ]);
   });
-  return [...elements, P(children: [])];
+  return elements;
 }
