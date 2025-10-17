@@ -1,6 +1,7 @@
 /* Global styles */
 :root {
 	--main-text-colour: #EEEEEE;
+	--link-colour: #58A6FF;
 }
 
 html {
@@ -36,6 +37,21 @@ h2 > a.link,
 h3 > a.link,
 h4 > a.link {
 	display: none;
+	text-decoration: none;
+}
+/* These are emoji (🔗) which don't look good with a normal underline, so we do a full outline instead */
+.link:hover {
+	--radius: 0.03em;
+	---radius: calc(-1 * var(--radius));
+	--blur: 0.03em;
+	text-shadow: var(---radius) var(---radius) var(--blur) var(--link-colour),
+	0 var(---radius) var(--blur) var(--link-colour),
+	var(--radius) var(---radius) var(--blur) var(--link-colour),
+	var(--radius) 0 var(--blur) var(--link-colour),
+	var(--radius) var(--radius) var(--blur) var(--link-colour),
+	0 var(--radius) var(--blur) var(--link-colour),
+	var(---radius) var(--radius) var(--blur) var(--link-colour),
+	var(---radius) 0 var(--blur) var(--link-colour);
 }
 
 /* Anchor point for the link emoji */
@@ -66,8 +82,12 @@ img, .card {
 }
 
 a, a:visited {
-	color: #58A6FF;
+	color: var(--link-colour);
 	text-decoration: none;
+}
+
+a:hover, a:focus-within {
+	text-decoration: underline;
 }
 
 .stealth-link {
