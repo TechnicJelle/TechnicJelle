@@ -42,7 +42,7 @@ class Hn extends Element {
         ),
     ];
     return "<h$level$modifiers>"
-        '${thisChildren.map((el) => el.build()).join("\n\n")}'
+        '${thisChildren.map((el) => el.build()).join("\n")}'
         "</h$level>";
   }
 }
