@@ -9,7 +9,7 @@ String tagToCSSClass(String tag) {
 Element generateTagsList(Iterable<String> tags, {bool withUsageAmount = false}) {
   return UnorderedList(
     classes: ["tags"],
-    children: tags.map(
+    items: tags.map(
       (String tag) => ListItem(
         classes: [tagToCSSClass(tag)],
         children: [

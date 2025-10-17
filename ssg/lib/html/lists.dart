@@ -17,12 +17,14 @@ class ListItem extends Element {
 }
 
 class UnorderedList extends Element {
+  Iterable<ListItem> items;
+
   UnorderedList({
-    required super.children,
+    required this.items,
     super.id,
     super.classes,
     super.inlineStyles,
-  });
+  }) : super(children: items);
 
   @override
   String build() {
@@ -33,12 +35,14 @@ class UnorderedList extends Element {
 }
 
 class OrderedList extends Element {
+  Iterable<ListItem> items;
+
   OrderedList({
-    required super.children,
+    required this.items,
     super.id,
     super.classes,
     super.inlineStyles,
-  });
+  }) : super(children: items);
 
   @override
   String build() {
