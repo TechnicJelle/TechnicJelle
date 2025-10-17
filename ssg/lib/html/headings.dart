@@ -4,7 +4,6 @@ import "package:ssg/utils.dart";
 
 class Hn extends Element {
   int level;
-  bool autoID;
   bool autoLink;
 
   Hn({
@@ -13,25 +12,16 @@ class Hn extends Element {
     super.id,
     super.classes,
     super.inlineStyles,
-    this.autoID = true,
+    bool autoID = true,
     this.autoLink = true,
-  });
+  }) {
+    if (id == null && autoID) {
+      id = innerText.clean();
+    }
+  }
 
   @override
   String build() {
-    if (autoID && id == null && children.length == 1) {
-      final Element first = children.first;
-      switch (first) {
-        case T():
-          id = first.text.clean();
-        case A():
-          if (first.children.length == 1) {
-            if (first.children.first case final T first2) {
-              id = first2.text.clean();
-            }
-          }
-      }
-    }
     final Iterable<Element> thisChildren = [
       ...children,
       if (autoLink && id != null)
