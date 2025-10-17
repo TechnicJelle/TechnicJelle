@@ -31,3 +31,35 @@ class Section extends Element {
         "</section>";
   }
 }
+
+class Nav extends Element {
+  Nav({
+    required super.children,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  });
+
+  @override
+  String build() {
+    return "<nav$modifiers>\n"
+        '${children.map((el) => el.build()).join("\n")}\n'
+        "</nav>";
+  }
+}
+
+class Aside extends Element {
+  Aside({
+    required super.children,
+    super.id,
+    super.classes,
+    super.inlineStyles,
+  });
+
+  @override
+  String build() {
+    return "<aside$modifiers>\n"
+        '${children.map((el) => el.build()).join("\n")}\n'
+        "</aside>";
+  }
+}

@@ -177,8 +177,12 @@ aside h2 {
 	margin-bottom: 0;
 }
 
-aside ul {
+aside ol {
 	padding-left: 1em;
+}
+
+aside > nav > ol {
+	padding-left: 0;
 }
 
 aside li {

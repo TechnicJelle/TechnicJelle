@@ -4,6 +4,7 @@ import "package:ssg/html.dart";
 import "package:ssg/markdown.dart";
 
 import "projects.dart";
+import "table_of_contents.dart";
 import "webrings.dart";
 
 Header generateHeader() => Header(
@@ -27,17 +28,25 @@ Header generateHeader() => Header(
   ],
 );
 
-Body generateBody() => Body(
-  header: generateHeader(),
-  main: Main(
-    children: [
-      ...markdown(File("README.md")),
-      ...generateProjects(),
-      generateWebrings(),
-    ],
-  ),
-  footer: generateFooter(),
-);
+Body generateBody() {
+  final List<Element> mainContent = [
+    ...markdown(File("README.md")),
+    ...generateProjects(),
+    generateWebrings(),
+  ];
+
+  //generate ToC from the mainContent and insert it into the mainContent once it's done
+  mainContent.insert(
+    mainContent.indexOf(mainContent.firstWhere((element) => element.id == "projects")),
+    generateToC(fromContent: mainContent),
+  );
+
+  return Body(
+    header: generateHeader(),
+    main: Main(children: mainContent),
+    footer: generateFooter(),
+  );
+}
 
 Footer generateFooter() {
   return Footer(
