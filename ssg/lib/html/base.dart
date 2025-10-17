@@ -33,6 +33,11 @@ abstract class Element {
     }
     return sb.toString();
   }
+
+  @override
+  String toString() {
+    return "<$runtimeType #$modifiers> $innerText";
+  }
 }
 
 class HTML extends Element {
