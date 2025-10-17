@@ -1,5 +1,7 @@
 import "dart:convert";
 
+import "package:ssg/html/base.dart";
+
 const HtmlEscape _htmlEscape = HtmlEscape();
 
 extension HtmlEscaping on String {
@@ -8,7 +10,7 @@ extension HtmlEscaping on String {
   }
 }
 
-extension Embedding1 on Iterable<String>? {
+extension Extension1 on Iterable<String>? {
   String classes() {
     final Iterable<String>? classes = this;
     if (classes == null) return "";
@@ -22,7 +24,7 @@ extension Embedding1 on Iterable<String>? {
   }
 }
 
-extension Embedding2 on String? {
+extension Extension2 on String? {
   String id() {
     final String? id = this;
     if (id == null) return "";
@@ -30,8 +32,19 @@ extension Embedding2 on String? {
   }
 }
 
-extension Embedding3 on String {
+extension Extension3 on String {
   String clean() {
     return toLowerCase().replaceAll(RegExp("[^a-z0-9 ]"), "").trim().replaceAll(" ", "-");
+  }
+}
+
+extension Extension4 on Iterable<Element> {
+  void collectOfType<E>({required List<E> into}) {
+    for (final element in this) {
+      if (element case final E e) {
+        into.add(e);
+      }
+      element.children.collectOfType(into: into);
+    }
   }
 }

@@ -12,7 +12,7 @@ class Body extends Element {
     super.id,
     super.classes,
     super.inlineStyles,
-  }) : super(children: []);
+  }) : super(children: [header, main, footer]);
 
   @override
   String build() {
