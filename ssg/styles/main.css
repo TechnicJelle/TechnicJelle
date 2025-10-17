@@ -61,7 +61,8 @@ h2, h3, h4 {
 
 h2:hover > a.link,
 h3:hover > a.link,
-h4:hover > a.link {
+h4:hover > a.link,
+.card:hover a.link {
 	display: inline;
 	font-size: 0.7em;
 	margin-left: 0.3em;
