@@ -3,6 +3,11 @@ import "package:ssg/html/text.dart";
 import "package:ssg/utils.dart";
 
 class Hn extends Element {
+  ///Override this if you want the automatic links to have a different class.
+  static String autoLinkClass = "link";
+  ///Override this if you want to display something else than a 🔗 as the link.
+  static Element autoLinkElement = T("🔗");
+
   int level;
   bool autoLink;
 
@@ -26,9 +31,9 @@ class Hn extends Element {
       ...children,
       if (autoLink && id != null)
         A(
-          classes: ["link"],
+          classes: [autoLinkClass],
           href: "#${id!}",
-          children: [T("🔗")],
+          children: [autoLinkElement],
         ),
     ];
     return "<h$level$modifiers>"
