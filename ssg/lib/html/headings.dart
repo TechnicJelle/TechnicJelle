@@ -5,6 +5,7 @@ import "package:ssg/utils.dart";
 class Hn extends Element {
   ///Override this if you want the automatic links to have a different class.
   static String autoLinkClass = "link";
+
   ///Override this if you want to display something else than a 🔗 as the link.
   static Element autoLinkElement = T("🔗");
 
@@ -43,14 +44,8 @@ class Hn extends Element {
 }
 
 class H1 extends Hn {
-  H1({
-    required super.children,
-    super.id,
-    super.classes,
-    super.inlineStyles,
-    super.autoID,
-    super.autoLink = false,
-  }) : super(level: 1);
+  H1({required super.children, super.id, super.classes, super.inlineStyles, super.autoID, super.autoLink = false})
+    : super(level: 1);
 }
 
 class H2 extends Hn {
