@@ -4,19 +4,14 @@ on:
   push:
   workflow_dispatch:
 
-env:
-  DART_SDK_VERSION: 3.9.4-1
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
 
-      - name: Install Dart SDK
-        run: |
-          wget --quiet "https://storage.googleapis.com/dart-archive/channels/stable/release/latest/linux_packages/dart_${{ env.DART_SDK_VERSION }}_amd64.deb"
-          sudo dpkg -i "dart_${{ env.DART_SDK_VERSION }}_amd64.deb"
+      - name: Setup Dart SDK
+        uses: dart-lang/setup-dart@v1
 
       - name: Download SSG dependencies
         run: cd ssg && dart pub get
