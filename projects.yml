@@ -38,7 +38,7 @@
   - NeoGXP: https://github.com/NeoGXP/NeoGXP/
     tags: [ Game Engine, C# ]
   - LLRI2 Experiments: https://github.com/Rythe-Interactive/LLRI2-Experiments
-    tags: [ Game Engine, C++, Vulkan, SDL_GPU ]
+    tags: [ Game Engine, C++, Graphics Programming, Vulkan, SDL_GPU ]
 
 💡 Tech Demos:
   - Flutter User Fonts Demo: https://github.com/TechnicJelle/FlutterUserFontsDemo
