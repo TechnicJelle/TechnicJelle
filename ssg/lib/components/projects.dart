@@ -1,7 +1,6 @@
-import "package:ssg/html.dart";
-
-import "../projects_loading.dart";
-import "tags.dart";
+import "package:ssg/components/tags.dart";
+import "package:ssg/projects_loading.dart";
+import "package:techs_html_bindings/elements.dart";
 
 Section generateProjectsSection(List<Project> projects) {
   return Section(

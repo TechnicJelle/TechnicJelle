@@ -1,6 +1,5 @@
-import "package:ssg/html.dart";
-
-import "../projects_loading.dart";
+import "package:ssg/projects_loading.dart";
+import "package:techs_html_bindings/elements.dart";
 
 String cleanTag(String tag) {
   return tag.replaceAll(" ", "-").replaceAll("#", "s").replaceAll("+", "p").replaceAll("/", "_");

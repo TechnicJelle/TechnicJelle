@@ -1,5 +1,5 @@
 import "package:path/path.dart" as p;
-import "package:ssg/html.dart";
+import "package:techs_html_bindings/elements.dart";
 
 Header generateHeader({required String filename, List<A> breadcrumbs = const []}) {
   return Header(

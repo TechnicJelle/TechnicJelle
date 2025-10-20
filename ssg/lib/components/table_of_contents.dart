@@ -1,7 +1,6 @@
-import "package:ssg/html.dart";
-import "package:ssg/utils.dart";
-
-import "../stack.dart";
+import "package:ssg/stack.dart";
+import "package:techs_html_bindings/elements.dart";
+import "package:techs_html_bindings/utils.dart";
 
 List<ListItem> tocHeadingsToListItems(List<Hn> tocHeadings) {
   final List<ListItem> finalListItems = [];

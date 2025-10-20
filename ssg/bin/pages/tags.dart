@@ -1,15 +1,14 @@
 import "dart:io";
 
 import "package:path/path.dart" as p;
-import "package:ssg/html.dart";
-
-import "../components/footer.dart";
-import "../components/head.dart";
-import "../components/header.dart";
-import "../components/projects.dart";
-import "../components/tags.dart";
-import "../main.dart";
-import "../projects_loading.dart";
+import "package:ssg/components/footer.dart";
+import "package:ssg/components/head.dart";
+import "package:ssg/components/header.dart";
+import "package:ssg/components/projects.dart";
+import "package:ssg/components/tags.dart";
+import "package:ssg/constants.dart";
+import "package:ssg/projects_loading.dart";
+import "package:techs_html_bindings/elements.dart";
 
 final Directory dirTags = Directory(p.join(dirBuild.path, "tags"))..createSync();
 
@@ -19,10 +18,12 @@ void createTagsPages() {
     head: generateHead(title: "Tags"),
     body: Body(
       header: generateHeader(filename: "Tags"),
-      main: Main(children: [
-        H1(children: [T("All tags")]),
-        generateTagsList(withUsageAmount: true),
-      ]),
+      main: Main(
+        children: [
+          H1(children: [T("All tags")]),
+          generateTagsList(withUsageAmount: true),
+        ],
+      ),
       footer: generateFooter(),
     ),
   ).build();

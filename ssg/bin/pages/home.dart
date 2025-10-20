@@ -1,18 +1,17 @@
 import "dart:io";
 
 import "package:path/path.dart" as p;
-import "package:ssg/html.dart";
-import "package:ssg/markdown.dart";
-
-import "../components/footer.dart";
-import "../components/head.dart";
-import "../components/header.dart";
-import "../components/projects.dart";
-import "../components/table_of_contents.dart";
-import "../components/tags.dart";
-import "../components/webrings.dart";
-import "../main.dart";
-import "../projects_loading.dart";
+import "package:ssg/components/footer.dart";
+import "package:ssg/components/head.dart";
+import "package:ssg/components/header.dart";
+import "package:ssg/components/projects.dart";
+import "package:ssg/components/table_of_contents.dart";
+import "package:ssg/components/tags.dart";
+import "package:ssg/components/webrings.dart";
+import "package:ssg/constants.dart";
+import "package:ssg/projects_loading.dart";
+import "package:techs_html_bindings/elements.dart";
+import "package:techs_html_bindings/markdown.dart";
 
 void createHomePage() {
   final String indexHTML = HTML(

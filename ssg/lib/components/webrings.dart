@@ -1,4 +1,4 @@
-import "package:ssg/html.dart";
+import "package:techs_html_bindings/elements.dart";
 
 Section generateWebrings() {
   return Section(

@@ -2,9 +2,8 @@ import "dart:io";
 
 import "package:checked_yaml/checked_yaml.dart";
 import "package:github/github.dart";
-
-import "log.dart";
-import "main.dart";
+import "package:ssg/constants.dart";
+import "package:ssg/log.dart";
 
 class Project {
   String name;
@@ -23,7 +22,7 @@ class Project {
 
   int get stars => _repository?.stargazersCount ?? 0;
 
-  String? get starsUrl => _repository?.stargazersUrl;
+  String? get starsUrl => "$url/stargazers";
 }
 
 final Map<String, List<Project>> categoriesProjectsMap = checkedYamlDecode(
