@@ -104,6 +104,8 @@
     tags: [ Simulations, C++, olcPixelGameEngine ]
 
 📚 Libraries:
+  - HTML Bindings (Dart): https://github.com/TechnicJelle/techs_html_bindings
+    tags: [ Library, Dart, HTML ]
   - Update Checker (Java): https://github.com/TechnicJelle/UpdateCheckerJava
     tags: [ Library, Java, GitHub ]
   - MCUtils: https://github.com/TechnicJelle/MCUtils
