@@ -1,45 +1,50 @@
 import "dart:io";
 
 import "package:github/github.dart";
+import "package:glob/glob.dart";
+import "package:glob/list_local_fs.dart";
 import "package:path/path.dart" as p;
-import "package:ssg/html.dart";
 
-import "body.dart";
-import "head.dart";
 import "log.dart";
+import "pages/home.dart";
+import "pages/tags.dart";
 import "projects_loading.dart";
 
 final GitHub github = GitHub(auth: findAuthenticationFromEnvironment());
+final Directory dirBuild = Directory("build")..createSync();
 
 Future<void> main(List<String> arguments) async {
   await setupProjectRepository();
 
   log.info("Starting generation...");
-  final String html = HTML(
-    lang: "en",
-    head: generateHead(),
-    body: generateBody(),
-  ).build();
 
-  final Directory build = Directory("build")..createSync();
+  copy("images", "images");
+  copy("ssg/copy/**", "");
+  copy("ssg/styles", "styles");
 
-  final Directory copy = Directory("ssg/copy");
-  for (final FileSystemEntity fse in copy.listSync()) {
-    if (fse is File) {
-      fse.copySync(p.join(build.path, p.basename(fse.path)));
-    }
-  }
-
-  final Directory images = Directory("images");
-  Directory(p.join(build.path, images.path)).createSync();
-  for (final FileSystemEntity fse in images.listSync()) {
-    if (fse is File) {
-      fse.copySync(p.join(build.path, fse.path));
-    }
-  }
-
-  File(p.join(build.path, "index.html")).writeAsStringSync(html);
+  createHomePage();
+  createTagsPages();
 
   github.dispose();
   log.info("Done with generation!");
+}
+
+void copy(String source, String targetInBuild) {
+  final Glob sourceGlob = Glob(source);
+  final targetDir = Directory(p.joinAll([dirBuild.path, ...targetInBuild.split("/")]))..createSync();
+  for (final FileSystemEntity fse in sourceGlob.listSync()) {
+    switch (fse) {
+      case File():
+        fse.copySync(p.join(targetDir.path, p.basename(fse.path)));
+      case Directory():
+        for (final FileSystemEntity fse2 in fse.listSync()) {
+          switch (fse2) {
+            case File():
+              fse2.copySync(p.join(targetDir.path, p.basename(fse2.path)));
+            case Directory():
+              copy(fse2.path, p.joinAll([...targetInBuild.split("/"), p.relative(fse2.path, from: source)]));
+          }
+        }
+    }
+  }
 }

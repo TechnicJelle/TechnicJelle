@@ -31,10 +31,12 @@ final Map<String, List<Project>> categoriesProjectsMap = checkedYamlDecode(
   _parse,
 );
 
-final Map<String, int> tagsAndTheirUsages = {};
+final Map<String, List<Project>> tagsAndTheirUsages = {};
 
 Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
   if (m == null) throw Exception("Somehow, m was null!?");
+
+  log.info("Parsing projects.yml...");
 
   final Map<String, List<Project>> categories = {};
   m.forEach((key, value) {
@@ -77,6 +79,7 @@ Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
 
     categories[key] = projects;
   });
+  log.info("Finished parsing projects.yml!");
   return categories;
 }
 
@@ -113,12 +116,12 @@ Future<void> setupProjectRepository() async {
 
   // Record tag usages
   for (final String tag in allTagsSet) {
-    int tagUsages = 0;
+    final List<Project> projects = [];
     for (final project in allProjectsList) {
       if (project.tags.contains(tag)) {
-        tagUsages++;
+        projects.add(project);
       }
     }
-    tagsAndTheirUsages[tag] = tagUsages;
+    tagsAndTheirUsages[tag] = projects;
   }
 }

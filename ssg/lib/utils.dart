@@ -48,3 +48,17 @@ extension Extension4 on Iterable<Element> {
     }
   }
 }
+
+extension Extension5 on Map<String, String?>? {
+  String args() {
+    final Map<String, String?>? args = this;
+    if (args == null) return "";
+    final StringBuffer sb = StringBuffer();
+    args.forEach((String key, String? value) {
+      if (value != null) {
+        sb.write(" $key=$value");
+      }
+    });
+    return sb.toString();
+  }
+}

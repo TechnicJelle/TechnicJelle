@@ -130,10 +130,15 @@ h1 {
 }
 
 main {
-	flex-grow: 1; /* Push footer to bottom */
+	/* Push footer to bottom */
+	flex-grow: 1;
 
 	margin: auto;
 	padding: 24px;
+
+	/* Prevent pages with little content from being thin */
+	width: 100%;
+	box-sizing: border-box;
 
 	border: solid 2px;
 	border-radius: 8px;

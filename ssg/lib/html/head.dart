@@ -1,22 +1,23 @@
 import "package:ssg/html/base.dart";
+import "package:ssg/utils.dart";
 
 class Head extends Element {
   String title;
 
-  Iterable<Meta> metas;
-  Iterable<Link> links;
-  Iterable<Style> styles;
+  Iterable<Meta>? metas;
+  Iterable<Link>? links;
+  Iterable<Style>? styles;
 
   Head({
     required this.title,
-    required this.metas,
-    required this.links,
-    required this.styles,
+    this.metas,
+    this.links,
+    this.styles,
   }) : super(children: []);
 
   @override
   String build() {
-    final Iterable<Iterable<Element>> categories = [metas, links, styles];
+    final Iterable<Iterable<Element>> categories = [metas ?? [], links ?? [], styles ?? []];
     final String concatenated = categories
         .map((Iterable<Element> els) => els.map((Element el) => el.build()).join("\n"))
         .join("\n\n");
@@ -57,22 +58,55 @@ class Meta extends Element {
   }
 }
 
+enum PreloadType {
+  fetch,
+  font,
+  image,
+  script,
+  style,
+  track,
+}
+
 class Link extends Element {
   String rel;
-  String type;
-  String sizes;
   String href;
+  Map<String, String?>? args;
 
-  Link({
-    required this.rel,
-    required this.type,
-    required this.sizes,
+  Link.icon({
+    required String? type,
+    required String? sizes,
     required this.href,
-  }) : super(children: []);
+  }) : rel = "icon",
+       args = {
+         "type": type,
+         "sizes": sizes,
+       },
+       super(children: []);
+
+  Link.stylesheet({
+    required this.href,
+  }) : rel = "stylesheet",
+       super(children: []);
+
+  Link.preload({
+    required this.href,
+    required PreloadType as,
+  }) : rel = "preload",
+       args = {
+         "as": as.name,
+       },
+       super(children: []);
+
+  static Iterable<Link> preloadedStylesheet({required String href}) {
+    return [
+      Link.preload(href: href, as: PreloadType.style),
+      Link.stylesheet(href: href),
+    ];
+  }
 
   @override
   String build() {
-    return '<link rel="$rel" type="$type" sizes="$sizes" href="$href">';
+    return '<link rel="$rel" href="$href"${args.args()}>';
   }
 }
 
