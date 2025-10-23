@@ -2,9 +2,8 @@
 
 Written in Dart.
 
-- `lib` contains HTML bindings and other utilities
-  - Hopefully I can split this off into a proper Pub.dev package at some point, so I can reuse it for other websites, too.
-- `bin` contains the actual SSG-specific code
+- `bin` contains the code that generates the actual pages
+- `lib` contains functions to generate components, utilities, and shared variables 
 
 ## Running
 
