@@ -24,12 +24,12 @@ Head generateHead({
       Link.icon(
         type: "image/png",
         sizes: "32x32",
-        href: "/favicon-32x32.png",
+        href: "/favicon32.png",
       ),
       Link.icon(
         type: "image/png",
         sizes: "16x16",
-        href: "/favicon-16x16.png",
+        href: "/favicon16.png",
       ),
       ...Link.preloadedStylesheet(href: "/styles/main.css"),
     ],
