@@ -9,10 +9,18 @@ class Project {
   String name;
   String url;
   List<String> tags;
+  List<String> visuals;
   String? blog;
   String? descriptionOverride;
 
-  Project({required this.name, required this.url, required this.tags, this.blog, this.descriptionOverride});
+  Project({
+    required this.name,
+    required this.url,
+    required this.tags,
+    required this.visuals,
+    this.blog,
+    this.descriptionOverride,
+  });
 
   static final Map<Project, Repository> _projectRepository = {};
 
@@ -45,33 +53,50 @@ Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
     for (final projectMap in value) {
       if (projectMap is! Map) throw Exception("Unexpected element 2");
 
+      //Name & URL
       final mapEntry = projectMap.entries.first;
-      final key2 = mapEntry.key;
-      final value2 = mapEntry.value;
-      if (key2 is! String || value2 is! String) throw Exception("Unexpected element 3");
+      final projectName = mapEntry.key;
+      final projectUrl = mapEntry.value;
+      if (projectName is! String || projectUrl is! String) throw Exception("Unexpected element 3");
 
+      //Tags
       final tags = projectMap["tags"];
       if (tags is! List) throw Exception("Unexpected element 4");
-
-      final blog = projectMap["blog"];
-      if (blog is! String?) throw Exception("Unexpected element 5");
-
-      final descriptionOverride = projectMap["description"];
-      if (descriptionOverride is! String?) throw Exception("Unexpected element 5");
-
       final List<String> projectTags = [];
       for (final tag in tags) {
-        if (tag is! String) throw Exception("Unexpected element 6");
-
+        if (tag is! String) throw Exception("Unexpected element 5");
         projectTags.add(tag);
       }
+
+      //Visuals
+      final visuals = projectMap["visuals"];
+      if (visuals is! List?) throw Exception("Unexpected element 6");
+      final List<String> projectVisuals = [];
+      //TODO: Remove this↓ null check once all the projects have at least one visual
+      if (visuals != null) {
+        if (visuals == null) throw Exception("Project $projectName does not have any visuals!");
+        for (final visual in visuals) {
+          if (visual is! String) throw Exception("Unexpected element 7");
+          projectVisuals.add(visual);
+        }
+      }
+
+      //Blog
+      final projectBlog = projectMap["blog"];
+      if (projectBlog is! String?) throw Exception("Unexpected element 8");
+
+      //Description Override
+      final projectDescriptionOverride = projectMap["description"];
+      if (projectDescriptionOverride is! String?) throw Exception("Unexpected element 9");
+
       projects.add(
         Project(
-          name: key2,
-          url: value2,
+          name: projectName,
+          url: projectUrl,
           tags: projectTags,
-          blog: blog,
-          descriptionOverride: descriptionOverride,
+          visuals: projectVisuals,
+          blog: projectBlog,
+          descriptionOverride: projectDescriptionOverride,
         ),
       );
     }

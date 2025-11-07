@@ -16,7 +16,7 @@ body {
 	font-size: 16px;
 }
 
-img {
+img, video {
 	max-width: 100%;
 }
 
@@ -78,7 +78,7 @@ main, h1, h2, h3, .card {
 	border-color: #1C2229 !important;
 }
 
-img, .card {
+img, video {
 	border-radius: 3px;
 }
 
@@ -102,7 +102,7 @@ summary {
 
 /* Specific styles */
 body {
-	max-width: 900px;
+	max-width: 1280px;
 	margin: auto;
 	padding: 0 2px;
 
@@ -141,7 +141,7 @@ main {
 	box-sizing: border-box;
 
 	border: solid 2px;
-	border-radius: 8px;
+	border-radius: 6px;
 }
 
 /* Haiku style */
@@ -215,19 +215,49 @@ aside li {
 
 	display: flex;
 	flex-direction: column;
+
+	border-radius: 8px;
+}
+
+.card div.visuals {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
+
+	/*width: 100%;*/
+	/*aspect-ratio: 16 / 9;*/
+	/*object-fit: cover;*/
+	/*overflow: clip;*/
+	border-radius: 6px;
+
+	margin-bottom: 8px;
+}
+
+.card div.visuals > * {
+	/*width: 100%;*/
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+
+	scroll-snap-align: start;
+
+	border-radius: 6px;
 }
 
 .card .stars {
 	position: absolute;
-	top: 6px;
-	right: 8px;
+	top: 1px;
+	right: 1px;
 }
 
 .card h4 {
 	margin-bottom: 0.2em;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
 	.two-col {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -269,12 +299,14 @@ aside li {
 /* Tag colours */
 /* Language colours from: https://github.com/github-linguist/linguist/blob/main/lib/linguist/languages.yml */
 .tags > .Android {color: #32DE84;}
-.tags > .AutoHotkey {color: #6594B9;}
+.tags > .AutoHotKey {color: #6594B9;}
 .tags > .C {color: #555555;}
 .tags > .Cpp {color: #F34B7D;}
 .tags > .Cs {color: #178600;}
 .tags > .Dart {color: #00B4AB;}
+.tags > .Fonts {color: #A7C957;}
 .tags > .Flutter {color: #02569B;}
+.tags > .GXP-Engine {color: #8F70B8;}
 .tags > .Java {color: #B07219;}
 .tags > .JavaScript {color: #F1E05A;}
 .tags > .Processing {color: #0096D8;}
