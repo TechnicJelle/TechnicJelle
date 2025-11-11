@@ -24,7 +24,7 @@ void createHomePage() {
 
 Body generateBody() {
   final List<Element> mainContent = [
-    ...markdown(File("README.md")),
+    ...markdown(File("README.md").readAsStringSync()),
     ...generateProjects(),
     generateWebrings(),
   ];

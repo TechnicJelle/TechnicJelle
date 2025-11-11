@@ -61,10 +61,10 @@ packages:
     dependency: transitive
     description:
       name: http
-      sha256: bb2ce4590bc2667c96f318d68cac1b5a7987ec819351d32b1c987239a815e007
+      sha256: "87721a4a50b19c7f1d49001e51409bddc46303966ce89a65af4f4e6004896412"
       url: "https://pub.dev"
     source: hosted
-    version: "1.5.0"
+    version: "1.6.0"
   http_parser:
     dependency: transitive
     description:
@@ -150,7 +150,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: c5804dec028200b8c4fe164a670ff1947e432478
+      resolved-ref: "8271b212baa3565e91a20577c78cad0d9e4ed50e"
       url: "https://github.com/TechnicJelle/techs_html_bindings.git"
     source: git
     version: "1.0.0"
