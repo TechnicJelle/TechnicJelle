@@ -2,7 +2,7 @@
 # Hi there! 👋
 
 <!--- region: visual -->
-| <img src="images/logo-128.gif" alt="animated version of my logo" width=128 height=128> | Programming's my art<br>Empty files are my canvas<br>And code is my brush |
+| <img src="images/logo-128.gif" alt="animated version of my logo" width=128 height=128> | Programming's my art<br/>Empty files are my canvas<br/>And code is my brush |
 |---|:---|
 
 <!--- region: intro -->
