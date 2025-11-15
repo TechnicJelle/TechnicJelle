@@ -69,12 +69,25 @@
       - https://raw.githubusercontent.com/TechnicJelle/FlappyPong/refs/heads/main/.github/readme_assets/Peek%202025-11-07%2003-55.mp4
   - LEADLEG 2069: https://github.com/TechnicJelle/GGJ2024
     tags: [ Game, Unity, C#, Team, Game Jam ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/GGJ2024/refs/heads/main/.github/readme_assets/Screenshot_2025-11-15_01-26-16.png
+      - https://raw.githubusercontent.com/TechnicJelle/GGJ2024/refs/heads/main/.github/readme_assets/Screenshot_2025-11-15_01-26-29.png
   - Catoms: https://github.com/TechnicJelle/Project-Final-Approach
     tags: [ Game, C#, GXP Engine, Physics ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/Project-Final-Approach/refs/heads/main/.github/readme_assets/demo.gif
   - She Can VR: https://github.com/TechnicJelle/Project-Customer
     tags: [ Game, C#, Unity, VR, Team ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/Project-Customer/refs/heads/main/.github/readme-assets/vlcsnap-2025-11-15-01h40m21s348.png
+      - https://raw.githubusercontent.com/TechnicJelle/Project-Customer/refs/heads/main/.github/readme-assets/vlcsnap-2025-11-15-01h40m39s498.png
+      - https://raw.githubusercontent.com/TechnicJelle/Project-Customer/refs/heads/main/.github/readme-assets/vlcsnap-2025-11-15-01h41m07s627.png
   - Tetsaw: https://github.com/TechnicJelle/Tetsaw
     tags: [ Game, Processing, Android ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/Tetsaw/main/.github/readme_assets/in-game.png
+      - https://raw.githubusercontent.com/TechnicJelle/Tetsaw/main/.github/readme_assets/main_menu.png
+      - https://raw.githubusercontent.com/TechnicJelle/Tetsaw/refs/heads/main/.github/readme_assets/algorithm.mp4
 
 ⚙️ Game Engines:
   - NeoGXP: https://github.com/NeoGXP/NeoGXP/
