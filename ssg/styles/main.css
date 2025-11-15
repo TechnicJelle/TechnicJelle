@@ -251,7 +251,10 @@ aside li {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 0.2em;
-	/*star count is at the end here*/
+}
+
+.card .stars {
+	font-weight: 500;
 }
 
 @media screen and (min-width: 1000px) {
