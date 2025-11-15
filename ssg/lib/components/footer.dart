@@ -5,7 +5,7 @@ Footer generateFooter() {
     children: [
       P(
         children: [
-          T("Website last updated on"),
+          T("Website last updated on "),
           Time(
             datetime: DateTime.now().toIso8601String(),
             visible: DateTime.now().copyWith(microsecond: 0).toIso8601String().replaceAll("T", " "),
