@@ -21,7 +21,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v4
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@55306faa4ed53b815ae49e564af8cfb359d32ae2
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          path: 'build'
+          source-directory: build
+          destination-github-username: "TechnicJelle"
+          destination-repository-name: "technicjelle.github.io"
+          user-name: "github-actions[bot]"
+          user-email: "41898282+github-actions[bot]@users.noreply.github.com"
+          target-branch: deploy
