@@ -17,7 +17,7 @@ Footer generateFooter() {
           P(
             inlineStyles: ["margin-bottom: 0"],
             children: [
-              T("Website made by"),
+              T("Website made by "),
               A(href: "mailto:technicjelleplay@gmail.com", children: [T("TechnicJelle")]),
             ],
           ),
