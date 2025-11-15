@@ -54,9 +54,14 @@ Element _generateProjectCard(Project project) {
     classes: ["card"],
     children: [
       if (project.visuals.isNotEmpty) _generateVisuals(project),
-      H4(
+      Div(
+        classes: ["card-title-bar"],
         children: [
-          A(href: project.url, children: [T(project.name)]),
+          H4(
+            children: [
+              A(href: project.url, children: [T(project.name)]),
+            ],
+          ),
           if (project.stars > 0)
             P(
               classes: ["stars"],
