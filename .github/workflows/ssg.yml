@@ -1,42 +1,27 @@
 name: CI
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the badges branch
   push:
-    branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      # Runs a single command using the runners shell
-      - name: chmod the generate script
-        run: chmod +x generate.sh
+      - name: Setup Dart SDK
+        uses: dart-lang/setup-dart@v1
 
-      # Runs a set of commands using the runners shell
-      - name: Build the website
-        run: ./generate.sh ${{ secrets.API_TOKEN_GITHUB }}
-        
-      - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@main
+      - name: Download SSG dependencies
+        run: cd ssg && dart pub get
+
+      - name: Build the Website
+        run: dart run ssg/bin/main.dart
         env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4
         with:
-          source-directory: build
-          destination-github-username: "TechnicJelle"
-          destination-repository-name: "technicjelle.github.io"
-          user-name: "github-actions[bot]"
-          user-email: "41898282+github-actions[bot]@users.noreply.github.com"
-          target-branch: deploy
+          path: 'build'

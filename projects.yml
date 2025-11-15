@@ -1,0 +1,203 @@
+# First tag is always the same as the category (without the emoji)
+# Tags are always singular (not plural)
+
+🎮 Games:
+  - Space Combat 3DX: https://github.com/TechnicJelle/SpaceCombat3DX
+    tags: [ Game, C#, Unity ]
+    blog: https://technicjelle.tumblr.com/tagged/Space%20Game%203DX
+    visuals:
+      - https://64.media.tumblr.com/f334422220d28a4eaa61c5346f74449a/c843dc2fc5ca71c3-df/s2048x3072/c1a014c578ca1dd436ea71e8a4c28a125f9d599c.png
+      - https://64.media.tumblr.com/cf5ee609b7977daa40acccddd4eb1654/c8cc5ff305aea9e4-05/s2048x3072/a529d42899127cbb9948db7d0cedd34cee83adcc.png
+      - https://64.media.tumblr.com/44757343cce8cf4201bea4a7892644e3/c843dc2fc5ca71c3-7d/s2048x3072/b3e6d9e561263ab25e60f82a9332eb278ba9c729.png
+  - DigiSwamp AG: https://github.com/Unrealitix/Project-Showoff
+    tags: [ Game, C#, Unity, Team ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/Project-Showoff/refs/heads/main/.github/readme_assets/Screenshot_2025-11-07_02-19-36.png
+      - https://raw.githubusercontent.com/TechnicJelle/Project-Showoff/refs/heads/main/.github/readme_assets/Screenshot_2025-11-07_02-21-58.png
+      - https://raw.githubusercontent.com/TechnicJelle/Project-Showoff/refs/heads/main/.github/readme_assets/splitscreen.png
+      - https://raw.githubusercontent.com/TechnicJelle/Project-Showoff/refs/heads/main/.github/readme_assets/wip.png
+  - Sea Spelunking: https://github.com/TechnicJelle/CMGT-Project-Innovation
+    tags: [ Game, C#, Unity, Team ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/CMGT-Project-Innovation/refs/heads/main/.github/readme_assets/vlcsnap-2025-11-07-02h48m10s142.png
+      - https://raw.githubusercontent.com/TechnicJelle/CMGT-Project-Innovation/refs/heads/main/.github/readme_assets/vlcsnap-2025-11-07-02h49m28s243.png
+      - https://raw.githubusercontent.com/TechnicJelle/CMGT-Project-Innovation/refs/heads/main/.github/readme_assets/vlcsnap-2025-11-07-02h50m26s447.png
+      - https://raw.githubusercontent.com/TechnicJelle/CMGT-Project-Innovation/refs/heads/main/.github/readme_assets/vlcsnap-2025-11-07-02h50m26s447.png
+  - Fox Hunt: https://github.com/TechnicJelle/DWM_WARLOCK
+    tags: [ Game, Processing, Team, Game Jam ]
+    visuals:
+      - https://raw.githubusercontent.com/MEGAHARD-Games/DWM_WARLOCK/refs/heads/main/.github/readme_assets/Screenshot_2025-11-07_02-55-26_all.png
+  - Geodesic: https://github.com/TechnicJelle/TEA_TEB
+    tags: [ Game, Processing, Team, Game Jam ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/TEA_TEB/main/.github/readme_assets/in_game.png
+      - https://raw.githubusercontent.com/TechnicJelle/TEA_TEB/main/.github/readme_assets/main_menu.png
+  - CMGT Intake: https://github.com/TechnicJelle/CMGT_Intake
+    tags: [ Game, Processing, Physics ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/CMGT_Intake/refs/heads/main/.github/images/Screenshot_2025-11-07_03-15-44.png
+      - https://raw.githubusercontent.com/TechnicJelle/CMGT_Intake/refs/heads/main/.github/images/Screenshot_2025-11-07_03-16-24.png
+      - https://raw.githubusercontent.com/TechnicJelle/CMGT_Intake/refs/heads/main/.github/images/Screenshot_2025-11-07_03-16-40.png
+      - https://raw.githubusercontent.com/TechnicJelle/CMGT_Intake/refs/heads/main/.github/images/Screenshot_2025-11-07_03-16-49.png
+  - Afterparty: https://github.com/TechnicJelle/CMGT_PointAndClick
+    tags: [ Game, Processing, Team, Prize ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/CMGT_PointAndClick/refs/heads/main/.github/readme_assets/vlcsnap-2025-11-07-03h21m08s592.png
+      - https://raw.githubusercontent.com/TechnicJelle/CMGT_PointAndClick/refs/heads/main/.github/readme_assets/vlcsnap-2025-11-07-03h21m45s375.png
+      - https://raw.githubusercontent.com/TechnicJelle/CMGT_PointAndClick/refs/heads/main/.github/readme_assets/vlcsnap-2025-11-07-03h22m22s118.png
+      - https://raw.githubusercontent.com/TechnicJelle/CMGT_PointAndClick/refs/heads/main/.github/readme_assets/vlcsnap-2025-11-07-03h21m27s679.png
+  - Chthonic Metal: https://github.com/TechnicJelle/Chthonic_Metal
+    tags: [ Game, C++, SFML ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/Chthonic_Metal/main/.github/readme_assets/MainMenuScreen.gif
+      - https://raw.githubusercontent.com/TechnicJelle/Chthonic_Metal/main/.github/readme_assets/CharacterSelectionScreen.png
+      - https://raw.githubusercontent.com/TechnicJelle/Chthonic_Metal/main/.github/readme_assets/FightScreen.png
+      - https://raw.githubusercontent.com/TechnicJelle/Chthonic_Metal/main/.github/readme_assets/FightScreenDeath.png
+  - Phurey: https://github.com/TechnicJelle/Phurey
+    tags: [ Game, JavaScript, p5js, Game Design, Level Design, Physics ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/Phurey/refs/heads/main/.github/readme_assets/1.png
+      - https://raw.githubusercontent.com/TechnicJelle/Phurey/refs/heads/main/.github/readme_assets/2.png
+      - https://raw.githubusercontent.com/TechnicJelle/Phurey/refs/heads/main/.github/readme_assets/3.png
+  - Doom Game (GXP): https://github.com/TechnicJelle/DoomGame
+    tags: [ Game, C#, GXP Engine ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/DoomGameGXP/refs/heads/main/.github/texture-warping-fix.webm
+  - Flappy Pong: https://github.com/TechnicJelle/FlappyPong
+    tags: [ Game, C++, olcPixelGameEngine, Premake ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/FlappyPong/refs/heads/main/.github/readme_assets/Peek%202025-11-07%2003-55.mp4
+  - LEADLEG 2069: https://github.com/TechnicJelle/GGJ2024
+    tags: [ Game, Unity, C#, Team, Game Jam ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/GGJ2024/refs/heads/main/.github/readme_assets/Screenshot_2025-11-15_01-26-16.png
+      - https://raw.githubusercontent.com/TechnicJelle/GGJ2024/refs/heads/main/.github/readme_assets/Screenshot_2025-11-15_01-26-29.png
+  - Catoms: https://github.com/TechnicJelle/Project-Final-Approach
+    tags: [ Game, C#, GXP Engine, Physics ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/Project-Final-Approach/refs/heads/main/.github/readme_assets/demo.gif
+  - She Can VR: https://github.com/TechnicJelle/Project-Customer
+    tags: [ Game, C#, Unity, VR, Team ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/Project-Customer/refs/heads/main/.github/readme-assets/vlcsnap-2025-11-15-01h40m21s348.png
+      - https://raw.githubusercontent.com/TechnicJelle/Project-Customer/refs/heads/main/.github/readme-assets/vlcsnap-2025-11-15-01h40m39s498.png
+      - https://raw.githubusercontent.com/TechnicJelle/Project-Customer/refs/heads/main/.github/readme-assets/vlcsnap-2025-11-15-01h41m07s627.png
+  - Tetsaw: https://github.com/TechnicJelle/Tetsaw
+    tags: [ Game, Processing, Android ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/Tetsaw/main/.github/readme_assets/in-game.png
+      - https://raw.githubusercontent.com/TechnicJelle/Tetsaw/main/.github/readme_assets/main_menu.png
+      - https://raw.githubusercontent.com/TechnicJelle/Tetsaw/refs/heads/main/.github/readme_assets/algorithm.mp4
+
+⚙️ Game Engines:
+  - NeoGXP: https://github.com/NeoGXP/NeoGXP/
+    tags: [ Game Engine, C# ]
+  - LLRI2 Experiments: https://github.com/Rythe-Interactive/LLRI2-Experiments
+    tags: [ Game Engine, C++, Graphics Programming, Vulkan, SDL_GPU ]
+
+💡 Tech Demos:
+  - Flutter User Fonts Demo: https://github.com/TechnicJelle/FlutterUserFontsDemo
+    tags: [ Tech Demo, Dart, Flutter, Android, Fonts ]
+  - Vulkan Psychedelic Cloths: https://github.com/TechnicJelle/VulkanPsychedelicCloths
+    tags: [ Tech Demo, C++, Graphics Programming, Vulkan ]
+  - Planes Tower Defence: https://github.com/TechnicJelle/PlanesTowerDefence
+    blog: https://technicjelle.tumblr.com/tagged/Planes%20Tower%20Defence
+    tags: [ Tech Demo, C#, Unity, Game ]
+  - Unreal Engine 5 GitHub Actions VR Template: https://github.com/TechnicJelle/UE5_GHActions_VRTemplate
+    tags: [ Tech Demo, Unreal Engine, CI/CD, Template ]
+  - Weaving Factory: https://technicjelle.tumblr.com/tagged/Weaving%20Factory
+    description: "Not on GitHub, because this was locally hosted with Perforce, managed by me"
+    blog: https://technicjelle.tumblr.com/tagged/Weaving%20Factory
+    tags: [ Tech Demo, Unreal Engine, Team, CI/CD, VCS, VR ]
+
+🖥️ Desktop Software Tools:
+  - BlueMap GUI: https://github.com/TechnicJelle/BlueMapGUI
+    tags: [ Desktop Software Tool, Dart, Flutter, BlueMap ]
+
+📱 Mobile Apps:
+  - GitDroid: https://github.com/TechnicJelle/GitDroid
+    tags: [ App, Dart, Flutter, Android, GitHub ]
+  - Wesley Chess: https://github.com/TechnicJelle/WesleyChess
+    tags: [ App, Processing, Android ]
+  - TwitDirect: https://github.com/TechnicJelle/TwitDirect
+    tags: [ App, Java, Android ]
+  - Vanir (UIMS): https://github.com/TechnicJelle/UIMS.App
+    tags: [ App, Dart, Flutter, Android, Team ]
+  - Life Wrench: https://github.com/TechnicJelle/LifeWrench
+    tags: [ App, Processing, Android ]
+
+🌐 Websites:
+  - TechnicJelle: https://github.com/TechnicJelle/TechnicJelle
+    tags: [ Website, Dart, HTML, CSS, Static Site Generator ]
+  - CMGTwitch: https://github.com/TechnicJelle/CMGTwitch
+    tags: [ Website, Dart, Flutter, Tech Demo ]
+  - BlueMap Marker Generator: https://github.com/TechnicJelle/BlueMapMarkerGenerator
+    tags: [ Website, Dart, Flutter, BlueMap ]
+  - GPU For Beginners: https://github.com/TechnicJelle/GPUForBeginners/
+    tags: [ Website, Graphics Programming, SDL_GPU, Tutorial ]
+
+🔌  Server Software:
+  - Post To Websocket Broadcaster (Dart): https://github.com/TechnicJelle/PostToWebsocketBroadcasterDart
+    tags: [ Server Software, Dart ]
+
+📝 Scripts:
+  - My AutoHotKey Scripts: https://github.com/TechnicJelle/My-AutoHotKey-Scripts
+    tags: [ Script, AutoHotKey ]
+  - Discord Reactor: https://github.com/TechnicJelle/DiscordReactor
+    tags: [ Script, Python, Discord ]
+
+🤖 Discord Bots:
+  - Glyfi: https://github.com/glyphs-fi/GlyfiBot
+    tags: [ Discord, C# ]
+  - Hydr8: https://github.com/TechnicJelle/DiscordHydr8Bot
+    tags: [ Discord, Python ]
+
+🌌 Simulations:
+  - Solar System: https://github.com/TechnicJelle/SolarSystem
+    tags: [ Simulations, Processing, Team ]
+  - Fireworks Display (PGE): https://github.com/TechnicJelle/FireworksPGE
+    tags: [ Simulations, C++, olcPixelGameEngine ]
+
+📚 Libraries:
+  - HTML Bindings (Dart): https://github.com/TechnicJelle/techs_html_bindings
+    tags: [ Library, Dart, HTML ]
+  - Update Checker (Java): https://github.com/TechnicJelle/UpdateCheckerJava
+    tags: [ Library, Java, GitHub ]
+  - MCUtils: https://github.com/TechnicJelle/MCUtils
+    tags: [ Library, Java, Minecraft ]
+  - BMUtils: https://github.com/TechnicJelle/BMUtils
+    tags: [ Library, Java, Minecraft, BlueMap ]
+
+⛏️ Minecraft Plugins:
+  - Simple Block Commands: https://github.com/TechnicJelle/SimpleBlockCommands
+    tags: [ Minecraft, Java ]
+  - Discord Inviter: https://github.com/TechnicJelle/DiscordInviter
+    tags: [ Minecraft, Java ]
+  - BlueMap Offline Player Markers: https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers
+    tags: [ Minecraft, Java, BlueMap ]
+  - BlueMap Sign Extractor: https://github.com/TechnicJelle/BlueMapSignExtractor
+    tags: [ Minecraft, Java, BlueMap ]
+  - BlueMap Chat Markers: https://github.com/TechnicJelle/BlueMapChatMarkers
+    tags: [ Minecraft, Java, BlueMap ]
+  - BlueMap Filtered Entities: https://github.com/TechnicJelle/BlueMapFilteredEntities
+    tags: [ Minecraft, Java, BlueMap ]
+  - BlueMap MC Map Sync: https://github.com/TechnicJelle/BlueMapMCMapSync
+    tags: [ Minecraft, Java, BlueMap ]
+  - BlueMap Floodgate: https://github.com/TechnicJelle/BlueMapFloodgate
+    tags: [ Minecraft, Java, BlueMap ]
+  - BlueMap Spawn Marker: https://github.com/TechnicJelle/BlueMapSpawnMarker
+    tags: [ Minecraft, Java, BlueMap ]
+  - BlueMap Native Addon Template: https://github.com/TechnicJelle/BlueMapNativeAddonTemplate
+    tags: [ Minecraft, Java, BlueMap, Template ]
+  - BlueMap Structures: https://github.com/TechnicJelle/BlueMapStructures
+    tags: [ Minecraft, Java, BlueMap ]
+  - BlueMap Death Markers: https://github.com/TechnicJelle/BlueMapDeathMarkers
+    tags: [ Minecraft, Java, BlueMap ]
+  - BlueMap Player Control: https://github.com/TechnicJelle/BlueMapPlayerControl
+    tags: [ Minecraft, Java, BlueMap ]
+  - BlueMap New Map: https://github.com/TechnicJelle/BlueMapNewMap
+    tags: [ Minecraft, Java, BlueMap ]
+  - BlueMap Web Addons: https://github.com/TechnicJelle/BlueMapWebAddons
+    tags: [ Minecraft, JavaScript, BlueMap ]
+  - BlueMap Custom Skin Provider: https://github.com/TechnicJelle/BlueMapCustomSkinProvider
+    tags: [ Minecraft, Java, BlueMap ]
