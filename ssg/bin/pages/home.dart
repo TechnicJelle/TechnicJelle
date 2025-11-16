@@ -42,9 +42,64 @@ Section generateHero(Table table) {
   );
 }
 
+void replaceBadges(List<Element> md) {
+  md.replace(
+    test: (Element element) {
+      if (element is Image) {
+        final Uri src = Uri.parse(element.src);
+        if (src.host == "img.shields.io" && src.pathSegments.first == "badge") {
+          final String s = src.pathSegments.last;
+          final int splitOnIndex = s.lastIndexOf("-");
+          return generateBadge(
+            label: s.substring(0, splitOnIndex).trim().replaceAll("--", "-"),
+            labelColour: src.queryParameters["logoColor"]!,
+            logo: src.queryParameters["logo"]!,
+            backgroundColour: "#${s.substring(splitOnIndex + 1).trim()}",
+          );
+        }
+      }
+      return null;
+    },
+  );
+}
+
+List<Element> generateBadge({
+  required String label,
+  required String labelColour,
+  required String logo,
+  required String backgroundColour,
+}) {
+  if (logo == "openjdk") logo = "java";
+
+  final File icon = File("images/icons/$logo.svg");
+  return [
+    Span(
+      classes: ["badge"],
+      inlineStyles: [
+        "color: $labelColour",
+        "background-color: $backgroundColour",
+      ],
+      children: [
+        T(
+          icon
+              .readAsStringSync()
+              .replaceAll(
+                ' xmlns="http://www.w3.org/2000/svg">',
+                ' xmlns="http://www.w3.org/2000/svg" width=24 height=24>',
+              )
+              .replaceAll('"/></svg>', '" fill="currentColor"/></svg>'),
+        ),
+        T(label),
+      ],
+    ),
+    T(" "),
+  ];
+}
+
 Body generateBody() {
   final List<Element> md = markdown(File("README.md").readAsStringSync());
   replaceHeroTable(md);
+  replaceBadges(md);
 
   final List<Element> mainContent = [
     ...md,
