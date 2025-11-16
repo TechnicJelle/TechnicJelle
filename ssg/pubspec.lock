@@ -150,7 +150,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: b9e30adc858e1f7bd3c6c75a1482007bb6834787
+      resolved-ref: "9e479c78a1fcd17f210ae4f6cef7784a693b361f"
       url: "https://github.com/TechnicJelle/techs_html_bindings.git"
     source: git
     version: "1.0.0"

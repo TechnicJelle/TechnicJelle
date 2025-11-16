@@ -92,17 +92,40 @@
 ⚙️ Game Engines:
   - NeoGXP: https://github.com/NeoGXP/NeoGXP/
     tags: [ Game Engine, C# ]
+    visuals:
+      - https://raw.githubusercontent.com/NeoGXP/NeoGXP/refs/heads/main/.github/readme_assets/demo0.png
+      - https://raw.githubusercontent.com/NeoGXP/NeoGXP/refs/heads/main/.github/readme_assets/demo_text.png
+      - https://raw.githubusercontent.com/NeoGXP/NeoGXP/refs/heads/main/.github/readme_assets/shapes.gif
   - LLRI2 Experiments: https://github.com/Rythe-Interactive/LLRI2-Experiments
     tags: [ Game Engine, C++, Graphics Programming, Vulkan, SDL_GPU ]
+    visuals:
+      - https://raw.githubusercontent.com/Rythe-Interactive/LLRI2-Experiments/refs/heads/main/.github/readme_assets/doom.png
+      - https://raw.githubusercontent.com/Rythe-Interactive/LLRI2-Experiments/refs/heads/main/.github/readme_assets/pixel_stars.png
+      - https://raw.githubusercontent.com/Rythe-Interactive/LLRI2-Experiments/refs/heads/main/.github/readme_assets/big_monkey.png
+      - https://raw.githubusercontent.com/Rythe-Interactive/LLRI2-Experiments/refs/heads/main/.github/readme_assets/windowed.png
+      - https://raw.githubusercontent.com/Rythe-Interactive/LLRI2-Experiments/refs/heads/main/.github/readme_assets/simple.png
 
 💡 Tech Demos:
   - Flutter User Fonts Demo: https://github.com/TechnicJelle/FlutterUserFontsDemo
     tags: [ Tech Demo, Dart, Flutter, Android, Fonts ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/FlutterUserFontsDemo/refs/heads/main/.github/readme_assets/anim.gif
+      - https://raw.githubusercontent.com/TechnicJelle/FlutterUserFontsDemo/refs/heads/main/.github/readme_assets/settings.png
+      - https://raw.githubusercontent.com/TechnicJelle/FlutterUserFontsDemo/refs/heads/main/.github/readme_assets/default.png
+      - https://raw.githubusercontent.com/TechnicJelle/FlutterUserFontsDemo/refs/heads/main/.github/readme_assets/OCR-A.png
+      - https://raw.githubusercontent.com/TechnicJelle/FlutterUserFontsDemo/refs/heads/main/.github/readme_assets/comic-big.png
   - Vulkan Psychedelic Cloths: https://github.com/TechnicJelle/VulkanPsychedelicCloths
     tags: [ Tech Demo, C++, Graphics Programming, Vulkan ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/VulkanPsychedelicCloths/feature/dear-imgui/.github/readme_assets/dear-imgui-demo.gif
+      - https://raw.githubusercontent.com/TechnicJelle/VulkanPsychedelicCloths/main/.github/readme_assets/demo.gif
   - Planes Tower Defence: https://github.com/TechnicJelle/PlanesTowerDefence
     blog: https://technicjelle.tumblr.com/tagged/Planes%20Tower%20Defence
     tags: [ Tech Demo, C#, Unity, Game ]
+    visuals:
+      - https://64.media.tumblr.com/96e36b1e111b9817377374369e17da91/a311c0963a93719d-a1/s1280x1920/8fa3f9ae921b843e51a7eeb686717ee72aeca8ab.png
+      - https://va.media.tumblr.com/tumblr_rog9h758iI1zblpfz_r2_720.mp4
+      - https://raw.githubusercontent.com/TechnicJelle/PlanesTowerDefence/main/PlantUML/include.svg
   - Unreal Engine 5 GitHub Actions VR Template: https://github.com/TechnicJelle/UE5_GHActions_VRTemplate
     tags: [ Tech Demo, Unreal Engine, CI/CD, Template ]
   - Weaving Factory: https://technicjelle.tumblr.com/tagged/Weaving%20Factory

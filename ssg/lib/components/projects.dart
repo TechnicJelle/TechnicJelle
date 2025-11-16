@@ -33,6 +33,7 @@ Element _generateVisual(String link) {
     case ".jpg":
     case ".jpeg":
     case ".webp":
+    case ".svg":
       return Image(src: link, alt: "");
     case ".mp4":
     case ".webm":
@@ -44,6 +45,7 @@ Element _generateVisual(String link) {
         disableRemotePlayback: true,
         loop: true,
         playsInline: true,
+        tabFocusable: false,
       );
     default:
       throw UnsupportedError("Unsupported visual extension: $ext");
