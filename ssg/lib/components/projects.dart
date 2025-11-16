@@ -2,6 +2,7 @@ import "package:path/path.dart" as p;
 import "package:ssg/components/tags.dart";
 import "package:ssg/projects_loading.dart";
 import "package:techs_html_bindings/elements.dart";
+import "package:techs_html_bindings/utils.dart";
 
 Section generateProjectsSection(List<Project> projects) {
   return Section(
@@ -50,7 +51,9 @@ Element _generateVisual(String link) {
 }
 
 Element _generateProjectCard(Project project) {
+  final String projectID = project.name.clean();
   return Section(
+    id: projectID,
     classes: ["card"],
     children: [
       if (project.visuals.isNotEmpty) _generateVisuals(project),
@@ -58,8 +61,14 @@ Element _generateProjectCard(Project project) {
         classes: ["card-title-bar"],
         children: [
           H4(
+            autoID: false,
             children: [
               A(href: project.url, children: [T(project.name)]),
+              A(
+                classes: [Hn.autoLinkClass],
+                href: "#$projectID",
+                children: [Hn.autoLinkElement],
+              )
             ],
           ),
           if (project.stars > 0)
