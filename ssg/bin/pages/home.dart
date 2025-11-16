@@ -24,17 +24,8 @@ void createHomePage() {
 }
 
 void replaceHeroTable(List<Element> md) {
-  final List<Table> tables = [];
-  md.collectOfType(into: tables);
-
-  final Table heroTable = tables.first;
-  md.remove(heroTable);
-
-  final List<H1> h1s = [];
-  md.collectOfType(into: h1s);
-  final int h1Index = md.indexOf(h1s.first);
-
-  md.insert(h1Index + 1, generateHero(heroTable));
+  final Table heroTable = md.whereType<Table>().first;
+  md[md.indexOf(heroTable)] = generateHero(heroTable);
 }
 
 Section generateHero(Table table) {
