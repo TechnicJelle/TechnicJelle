@@ -12,6 +12,7 @@ import "package:ssg/constants.dart";
 import "package:ssg/projects_loading.dart";
 import "package:techs_html_bindings/elements.dart";
 import "package:techs_html_bindings/markdown.dart";
+import "package:techs_html_bindings/utils.dart";
 
 void createHomePage() {
   final String indexHTML = HTML(
@@ -22,9 +23,40 @@ void createHomePage() {
   File(p.join(dirBuild.path, "index.html")).writeAsStringSync(indexHTML);
 }
 
+void replaceHeroTable(List<Element> md) {
+  final List<Table> tables = [];
+  md.collectOfType(into: tables);
+
+  final Table heroTable = tables.first;
+  md.remove(heroTable);
+
+  final List<H1> h1s = [];
+  md.collectOfType(into: h1s);
+  final int h1Index = md.indexOf(h1s.first);
+
+  md.insert(h1Index + 1, generateHero(heroTable));
+}
+
+Section generateHero(Table table) {
+  final List<TableHeader> ths = [];
+  table.collectChildrenOfType(into: ths);
+  final String img = ths.first.innerText.trim();
+  final String haiku = ths.last.innerText.trim();
+  return Section(
+    classes: ["hero"],
+    children: [
+      T(img),
+      P.text(haiku),
+    ],
+  );
+}
+
 Body generateBody() {
+  final List<Element> md = markdown(File("README.md").readAsStringSync());
+  replaceHeroTable(md);
+
   final List<Element> mainContent = [
-    ...markdown(File("README.md").readAsStringSync()),
+    ...md,
     ...generateProjects(),
     generateWebrings(),
   ];
