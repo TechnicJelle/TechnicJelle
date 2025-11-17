@@ -34,6 +34,7 @@ Element _generateVisual(String link) {
     case ".jpeg":
     case ".webp":
     case ".svg":
+    case ".pnj":
       return Image(src: link, alt: "");
     case ".mp4":
     case ".webm":
