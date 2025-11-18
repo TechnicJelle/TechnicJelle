@@ -176,9 +176,9 @@
   - Vanir (UIMS): https://github.com/TechnicJelle/UIMS.App
     tags: [ App, Dart, Flutter, Android, Team ]
     visuals:
-      - https://raw.githubusercontent.com/TechnicJelle/UIMS.App/main/.github/readme_assets/search.png
       - https://raw.githubusercontent.com/TechnicJelle/UIMS.App/main/.github/readme_assets/filtering.png
       - https://raw.githubusercontent.com/TechnicJelle/UIMS.App/main/.github/readme_assets/scanner.png
+      - https://raw.githubusercontent.com/TechnicJelle/UIMS.App/main/.github/readme_assets/search.png
   - Life Wrench: https://github.com/TechnicJelle/LifeWrench
     tags: [ App, Processing, Android ]
     visuals:
