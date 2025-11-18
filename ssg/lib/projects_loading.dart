@@ -72,8 +72,7 @@ Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
       final visuals = projectMap["visuals"];
       if (visuals is! List?) throw Exception("Unexpected element 6");
       final List<String> projectVisuals = [];
-      //TODO: Remove this↓ null check once all the projects have at least one visual
-      if (visuals != null) {
+      if (!key.contains("Libraries")) { //Do not require visuals for libraries
         if (visuals == null) throw Exception("Project $projectName does not have any visuals!");
         for (final visual in visuals) {
           if (visual is! String) throw Exception("Unexpected element 7");
