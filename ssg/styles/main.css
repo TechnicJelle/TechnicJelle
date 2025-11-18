@@ -293,7 +293,7 @@ aside li {
 }
 
 .card div.visuals > * {
-	/*width: 100%;*/
+	min-width: 100%;
 	aspect-ratio: 16 / 9;
 	object-fit: cover;
 
