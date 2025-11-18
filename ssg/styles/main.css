@@ -282,6 +282,7 @@ aside li {
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 	scrollbar-width: none;
+	scroll-snap-stop: always;
 
 	/*width: 100%;*/
 	/*aspect-ratio: 16 / 9;*/
