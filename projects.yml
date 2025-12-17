@@ -156,6 +156,11 @@
       - https://raw.githubusercontent.com/TechnicJelle/BlueMapGUI/refs/heads/main/.github/readme_assets/settings_screen.png
 
 📱 Mobile Apps:
+  - Simple Audio Converter: https://github.com/TechnicJelle/SimpleAudioConverter
+    tags: [ App, Dart, Flutter, Android, ffmpeg ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/SimpleAudioConverter/refs/heads/main/.github/readme_assets/example01.png
+      - https://raw.githubusercontent.com/TechnicJelle/SimpleAudioConverter/refs/heads/main/.github/readme_assets/example02.png
   - GitDroid: https://github.com/TechnicJelle/GitDroid
     tags: [ App, Dart, Flutter, Android, GitHub ]
     visuals:
