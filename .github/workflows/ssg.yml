@@ -2,7 +2,6 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -23,6 +22,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Pushes to another repository
+        # Only on pushes to main, to prevent other branches and PRs from deploying
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main'}}
         uses: cpina/github-action-push-to-another-repository@55306faa4ed53b815ae49e564af8cfb359d32ae2
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
