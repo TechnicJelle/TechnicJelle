@@ -159,6 +159,8 @@
   - Simple Audio Converter: https://github.com/TechnicJelle/SimpleAudioConverter
     tags: [ App, Dart, Flutter, Android, ffmpeg ]
     visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/SimpleAudioConverter/refs/heads/main/.github/readme_assets/demo-main.mp4
+      - https://raw.githubusercontent.com/TechnicJelle/SimpleAudioConverter/refs/heads/main/.github/readme_assets/demo-sharing.mp4
       - https://raw.githubusercontent.com/TechnicJelle/SimpleAudioConverter/refs/heads/main/.github/readme_assets/example01.png
       - https://raw.githubusercontent.com/TechnicJelle/SimpleAudioConverter/refs/heads/main/.github/readme_assets/example02.png
   - GitDroid: https://github.com/TechnicJelle/GitDroid
