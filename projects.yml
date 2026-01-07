@@ -247,7 +247,8 @@
   - Colour Mentions: https://github.com/TechnicJelle/DiscordColourMentionBot
     tags: [ Discord, Dart ]
     visuals:
-      - https://raw.githubusercontent.com/TechnicJelle/DiscordColourMentionBot/v1/.github/readme_assets/demo.png
+      - https://raw.githubusercontent.com/TechnicJelle/DiscordColourMentionBot/main/.github/readme_assets/demo.png
+      - https://raw.githubusercontent.com/TechnicJelle/DiscordColourMentionBot/main/.github/readme_assets/many.png
   - Hydr8: https://github.com/TechnicJelle/DiscordHydr8Bot
     tags: [ Discord, Python ]
     visuals:
