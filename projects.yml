@@ -150,10 +150,11 @@
   - BlueMap GUI: https://github.com/TechnicJelle/BlueMapGUI
     tags: [ Desktop Software Tool, Dart, Flutter, BlueMap ]
     visuals:
-      - https://raw.githubusercontent.com/TechnicJelle/BlueMapGUI/main/.github/readme_assets/control_panel.png
-      - https://raw.githubusercontent.com/TechnicJelle/BlueMapGUI/refs/heads/main/.github/readme_assets/map_config.png
-      - https://raw.githubusercontent.com/TechnicJelle/BlueMapGUI/refs/heads/main/.github/readme_assets/projects_list.png
-      - https://raw.githubusercontent.com/TechnicJelle/BlueMapGUI/refs/heads/main/.github/readme_assets/settings_screen.png
+      - https://raw.githubusercontent.com/TechnicJelle/BlueMapGUI/refs/heads/main/.github/readme_assets/dark/control_panel.png
+      - https://raw.githubusercontent.com/TechnicJelle/BlueMapGUI/refs/heads/main/.github/readme_assets/dark/config_map_overworld.png
+      - https://raw.githubusercontent.com/TechnicJelle/BlueMapGUI/refs/heads/main/.github/readme_assets/dark/config_map_overworld_advanced.png
+      - https://raw.githubusercontent.com/TechnicJelle/BlueMapGUI/refs/heads/main/.github/readme_assets/dark/projects_list.png
+      - https://raw.githubusercontent.com/TechnicJelle/BlueMapGUI/refs/heads/main/.github/readme_assets/dark/settings_screen.png
 
 📱 Mobile Apps:
   - Simple Audio Converter: https://github.com/TechnicJelle/SimpleAudioConverter
