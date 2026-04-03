@@ -7,7 +7,8 @@
 
 <!--- region: intro -->
 My name is Jelle ([IPA](https://en.wikipedia.org/wiki/Help:IPA/Dutch): /ˈjɛ.lə/), and I like creating stuff!  
-I am currently looking for a Graphics Programming job for games in The Netherlands.  
+I am currently looking for a Graphics Programming or DevOps/Infrastructure Engineering job in the games industry in The Netherlands.
+
 In July 2025, I graduated [Cum Laude (With Honours)](https://en.wikipedia.org/wiki/Latin_honors#Netherlands)
 the study _Creative Media and Game Technologies_ at _Saxion University of Applied Sciences_.
 
