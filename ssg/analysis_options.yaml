@@ -15,3 +15,4 @@ linter:
     prefer_single_quotes: false
     prefer_double_quotes: true
     avoid_escaping_inner_quotes: true
+    avoid_types_on_closure_parameters: false

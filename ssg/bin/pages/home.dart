@@ -69,6 +69,8 @@ List<Element> generateBadge({
   required String logo,
   required String backgroundColour,
 }) {
+  // it's okay 🤫 don't worry about it
+  // ignore: parameter_assignments
   if (logo == "openjdk") logo = "java";
 
   final File icon = File("images/icons/$logo.svg");
