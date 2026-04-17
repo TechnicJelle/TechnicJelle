@@ -12,7 +12,7 @@ import "package:techs_html_bindings/elements.dart";
 
 final Directory dirTags = Directory(p.join(dirBuild.path, "tags"))..createSync();
 
-void createTagsPages() {
+Future<void> createTagsPages() async {
   final String tagsPage = HTML(
     lang: "en",
     head: generateHead(title: "Tags"),
@@ -29,10 +29,12 @@ void createTagsPages() {
   ).build();
   File(p.join(dirTags.path, "index.html")).writeAsStringSync(tagsPage);
 
-  tagsAndTheirUsages.forEach(_createTagPage);
+  for (final MapEntry<String, List<Project>> entry in tagsAndTheirUsages.entries) {
+    await _createTagPage(tag: entry.key, projects: entry.value);
+  }
 }
 
-void _createTagPage(String tag, List<Project> projects) {
+Future<void> _createTagPage({required String tag, required List<Project> projects}) async {
   final Directory tagDir = Directory(p.join(dirTags.path, cleanTag(tag)))..createSync();
   final String tagPage = HTML(
     lang: "en",
@@ -52,7 +54,7 @@ void _createTagPage(String tag, List<Project> projects) {
               Em(children: [T(tag)]),
             ],
           ),
-          generateProjectsSection(projects),
+          await generateProjectsSection(projects),
         ],
       ),
       footer: generateFooter(),

@@ -14,11 +14,11 @@ import "package:techs_html_bindings/elements.dart";
 import "package:techs_html_bindings/markdown.dart";
 import "package:techs_html_bindings/utils.dart";
 
-void createHomePage() {
+Future<void> createHomePage() async {
   final String indexHTML = HTML(
     lang: "en",
     head: generateHead(),
-    body: generateBody(),
+    body: await generateBody(),
   ).build();
   File(p.join(dirBuild.path, "index.html")).writeAsStringSync(indexHTML);
 }
@@ -98,14 +98,14 @@ List<Element> generateBadge({
   ];
 }
 
-Body generateBody() {
+Future<Body> generateBody() async {
   final List<Element> md = markdown(File("README.md").readAsStringSync());
   replaceHeroTable(md);
   replaceBadges(md);
 
   final List<Element> mainContent = [
     ...md,
-    ...generateProjects(),
+    ...await generateProjects(),
     generateWebrings(),
   ];
 
@@ -122,16 +122,18 @@ Body generateBody() {
   );
 }
 
-List<Element> generateProjects() {
+Future<List<Element>> generateProjects() async {
   final List<Element> elements = [
     H2(children: [T("Projects")]),
     generateTagsList(withUsageAmount: true),
   ];
-  categoriesProjectsMap.forEach((String category, List<Project> projects) {
+  for (final MapEntry<String, List<Project>> entry in categoriesProjectsMap.entries) {
+    final String category = entry.key;
+    final List<Project> projects = entry.value;
     elements.addAll([
       H3(children: [T(category)]),
-      generateProjectsSection(projects),
+      await generateProjectsSection(projects),
     ]);
-  });
+  }
   return elements;
 }

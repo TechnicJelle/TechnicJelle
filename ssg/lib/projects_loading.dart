@@ -8,6 +8,7 @@ import "package:ssg/log.dart";
 class Project {
   String name;
   String url;
+  String category;
   List<String> tags;
   List<String> visuals;
   String? blog;
@@ -16,6 +17,7 @@ class Project {
   Project({
     required this.name,
     required this.url,
+    required this.category,
     required this.tags,
     required this.visuals,
     this.blog,
@@ -92,6 +94,7 @@ Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
         Project(
           name: projectName,
           url: projectUrl,
+          category: key,
           tags: projectTags,
           visuals: projectVisuals,
           blog: projectBlog,

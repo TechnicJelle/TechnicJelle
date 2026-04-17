@@ -15,9 +15,10 @@ Future<void> main(List<String> arguments) async {
   copy("ssg/copy", "");
   copy("ssg/styles", "styles");
 
-  createHomePage();
-  createTagsPages();
+  await createHomePage();
+  await createTagsPages();
 
   github.dispose();
+  http.close();
   log.info("Done with generation!");
 }

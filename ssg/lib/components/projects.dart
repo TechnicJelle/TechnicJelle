@@ -1,22 +1,28 @@
+import "dart:io";
+
 import "package:path/path.dart" as p;
 import "package:ssg/components/tags.dart";
+import "package:ssg/constants.dart";
+import "package:ssg/log.dart";
 import "package:ssg/projects_loading.dart";
 import "package:techs_html_bindings/elements.dart";
 import "package:techs_html_bindings/utils.dart";
 
-Section generateProjectsSection(List<Project> projects) {
+final Directory dirImages = Directory("build/images/project-visuals")..createSync(recursive: true);
+
+Future<Section> generateProjectsSection(List<Project> projects) async {
   return Section(
     classes: ["two-col"],
     children: [
-      for (final project in projects) _generateProjectCard(project),
+      for (final project in projects) await _generateProjectCard(project),
     ],
   );
 }
 
-Element _generateVisuals(Project project) {
+Future<Element> _generateVisuals(Project project) async {
   final List<Element> visuals = [];
   for (final String visual in project.visuals) {
-    visuals.add(_generateVisual(visual));
+    visuals.add(await _generateVisual(project, visual));
   }
   return Div(
     classes: ["visuals"],
@@ -24,7 +30,7 @@ Element _generateVisuals(Project project) {
   );
 }
 
-Element _generateVisual(String link) {
+Future<Element> _generateVisual(Project project, String link) async {
   final String ext = p.extension(link);
   if (ext.isEmpty) throw Exception("Extension could not be found in $link");
   switch (ext) {
@@ -35,11 +41,15 @@ Element _generateVisual(String link) {
     case ".webp":
     case ".svg":
     case ".pnj":
-      return Image(src: link, alt: "", loading: .lazy);
+      return Image(
+        src: await _downloadVisualIfNecessary(project, link),
+        alt: "",
+        loading: .lazy,
+      );
     case ".mp4":
     case ".webm":
       return Video(
-        src: link,
+        src: await _downloadVisualIfNecessary(project, link),
         autoplay: true,
         muted: true,
         disablePictureInPicture: true,
@@ -50,17 +60,43 @@ Element _generateVisual(String link) {
         loading: .lazy,
       );
     default:
-      throw UnsupportedError("Unsupported visual extension: $ext");
+      throw UnsupportedError('Unsupported Visual extension "$ext" in $link');
   }
 }
 
-Element _generateProjectCard(Project project) {
+///Download a local copy of the visual, instead of using the link from projects.yml
+Future<String> _downloadVisualIfNecessary(Project project, String link) async {
+  if (Platform.environment["ENABLE_VISUAL_DOWNLOADING"] != null) {
+    final Uri uri = Uri.parse(link);
+
+    final String filename = uri.getFileName();
+    final dirVisuals = Directory(p.join(dirImages.path, project.category.clean(), project.name.clean()))
+      ..createSync(recursive: true);
+    final file = File(p.join(dirVisuals.path, filename));
+    final String relativeUrl = "/${p.relative(file.path, from: dirBuild.path)}";
+
+    log.info("Downloading visual $relativeUrl");
+
+    final request = await http.getUrl(uri);
+    final response = await request.close();
+
+    //heehee
+    if (response.statusCode / 100.0 >= 4.0) throw Exception("HTTP Error ${response.statusCode} at $link");
+
+    await response.pipe(file.openWrite());
+
+    return relativeUrl;
+  }
+  return link;
+}
+
+Future<Element> _generateProjectCard(Project project) async {
   final String projectID = project.name.clean();
   return Section(
     id: projectID,
     classes: ["card"],
     children: [
-      if (project.visuals.isNotEmpty) _generateVisuals(project),
+      if (project.visuals.isNotEmpty) await _generateVisuals(project),
       Div(
         classes: ["card-title-bar"],
         children: [
