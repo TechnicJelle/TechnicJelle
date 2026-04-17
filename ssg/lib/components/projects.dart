@@ -35,7 +35,7 @@ Element _generateVisual(String link) {
     case ".webp":
     case ".svg":
     case ".pnj":
-      return Image(src: link, alt: "");
+      return Image(src: link, alt: "", loading: .lazy);
     case ".mp4":
     case ".webm":
       return Video(
@@ -47,6 +47,7 @@ Element _generateVisual(String link) {
         loop: true,
         playsInline: true,
         tabFocusable: false,
+        loading: .lazy,
       );
     default:
       throw UnsupportedError("Unsupported visual extension: $ext");
@@ -71,7 +72,7 @@ Element _generateProjectCard(Project project) {
                 classes: [Hn.autoLinkClass],
                 href: "#$projectID",
                 children: [Hn.autoLinkElement],
-              )
+              ),
             ],
           ),
           if (project.stars > 0)
