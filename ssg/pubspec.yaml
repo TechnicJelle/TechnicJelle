@@ -5,7 +5,7 @@ repository: https://github.com/TechnicJelle/TechnicJelle
 publish_to: none
 
 environment:
-  sdk: ^3.8.1
+  sdk: ^3.11.4
 
 dependencies:
   checked_yaml: ^2.0.4
