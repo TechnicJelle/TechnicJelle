@@ -248,8 +248,10 @@
   - Colour Mentions: https://github.com/TechnicJelle/DiscordColourMentionBot
     tags: [ Discord, Dart ]
     visuals:
-      - https://raw.githubusercontent.com/TechnicJelle/DiscordColourMentionBot/main/.github/readme_assets/demo.png
-      - https://raw.githubusercontent.com/TechnicJelle/DiscordColourMentionBot/main/.github/readme_assets/many.png
+      - https://raw.githubusercontent.com/TechnicJelle/DiscordColourMentionBot/refs/heads/main/.github/readme_assets/demo_emoji.png
+      - https://raw.githubusercontent.com/TechnicJelle/DiscordColourMentionBot/refs/heads/main/.github/readme_assets/demo_attachment.png
+      - https://raw.githubusercontent.com/TechnicJelle/DiscordColourMentionBot/refs/heads/main/.github/readme_assets/demo_emoji_many.png
+      - https://raw.githubusercontent.com/TechnicJelle/DiscordColourMentionBot/refs/heads/main/.github/readme_assets/demo_attachment_many.png
   - Hydr8: https://github.com/TechnicJelle/DiscordHydr8Bot
     tags: [ Discord, Python ]
     visuals:
