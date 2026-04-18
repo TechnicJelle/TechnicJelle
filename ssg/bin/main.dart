@@ -3,6 +3,7 @@ import "package:ssg/copy.dart";
 import "package:ssg/log.dart";
 import "package:ssg/projects_loading.dart";
 
+import "pages/blog.dart";
 import "pages/home.dart";
 import "pages/tags.dart";
 
@@ -17,6 +18,7 @@ Future<void> main(List<String> arguments) async {
 
   await createHomePage();
   await createTagsPages();
+  await createBlog();
 
   github.dispose();
   http.close();

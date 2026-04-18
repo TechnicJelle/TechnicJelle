@@ -363,6 +363,26 @@ aside li {
 	background: #333;
 }
 
+ol.years {}
+
+ol.months {
+	margin-bottom: 2em;
+}
+
+ol.days {
+	margin-top: 0.6em;
+	margin-bottom: 1.2em;
+}
+
+ul.posts {
+	margin-bottom: 0.5em;
+}
+
+ol.months > ::marker {
+	color: grey;
+	font-size: 0.8em;
+}
+
 /* Tag colours */
 /* Language colours from: https://github.com/github-linguist/linguist/blob/main/lib/linguist/languages.yml */
 .tags > .Android {color: #32DE84;}

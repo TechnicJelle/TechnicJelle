@@ -14,3 +14,22 @@ extension UriExtension on Uri {
 
   String getExtension() => p.extension(pathSegments.join("/"));
 }
+
+extension SortFiles on List<FileSystemEntity> {
+  void sortFSE() => sort((a, b) => a.path.compareTo(b.path));
+}
+
+const List<String> monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
