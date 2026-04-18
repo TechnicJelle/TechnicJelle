@@ -3,19 +3,18 @@ import "package:techs_html_bindings/elements.dart";
 
 Header generateHeader({required String filename, List<A> breadcrumbs = const []}) {
   return Header(
+    classes: ["mono-font"],
     children: [
       Nav(
-        classes: ["mono-font"],
-        inlineStyles: ["display: flex", "align-items: baseline"],
         children: [
-          A(href: "/", children: [T("TechnicJelle")]),
-          Span(classes: ["small"], children: [T("/")]),
+          A.text("TechnicJelle", href: "/"),
+          Span.text("/", classes: ["small"]),
           for (final breadcrumb in breadcrumbs) ...[
             breadcrumb,
-            Span(classes: ["small"], children: [T("/")]),
+            Span.text("/", classes: ["small"]),
           ],
-          Span(children: [T(p.basenameWithoutExtension(filename))]),
-          Span(classes: ["small"], children: [T(p.extension(filename))]),
+          Span.text(p.basenameWithoutExtension(filename)),
+          Span.text(p.extension(filename), classes: ["small"]),
         ],
       ),
     ],

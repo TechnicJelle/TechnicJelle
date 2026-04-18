@@ -118,10 +118,16 @@ body {
 }
 
 header {
-	font-size: 14px;
-	padding-top: 6px;
-	padding-left: 4px;
-	margin-bottom: 12px;
+	display: flex;
+	justify-content: space-between;
+
+	font-size: 16px;
+	padding: 12px 4px 10px;
+}
+
+header > nav {
+	display: flex;
+	align-items: baseline;
 }
 
 span.small {
