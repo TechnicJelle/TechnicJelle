@@ -26,7 +26,7 @@ details img[alt*="Saxion diploma"] {
 }
 
 .mono-font {
-	font-family: "JetBrainsMono NF", "JetBrains Mono", "ui-monospace", "SFMono-Regular", "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+	font-family: "JetBrains Mono", "ui-monospace", "SFMono-Regular", "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
 }
 
 h1, h2, h3, h4, h5, h6, .card {
