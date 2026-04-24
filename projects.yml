@@ -344,6 +344,10 @@
     tags: [ Minecraft, Java, BlueMap ]
     visuals:
       - https://raw.githubusercontent.com/TechnicJelle/BlueMapPlayerControl/main/.github/readme_assets/demo.gif
+  - BlueMap Time Marker: https://github.com/TechnicJelle/BlueMapTimeMarker
+    tags: [ Minecraft, Java, BlueMap ]
+    visuals:
+      - https://raw.githubusercontent.com/TechnicJelle/BlueMapTimeMarker/refs/heads/main/.github/readme_assets/demo.png
   - BlueMap New Map: https://github.com/TechnicJelle/BlueMapNewMap
     tags: [ Minecraft, Java, BlueMap ]
     visuals:
