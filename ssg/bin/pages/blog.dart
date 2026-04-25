@@ -1,15 +1,19 @@
 import "dart:io";
 
 import "package:path/path.dart" as p;
+import "package:ssg/atom/generate.dart";
 import "package:ssg/components/footer.dart";
 import "package:ssg/components/head.dart";
 import "package:ssg/components/header.dart";
 import "package:ssg/constants.dart";
+import "package:ssg/md_file.dart";
 import "package:techs_html_bindings/elements.dart";
-import "package:techs_html_bindings/markdown.dart";
 
 final Directory dirBlog = Directory("blog");
 final Directory dirBuildBlog = Directory(p.join("build", dirBlog.path))..createSync();
+
+//TODO: Implement article tags
+//TODO: Maybe also have a feed per blog tag? But only show those if you actually go to that tag page and search for linked feeds.
 
 Future<void> createBlog() async {
   final String indexHTML = HTML(
@@ -21,8 +25,10 @@ Future<void> createBlog() async {
 }
 
 Future<Body> generateBody() async {
+  final List<MdFile> mdFiles = [];
   final List<ListItem> yearItems = [];
 
+  //TODO: Make index.html files for all the intermediate directories, like the year, month, and day; all linking to their sub-things.
   final List<FileSystemEntity> years = dirBlog.listSync()..sortFSE();
   for (final Directory year in years.whereType<Directory>()) {
     final String yearName = p.basenameWithoutExtension(year.path);
@@ -41,14 +47,19 @@ Future<Body> generateBody() async {
 
         final List<FileSystemEntity> posts = day.listSync()..sortFSE();
         for (final File post in posts.whereType<File>()) {
-          final String title = await _generateBlogPost(post);
+          final mdFile = await _generateBlogPost(post);
+          final String path = postPath(post);
+
+          final String? title = mdFile.title;
+          if (title == null) throw Exception("Post `$path` does not have a title (an H1)!");
           postItems.add(
             ListItem(
               children: [
-                A.text(title, href: postPath(post)),
+                A.text(title, href: path),
               ],
             ),
           );
+          mdFiles.add(mdFile);
         }
         dayItems.add(
           ListItem(
@@ -79,6 +90,19 @@ Future<Body> generateBody() async {
     );
   }
 
+  const String blogUrl = "$baseUrl/blog";
+  await generateAtomFeed(
+    destinationPath: dirBlog,
+    title: "TechnicJelle's Blog",
+    subtitle:
+        "This is the Atom feed of TechnicJelle's blog. Here you will find articles I've written about things I did.",
+    author: "TechnicJelle",
+    siteRootUrl: baseUrl,
+    entries: mdFiles.map((f) => f.toAtomEntry("$blogUrl/${postPath(f.file)}")).toList(growable: false),
+    //never change this:
+    id: "urn:uuid:019dc1b3-1427-7fbf-b058-015b535012e1",
+  );
+
   return Body(
     header: generateHeader(filename: "Blog", showBlog: false),
     main: Main(
@@ -95,19 +119,14 @@ Future<Body> generateBody() async {
 String postPath(File post) => p.withoutExtension(p.relative(post.path, from: dirBlog.path));
 
 /// Returns the title of the blog post (contents of the first H1)
-Future<String> _generateBlogPost(File post) async {
+Future<MdFile> _generateBlogPost(File post) async {
+  final MdFile mdFile = MdFile(file: post);
+
   final String path = postPath(post);
-
-  final mdElements = markdown(await post.readAsString());
-  final H1? h1 = mdElements.whereType<H1>().firstOrNull;
-  if (h1 == null) {
-    throw Exception("Post `$path` does not have a title (an H1)!");
-  }
-
   final postDir = Directory(p.join(dirBuildBlog.path, path))..createSync(recursive: true);
   final postHtml = File(p.join(postDir.path, "index.html"));
 
-  await postHtml.writeAsString(Div(children: mdElements).build());
+  await postHtml.writeAsString(Div(children: mdFile.elements).build());
 
-  return h1.innerText;
+  return mdFile;
 }

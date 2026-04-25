@@ -38,7 +38,12 @@ Future<void> _createTagPage({required String tag, required List<Project> project
   final Directory tagDir = Directory(p.join(dirTags.path, cleanTag(tag)))..createSync();
   final String tagPage = HTML(
     lang: "en",
-    head: generateHead(title: tag),
+    head: generateHead(
+      title: tag,
+      extraLinks: [
+        //TODO: Maybe a feed per project tag? But only show if you actually go to this tag page and search for linked feeds.
+      ],
+    ),
     body: Body(
       header: generateHeader(
         breadcrumbs: [

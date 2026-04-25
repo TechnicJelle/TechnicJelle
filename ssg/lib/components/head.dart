@@ -4,6 +4,7 @@ import "package:techs_html_bindings/elements.dart";
 Head generateHead({
   String? title,
   String description = "On this website you'll find info about me and my projects",
+  List<Link> extraLinks = const [],
 }) {
   String fullTitle = "TechnicJelle";
   if (title != null) {
@@ -33,6 +34,9 @@ Head generateHead({
         href: "/favicon16.png",
       ),
       ...Link.preloadedStylesheet(href: "/styles/main.css"),
+      ...extraLinks,
+      //TODO: Add a feed for projects as well
+      Link.atom(href: "/blog/feed.xml", title: "Blog Atom Feed"),
     ],
     styles: [
       Style(css: "body { background: #151515; }"),

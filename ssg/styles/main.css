@@ -363,10 +363,13 @@ aside li {
 	background: #333;
 }
 
-ol.years {}
+ol.years {
+	padding-left: 5ch;
+}
 
 ol.months {
 	margin-bottom: 2em;
+	padding-left: 3ch;
 }
 
 ol.days {
