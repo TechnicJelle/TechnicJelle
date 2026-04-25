@@ -3,6 +3,9 @@ import "dart:io";
 import "package:github/github.dart";
 import "package:path/path.dart" as p;
 
+///does not include trailing slash to makes string interpolation look prettier
+const String baseUrl = "https://technicjelle.com";
+
 final Directory dirBuild = Directory("build")..createSync();
 
 final github = GitHub(auth: findAuthenticationFromEnvironment());

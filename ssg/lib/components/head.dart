@@ -1,3 +1,4 @@
+import "package:ssg/constants.dart";
 import "package:techs_html_bindings/elements.dart";
 
 Head generateHead({
@@ -17,7 +18,7 @@ Head generateHead({
       Meta.name(name: "description", content: description),
       Meta.name(name: "og:description", content: description),
       Meta.name(name: "theme-color", content: "#001FF1"),
-      Meta.name(name: "og:image", content: "https://technicjelle.com/images/logo-128.gif"),
+      Meta.name(name: "og:image", content: "$baseUrl/images/logo-128.gif"),
       Meta.httpEquiv(httpEquiv: "X-Clacks-Overhead", content: "GNU Terry Pratchett"),
     ],
     links: [
