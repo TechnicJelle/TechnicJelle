@@ -19,7 +19,7 @@ final Directory dirBuildBlog = Directory(p.join("build", dirBlog.path))..createS
 Future<void> createBlog() async {
   final String indexHTML = HTML(
     lang: "en",
-    head: generateHead(extraStyles: ["blog"]),
+    head: generateHead(title: "Blog", extraStyles: ["blog"]),
     body: await generateBody(),
   ).build();
   File(p.join(dirBuildBlog.path, "index.html")).writeAsStringSync(indexHTML);
@@ -109,7 +109,7 @@ void generateBreadcrumbIndex(List<String> path, List<Element> elements) {
   File(p.joinAll([dirBuildBlog.path, ...path, "index.html"])).writeAsStringSync(
     HTML(
       lang: "en",
-      head: generateHead(extraStyles: ["blog"]),
+      head: generateHead(title: "Blog ${path.join("/")}", extraStyles: ["blog"]),
       body: Body(
         header: generateHeader(
           breadcrumbs: [
@@ -147,7 +147,7 @@ Future<MdFile> _generateBlogPost(File post) async {
   String aggregate = "/${dirBlog.path}";
   final String indexHTML = HTML(
     lang: "en",
-    head: generateHead(),
+    head: generateHead(title: mdFile.title),
     body: Body(
       header: generateHeader(
         breadcrumbs: [
