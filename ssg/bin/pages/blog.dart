@@ -6,6 +6,7 @@ import "package:ssg/components/footer.dart";
 import "package:ssg/components/head.dart";
 import "package:ssg/components/header.dart";
 import "package:ssg/constants.dart";
+import "package:ssg/log.dart";
 import "package:ssg/md_file.dart";
 import "package:techs_html_bindings/elements.dart";
 
@@ -28,24 +29,24 @@ Future<Body> generateBody() async {
   final List<MdFile> mdFiles = [];
   final List<Element> yearItems = [];
 
-  final List<FileSystemEntity> years = dirBlog.listSync()..sortFSE();
-  for (final Directory year in years.whereType<Directory>()) {
+  final List<Directory> years = dirBlog.listSync().dirs()..sortFSE();
+  for (final Directory year in years.reversed) {
     final String yearName = p.basenameWithoutExtension(year.path);
     final List<Element> monthItems = [];
 
-    final List<FileSystemEntity> months = year.listSync()..sortFSE();
-    for (final Directory month in months.whereType<Directory>()) {
+    final List<Directory> months = year.listSync().dirs()..sortFSE();
+    for (final Directory month in months.reversed) {
       final int monthIndex = int.parse(p.basenameWithoutExtension(month.path));
       final String monthName = monthNames[monthIndex - 1];
       final List<Element> dayItems = [];
 
-      final List<FileSystemEntity> days = month.listSync()..sortFSE();
-      for (final Directory day in days.whereType<Directory>()) {
+      final List<Directory> days = month.listSync().dirs()..sortFSE();
+      for (final Directory day in days.reversed) {
         final String dayName = p.basenameWithoutExtension(day.path);
         final List<ListItem> postItems = [];
 
-        final List<FileSystemEntity> posts = day.listSync()..sortFSE();
-        for (final File post in posts.whereType<File>()) {
+        final List<File> posts = day.listSync().files()..sortFSE();
+        for (final File post in posts) {
           final mdFile = await _generateBlogPost(post);
           final String path = "/${p.join(dirBlog.path, postPath(post))}";
 
@@ -53,6 +54,7 @@ Future<Body> generateBody() async {
           if (title == null) throw Exception("Post `$path` does not have a title (an H1)!");
           postItems.add(ListItem(children: [A.text(title, href: path)]));
           mdFiles.add(mdFile);
+          log.info("Found blog post $path");
         }
         dayItems
           ..add(H4.text(dayName, id: "$yearName-${monthIndex.toStringDigits()}-$dayName"))

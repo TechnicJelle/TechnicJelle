@@ -19,6 +19,10 @@ extension UriExtension on Uri {
 }
 
 extension SortFiles on List<FileSystemEntity> {
+  List<Directory> dirs() => whereType<Directory>().toList();
+
+  List<File> files() => whereType<File>().toList();
+
   void sortFSE() => sort((a, b) => a.path.compareTo(b.path));
 }
 
