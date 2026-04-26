@@ -22,6 +22,10 @@ extension SortFiles on List<FileSystemEntity> {
   void sortFSE() => sort((a, b) => a.path.compareTo(b.path));
 }
 
+extension NumString on int {
+  String toStringDigits([int digits = 2]) => toString().padLeft(digits, "0");
+}
+
 const List<String> monthNames = [
   "January",
   "February",

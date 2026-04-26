@@ -21,9 +21,9 @@ Future<void> main(List<String> arguments) async {
     final dirNewPost = Directory(
       p.join(
         "blog",
-        now.year.toString()..padLeft(4, "0"),
-        now.month.toString().padLeft(2, "0"),
-        now.day.toString().padLeft(2, "0"),
+        now.year.toStringDigits(4),
+        now.month.toStringDigits(),
+        now.day.toStringDigits(),
       ),
     )..createSync(recursive: true);
     final fileNewPost = File(p.join(dirNewPost.path, "${arguments[1]}.md"));

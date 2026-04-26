@@ -18,7 +18,7 @@ final Directory dirBuildBlog = Directory(p.join("build", dirBlog.path))..createS
 Future<void> createBlog() async {
   final String indexHTML = HTML(
     lang: "en",
-    head: generateHead(),
+    head: generateHead(extraStyles: ["blog"]),
     body: await generateBody(),
   ).build();
   File(p.join(dirBuildBlog.path, "index.html")).writeAsStringSync(indexHTML);
@@ -26,19 +26,18 @@ Future<void> createBlog() async {
 
 Future<Body> generateBody() async {
   final List<MdFile> mdFiles = [];
-  final List<ListItem> yearItems = [];
+  final List<Element> yearItems = [];
 
-  //TODO: Make index.html files for all the intermediate directories, like the year, month, and day; all linking to their sub-things.
   final List<FileSystemEntity> years = dirBlog.listSync()..sortFSE();
   for (final Directory year in years.whereType<Directory>()) {
     final String yearName = p.basenameWithoutExtension(year.path);
-    final List<ListItem> monthItems = [];
+    final List<Element> monthItems = [];
 
     final List<FileSystemEntity> months = year.listSync()..sortFSE();
     for (final Directory month in months.whereType<Directory>()) {
       final int monthIndex = int.parse(p.basenameWithoutExtension(month.path));
       final String monthName = monthNames[monthIndex - 1];
-      final List<ListItem> dayItems = [];
+      final List<Element> dayItems = [];
 
       final List<FileSystemEntity> days = month.listSync()..sortFSE();
       for (final Directory day in days.whereType<Directory>()) {
@@ -48,54 +47,39 @@ Future<Body> generateBody() async {
         final List<FileSystemEntity> posts = day.listSync()..sortFSE();
         for (final File post in posts.whereType<File>()) {
           final mdFile = await _generateBlogPost(post);
-          final String path = postPath(post);
+          final String path = "/${p.join(dirBlog.path, postPath(post))}";
 
           final String? title = mdFile.title;
           if (title == null) throw Exception("Post `$path` does not have a title (an H1)!");
-          postItems.add(
-            ListItem(
-              children: [
-                A.text(title, href: path),
-              ],
-            ),
-          );
+          postItems.add(ListItem(children: [A.text(title, href: path)]));
           mdFiles.add(mdFile);
         }
-        dayItems.add(
-          ListItem(
-            value: dayName,
-            children: [
-              UnorderedList(items: postItems, classes: ["posts"]),
-            ],
-          ),
+        dayItems
+          ..add(H4.text(dayName, id: "$yearName-${monthIndex.toStringDigits()}-$dayName"))
+          ..add(UnorderedList(items: postItems));
+        generateBreadcrumbIndex(
+          [yearName, monthIndex.toStringDigits(), dayName],
+          [UnorderedList(items: postItems)],
         );
       }
-      monthItems.add(
-        ListItem(
-          value: monthIndex.toString(),
-          children: [
-            T(monthName),
-            OrderedList(items: dayItems, classes: ["days"]),
-          ],
-        ),
-      );
+      monthItems
+        ..add(H3(children: [Span.text("$monthIndex"), T(monthName)], id: "$yearName-$monthIndex"))
+        ..addAll(dayItems);
+      generateBreadcrumbIndex([yearName, monthIndex.toStringDigits()], dayItems);
     }
-    yearItems.add(
-      ListItem(
-        value: yearName,
-        children: [
-          OrderedList(items: monthItems, classes: ["months"]),
-        ],
-      ),
-    );
+    yearItems
+      ..add(H2.text(yearName, id: yearName))
+      ..addAll(monthItems);
+
+    generateBreadcrumbIndex([yearName], monthItems);
   }
 
-  const String blogUrl = "$baseUrl/blog";
+  final String blogUrl = "$baseUrl/${dirBlog.path}";
   await generateAtomFeed(
     destinationPath: dirBlog,
     title: "TechnicJelle's Blog",
     subtitle:
-        "This is the Atom feed of TechnicJelle's blog. Here you will find articles I've written about things I did.",
+        "This is the Atom feed of TechnicJelle's blog. Here you will find articles I've written about things I've made, which can be games, art or something else entirely.",
     author: "TechnicJelle",
     siteRootUrl: baseUrl,
     entries: mdFiles.map((f) => f.toAtomEntry("$blogUrl/${postPath(f.file)}")).toList(growable: false),
@@ -108,11 +92,40 @@ Future<Body> generateBody() async {
     main: Main(
       children: [
         H1.text("Blog"),
-        P.text("This is my blog"),
-        OrderedList(items: yearItems, classes: ["years"]),
+        P.text(
+          "This is my (TechnicJelle) blog! On this blog I write about things I make, which can be games, art or something else entirely",
+        ),
+        ...yearItems,
       ],
     ),
     footer: generateFooter(),
+  );
+}
+
+void generateBreadcrumbIndex(List<String> path, List<Element> elements) {
+  String aggregate = "/${dirBlog.path}";
+  File(p.joinAll([dirBuildBlog.path, ...path, "index.html"])).writeAsStringSync(
+    HTML(
+      lang: "en",
+      head: generateHead(extraStyles: ["blog"]),
+      body: Body(
+        header: generateHeader(
+          breadcrumbs: [
+            A.text("Blog", href: aggregate),
+            ...path.map((String e) => A.text(e, href: aggregate += "/$e")).toList()..removeLast(),
+          ],
+          filename: path.last,
+          showBlog: false,
+        ),
+        main: Main(
+          children: [
+            H1.text(path.last),
+            ...elements,
+          ],
+        ),
+        footer: generateFooter(),
+      ),
+    ).build(),
   );
 }
 
@@ -126,21 +139,20 @@ Future<MdFile> _generateBlogPost(File post) async {
   final postDir = Directory(p.join(dirBuildBlog.path, path))..createSync(recursive: true);
   final postHtml = File(p.join(postDir.path, "index.html"));
 
-  final List<String> parts = p.split(mdFile.file.path).toList(growable: false);
-  if (parts.length < 4) throw Exception("Could not extract date from mdFile path!?");
+  final List<String> parts = p.split(mdFile.file.path).toList()..removeAt(0);
+  if (parts.length != 4) throw Exception("Could not extract date from mdFile path!?");
 
+  String aggregate = "/${dirBlog.path}";
   final String indexHTML = HTML(
     lang: "en",
     head: generateHead(),
     body: Body(
       header: generateHeader(
-        filename: p.basename(mdFile.file.path),
         breadcrumbs: [
-          A.text("Blog", href: "/blog"),
-          A.text(parts[1], href: "/blog/${parts[1]}"),
-          A.text(parts[2], href: "/blog/${parts[1]}/${parts[2]}"),
-          A.text(parts[3], href: "/blog/${parts[1]}/${parts[2]}/${parts[3]}"),
+          A.text("Blog", href: aggregate),
+          ...parts.map((String e) => A.text(e, href: aggregate += "/$e")).toList()..removeLast(),
         ],
+        filename: parts.last,
         showBlog: false,
       ),
       main: Main(
