@@ -6,7 +6,7 @@ import "package:path/path.dart" as p;
 ///does not include trailing slash to makes string interpolation look prettier
 const String baseUrl = "https://technicjelle.com";
 
-final Directory dirBuild = Directory("build")..createSync();
+final Directory dirBuild = Directory("build");
 
 final github = GitHub(auth: findAuthenticationFromEnvironment());
 

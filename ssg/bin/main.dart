@@ -43,6 +43,11 @@ atom-id: "${const Uuid().v7()}"
     exit(0);
   }
 
+  if (dirBuild.existsSync()) {
+    dirBuild.deleteSync(recursive: true);
+  }
+  dirBuild.createSync();
+
   await setupProjectRepository();
 
   log.info("Starting generation...");
