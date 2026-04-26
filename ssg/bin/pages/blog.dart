@@ -126,7 +126,31 @@ Future<MdFile> _generateBlogPost(File post) async {
   final postDir = Directory(p.join(dirBuildBlog.path, path))..createSync(recursive: true);
   final postHtml = File(p.join(postDir.path, "index.html"));
 
-  await postHtml.writeAsString(Div(children: mdFile.elements).build());
+  final List<String> parts = p.split(mdFile.file.path).toList(growable: false);
+  if (parts.length < 4) throw Exception("Could not extract date from mdFile path!?");
+
+  final String indexHTML = HTML(
+    lang: "en",
+    head: generateHead(),
+    body: Body(
+      header: generateHeader(
+        filename: p.basename(mdFile.file.path),
+        breadcrumbs: [
+          A.text("Blog", href: "/blog"),
+          A.text(parts[1], href: "/blog/${parts[1]}"),
+          A.text(parts[2], href: "/blog/${parts[1]}/${parts[2]}"),
+          A.text(parts[3], href: "/blog/${parts[1]}/${parts[2]}/${parts[3]}"),
+        ],
+        showBlog: false,
+      ),
+      main: Main(
+        children: mdFile.elements,
+      ),
+      footer: generateFooter(),
+    ),
+  ).build();
+
+  await postHtml.writeAsString(indexHTML);
 
   return mdFile;
 }

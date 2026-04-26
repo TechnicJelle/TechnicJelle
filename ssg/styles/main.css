@@ -136,6 +136,10 @@ span.small {
 	padding: 0 4px;
 }
 
+header > nav > span.small:last-child {
+	padding: 0;
+}
+
 h1 {
 	margin-top: 0;
 }
