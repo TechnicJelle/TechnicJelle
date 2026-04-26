@@ -1,3 +1,4 @@
+import "dart:collection";
 import "dart:io";
 
 import "package:checked_yaml/checked_yaml.dart";
@@ -10,20 +11,26 @@ import "package:uuid/uuid.dart";
 class MdFile {
   final File file;
   final String content;
-  final List<Element> elements;
+  final List<Element> _elements;
   Map<String, Object>? _frontmatter;
 
-  Map<String, Object>? get frontmatter => _frontmatter;
+  UnmodifiableMapView<String, Object>? get frontmatter {
+    final thisFrontmatter = _frontmatter;
+    if (thisFrontmatter == null) return null;
+    return UnmodifiableMapView(thisFrontmatter);
+  }
+
+  UnmodifiableListView<Element> get elements => UnmodifiableListView(_elements);
 
   H1? get h1 => elements.whereType<H1>().firstOrNull;
 
   String? get title => h1?.innerText;
 
-  MdFile({required this.file}) : content = file.readAsStringSync(), elements = [] {
+  MdFile({required this.file}) : content = file.readAsStringSync(), _elements = [] {
     final RegExp checkFrontmatter = RegExp(r"^---$\n(.*?)\s*^---$\s*(.*)", dotAll: true, multiLine: true);
     final RegExpMatch? match = checkFrontmatter.firstMatch(content);
     if (match == null) {
-      elements.addAll(markdown(content));
+      _elements.addAll(markdown(content));
     } else {
       final String? strFrontmatter = match.group(1);
       if (strFrontmatter == null) {
@@ -39,7 +46,7 @@ class MdFile {
       if (strRest == null) {
         throw Exception("Regex failure in frontmatter parsing of ${file.path}: missing group 2");
       }
-      elements.addAll(markdown(strRest));
+      _elements.addAll(markdown(strRest));
     }
   }
 
@@ -76,7 +83,7 @@ class MdFile {
     if (thisTitle == null) throw Exception("Post $sourcePath does not have a title!");
 
     final String content = Div(
-      children: elements..remove(h1),
+      children: elements.where((element) => element != h1).toList(growable: false),
       args: {"xmlns": "http://www.w3.org/1999/xhtml"},
     ).build();
 
