@@ -7,6 +7,11 @@ import "pages/home.dart";
 import "pages/tags.dart";
 
 Future<void> main(List<String> arguments) async {
+  if (dirBuild.existsSync()) {
+    dirBuild.deleteSync(recursive: true);
+  }
+  dirBuild.createSync();
+
   await setupProjectRepository();
 
   log.info("Starting generation...");

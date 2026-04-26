@@ -3,7 +3,7 @@ import "dart:io";
 import "package:github/github.dart";
 import "package:path/path.dart" as p;
 
-final Directory dirBuild = Directory("build")..createSync();
+final Directory dirBuild = Directory("build");
 
 final github = GitHub(auth: findAuthenticationFromEnvironment());
 
