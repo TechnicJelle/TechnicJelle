@@ -85,6 +85,7 @@ Future<Body> generateBody() async {
     author: "TechnicJelle",
     siteRootUrl: baseUrl,
     entries: mdFiles.map((f) => f.toAtomEntry("$blogUrl/${postPath(f.file)}")).toList(growable: false),
+    entryIdPrefix: "urn:uuid:",
     //never change this:
     id: "urn:uuid:019dc1b3-1427-7fbf-b058-015b535012e1",
   );
