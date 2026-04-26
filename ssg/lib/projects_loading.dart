@@ -49,46 +49,46 @@ Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
 
   final Map<String, List<Project>> categories = {};
   m.forEach((key, value) {
-    if (key is! String || value is! List) throw Exception("Unexpected element 1");
+    if (key is! String || value is! List) throw Exception("Expected each top-level projects.yml entry to be a category name with a list of projects.");
 
     final List<Project> projects = [];
     for (final projectMap in value) {
-      if (projectMap is! Map) throw Exception("Unexpected element 2");
+      if (projectMap is! Map) throw Exception('Expected each project entry in category "$key" to be a map.');
 
       //Name & URL
       final mapEntry = projectMap.entries.first;
       final projectName = mapEntry.key;
       final projectUrl = mapEntry.value;
-      if (projectName is! String || projectUrl is! String) throw Exception("Unexpected element 3");
+      if (projectName is! String || projectUrl is! String) throw Exception('Expected the first entry of a project in category "$key" to contain a project name and URL as strings.');
 
       //Tags
       final tags = projectMap["tags"];
-      if (tags is! List) throw Exception("Unexpected element 4");
+      if (tags is! List) throw Exception('Expected project "$projectName" to define "tags" as a list.');
       final List<String> projectTags = [];
       for (final tag in tags) {
-        if (tag is! String) throw Exception("Unexpected element 5");
+        if (tag is! String) throw Exception('Expected every tag for project "$projectName" to be a string.');
         projectTags.add(tag);
       }
 
       //Visuals
       final visuals = projectMap["visuals"];
-      if (visuals is! List?) throw Exception("Unexpected element 6");
+      if (visuals is! List?) throw Exception('Expected "visuals" for project "$projectName" to be a list of strings or omitted.');
       final List<String> projectVisuals = [];
       if (!key.contains("Libraries")) { //Do not require visuals for libraries
         if (visuals == null) throw Exception("Project $projectName does not have any visuals!");
         for (final visual in visuals) {
-          if (visual is! String) throw Exception("Unexpected element 7");
+          if (visual is! String) throw Exception('Expected every visual for project "$projectName" to be a string URL.');
           projectVisuals.add(visual);
         }
       }
 
       //Blog
       final projectBlog = projectMap["blog"];
-      if (projectBlog is! String?) throw Exception("Unexpected element 8");
+      if (projectBlog is! String?) throw Exception('Expected "blog" for project "$projectName" to be a string or omitted.');
 
       //Description Override
       final projectDescriptionOverride = projectMap["description"];
-      if (projectDescriptionOverride is! String?) throw Exception("Unexpected element 9");
+      if (projectDescriptionOverride is! String?) throw Exception('Expected "description" for project "$projectName" to be a string or omitted.');
 
       projects.add(
         Project(
