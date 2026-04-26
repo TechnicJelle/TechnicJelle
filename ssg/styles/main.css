@@ -125,8 +125,19 @@ header {
 	padding: 12px 4px 10px;
 }
 
+/* For very thin screens, put the items in the header below each other */
+@media screen and (max-width: 300px) {
+	header {
+		flex-direction: column;
+		gap: 0.5em;
+		align-items: center;
+	}
+}
+
+
 header > nav {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: baseline;
 }
 
