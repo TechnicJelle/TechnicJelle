@@ -1,0 +1,18 @@
+/* H2 is Year */
+/* H3 is Month */
+/* H4 is Day */
+
+h4 {
+	margin-bottom: 0.2em;
+}
+
+ul {
+	margin-top: 0;
+	padding-left: 1em;
+	list-style-type: disclosure-closed;
+}
+
+h3 span:first-of-type {
+	color: grey;
+	font-size: 0.8em;
+}

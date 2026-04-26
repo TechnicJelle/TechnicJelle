@@ -10,7 +10,7 @@ import "package:ssg/constants.dart";
 import "package:ssg/projects_loading.dart";
 import "package:techs_html_bindings/elements.dart";
 
-final Directory dirTags = Directory(p.join(dirBuild.path, "tags"))..createSync();
+final Directory dirTags = Directory(p.join(dirBuild.path, "tags"));
 
 Future<void> createTagsPages() async {
   final String tagsPage = HTML(
@@ -27,6 +27,7 @@ Future<void> createTagsPages() async {
       footer: generateFooter(),
     ),
   ).build();
+  dirTags.createSync(recursive: true);
   File(p.join(dirTags.path, "index.html")).writeAsStringSync(tagsPage);
 
   for (final MapEntry<String, List<Project>> entry in tagsAndTheirUsages.entries) {
@@ -38,7 +39,12 @@ Future<void> _createTagPage({required String tag, required List<Project> project
   final Directory tagDir = Directory(p.join(dirTags.path, cleanTag(tag)))..createSync();
   final String tagPage = HTML(
     lang: "en",
-    head: generateHead(title: tag),
+    head: generateHead(
+      title: tag,
+      extraLinks: [
+        //TODO: Maybe a feed per project tag? But only show if you actually go to this tag page and search for linked feeds.
+      ],
+    ),
     body: Body(
       header: generateHeader(
         breadcrumbs: [
