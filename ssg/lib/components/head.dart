@@ -15,13 +15,13 @@ Head generateHead({
   return Head(
     title: fullTitle,
     metas: [
-      Meta.name(name: "viewport", content: "width=device-width, initial-scale=1"),
-      Meta.name(name: "og:title", content: fullTitle),
-      Meta.name(name: "description", content: description),
-      Meta.name(name: "og:description", content: description),
-      Meta.name(name: "theme-color", content: "#001FF1"),
-      Meta.name(name: "og:image", content: "$baseUrl/images/logo-128.gif"),
-      Meta.httpEquiv(httpEquiv: "X-Clacks-Overhead", content: "GNU Terry Pratchett"),
+      Meta.name("viewport", content: "width=device-width, initial-scale=1"),
+      Meta.property("og:title", content: fullTitle),
+      Meta.name("description", content: description),
+      Meta.property("og:description", content: description),
+      Meta.name("theme-color", content: "#001FF1"),
+      Meta.property("og:image", content: "$baseUrl/images/logo-128.gif"),
+      Meta.httpEquiv("X-Clacks-Overhead", content: "GNU Terry Pratchett"),
     ],
     links: [
       Link.icon(
