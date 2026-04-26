@@ -43,7 +43,7 @@ Future<Element> _generateVisual(Project project, String link) async {
     case ".pnj":
       return Image(
         src: await _downloadVisualIfNecessary(project, link),
-        alt: "",
+        alt: "Screenshot of ${project.name}",
         loading: .lazy,
       );
     case ".mp4":
