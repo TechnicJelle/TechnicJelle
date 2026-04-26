@@ -27,6 +27,7 @@ Future<void> createTagsPages() async {
       footer: generateFooter(),
     ),
   ).build();
+  dirTags.createSync(recursive: true);
   File(p.join(dirTags.path, "index.html")).writeAsStringSync(tagsPage);
 
   for (final MapEntry<String, List<Project>> entry in tagsAndTheirUsages.entries) {
