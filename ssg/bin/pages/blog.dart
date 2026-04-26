@@ -11,7 +11,7 @@ import "package:ssg/md_file.dart";
 import "package:techs_html_bindings/elements.dart";
 
 final Directory dirBlog = Directory("blog");
-final Directory dirBuildBlog = Directory(p.join("build", dirBlog.path))..createSync();
+final Directory dirBuildBlog = Directory(p.join("build", dirBlog.path));
 
 //TODO: Implement article tags
 //TODO: Maybe also have a feed per blog tag? But only show those if you actually go to that tag page and search for linked feeds.

@@ -10,7 +10,7 @@ import "package:ssg/constants.dart";
 import "package:ssg/projects_loading.dart";
 import "package:techs_html_bindings/elements.dart";
 
-final Directory dirTags = Directory(p.join(dirBuild.path, "tags"))..createSync();
+final Directory dirTags = Directory(p.join(dirBuild.path, "tags"));
 
 Future<void> createTagsPages() async {
   final String tagsPage = HTML(
