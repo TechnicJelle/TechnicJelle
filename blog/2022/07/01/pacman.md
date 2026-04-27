@@ -19,6 +19,6 @@ but I am very happy with the outcome :)
 
 Here is the final node-tree:
 
-![nodes](nodes.png)
+![A screenshot of Blender 3.2.0, showing a node-tree at the bottom, and the pacman at the top](nodes.png)
 
 I posted it on ArtStation, too, so give me a like and a follow over there if you want: https://www.artstation.com/artwork/KO9Y1o
