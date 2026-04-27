@@ -18,11 +18,13 @@ extension UriExtension on Uri {
   String getExtension() => p.extension(pathSegments.join("/"));
 }
 
-extension SortFiles on List<FileSystemEntity> {
+extension FilterFSE on Iterable<FileSystemEntity> {
   List<Directory> dirs() => whereType<Directory>().toList();
 
   List<File> files() => whereType<File>().toList();
+}
 
+extension SortFiles on List<FileSystemEntity> {
   void sortFSE() => sort((a, b) => a.path.compareTo(b.path));
 }
 

@@ -9,6 +9,7 @@ import "package:ssg/constants.dart";
 import "package:ssg/log.dart";
 import "package:ssg/md_file.dart";
 import "package:techs_html_bindings/elements.dart";
+import "package:techs_html_bindings/utils.dart";
 
 final Directory dirBlog = Directory("blog");
 final Directory dirBuildBlog = Directory(p.join("build", dirBlog.path));
@@ -45,16 +46,45 @@ Future<Body> generateBody() async {
         final String dayName = p.basenameWithoutExtension(day.path);
         final List<ListItem> postItems = [];
 
-        final List<File> posts = day.listSync().files()..sortFSE();
+        final List<File> posts = day.listSync().where((fse) => fse.path.endsWith(".md")).files()..sortFSE();
         for (final File post in posts) {
           final mdFile = await _generateBlogPost(post);
-          final String path = "/${p.join(dirBlog.path, postPath(post))}";
+          final String path = p.join(dirBlog.path, postPath(post));
 
           final String? title = mdFile.title;
           if (title == null) throw Exception("Post `$path` does not have a title (an H1)!");
-          postItems.add(ListItem(children: [A.text(title, href: path)]));
+          postItems.add(ListItem(children: [A.text(title, href: "/$path")]));
           mdFiles.add(mdFile);
           log.info("Found blog post $path");
+
+          final postDir = Directory(p.join(dirBuild.path, path));
+          //Copy linked assets in the mdFile
+          final List<Image> images = [];
+          mdFile.elements.collectOfType(into: images);
+          for (final Image img in images) {
+            final uri = Uri.parse(img.src);
+            if (uri.scheme.isNotEmpty) continue;
+            final imgFile = File(p.join(day.path, img.src));
+            if (!imgFile.existsSync()) {
+              throw Exception("Blog post `$path` links to image `${imgFile.path}` but that file does not exist!");
+            }
+            final targetFile = File(p.join(postDir.path, img.src));
+            await imgFile.copy(targetFile.path);
+          }
+
+          //Copy linked videos in the mdFile
+          final List<Video> videos = [];
+          mdFile.elements.collectOfType(into: videos);
+          for (final Video vid in videos) {
+            final uri = Uri.parse(vid.src);
+            if (uri.scheme.isNotEmpty) continue;
+            final vidFile = File(p.join(day.path, vid.src));
+            if (!vidFile.existsSync()) {
+              throw Exception("Blog post `$path` links to video `${vidFile.path}` but that file does not exist!");
+            }
+            final targetFile = File(p.join(postDir.path, vid.src));
+            await vidFile.copy(targetFile.path);
+          }
         }
         dayItems
           ..add(H4.text(dayName, id: "$yearName-${monthIndex.toStringDigits()}-$dayName"))
