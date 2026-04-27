@@ -25,7 +25,8 @@ Future<void> generateAtomFeed({
         ..element("title", nest: title)
         ..element("subtitle", nest: subtitle)
         ..element("link", attributes: {"href": "$siteRootUrl/${destinationFile.path}", "rel": "self"})
-        ..element("link", attributes: {"href": siteRootUrl})
+        ..element("link", attributes: {"href": "$siteRootUrl/${destinationPath.path}", "rel": "alternate"})
+        ..element("link", attributes: {"href": siteRootUrl, "rel": "related"})
         ..element("updated", nest: DateTime.now().toAtomString())
         ..element("author", nest: () => builder.element("name", nest: author))
         ..element("id", nest: id);
@@ -46,7 +47,7 @@ Future<void> generateAtomFeed({
           nest: () {
             builder
               ..element("title", nest: entry.title)
-              ..element("link", attributes: {"href": entry.link})
+              ..element("link", attributes: {"href": entry.link, "rel": "alternate"})
               ..element("id", nest: entryId)
               ..element("published", nest: entry.published)
               ..element("updated", nest: entry.updated)
