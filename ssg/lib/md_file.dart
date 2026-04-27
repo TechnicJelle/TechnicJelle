@@ -4,6 +4,7 @@ import "dart:io";
 import "package:checked_yaml/checked_yaml.dart";
 import "package:path/path.dart" as p;
 import "package:ssg/atom/entry.dart";
+import "package:ssg/constants.dart";
 import "package:techs_html_bindings/elements.dart";
 import "package:techs_html_bindings/markdown.dart";
 import "package:uuid/uuid.dart";
@@ -89,13 +90,13 @@ class MdFile {
 
     final List<int> parts = p.split(sourcePath).map(int.tryParse).whereType<int>().toList(growable: false);
     if (parts.length != 3) throw Exception("Could not extract date from sourcePath!?");
-    final publishedDate = DateTime(parts[0], parts[1], parts[2]).toUtc();
+    final publishedDate = DateTime.utc(parts[0], parts[1], parts[2]);
 
     return Entry(
       title: thisTitle,
       link: link,
       id: atomId,
-      published: publishedDate.toIso8601String(),
+      published: publishedDate.toAtomString(),
       content: content,
       sourcePath: sourcePath,
     );

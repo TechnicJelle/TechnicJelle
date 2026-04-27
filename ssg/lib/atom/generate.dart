@@ -26,7 +26,7 @@ Future<void> generateAtomFeed({
         ..element("subtitle", nest: subtitle)
         ..element("link", attributes: {"href": "$siteRootUrl/${destinationFile.path}", "rel": "self"})
         ..element("link", attributes: {"href": siteRootUrl})
-        ..element("updated", nest: DateTime.now().copyWith(microsecond: 0).toIso8601String())
+        ..element("updated", nest: DateTime.now().toAtomString())
         ..element("author", nest: () => builder.element("name", nest: author))
         ..element("id", nest: id);
 

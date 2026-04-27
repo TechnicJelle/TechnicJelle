@@ -32,6 +32,10 @@ extension NumString on int {
   String toStringDigits([int digits = 2]) => toString().padLeft(digits, "0");
 }
 
+extension TimeFormat on DateTime {
+  String toAtomString() => copyWith(microsecond: 0).toUtc().toIso8601String();
+}
+
 const List<String> monthNames = [
   "January",
   "February",
