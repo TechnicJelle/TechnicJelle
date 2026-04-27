@@ -100,6 +100,8 @@ class MdFile {
       updated: publishedDate.toAtomString(),
       content: content,
       sourcePath: sourcePath,
+      xmlLang: "en",
+      xmlBase: link,
     );
   }
 }

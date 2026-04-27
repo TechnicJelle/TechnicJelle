@@ -6,6 +6,8 @@ class Entry {
   final String updated;
   final String content;
   final String sourcePath;
+  final String? xmlLang;
+  final String? xmlBase;
 
   Entry({
     required this.title,
@@ -15,5 +17,7 @@ class Entry {
     required this.updated,
     required this.content,
     required this.sourcePath,
+    this.xmlLang,
+    this.xmlBase,
   });
 }

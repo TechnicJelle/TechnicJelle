@@ -51,7 +51,15 @@ Future<void> generateAtomFeed({
               ..element("id", nest: entryId)
               ..element("published", nest: entry.published)
               ..element("updated", nest: entry.updated)
-              ..element("content", attributes: {"type": "xhtml"}, nest: () => builder.xml(entry.content));
+              ..element(
+                "content",
+                attributes: {
+                  "type": "xhtml",
+                  if (entry.xmlLang != null) ...{"xml:lang": entry.xmlLang!},
+                  if (entry.xmlBase != null) ...{"xml:base": entry.xmlBase!},
+                },
+                nest: () => builder.xml(entry.content),
+              );
           },
         );
       }
