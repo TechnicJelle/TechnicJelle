@@ -97,6 +97,7 @@ class MdFile {
       link: link,
       id: atomId,
       published: publishedDate.toAtomString(),
+      updated: publishedDate.toAtomString(),
       content: content,
       sourcePath: sourcePath,
     );

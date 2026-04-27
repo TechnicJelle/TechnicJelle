@@ -49,6 +49,7 @@ Future<void> generateAtomFeed({
               ..element("link", attributes: {"href": entry.link})
               ..element("id", nest: entryId)
               ..element("published", nest: entry.published)
+              ..element("updated", nest: entry.updated)
               ..element("content", attributes: {"type": "xhtml"}, nest: () => builder.xml(entry.content));
           },
         );

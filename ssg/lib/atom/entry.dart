@@ -3,6 +3,7 @@ class Entry {
   final String link;
   final String id;
   final String published;
+  final String updated;
   final String content;
   final String sourcePath;
 
@@ -11,6 +12,7 @@ class Entry {
     required this.link,
     required this.id,
     required this.published,
+    required this.updated,
     required this.content,
     required this.sourcePath,
   });
