@@ -7,6 +7,7 @@ import "package:ssg/atom/entry.dart";
 import "package:ssg/constants.dart";
 import "package:techs_html_bindings/elements.dart";
 import "package:techs_html_bindings/markdown.dart";
+import "package:techs_html_bindings/utils.dart";
 import "package:uuid/uuid.dart";
 
 class MdFile {
@@ -83,8 +84,22 @@ class MdFile {
     final String? thisTitle = title;
     if (thisTitle == null) throw Exception("Post $sourcePath does not have a title!");
 
+    //replace elements for use in an atom feed
+    final List<Element> fixedElements = elements.where((element) => element != h1).toList()
+      //make all media src's absolute URLs
+      ..replace(
+        test: (element) {
+          final prefix = "$baseUrl/${p.join(p.dirname(sourcePath), p.basenameWithoutExtension(sourcePath))}/";
+          return switch (element) {
+            Image(:final src) => [element.copyWith(src: prefix + src)],
+            Video(:final src) => [element.copyWith(src: prefix + src)],
+            _ => null,
+          };
+        },
+      );
+
     final String content = Div(
-      children: elements.where((element) => element != h1).toList(growable: false),
+      children: fixedElements,
       args: {"xmlns": "http://www.w3.org/1999/xhtml"},
     ).build();
 
