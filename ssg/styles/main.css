@@ -21,6 +21,11 @@ img, video {
 	max-width: 100%;
 }
 
+iframe {
+	width: 100%;
+	aspect-ratio: 16 / 10;
+}
+
 details img[alt*="Saxion diploma"] {
 	height: unset;
 }
