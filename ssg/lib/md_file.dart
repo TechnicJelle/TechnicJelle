@@ -96,6 +96,13 @@ class MdFile {
             _ => null,
           };
         },
+      )
+      ..replace(
+        test: (element) {
+          if (element is! Code) return null;
+          return element.children.toList()
+            ..replace(test: (element) => element is T ? [T(element.text.escape())] : null);
+        },
       );
 
     final String content = Div(
