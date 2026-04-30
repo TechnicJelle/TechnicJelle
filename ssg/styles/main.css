@@ -383,6 +383,17 @@ aside li {
 	background: #333;
 }
 
+pre, :not(pre) > code {
+	background-color: #333;
+	border-radius: 4px;
+	overflow-x: auto;
+	tab-size: 4;
+}
+
+pre { padding: 1em 1.25em; }
+
+:not(pre) > code { padding: 0.2em 0.4em; }
+
 /* Tag colours */
 /* Language colours from: https://github.com/github-linguist/linguist/blob/main/lib/linguist/languages.yml */
 .tags > .Android {color: #32DE84;}
