@@ -178,7 +178,7 @@ Future<MdFile> _generateBlogPost(File post) async {
   String aggregate = "/${dirBlog.path}";
   final String indexHTML = HTML(
     lang: "en",
-    head: generateHead(title: mdFile.title),
+    head: generateHead(title: mdFile.title, extraStyles: ["blog-post"]),
     body: Body(
       header: generateHeader(
         breadcrumbs: [

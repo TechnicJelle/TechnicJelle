@@ -1,0 +1,7 @@
+/* Direct child <p> due to Markdown always wrapping <img>s into a <p>... */
+.img-list > p {
+	display: flex;
+	align-items: start; /*anti-stretch*/
+	flex-wrap: wrap;
+	gap: 1em;
+}
