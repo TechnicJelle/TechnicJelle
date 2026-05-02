@@ -1,3 +1,7 @@
+main {
+	line-height: 1.4;
+}
+
 /* Direct child <p> due to Markdown always wrapping <img>s into a <p>... */
 div.img-list > p {
 	display: flex;
