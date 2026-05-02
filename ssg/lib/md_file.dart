@@ -30,7 +30,9 @@ class MdFile {
 
   MdFile({required this.file}) : content = file.readAsStringSync(), _elements = [] {
     if (content.contains("“") || content.contains("”")) {
-      throw Exception("Post ${file.path} contains a stupid quote!");
+      throw Exception("Post ${file.path} contains a stupid “quote”!");
+    } else if (content.contains("…")) {
+      throw Exception("Post ${file.path} contains a stupid ellipsis…");
     }
     final RegExp checkFrontmatter = RegExp(r"^---$\n(.*?)\s*^---$\s*(.*)", dotAll: true, multiLine: true);
     final RegExpMatch? match = checkFrontmatter.firstMatch(content);
