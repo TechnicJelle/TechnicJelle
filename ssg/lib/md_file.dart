@@ -29,6 +29,9 @@ class MdFile {
   String? get title => h1?.innerText;
 
   MdFile({required this.file}) : content = file.readAsStringSync(), _elements = [] {
+    if (content.contains("“") || content.contains("”")) {
+      throw Exception("Post ${file.path} contains a stupid quote!");
+    }
     final RegExp checkFrontmatter = RegExp(r"^---$\n(.*?)\s*^---$\s*(.*)", dotAll: true, multiLine: true);
     final RegExpMatch? match = checkFrontmatter.firstMatch(content);
     if (match == null) {
