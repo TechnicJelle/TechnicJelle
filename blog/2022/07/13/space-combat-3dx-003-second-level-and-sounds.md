@@ -1,5 +1,6 @@
 ---
 tags: [ Art, GameDev, Updates, Blender, Unity, Space Combat 3DX ]
+prev: /blog/2022/07/10/space-combat-3dx-002-enemies
 original: https://technicjelle.tumblr.com/post/689695666498322432/space-combat-3dx-002-second-level-and-sounds
 atom-id: "019dc1ff-801e-74dc-9432-d4595cbff6c3"
 ---

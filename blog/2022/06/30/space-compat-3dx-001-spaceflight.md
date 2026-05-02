@@ -1,5 +1,6 @@
 ---
 tags: [ GameDev, Unity, Space Combat 3DX ]
+next: /blog/2022/07/10/space-combat-3dx-002-enemies
 atom-id: "019de611-44c9-7c94-8b03-7cb50baf4db7"
 ---
 

@@ -49,6 +49,26 @@ class MdFile {
         throw Exception("Regex failure in frontmatter parsing of ${file.path}: missing group 2");
       }
       _elements.addAll(markdown(strRest));
+
+      final String? prev = frontmatter?["prev"] as String?;
+      final String? next = frontmatter?["next"] as String?;
+      if (prev != null || next != null) {
+        final nav = Nav(
+          classes: ["center"],
+          children: [
+            P(
+              children: [
+                if (prev != null) A.text("← Previous Post", href: prev),
+                if (prev != null && next != null) T(" | "),
+                if (next != null) A.text("Next Post →", href: next),
+              ],
+            ),
+          ],
+        );
+        _elements
+          ..replace(test: (element) => element == h1 ? [element, nav] : null)
+          ..add(nav);
+      }
     }
   }
 
