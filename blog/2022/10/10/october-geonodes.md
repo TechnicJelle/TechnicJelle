@@ -28,6 +28,14 @@ https://www.artstation.com/artwork/eJn9ew
 ## Cracks
 
 Originally, this was a post solely about the Whizzy Points setup, but while porting the post to my new blog site,
-I found another piece I made in the same timeframe, so I thought I might as well share it here! :)
+I found another two pieces I made in the same timeframe, so I thought I might as well share it here! :)
 
 <video src="Cracks0001-0250.mp4" autoplay muted loop playsinline></video>
+
+![](Cracks_Nodes.png)
+
+## Negative Text
+
+This one was made before October, but 🤫
+
+![](NegativeText.png)
