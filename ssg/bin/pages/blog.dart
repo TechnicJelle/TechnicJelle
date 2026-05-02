@@ -20,7 +20,7 @@ final Directory dirBuildBlog = Directory(p.join("build", dirBlog.path));
 Future<void> createBlog() async {
   final String indexHTML = HTML(
     lang: "en",
-    head: generateHead(title: "Blog", extraStyles: ["blog"]),
+    head: generateHead(title: "Blog", extraStyles: ["blog-index"]),
     body: await generateBody(),
   ).build();
   File(p.join(dirBuildBlog.path, "index.html")).writeAsStringSync(indexHTML);
@@ -140,7 +140,7 @@ void generateBreadcrumbIndex(List<String> path, List<Element> elements) {
   File(p.joinAll([dirBuildBlog.path, ...path, "index.html"])).writeAsStringSync(
     HTML(
       lang: "en",
-      head: generateHead(title: "Blog ${path.join("/")}", extraStyles: ["blog"]),
+      head: generateHead(title: "Blog ${path.join("/")}", extraStyles: ["blog-index"]),
       body: Body(
         header: generateHeader(
           breadcrumbs: [
