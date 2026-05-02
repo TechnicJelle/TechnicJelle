@@ -98,9 +98,9 @@ As such, it can pretty nicely avoid asteroids!
 
 You can see the final result in the video all the way at the top of this post!
 
-You can download this current version of the game
-[here](https://github.com/TechnicJelle/SpaceCombat3DX/releases/tag/v0.0.2)  
-(builds available for both Windows and Linux)
+**You can download this current version of the game
+[here](https://github.com/TechnicJelle/SpaceCombat3DX/releases/tag/v0.0.2)**  
+_(builds available for both Windows and Linux)_
 
 And you can see the source code [here](https://github.com/TechnicJelle/SpaceCombat3DX/tree/v0.0.2).
 
