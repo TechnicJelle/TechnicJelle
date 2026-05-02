@@ -98,13 +98,14 @@ The enemy shoots out all the rays first, and if it hits anything,
 it chooses the direction of the ray that’s the furthest point from anything it hit.
 As such, it can pretty nicely avoid asteroids!
 
-You can see the final result in the YouTube video all the way at the [top](#enemy-ai-in-my-space-shooter-game) of this post!
+You can see the final result in the YouTube video all the way
+at the [top](#enemy-ai-in-my-space-shooter-game) of this post!
 
-**You can download this current version of the game
+**You can download this version of the game
 [here](https://github.com/TechnicJelle/SpaceCombat3DX/releases/tag/v0.0.2)**  
 _(builds available for both Windows and Linux)_
 
-And you can see the source code [here](https://github.com/TechnicJelle/SpaceCombat3DX/tree/v0.0.2).
+And you can see the source code of this version [here](https://github.com/TechnicJelle/SpaceCombat3DX/tree/v0.0.2).
 
 ---
 
