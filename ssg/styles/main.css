@@ -149,6 +149,9 @@ header > nav {
 span.small {
 	font-size: 12px;
 	color: #8B949E;
+}
+
+header > nav > span.small {
 	padding: 0 4px;
 }
 
