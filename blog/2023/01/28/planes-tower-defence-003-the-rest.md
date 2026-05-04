@@ -1,5 +1,5 @@
 ---
-tags: [ Code, GameDev, Unity, Planes Tower Defence ]
+tags: [ GameDev, Unity, Planes Tower Defence ]
 prev: /blog/2023/01/19/planes-tower-defence-002-pathfinding
 atom-id: "019df518-b25f-79fd-8a07-11a427e969bf"
 ---
