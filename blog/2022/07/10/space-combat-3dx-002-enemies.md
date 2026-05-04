@@ -29,8 +29,8 @@ simply gradually turn towards the player and accelerate forwards
 Just simply this was already surprisingly effective at annoying the player, but my goal was something more than this.
 For one thing, this could very easily get stuck behind asteroids.
 
-So I started working on the raycast system! The enemy would shoot out a ray directly in front of where it’s going
-and checks if it detected a game object that can’t be bumped around, like an asteroid.
+So I started working on the raycast system! The enemy would shoot out a ray directly in front of where it's going
+and checks if it detected a game object that can't be bumped around, like an asteroid.
 (The Unity RigidBody property "kinematic".)
 So, if the enemy detected an asteroid in front of it, it would shoot out a cone of rays.
 
@@ -38,9 +38,9 @@ So, if the enemy detected an asteroid in front of it, it would shoot out a cone 
 
 ![](Image2.png)
 
-You can see those rays being shot out from the capsule in these images. It’s really scanning that asteroid!
+You can see those rays being shot out from the capsule in these images. It's really scanning that asteroid!
 
-The problem with the system I have displayed here is that I hadn’t actually thought out
+The problem with the system I have displayed here is that I hadn't actually thought out
 how exactly I wanted to make the AI choose which way to go.
 I had thus far only thought about the raycasting, but not the actual "thought" behind the choosing of the new direction.
 
@@ -51,7 +51,7 @@ This system proved to not be effective enough, so I had to make it so that it al
 <video src="Video2.mp4" controls autoplay muted loop playsinline></video>
 
 As you can see here in this video, the rays all seem to get shot out fine.
-Except they don’t.
+Except they don't.
 Which gets more apparent if the amount of rays it shoots out gets turned up:
 
 <video src="Video3.mp4" controls autoplay muted loop playsinline></video>
@@ -83,7 +83,7 @@ for (int x = -rays; x <= rays; x++)
 }
 ```
 
-I’m not too familiar with how quaternions work exactly yet,
+I'm not too familiar with how quaternions work exactly yet,
 but I think it had to do with the rays not taking the rotation on the enemy transform into account correctly.
 By explicitly doing TransformDirection for each axis, that solved it.
 
@@ -95,7 +95,7 @@ So with this better system for continuous raycasting, I could continue working o
 
 I tried quite another few different comparison methods, but this is what I ended up going with:
 The enemy shoots out all the rays first, and if it hits anything,
-it chooses the direction of the ray that’s the furthest point from anything it hit.
+it chooses the direction of the ray that's the furthest point from anything it hit.
 As such, it can pretty nicely avoid asteroids!
 
 You can see the final result in the YouTube video all the way

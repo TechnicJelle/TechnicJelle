@@ -15,6 +15,6 @@ No PC required! Just power to the Arduino.
 
 It works over Wi-Fi with Web Sockets, with the phone being the server, and the Arduino being the client.
 
-The code of this project is quite horrible, so I’m not publishing it this time.
-Also because it’s basically just two library examples mashed together plus one of my lecture code samples,
+The code of this project is quite horrible, so I'm not publishing it this time.
+Also because it's basically just two library examples mashed together plus one of my lecture code samples,
 so hardly any of this is actually my own code.

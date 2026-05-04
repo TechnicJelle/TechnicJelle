@@ -6,21 +6,21 @@ atom-id: "019dc1ff-801e-7eab-a7f5-003f24ea24f6"
 
 # Fireworks Display in C++ with the PixelGameEngine
 
-Over the last couple of days, I’ve made a simple, little fireworks display:
+Over the last couple of days, I've made a simple, little fireworks display:
 
 <video src="fireworks.mp4" autoplay muted loop playsinline></video>
 
 It was supposed to be a quick project, but the physics were a little different than I usually do,
 so it took a little longer.
 
-In the past, I’ve always made my simulations like these in [Processing](https://processing.org/),
+In the past, I've always made my simulations like these in [Processing](https://processing.org/),
 which is a very, very great tool for learning stuff like this.
 
-Though now I feel like I’m ready for something more advanced,
-so I’m starting to use the PixelGameEngine for stuff like this,
+Though now I feel like I'm ready for something more advanced,
+so I'm starting to use the PixelGameEngine for stuff like this,
 which is a something similar to Processing, but you use C++, instead.
 
-C++ is a programming language just like Processing is, but it’s a lot more difficult.
+C++ is a programming language just like Processing is, but it's a lot more difficult.
 The performance advantages of it, however, often outweigh the extra complexity.
 
 So switching to C++ allows me much greater **performance**
@@ -28,13 +28,13 @@ and also much more **control** about what exactly happens everywhere.
 
 In Processing, the simulations typically run at a set frame rate, 60 fps by default.
 
-In the PixelGameEngine, the frame rate is unlocked, meaning that it’ll go as fast as possible.
+In the PixelGameEngine, the frame rate is unlocked, meaning that it'll go as fast as possible.
 
 Movement on computers usually goes by displacing a thing by a little bit every amount of time.
 When that amount of time is constant, like in Processing, this is easy:
 if we want to move a circle 60 pixels a second, we simply have to move it by 1 pixel per frame.
 
-In the PixelGameEngine this would not work, as the frame rate is not constant: sometimes it’s 1000 fps,
+In the PixelGameEngine this would not work, as the frame rate is not constant: sometimes it's 1000 fps,
 and at other times it is 3000 fps! (Told you the performance was better ;D )
 
 If we were to move the circle by one pixel every frame, the circle would sometimes move faster than at other times,
@@ -97,7 +97,7 @@ while(true)
 ```
 
 This method, simply put, keeps track of the delta time over a longer amount of time, and if a certain amount of time has
-passed, let’s say a tenth of a second, a new physics calculation is done.
+passed, let's say a tenth of a second, a new physics calculation is done.
 
 This effectively decouples the rendering and the physics from each other, allowing the physics to run at its own pace,
 while letting the rendering go at its own breakneck speed.
@@ -108,7 +108,7 @@ way to set how accurate I want the simulation to be!
 So I followed the tips from that blog post and implemented them into my simulation and after a bit of work, it all looks
 as great as it does now :)
 
-So that’s it!
+So that's it!
 
 **You can find the source code for this project [here](https://github.com/TechnicJelle/FireworksPGE)**
 

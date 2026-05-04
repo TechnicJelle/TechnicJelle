@@ -9,20 +9,20 @@ atom-id: "019dc1ff-801e-74dc-9432-d4595cbff6c3"
 
 <iframe src="https://www.youtube-nocookie.com/embed/aCmfekB2mho" title="YouTube video player" allow="fullscreen; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin"></iframe>
 
-Since the last post, I’ve been hard at work adding more and more features! Mainly the second level and sounds,
-but there’s a lot more that went into it all!
+Since the last post, I've been hard at work adding more and more features! Mainly the second level and sounds,
+but there's a lot more that went into it all!
 
 ## Enemy health
 
 Enemies now have health and can be defeated by bumping into them.
-I’ll add an actual shooting mechanic to both the player and the enemies later.
+I'll add an actual shooting mechanic to both the player and the enemies later.
 For now, this slightly more crude solution will have to do.
 The enemies also now have thruster particles of their own, just like the player.
 
 ## Skybox
 
 I have added a second level with another completely custom skybox made in Blender!
-Those top two voronoi textures with the very wide colour ramps together are actually the first level’s skybox.
+Those top two voronoi textures with the very wide colour ramps together are actually the first level's skybox.
 It just generates a ton of tiny white dots.
 There are two layers, because one makes tiny dots and the other makes even more and smaller dots.
 
@@ -35,13 +35,13 @@ This cube map has been rendered out using the excellent [Cube Map Creation Toolk
 
 ## Portals
 
-You can go from one level to the other by travelling through a portal that appears once you’ve defeated all the enemies!
+You can go from one level to the other by travelling through a portal that appears once you've defeated all the enemies!
 
 ![](Screenshot_(8).png)
 
 ## Sound
 
-I also added sounds to the player’s engine and also the enemies make buzzing sounds.
+I also added sounds to the player's engine and also the enemies make buzzing sounds.
 
 And the game has some nice background music to fill up the empty space!
 
@@ -49,7 +49,7 @@ Credits are listed in the repository's [README](https://github.com/TechnicJelle/
 
 ## Menu
 
-There’s now a pause menu with volume sliders for three different categories of sounds!
+There's now a pause menu with volume sliders for three different categories of sounds!
 There is now also a quit button there.
 That is useful, because before there was no other way to stop the game than to press Alt+F4!
 
@@ -57,7 +57,7 @@ That is useful, because before there was no other way to stop the game than to p
 
 ## Tutorial
 
-There’s now also a bit of a tutorial in the top left that explains what to do:
+There's now also a bit of a tutorial in the top left that explains what to do:
 
 <div class="img-list">
 
@@ -72,7 +72,7 @@ This tutorial system will be improved later.
 
 ---
 
-I’ll be putting this project on hold for a little bit while I work on other projects.
-Perhaps I’ll write about those too! :D
+I'll be putting this project on hold for a little bit while I work on other projects.
+Perhaps I'll write about those too! :D
 
 **Download the game [here](https://github.com/TechnicJelle/SpaceCombat3DX#readme)!**
