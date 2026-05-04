@@ -1,6 +1,7 @@
 ---
 tags: [ Code, GameDev, Unity, Planes Tower Defence ]
 prev: /blog/2023/01/14/planes-tower-defence-001-level
+next: /blog/2023/01/28/planes-tower-defence-003-the-rest
 original: https://technicjelle.tumblr.com/post/706828880324050944/planes-tower-defence-pathfinding
 atom-id: "019dc1ff-801e-735d-a3ab-ac4424599656"
 ---
@@ -148,8 +149,10 @@ but it just chooses between some predefined path segments.
 
 The next post will talk more about the enemies themselves.
 
+**Source code available [here](https://github.com/TechnicJelle/PlanesTowerDefence)**
+
 ---
 
 As a bonus, here's a video I recorded during this process, when the node linking didn't work all too well yet...
 
-<video src="Peek 2022-12-23 11-09.mp4" autoplay loop muted playsinline></video>
+<video src="Peek 2022-12-23 11-09.mp4" controls loop muted playsinline></video>
