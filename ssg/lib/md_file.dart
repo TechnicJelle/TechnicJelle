@@ -59,6 +59,7 @@ class MdFile {
       }
       _elements.addAll(markdown(strRest));
 
+      //TODO: Add verification that the pointed-to posts actually exist
       final String? prev = frontmatter?["prev"] as String?;
       final String? next = frontmatter?["next"] as String?;
       if (prev != null || next != null) {
