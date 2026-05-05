@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Clean Exif" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+    <option name="filePath" value="$PROJECT_DIR$/blog/clean_exif.dart" />
+    <option name="workingDirectory" value="$PROJECT_DIR$/blog" />
+    <method v="2" />
+  </configuration>
+</component>

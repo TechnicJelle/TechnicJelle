@@ -3,6 +3,9 @@ import "dart:io";
 import "package:github/github.dart";
 import "package:path/path.dart" as p;
 
+///does not include trailing slash to makes string interpolation look prettier
+const String baseUrl = "https://technicjelle.com";
+
 final Directory dirBuild = Directory("build");
 
 final github = GitHub(auth: findAuthenticationFromEnvironment());
@@ -14,3 +17,36 @@ extension UriExtension on Uri {
 
   String getExtension() => p.extension(pathSegments.join("/"));
 }
+
+extension FilterFSE on Iterable<FileSystemEntity> {
+  List<Directory> dirs() => whereType<Directory>().toList();
+
+  List<File> files() => whereType<File>().toList();
+}
+
+extension SortFiles on List<FileSystemEntity> {
+  void sortFSE() => sort((a, b) => a.path.compareTo(b.path));
+}
+
+extension NumString on int {
+  String toStringDigits([int digits = 2]) => toString().padLeft(digits, "0");
+}
+
+extension TimeFormat on DateTime {
+  String toAtomString() => copyWith(microsecond: 0).toUtc().toIso8601String();
+}
+
+const List<String> monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];

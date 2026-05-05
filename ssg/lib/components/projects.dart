@@ -8,7 +8,7 @@ import "package:ssg/projects_loading.dart";
 import "package:techs_html_bindings/elements.dart";
 import "package:techs_html_bindings/utils.dart";
 
-final Directory dirImages = Directory("build/images/project-visuals")..createSync(recursive: true);
+final Directory dirImages = Directory("build/images/project-visuals");
 
 Future<Section> generateProjectsSection(List<Project> projects) async {
   return Section(

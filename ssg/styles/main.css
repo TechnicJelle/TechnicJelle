@@ -21,12 +21,17 @@ img, video {
 	max-width: 100%;
 }
 
+iframe {
+	width: 100%;
+	aspect-ratio: 16 / 10;
+}
+
 details img[alt*="Saxion diploma"] {
 	height: unset;
 }
 
 .mono-font {
-	font-family: "JetBrainsMono NF", "JetBrains Mono", "ui-monospace", "SFMono-Regular", "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+	font-family: "JetBrains Mono", "ui-monospace", "SFMono-Regular", "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
 }
 
 h1, h2, h3, h4, h5, h6, .card {
@@ -118,16 +123,40 @@ body {
 }
 
 header {
-	font-size: 14px;
-	padding-top: 6px;
-	padding-left: 4px;
-	margin-bottom: 12px;
+	display: flex;
+	justify-content: space-between;
+
+	font-size: 16px;
+	padding: 12px 4px 10px;
+}
+
+/* For very thin screens, put the items in the header below each other */
+@media screen and (max-width: 300px) {
+	header {
+		flex-direction: column;
+		gap: 0.5em;
+		align-items: center;
+	}
+}
+
+
+header > nav {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
 }
 
 span.small {
 	font-size: 12px;
 	color: #8B949E;
+}
+
+header > nav > span.small {
 	padding: 0 4px;
+}
+
+header > nav > span.small:last-child {
+	padding: 0;
 }
 
 h1 {
@@ -356,6 +385,17 @@ aside li {
 .tags a:hover, .tags a:focus-within {
 	background: #333;
 }
+
+pre, :not(pre) > code {
+	background-color: #333;
+	border-radius: 4px;
+	overflow-x: auto;
+	tab-size: 4;
+}
+
+pre { padding: 1em 1.25em; }
+
+:not(pre) > code { padding: 0.2em 0.4em; }
 
 /* Tag colours */
 /* Language colours from: https://github.com/github-linguist/linguist/blob/main/lib/linguist/languages.yml */

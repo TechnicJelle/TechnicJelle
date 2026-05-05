@@ -15,7 +15,9 @@ dependencies:
   techs_html_bindings:
     git:
       url: https://github.com/TechnicJelle/techs_html_bindings.git
-      ref: main
+      ref: boring-md
+  uuid: ^4.5.3
+  xml: ^6.6.1
 
 dev_dependencies:
   very_good_analysis: ^10.2.0

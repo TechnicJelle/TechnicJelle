@@ -24,7 +24,7 @@ jobs:
 
       - name: Pushes to another repository
         # Only on pushes to main, to prevent other branches and PRs from deploying
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main'}}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         uses: cpina/github-action-push-to-another-repository@55306faa4ed53b815ae49e564af8cfb359d32ae2
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
@@ -35,3 +35,10 @@ jobs:
           user-name: "github-actions[bot]"
           user-email: "41898282+github-actions[bot]@users.noreply.github.com"
           target-branch: deploy
+
+      - name: Upload a build artifact
+        # Only when NOT pushing to main, so you can still see the result of other branches by downloading this artifact
+        if: ${{ !(github.event_name == 'push' && github.ref == 'refs/heads/main') }}
+        uses: actions/upload-artifact@v7
+        with:
+          path: build
