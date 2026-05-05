@@ -1,4 +1,6 @@
 ---
+tags: [ Blog Meta ]
+next: /blog/2026/05/05/new-blog-milestone-1
 atom-id: "019dc1ff-801e-757d-8c69-1ef41d0b25a3"
 ---
 
