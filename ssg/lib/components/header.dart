@@ -17,8 +17,7 @@ Header generateHeader({required String filename, List<A> breadcrumbs = const [],
           Span.text(p.extension(filename), classes: ["small"]),
         ],
       ),
-      //TODO: Re-enable once ready
-      // if (showBlog) A.text("Blog", href: "/blog"),
+      if (showBlog) A.text("Blog", href: "/blog"),
     ],
   );
 }
