@@ -129,9 +129,11 @@ class MdFile {
       )
       ..replace(
         test: (element) {
-          if (element is! Code) return null;
-          return element.children.toList()
+          if (element is! Pre) return null;
+          final escapedChildren = element.children.toList()
             ..replace(test: (element) => element is T ? [T(element.text.escape())] : null);
+          final Pre escapedPre = element.copyWith(children: escapedChildren);
+          return [escapedPre];
         },
       )
       ..replace(
