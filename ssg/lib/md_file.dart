@@ -133,6 +133,12 @@ class MdFile {
           return element.children.toList()
             ..replace(test: (element) => element is T ? [T(element.text.escape())] : null);
         },
+      )
+      ..replace(
+        test: (element) {
+          if (element is! Hn) return null;
+          return [element.copyWith(autoLink: false)];
+        },
       );
 
     final String content = Div(
