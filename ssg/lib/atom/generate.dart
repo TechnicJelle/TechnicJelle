@@ -69,6 +69,8 @@ Future<void> generateAtomFeed({
   await File(p.join(dirBuild.path, destinationFile.path)).writeAsString(
     document.toXmlString(
       pretty: true,
+      indent: "\t",
+      preserveWhitespace: (xmlNode) => xmlNode is XmlElement && ["pre", "p"].contains(xmlNode.localName),
       spaceBeforeSelfClose: (_) => true,
     ),
   );

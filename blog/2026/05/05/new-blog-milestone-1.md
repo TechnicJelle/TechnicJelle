@@ -16,3 +16,7 @@ It needs more testing that can only happen from a proper https website.
 
 Once I've resolved all the major bugs that I have no doubt I'll find,
 my next milestone will be to add tagging functionality.
+
+The third milestone will be syntax highlighting for code blocks.  
+I've done some research already, and I think I'll use tree-sitter for this.  
+But more research and experimentation will need to be done. Later, though.

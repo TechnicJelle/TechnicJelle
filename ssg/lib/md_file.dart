@@ -129,9 +129,47 @@ class MdFile {
       )
       ..replace(
         test: (element) {
-          if (element is! Code) return null;
-          return element.children.toList()
+          if (element is! Pre) return null;
+          final escapedChildren = element.children.toList()
             ..replace(test: (element) => element is T ? [T(element.text.escape())] : null);
+          final Pre escapedPre = element.copyWith(children: escapedChildren);
+          return [escapedPre];
+        },
+      )
+      ..replace(
+        test: (element) {
+          if (element is! Hn) return null;
+          return [element.copyWith(autoLink: false)];
+        },
+      )
+      ..replace(
+        test: (element) {
+          if (element is! Nav) return null;
+          final classes = element.classes;
+          if (classes == null) return null;
+          if (!classes.contains("center")) return null;
+
+          final newClasses = classes.where((strClass) => strClass != "center");
+          final newNav = element.copyWith(
+            classes: newClasses.isEmpty ? null : newClasses,
+            inlineStyles: ["text-align: center", ...?element.inlineStyles],
+          );
+          return [newNav];
+        },
+      )
+      ..replace(
+        test: (element) {
+          if (element is! Span) return null;
+          final classes = element.classes;
+          if (classes == null) return null;
+          if (!classes.contains("small")) return null;
+
+          final newClasses = classes.where((strClass) => strClass != "small");
+          final newSpan = element.copyWith(
+            classes: newClasses.isEmpty ? null : newClasses,
+            inlineStyles: ["font-size: 0.8em", ...?element.inlineStyles],
+          );
+          return [newSpan];
         },
       )
       ..replace(
