@@ -141,6 +141,36 @@ class MdFile {
           if (element is! Hn) return null;
           return [element.copyWith(autoLink: false)];
         },
+      )
+      ..replace(
+        test: (element) {
+          if (element is! Nav) return null;
+          final classes = element.classes;
+          if (classes == null) return null;
+          if (!classes.contains("center")) return null;
+
+          final newClasses = classes.where((strClass) => strClass != "center");
+          final newNav = element.copyWith(
+            classes: newClasses.isEmpty ? null : newClasses,
+            inlineStyles: ["text-align: center", ...?element.inlineStyles],
+          );
+          return [newNav];
+        },
+      )
+      ..replace(
+        test: (element) {
+          if (element is! Span) return null;
+          final classes = element.classes;
+          if (classes == null) return null;
+          if (!classes.contains("small")) return null;
+
+          final newClasses = classes.where((strClass) => strClass != "small");
+          final newSpan = element.copyWith(
+            classes: newClasses.isEmpty ? null : newClasses,
+            inlineStyles: ["font-size: 0.8em", ...?element.inlineStyles],
+          );
+          return [newSpan];
+        },
       );
 
     final String content = Div(
