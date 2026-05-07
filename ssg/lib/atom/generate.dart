@@ -69,6 +69,7 @@ Future<void> generateAtomFeed({
   await File(p.join(dirBuild.path, destinationFile.path)).writeAsString(
     document.toXmlString(
       pretty: true,
+      indent: "\t",
       spaceBeforeSelfClose: (_) => true,
     ),
   );
