@@ -70,7 +70,7 @@ Future<void> generateAtomFeed({
     document.toXmlString(
       pretty: true,
       indent: "\t",
-      preserveWhitespace: (xmlNode) => xmlNode is XmlElement && xmlNode.localName == "pre",
+      preserveWhitespace: (xmlNode) => xmlNode is XmlElement && ["pre", "p"].contains(xmlNode.localName),
       spaceBeforeSelfClose: (_) => true,
     ),
   );
