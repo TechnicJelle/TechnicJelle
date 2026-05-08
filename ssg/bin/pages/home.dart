@@ -118,7 +118,7 @@ Future<Body> generateBody() async {
   return Body(
     header: generateHeader(filename: "README.md"),
     main: Main(children: mainContent),
-    footer: generateFooter(),
+    footer: generateFooter(shouldDisplayLastUpdatedTime: true),
   );
 }
 
