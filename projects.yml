@@ -59,6 +59,13 @@
       - https://raw.githubusercontent.com/TechnicJelle/Phurey/refs/heads/main/.github/readme_assets/1.png
       - https://raw.githubusercontent.com/TechnicJelle/Phurey/refs/heads/main/.github/readme_assets/2.png
       - https://raw.githubusercontent.com/TechnicJelle/Phurey/refs/heads/main/.github/readme_assets/3.png
+  - Planes Tower Defence: https://github.com/TechnicJelle/PlanesTowerDefence
+    blog: https://technicjelle.tumblr.com/tagged/Planes%20Tower%20Defence
+    tags: [ Tech Demo, C#, Unity, Game ]
+    visuals:
+      - /blog/2023/01/19/planes-tower-defence-002-pathfinding/path-links.png
+      - /blog/2023/01/19/planes-tower-defence-002-pathfinding/Peek%202022-12-23%2011-09.mp4
+      - https://raw.githubusercontent.com/TechnicJelle/PlanesTowerDefence/main/PlantUML/include.svg
   - Doom Game (GXP): https://github.com/TechnicJelle/DoomGame
     tags: [ Game, C#, GXP Engine ]
     visuals:
@@ -119,13 +126,6 @@
     visuals:
       - https://raw.githubusercontent.com/TechnicJelle/VulkanPsychedelicCloths/feature/dear-imgui/.github/readme_assets/dear-imgui-demo.gif
       - https://raw.githubusercontent.com/TechnicJelle/VulkanPsychedelicCloths/main/.github/readme_assets/demo.gif
-  - Planes Tower Defence: https://github.com/TechnicJelle/PlanesTowerDefence
-    blog: https://technicjelle.tumblr.com/tagged/Planes%20Tower%20Defence
-    tags: [ Tech Demo, C#, Unity, Game ]
-    visuals:
-      - /blog/2023/01/19/planes-tower-defence-002-pathfinding/path-links.png
-      - /blog/2023/01/19/planes-tower-defence-002-pathfinding/Peek%202022-12-23%2011-09.mp4
-      - https://raw.githubusercontent.com/TechnicJelle/PlanesTowerDefence/main/PlantUML/include.svg
   - Unreal Engine 5 GitHub Actions VR Template: https://github.com/TechnicJelle/UE5_GHActions_VRTemplate
     tags: [ Tech Demo, Unreal Engine, CI/CD, Template ]
     visuals:
