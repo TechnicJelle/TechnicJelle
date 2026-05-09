@@ -154,7 +154,7 @@ class BlogPost extends MdFile {
   int month;
   int day;
 
-  String get year2 => year.toStringDigits(4);
+  String get year4 => year.toStringDigits(4);
 
   String get month2 => month.toStringDigits();
 
@@ -187,9 +187,9 @@ class BlogPost extends MdFile {
         header: generateHeader(
           breadcrumbs: [
             A.text("Blog", href: "/${dirBlog.path}"),
-            A.text(year2, href: "/${dirBlog.path}/$year2"),
-            A.text(month2, href: "/${dirBlog.path}/$year2/$month2"),
-            A.text(day2, href: "/${dirBlog.path}/$year2/$month2/$day2"),
+            A.text(year4, href: "/${dirBlog.path}/$year4"),
+            A.text(month2, href: "/${dirBlog.path}/$year4/$month2"),
+            A.text(day2, href: "/${dirBlog.path}/$year4/$month2/$day2"),
           ],
           filename: filename,
           showBlog: false,
