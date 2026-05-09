@@ -2,6 +2,7 @@
 :root {
 	--main-text-colour: #EEEEEE;
 	--link-colour: #58A6FF;
+	--border-colour: #1C2229;
 }
 
 html {
@@ -81,7 +82,7 @@ h2:hover > a.link {
 }
 
 main, h1, h2, h3, .card {
-	border-color: #1C2229 !important;
+	border-color: var(--border-colour) !important;
 }
 
 img, video, .badge {

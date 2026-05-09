@@ -27,83 +27,51 @@ Future<void> createBlog() async {
 }
 
 Future<Body> generateBody() async {
-  final List<MdFile> mdFiles = [];
-  final List<Element> yearItems = [];
+  final List<BlogPost> blogPosts = [];
 
   final List<Directory> years = dirBlog.listSync().dirs()..sortFSE();
-  for (final Directory year in years.reversed) {
-    final String yearName = p.basenameWithoutExtension(year.path);
-    final List<Element> monthItems = [];
+  for (final Directory year in years) {
+    final int yearIndex = int.parse(p.basenameWithoutExtension(year.path));
+    final String yearName = yearIndex.toStringDigits(4);
+    final List<Element> itemsInYear = [];
 
     final List<Directory> months = year.listSync().dirs()..sortFSE();
-    for (final Directory month in months.reversed) {
+    for (final Directory month in months) {
       final int monthIndex = int.parse(p.basenameWithoutExtension(month.path));
       final String monthName = monthNames[monthIndex - 1];
-      final List<Element> dayItems = [];
+      final List<Element> itemsInMonth = [];
 
       final List<Directory> days = month.listSync().dirs()..sortFSE();
-      for (final Directory day in days.reversed) {
-        final String dayName = p.basenameWithoutExtension(day.path);
-        final List<ListItem> postItems = [];
+      for (final Directory day in days) {
+        final int dayIndex = int.parse(p.basenameWithoutExtension(day.path));
+        final String dayName = dayIndex.toStringDigits();
+        final List<Element> itemsOnDay = [];
 
         final List<File> posts = day.listSync().where((fse) => fse.path.endsWith(".md")).files()..sortFSE();
         for (final File post in posts) {
-          final mdFile = await _generateBlogPost(post);
-          final String path = p.join(dirBlog.path, postPath(post));
-
-          final String? title = mdFile.title;
-          if (title == null) throw Exception("Post `$path` does not have a title (an H1)!");
-          postItems.add(ListItem(children: [A.text(title, href: "/$path")]));
-          mdFiles.add(mdFile);
-          log.info("Found blog post $path");
-
-          final postDir = Directory(p.join(dirBuild.path, path));
-          //Copy linked assets in the mdFile
-          final List<Image> images = [];
-          mdFile.elements.collectOfType(into: images);
-          for (final Image img in images) {
-            final uri = Uri.parse(img.src);
-            if (uri.scheme.isNotEmpty) continue;
-            final imgFile = File(p.join(day.path, img.src));
-            if (!imgFile.existsSync()) {
-              throw Exception("Blog post `$path` links to image `${imgFile.path}` but that file does not exist!");
-            }
-            final targetFile = File(p.join(postDir.path, img.src));
-            await imgFile.copy(targetFile.path);
-          }
-
-          //Copy linked videos in the mdFile
-          final List<Video> videos = [];
-          mdFile.elements.collectOfType(into: videos);
-          for (final Video vid in videos) {
-            final uri = Uri.parse(vid.src);
-            if (uri.scheme.isNotEmpty) continue;
-            final vidFile = File(p.join(day.path, vid.src));
-            if (!vidFile.existsSync()) {
-              throw Exception("Blog post `$path` links to video `${vidFile.path}` but that file does not exist!");
-            }
-            final targetFile = File(p.join(postDir.path, vid.src));
-            await vidFile.copy(targetFile.path);
-          }
+          final postFile = BlogPost(file: post, year: yearIndex, month: monthIndex, day: dayIndex);
+          itemsOnDay.add(postFile.generateCard());
+          blogPosts.add(postFile);
         }
-        dayItems
-          ..add(H4.text(dayName, id: "$yearName-${monthIndex.toStringDigits()}-$dayName"))
-          ..add(UnorderedList(items: postItems));
+        itemsInMonth.addAll(itemsOnDay);
         generateBreadcrumbIndex(
-          [yearName, monthIndex.toStringDigits(), dayName],
-          [UnorderedList(items: postItems)],
+          h1Text: "$dayIndex $monthName $yearName",
+          path: [yearName, monthIndex.toStringDigits(), dayName],
+          elements: itemsOnDay,
         );
       }
-      monthItems
-        ..add(H3(children: [Span.text("$monthIndex"), T(monthName)], id: "$yearName-$monthIndex"))
-        ..addAll(dayItems);
-      generateBreadcrumbIndex([yearName, monthIndex.toStringDigits()], dayItems);
+      itemsInYear.addAll(itemsInMonth);
+      generateBreadcrumbIndex(
+        h1Text: "$monthName $yearName",
+        path: [yearName, monthIndex.toStringDigits()],
+        elements: itemsInMonth,
+      );
     }
-    yearItems
-      ..add(H2.text(yearName, id: yearName))
-      ..addAll(monthItems);
-
-    generateBreadcrumbIndex([yearName], monthItems);
+    generateBreadcrumbIndex(
+      h1Text: yearName,
+      path: [yearName],
+      elements: itemsInYear,
+    );
   }
 
   final String blogUrl = "$baseUrl/${dirBlog.path}";
@@ -114,11 +82,24 @@ Future<Body> generateBody() async {
         "This is the Atom feed of TechnicJelle's blog. Here you will find articles I've written about things I've made, which can be games, art or something else entirely.",
     author: "TechnicJelle",
     siteRootUrl: baseUrl,
-    entries: mdFiles.map((f) => f.toAtomEntry("$blogUrl/${postPath(f.file)}")).toList(growable: false),
+    entries: blogPosts.reversed.map((f) => f.toAtomEntry(link: "$blogUrl/${f.path}")).toList(growable: false),
     entryIdPrefix: "urn:uuid:",
     //never change this:
     id: "urn:uuid:019dc1b3-1427-7fbf-b058-015b535012e1",
   );
+
+  final futures = blogPosts.map((e) => e.writeHtml());
+  await Future.wait(futures, eagerError: true);
+
+  final List<Element> postCards = [];
+  int currentYear = 0;
+  for (final post in blogPosts.reversed) {
+    if (currentYear != post.year) {
+      currentYear = post.year;
+      postCards.add(H2.text("$currentYear", autoLink: false));
+    }
+    postCards.add(post.generateCard());
+  }
 
   return Body(
     header: generateHeader(filename: "Blog", showBlog: false),
@@ -128,16 +109,22 @@ Future<Body> generateBody() async {
         P.text(
           "This is my (TechnicJelle) blog! On this blog I write about things I make, which can be games, art or something else entirely",
         ),
-        ...yearItems,
+        ...postCards,
       ],
     ),
     footer: generateFooter(),
   );
 }
 
-void generateBreadcrumbIndex(List<String> path, List<Element> elements) {
+void generateBreadcrumbIndex({
+  required String h1Text,
+  required List<String> path,
+  required List<Element> elements,
+}) {
   String aggregate = "/${dirBlog.path}";
-  File(p.joinAll([dirBuildBlog.path, ...path, "index.html"])).writeAsStringSync(
+  final File breadCrumbIndex = File(p.joinAll([dirBuildBlog.path, ...path, "index.html"]));
+  breadCrumbIndex.parent.createSync(recursive: true);
+  breadCrumbIndex.writeAsStringSync(
     HTML(
       lang: "en",
       head: generateHead(title: "Blog ${path.join("/")}", extraStyles: ["blog-index"]),
@@ -152,7 +139,7 @@ void generateBreadcrumbIndex(List<String> path, List<Element> elements) {
         ),
         main: Main(
           children: [
-            H1.text(path.last),
+            H1.text(h1Text),
             ...elements,
           ],
         ),
@@ -162,40 +149,102 @@ void generateBreadcrumbIndex(List<String> path, List<Element> elements) {
   );
 }
 
-String postPath(File post) => p.withoutExtension(p.relative(post.path, from: dirBlog.path));
+class BlogPost extends MdFile {
+  int year;
+  int month;
+  int day;
 
-/// Returns the title of the blog post (contents of the first H1)
-Future<MdFile> _generateBlogPost(File post) async {
-  final MdFile mdFile = MdFile(file: post);
+  String get year2 => year.toStringDigits(4);
 
-  final String path = postPath(post);
-  final postDir = Directory(p.join(dirBuildBlog.path, path))..createSync(recursive: true);
-  final postHtml = File(p.join(postDir.path, "index.html"));
+  String get month2 => month.toStringDigits();
 
-  final List<String> parts = p.split(mdFile.file.path).toList()..removeAt(0);
-  if (parts.length != 4) throw Exception("Could not extract date from mdFile path!?");
+  String get day2 => day.toStringDigits();
 
-  String aggregate = "/${dirBlog.path}";
-  final String indexHTML = HTML(
-    lang: "en",
-    head: generateHead(title: mdFile.title, extraStyles: ["blog-post"]),
-    body: Body(
-      header: generateHeader(
-        breadcrumbs: [
-          A.text("Blog", href: aggregate),
-          ...parts.map((String e) => A.text(e, href: aggregate += "/$e")).toList()..removeLast(),
-        ],
-        filename: parts.last,
-        showBlog: false,
+  BlogPost({
+    required super.file,
+    required this.year,
+    required this.month,
+    required this.day,
+  });
+
+  String get path => p.withoutExtension(p.relative(file.path, from: dirBlog.path));
+
+  String get filename => p.basename(file.path);
+
+  @override
+  DateTime get publishedDate => DateTime.utc(year, month, day);
+
+  Future<void> writeHtml() async {
+    log.info("Writing blog post $path");
+    final srcPostDir = Directory(p.dirname(file.path));
+    final buildPostDir = Directory(p.join(dirBuildBlog.path, path))..createSync(recursive: true);
+    final postHtml = File(p.join(buildPostDir.path, "index.html"));
+
+    final String indexHTML = HTML(
+      lang: "en",
+      head: generateHead(title: title, extraStyles: ["blog-post"]),
+      body: Body(
+        header: generateHeader(
+          breadcrumbs: [
+            A.text("Blog", href: "/${dirBlog.path}"),
+            A.text(year2, href: "/${dirBlog.path}/$year2"),
+            A.text(month2, href: "/${dirBlog.path}/$year2/$month2"),
+            A.text(day2, href: "/${dirBlog.path}/$year2/$month2/$day2"),
+          ],
+          filename: filename,
+          showBlog: false,
+        ),
+        main: Main(
+          children: elements,
+        ),
+        footer: generateFooter(),
       ),
-      main: Main(
-        children: mdFile.elements,
-      ),
-      footer: generateFooter(),
-    ),
-  ).build();
+    ).build();
 
-  await postHtml.writeAsString(indexHTML);
+    await postHtml.writeAsString(indexHTML);
 
-  return mdFile;
+    //Copy linked assets in the mdFile
+    final List<Image> images = [];
+    elements.collectOfType(into: images);
+    for (final Image img in images) {
+      final uri = Uri.parse(img.src);
+      if (uri.scheme.isNotEmpty) continue;
+      final imgFile = File(p.join(srcPostDir.path, img.src));
+      if (!imgFile.existsSync()) {
+        throw Exception("Blog post `$path` links to image `${imgFile.path}` but that file does not exist!");
+      }
+      final targetFile = File(p.join(buildPostDir.path, img.src));
+      await imgFile.copy(targetFile.path);
+    }
+
+    //Copy linked videos in the mdFile
+    final List<Video> videos = [];
+    elements.collectOfType(into: videos);
+    for (final Video vid in videos) {
+      final uri = Uri.parse(vid.src);
+      if (uri.scheme.isNotEmpty) continue;
+      final vidFile = File(p.join(srcPostDir.path, vid.src));
+      if (!vidFile.existsSync()) {
+        throw Exception("Blog post `$path` links to video `${vidFile.path}` but that file does not exist!");
+      }
+      final targetFile = File(p.join(buildPostDir.path, vid.src));
+      await vidFile.copy(targetFile.path);
+    }
+  }
+
+  Element generateCard() {
+    final String allText = Div(children: elements.where((e) => e is! Nav && e is! Hn)).innerText;
+    final String teaser =
+        "${allText.split(" ").getRange(0, 20).join(" ").replaceFirst(RegExp(r"[\s:,.]*$"), "")}...";
+    final String monthName = monthNames[month - 1];
+    return A(
+      href: "/${dirBlog.path}/$path",
+      classes: ["post"],
+      children: [
+        H3.text(title!, autoLink: false),
+        P.text("Published on $day $monthName", classes: ["published"]),
+        P.text(teaser, classes: ["teaser"]),
+      ],
+    );
+  }
 }

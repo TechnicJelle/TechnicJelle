@@ -1,18 +1,54 @@
-/* H2 is Year */
-/* H3 is Month */
-/* H4 is Day */
-
-h4 {
-	margin-bottom: 0.2em;
+:root {
+	--card-padding-inline: 0.7em;
+	--card-padding-block: 0.5em;
 }
 
-ul {
-	margin-top: 0;
-	padding-left: 1em;
-	list-style-type: disclosure-closed;
+main > :last-child {
+	margin-bottom: 0;
 }
 
-h3 span:first-of-type {
-	color: grey;
+.post, .post:visited {
+	display: block;
+	margin-block: 1em;
+	padding: var(--card-padding-block) var(--card-padding-inline);
+
+	color: inherit;
+
+	border: 2px solid var(--border-colour);
+	border-radius: 6px;
+	position: relative;
+}
+
+.post:hover, .post:focus-visible {
+	text-decoration: none;
+	background-color: #ffffff05;
+	outline: none;
+}
+
+.post > * {
+	margin: 0;
+}
+
+.post h3 {
+	border: none;
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+.post p.published {
 	font-size: 0.8em;
+	margin-bottom: 0.5em;
+	color: #aaaaaa;
+}
+
+.post p.teaser {
+	font-style: italic;
+}
+
+@media screen and (min-width: 800px) {
+	.post p.published {
+		position: absolute;
+		top: var(--card-padding-block);
+		right: var(--card-padding-inline);
+	}
 }
