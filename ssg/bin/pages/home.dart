@@ -17,7 +17,9 @@ import "package:techs_html_bindings/utils.dart";
 Future<void> createHomePage() async {
   final String indexHTML = HTML(
     lang: "en",
-    head: generateHead(),
+    head: generateHead(
+      extraStyles: ["home"],
+    ),
     body: await generateBody(),
   ).build();
   File(p.join(dirBuild.path, "index.html")).writeAsStringSync(indexHTML);

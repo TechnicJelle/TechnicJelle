@@ -1,0 +1,5 @@
+/* TODO: Move all home-specific styles into this file */
+
+section.two-col + h3 {
+	margin-top: 5em;
+}
