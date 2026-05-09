@@ -34,7 +34,7 @@ Head generateHead({
         sizes: "16x16",
         href: "/favicon16.png",
       ),
-      ...Link.preloadedStylesheet(href: "/styles/main.css"),
+      ...Link.preloadedStylesheet(href: "/styles/shared.css"),
       ...extraStyles.expand((String extraStyle) => Link.preloadedStylesheet(href: "/styles/$extraStyle.css")),
       ...extraLinks,
       //TODO: Add a feed for projects as well

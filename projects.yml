@@ -6,9 +6,9 @@
     tags: [ Game, C#, Unity ]
     blog: https://technicjelle.tumblr.com/tagged/Space%20Game%203DX
     visuals:
-      - https://64.media.tumblr.com/f334422220d28a4eaa61c5346f74449a/c843dc2fc5ca71c3-df/s2048x3072/c1a014c578ca1dd436ea71e8a4c28a125f9d599c.png
-      - https://64.media.tumblr.com/cf5ee609b7977daa40acccddd4eb1654/c8cc5ff305aea9e4-05/s2048x3072/a529d42899127cbb9948db7d0cedd34cee83adcc.png
-      - https://64.media.tumblr.com/44757343cce8cf4201bea4a7892644e3/c843dc2fc5ca71c3-7d/s2048x3072/b3e6d9e561263ab25e60f82a9332eb278ba9c729.png
+      - /blog/2022/07/13/space-combat-3dx-003-second-level-and-sounds/Screenshot_(8).png
+      - /blog/2022/07/10/space-combat-3dx-002-enemies/Image3.png
+      - /blog/2022/07/13/space-combat-3dx-003-second-level-and-sounds/Screenshot_(9).png
   - DigiSwamp AG: https://github.com/Unrealitix/Project-Showoff
     tags: [ Game, C#, Unity, Team ]
     visuals:
@@ -59,6 +59,13 @@
       - https://raw.githubusercontent.com/TechnicJelle/Phurey/refs/heads/main/.github/readme_assets/1.png
       - https://raw.githubusercontent.com/TechnicJelle/Phurey/refs/heads/main/.github/readme_assets/2.png
       - https://raw.githubusercontent.com/TechnicJelle/Phurey/refs/heads/main/.github/readme_assets/3.png
+  - Planes Tower Defence: https://github.com/TechnicJelle/PlanesTowerDefence
+    blog: https://technicjelle.tumblr.com/tagged/Planes%20Tower%20Defence
+    tags: [ Tech Demo, C#, Unity, Game ]
+    visuals:
+      - /blog/2023/01/19/planes-tower-defence-002-pathfinding/path-links.png
+      - /blog/2023/01/19/planes-tower-defence-002-pathfinding/Peek%202022-12-23%2011-09.mp4
+      - https://raw.githubusercontent.com/TechnicJelle/PlanesTowerDefence/main/PlantUML/include.svg
   - Doom Game (GXP): https://github.com/TechnicJelle/DoomGame
     tags: [ Game, C#, GXP Engine ]
     visuals:
@@ -119,13 +126,6 @@
     visuals:
       - https://raw.githubusercontent.com/TechnicJelle/VulkanPsychedelicCloths/feature/dear-imgui/.github/readme_assets/dear-imgui-demo.gif
       - https://raw.githubusercontent.com/TechnicJelle/VulkanPsychedelicCloths/main/.github/readme_assets/demo.gif
-  - Planes Tower Defence: https://github.com/TechnicJelle/PlanesTowerDefence
-    blog: https://technicjelle.tumblr.com/tagged/Planes%20Tower%20Defence
-    tags: [ Tech Demo, C#, Unity, Game ]
-    visuals:
-      - https://64.media.tumblr.com/96e36b1e111b9817377374369e17da91/a311c0963a93719d-a1/s1280x1920/8fa3f9ae921b843e51a7eeb686717ee72aeca8ab.png
-      - https://va.media.tumblr.com/tumblr_rog9h758iI1zblpfz_r2_720.mp4
-      - https://raw.githubusercontent.com/TechnicJelle/PlanesTowerDefence/main/PlantUML/include.svg
   - Unreal Engine 5 GitHub Actions VR Template: https://github.com/TechnicJelle/UE5_GHActions_VRTemplate
     tags: [ Tech Demo, Unreal Engine, CI/CD, Template ]
     visuals:
@@ -139,12 +139,12 @@
     blog: https://technicjelle.tumblr.com/tagged/Weaving%20Factory
     tags: [ Tech Demo, Unreal Engine, Team, CI/CD, VCS, VR ]
     visuals:
-      - https://64.media.tumblr.com/1de5cd49798d456fcee57a48a78f4209/7778f59c100dd386-86/s1280x1920/5831ccb0886feb235c2b69b14cc3b551ce6061ec.pnj
-      - https://64.media.tumblr.com/d3e11716700dea06bb21a9caac5dd0fe/7778f59c100dd386-8b/s1280x1920/13728fab5e346d8dd897ca7f0ba37579ae5b946e.pnj
-      - https://64.media.tumblr.com/c33e7686531688eb76fce2a462150f5a/5e0c094dd66f1618-5a/s1280x1920/1129a46dcd2241ca7051ed965e42a8e34b173d27.png
-      - https://va.media.tumblr.com/tumblr_smn345I0vr1zblpfz_720.mp4
-      - https://64.media.tumblr.com/075a43055238ed6378fae44c9f2f4522/5e0c094dd66f1618-6e/s1280x1920/2a3f1dc62f46ccc339e147f62b105337b66c3713.png
-      - https://64.media.tumblr.com/8ceafea69fc0f207e95015db5f50956c/5e0c094dd66f1618-c1/s1280x1920/f698c813aaa91d7eaf419e2b20ea18ff708ce44c.png
+      - /blog/2024/12/17/weaving-factory-screenshots/1.png
+      - /blog/2024/12/17/weaving-factory-screenshots/2.png
+      - /blog/2025/01/19/infrastructure-for-disaster-control-aka-automatic-builds/jenkins_bwe.png
+      - /blog/2024/11/08/controller-less-vr-teleportation/MovementConcept0001-0250.mp4
+      - /blog/2025/01/19/infrastructure-for-disaster-control-aka-automatic-builds/Screenshot_2025-01-17_22-56-22.png
+      - /blog/2025/01/19/infrastructure-for-disaster-control-aka-automatic-builds/NetworkMap.excalidraw.png
 
 🖥️ Desktop Software Tools:
   - BlueMap GUI: https://github.com/TechnicJelle/BlueMapGUI

@@ -28,6 +28,8 @@ class MdFile {
 
   String? get title => h1?.innerText;
 
+  DateTime get publishedDate => DateTime.fromMillisecondsSinceEpoch(0, isUtc: true);
+
   MdFile({required this.file}) : content = file.readAsStringSync(), _elements = [] {
     if (content.contains("“") || content.contains("”")) {
       throw Exception("Post ${file.path} contains a stupid “quote”");
@@ -97,7 +99,7 @@ class MdFile {
     return map;
   }
 
-  Entry toAtomEntry(String link) {
+  Entry toAtomEntry({required String link}) {
     final String sourcePath = file.path;
     final thisFrontmatter = frontmatter;
     if (thisFrontmatter == null) throw Exception("Post $sourcePath does not have frontmatter!");
@@ -183,10 +185,6 @@ class MdFile {
       children: fixedElements,
       args: {"xmlns": "http://www.w3.org/1999/xhtml"},
     ).build();
-
-    final List<int> parts = p.split(sourcePath).map(int.tryParse).whereType<int>().toList(growable: false);
-    if (parts.length != 3) throw Exception("Could not extract date from sourcePath!?");
-    final publishedDate = DateTime.utc(parts[0], parts[1], parts[2]);
 
     return Entry(
       title: thisTitle,

@@ -1,14 +1,15 @@
 import "package:techs_html_bindings/elements.dart";
 
-Footer generateFooter() {
+Footer generateFooter({bool shouldDisplayLastUpdatedTime = false}) {
   return Footer(
     children: [
-      P(
-        children: [
-          T("Website last updated on "),
-          Time.now(),
-        ],
-      ),
+      if (shouldDisplayLastUpdatedTime)
+        P(
+          children: [
+            T("Website last updated on "),
+            Time.now(),
+          ],
+        ),
       Address(
         children: [
           P(
