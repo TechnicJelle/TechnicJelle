@@ -61,7 +61,7 @@
       - https://raw.githubusercontent.com/TechnicJelle/Phurey/refs/heads/main/.github/readme_assets/3.png
   - Planes Tower Defence: https://github.com/TechnicJelle/PlanesTowerDefence
     blog: https://technicjelle.tumblr.com/tagged/Planes%20Tower%20Defence
-    tags: [ Tech Demo, C#, Unity, Game ]
+    tags: [ Game, Tech Demo, C#, Unity ]
     visuals:
       - /blog/2023/01/19/planes-tower-defence-002-pathfinding/path-links.png
       - /blog/2023/01/19/planes-tower-defence-002-pathfinding/Peek%202022-12-23%2011-09.mp4

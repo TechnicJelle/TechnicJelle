@@ -15,7 +15,7 @@ final Directory dirTags = Directory(p.join(dirBuild.path, "tags"));
 Future<void> createTagsPages() async {
   final String tagsPage = HTML(
     lang: "en",
-    head: generateHead(title: "Tags"),
+    head: generateHead(title: "Tags", extraStyles: ["projects"]),
     body: Body(
       header: generateHeader(filename: "Tags"),
       main: Main(
@@ -41,6 +41,7 @@ Future<void> _createTagPage({required String tag, required List<Project> project
     lang: "en",
     head: generateHead(
       title: tag,
+      extraStyles: ["projects"],
       extraLinks: [
         //TODO: Maybe a feed per project tag? But only show if you actually go to this tag page and search for linked feeds.
       ],

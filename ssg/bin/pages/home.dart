@@ -18,7 +18,7 @@ Future<void> createHomePage() async {
   final String indexHTML = HTML(
     lang: "en",
     head: generateHead(
-      extraStyles: ["home"],
+      extraStyles: ["home", "projects"],
     ),
     body: await generateBody(),
   ).build();
