@@ -154,6 +154,8 @@ class BlogPost extends MdFile {
   int month;
   int day;
 
+  List<String> tags;
+
   String get year4 => year.toStringDigits(4);
 
   String get month2 => month.toStringDigits();
@@ -165,7 +167,11 @@ class BlogPost extends MdFile {
     required this.year,
     required this.month,
     required this.day,
-  });
+  }) : tags = [] {
+    final tagsMaybe = frontmatter!["tags"]!;
+    if (tagsMaybe is! List) throw Exception("Tags wasn't a list!?");
+    tags.addAll(tagsMaybe.map((e) => e.toString()));
+  }
 
   String get path => p.withoutExtension(p.relative(file.path, from: dirBlog.path));
 
@@ -179,6 +185,10 @@ class BlogPost extends MdFile {
     final srcPostDir = Directory(p.dirname(file.path));
     final buildPostDir = Directory(p.join(dirBuildBlog.path, path))..createSync(recursive: true);
     final postHtml = File(p.join(buildPostDir.path, "index.html"));
+
+    final tagsList = UnorderedList(items: tags.map(ListItem.text));
+    final fixedElements = elements.toList()
+      ..replace(test: (element) => element == h1 ? [element, tagsList] : null);
 
     final String indexHTML = HTML(
       lang: "en",
@@ -195,7 +205,7 @@ class BlogPost extends MdFile {
           showBlog: false,
         ),
         main: Main(
-          children: elements,
+          children: fixedElements,
         ),
         footer: generateFooter(),
       ),
