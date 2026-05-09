@@ -116,6 +116,12 @@ class MdFile {
     final String? thisTitle = title;
     if (thisTitle == null) throw Exception("Post $sourcePath does not have a title!");
 
+    // TODO: Fix that this mutates the original elements list.
+    //  It is not copied deeply enough.
+    //  The children might be getting replaced by copies, but their parents are not getting replaced by copies,
+    //  so the parents (which are shared between `elements` and `fixedElements` get their child replaced by a modified copy.
+    //  But they're shared, so the replace affects both lists...
+
     //replace elements for use in an atom feed
     final List<Element> fixedElements = elements.where((element) => element != h1).toList()
       //make all media src's absolute URLs
