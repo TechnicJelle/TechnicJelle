@@ -28,16 +28,17 @@ void replaceHeroTable(List<Element> md) {
   md[md.indexOf(heroTable)] = generateHero(heroTable);
 }
 
+///Replaces the <Table> in the readme with a flexbox <Section>
 Section generateHero(Table table) {
   final List<TableHeader> ths = [];
   table.collectChildrenOfType(into: ths);
-  final String img = ths.first.innerText.trim();
-  final String haiku = ths.last.innerText.trim();
+  final Image img = ths.first.children.whereType<Image>().first;
+  final Iterable<Element> haiku = ths.last.children;
   return Section(
     classes: ["hero"],
     children: [
-      T(img),
-      P.text(haiku),
+      img,
+      P(children: haiku),
     ],
   );
 }
