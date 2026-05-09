@@ -74,6 +74,21 @@ Future<Body> generateBody() async {
     );
   }
 
+  final futures = blogPosts.map((e) => e.writeHtml());
+  await Future.wait(futures, eagerError: true);
+
+  final List<Element> postCards = [];
+  int currentYear = 0;
+  for (final post in blogPosts.reversed) {
+    if (currentYear != post.year) {
+      currentYear = post.year;
+      postCards.add(H2.text("$currentYear", autoLink: false));
+    }
+    postCards.add(post.generateCard());
+  }
+
+  // Generate atom feed after writing the HTML, because `toAtomEntry()` mutates the mdFile's `elements`
+  // I'd like to fix that sometime, but it's tricky. So for now, we work around it by just doing in in the opposite order...
   final String blogUrl = "$baseUrl/${dirBlog.path}";
   await generateAtomFeed(
     destinationPath: dirBlog,
@@ -87,19 +102,6 @@ Future<Body> generateBody() async {
     //never change this:
     id: "urn:uuid:019dc1b3-1427-7fbf-b058-015b535012e1",
   );
-
-  final futures = blogPosts.map((e) => e.writeHtml());
-  await Future.wait(futures, eagerError: true);
-
-  final List<Element> postCards = [];
-  int currentYear = 0;
-  for (final post in blogPosts.reversed) {
-    if (currentYear != post.year) {
-      currentYear = post.year;
-      postCards.add(H2.text("$currentYear", autoLink: false));
-    }
-    postCards.add(post.generateCard());
-  }
 
   return Body(
     header: generateHeader(filename: "Blog", showBlog: false),

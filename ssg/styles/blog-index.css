@@ -19,10 +19,20 @@ main > :last-child {
 	position: relative;
 }
 
-.post:hover, .post:focus-visible {
+.post:hover {
 	text-decoration: none;
 	background-color: #ffffff05;
-	outline: none;
+}
+
+/* This happens when clicked/tapped to go to a post, and then the browser's back button is pressed */
+.post:focus-within {
+	text-decoration: none;
+}
+
+/* Tab navigation */
+.post:focus-visible {
+	text-decoration: none;
+	outline: 2px var(--main-text-colour) solid;
 }
 
 .post > * {
