@@ -69,6 +69,9 @@ Future<String> _downloadVisualIfNecessary(Project project, String link) async {
   if (Platform.environment["ENABLE_VISUAL_DOWNLOADING"] != null) {
     final Uri uri = Uri.parse(link);
 
+    // Do not download visuals from URLs that cannot be downloaded from, like local URLs.
+    if (uri.scheme.isEmpty) return link;
+
     final String filename = uri.getFileName();
     final dirVisuals = Directory(p.join(dirImages.path, project.category.clean(), project.name.clean()))
       ..createSync(recursive: true);
