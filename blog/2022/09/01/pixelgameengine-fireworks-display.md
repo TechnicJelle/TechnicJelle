@@ -1,5 +1,5 @@
 ---
-tags: [ Code, How I did a thing, C++, PixelGameEngine, Simulation ]
+tags: [ Code, How I did a thing, C++, olcPixelGameEngine, Simulation ]
 original: https://technicjelle.tumblr.com/post/697768322612297728/fireworks-display-in-c-with-the-pixelgameengine
 atom-id: "019dc1ff-801e-7eab-a7f5-003f24ea24f6"
 ---
