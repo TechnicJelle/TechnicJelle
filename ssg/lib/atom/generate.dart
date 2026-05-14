@@ -50,16 +50,19 @@ Future<void> generateAtomFeed({
               ..element("link", attributes: {"href": entry.link, "rel": "alternate"})
               ..element("id", nest: entryId)
               ..element("published", nest: entry.published)
-              ..element("updated", nest: entry.updated)
-              ..element(
-                "content",
-                attributes: {
-                  "type": "xhtml",
-                  if (entry.xmlLang != null) ...{"xml:lang": entry.xmlLang!},
-                  if (entry.xmlBase != null) ...{"xml:base": entry.xmlBase!},
-                },
-                nest: () => builder.xml(entry.content),
-              );
+              ..element("updated", nest: entry.updated);
+            if (entry.summary != null) {
+              builder.element("summary", nest: entry.summary);
+            }
+            builder.element(
+              "content",
+              attributes: {
+                "type": "xhtml",
+                if (entry.xmlLang != null) ...{"xml:lang": entry.xmlLang!},
+                if (entry.xmlBase != null) ...{"xml:base": entry.xmlBase!},
+              },
+              nest: () => builder.xml(entry.content),
+            );
           },
         );
       }

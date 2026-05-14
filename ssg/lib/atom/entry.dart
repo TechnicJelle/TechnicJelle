@@ -1,13 +1,14 @@
 class Entry {
-  final String title;
-  final String link;
-  final String id;
-  final String published;
-  final String updated;
-  final String content;
-  final String sourcePath;
-  final String? xmlLang;
-  final String? xmlBase;
+  String title;
+  String link;
+  String id;
+  String published;
+  String updated;
+  String content;
+  String? summary;
+  String sourcePath;
+  String? xmlLang;
+  String? xmlBase;
 
   Entry({
     required this.title,
@@ -17,6 +18,7 @@ class Entry {
     required this.updated,
     required this.content,
     required this.sourcePath,
+    this.summary,
     this.xmlLang,
     this.xmlBase,
   });

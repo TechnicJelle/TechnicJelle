@@ -1,6 +1,7 @@
 import "dart:io";
 
 import "package:path/path.dart" as p;
+import "package:ssg/atom/entry.dart";
 import "package:ssg/atom/generate.dart";
 import "package:ssg/components/footer.dart";
 import "package:ssg/components/head.dart";
@@ -236,6 +237,11 @@ class BlogPost extends MdFile {
   @override
   DateTime get publishedDate => DateTime.utc(year, month, day);
 
+  String get teaser {
+    final String allText = Div(children: elements.where((e) => e is! Nav && e is! Hn)).innerText;
+    return "${allText.split(" ").getRange(0, 20).join(" ").replaceFirst(RegExp(r"[\s:,.]*$"), "")}...";
+  }
+
   Future<void> writeHtml() async {
     log.info("Writing blog post $path");
     final srcPostDir = Directory(p.dirname(file.path));
@@ -307,9 +313,6 @@ class BlogPost extends MdFile {
   }
 
   Element generateCard({bool showYear = false}) {
-    final String allText = Div(children: elements.where((e) => e is! Nav && e is! Hn)).innerText;
-    final String teaser =
-        "${allText.split(" ").getRange(0, 20).join(" ").replaceFirst(RegExp(r"[\s:,.]*$"), "")}...";
     return Div(
       classes: ["post"],
       children: [
@@ -336,5 +339,10 @@ class BlogPost extends MdFile {
       )
       ..args ??= {}
       ..args!["title"] = datetime;
+  }
+
+  @override
+  Entry toAtomEntry({required String link}) {
+    return super.toAtomEntry(link: link)..summary = teaser;
   }
 }
