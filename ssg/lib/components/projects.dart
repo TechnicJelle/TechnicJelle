@@ -7,6 +7,7 @@ import "package:ssg/projects_loading.dart";
 import "package:techs_html_bindings/elements.dart";
 import "package:techs_html_bindings/utils.dart";
 
+const String projectsHrefPrefix = "/tags";
 final Directory dirImages = Directory("build/images/project-visuals");
 
 Future<Section> generateProjectsSection(List<Project> projects) async {
@@ -133,7 +134,7 @@ Future<Element> _generateProjectCard(Project project) async {
           classes: ["blog-link"],
           children: [T("Read about this project on my blog →")],
         ),
-      projectTagStore.generateTagsList(hrefPrefix: "/tags", tags: project.tags),
+      projectTagStore.generateTagsList(hrefPrefix: projectsHrefPrefix, tags: project.tags),
     ],
   );
 }

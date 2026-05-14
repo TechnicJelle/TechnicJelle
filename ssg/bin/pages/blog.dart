@@ -18,6 +18,7 @@ final Directory dirBuildBlog = Directory(p.join("build", dirBlog.path));
 final Directory dirBlogTags = Directory(p.join(dirBuildBlog.path, "tags"));
 
 final TagStore<BlogPost> blogTagStore = TagStore();
+const String blogHrefPrefix = "/blog/tags";
 
 Future<void> createBlog() async {
   final String indexHTML = HTML(
@@ -32,7 +33,7 @@ Future<void> createBlog() async {
     h1Text: "All blog tags",
     dir: dirBlogTags,
     breadcrumbs: [A.text("Blog", href: "/blog")],
-    hrefPrefix: "/blog/tags",
+    hrefPrefix: blogHrefPrefix,
     extraStyles: ["blog-index"],
   );
 
@@ -249,7 +250,7 @@ class BlogPost extends MdFile {
     final postHtml = File(p.join(buildPostDir.path, "index.html"));
 
     final published = generatePublished(showYear: true);
-    final tagsList = blogTagStore.generateTagsList(hrefPrefix: "/blog/tags", tags: tags);
+    final tagsList = blogTagStore.generateTagsList(hrefPrefix: blogHrefPrefix, tags: tags);
     final fixedElements = elements.toList()
       ..replace(
         test: (element) => element == h1
@@ -318,7 +319,7 @@ class BlogPost extends MdFile {
       children: [
         H3(children: [A.text(title!, href: "/${dirBlog.path}/$path")], autoLink: false),
         generatePublished(showYear: showYear),
-        blogTagStore.generateTagsList(hrefPrefix: "/blog/tags", tags: tags),
+        blogTagStore.generateTagsList(hrefPrefix: blogHrefPrefix, tags: tags),
         P.text(teaser, classes: ["teaser"]),
       ],
     );

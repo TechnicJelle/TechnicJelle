@@ -127,7 +127,7 @@ Future<Body> generateBody() async {
 Future<List<Element>> generateProjects() async {
   final List<Element> elements = [
     H2(children: [T("Projects")]),
-    projectTagStore.generateTagsList(hrefPrefix: "/tags", withUsageAmount: true),
+    projectTagStore.generateTagsList(hrefPrefix: projectsHrefPrefix, withUsageAmount: true),
   ];
   for (final MapEntry<String, List<Project>> entry in categoriesProjectsMap.entries) {
     final String category = entry.key;
