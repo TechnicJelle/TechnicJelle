@@ -2,6 +2,10 @@ main {
 	line-height: 1.4;
 }
 
+h1 {
+	margin-bottom: 0.4em;
+}
+
 /* Direct child <p> due to Markdown always wrapping <img>s into a <p>... */
 div.img-list > p {
 	display: flex;
@@ -12,4 +16,23 @@ div.img-list > p {
 
 .center {
 	text-align: center;
+}
+
+.below-title {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 2em;
+	row-gap: 1em;
+	align-items: center;
+}
+
+.below-title .tags {
+	margin-bottom: 0;
+	padding: 0.4em 0 0.4em;
+}
+
+.below-title .published {
+	color: #aaaaaa;
+	margin-left: auto;
+	margin-block: 0;
 }

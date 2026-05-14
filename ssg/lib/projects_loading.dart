@@ -4,6 +4,7 @@ import "package:checked_yaml/checked_yaml.dart";
 import "package:github/github.dart";
 import "package:ssg/constants.dart";
 import "package:ssg/log.dart";
+import "package:ssg/tag_store.dart";
 
 class Project {
   String name;
@@ -40,7 +41,7 @@ final Map<String, List<Project>> categoriesProjectsMap = checkedYamlDecode(
   _parse,
 );
 
-final Map<String, List<Project>> tagsAndTheirUsages = {};
+final TagStore<Project> projectTagStore = TagStore();
 
 Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
   if (m == null) throw Exception("Somehow, m was null!?");
@@ -148,6 +149,6 @@ Future<void> setupProjectRepository() async {
         projects.add(project);
       }
     }
-    tagsAndTheirUsages[tag] = projects;
+    projectTagStore.setUsagesForTag(tag: tag, usages: projects);
   }
 }

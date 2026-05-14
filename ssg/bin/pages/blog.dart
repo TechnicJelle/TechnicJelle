@@ -8,22 +8,73 @@ import "package:ssg/components/header.dart";
 import "package:ssg/constants.dart";
 import "package:ssg/log.dart";
 import "package:ssg/md_file.dart";
+import "package:ssg/tag_store.dart";
 import "package:techs_html_bindings/elements.dart";
 import "package:techs_html_bindings/utils.dart";
 
 final Directory dirBlog = Directory("blog");
 final Directory dirBuildBlog = Directory(p.join("build", dirBlog.path));
+final Directory dirBlogTags = Directory(p.join(dirBuildBlog.path, "tags"));
 
-//TODO: Implement article tags
-//TODO: Maybe also have a feed per blog tag? But only show those if you actually go to that tag page and search for linked feeds.
+final TagStore<BlogPost> blogTagStore = TagStore();
 
 Future<void> createBlog() async {
   final String indexHTML = HTML(
     lang: "en",
-    head: generateHead(title: "Blog", extraStyles: ["blog-index"]),
+    head: generateHead(title: "Blog", extraStyles: ["blog-index", "tags"]),
     body: await generateBody(),
   ).build();
   File(p.join(dirBuildBlog.path, "index.html")).writeAsStringSync(indexHTML);
+
+  blogTagStore.writeTagsPage(
+    title: "Blog Tags",
+    h1Text: "All blog tags",
+    dir: dirBlogTags,
+    breadcrumbs: [A.text("Blog", href: "/blog")],
+    hrefPrefix: "/blog/tags",
+    extraStyles: ["blog-index"],
+  );
+
+  for (final MapEntry<String, List<BlogPost>> entry in blogTagStore.entries) {
+    await _createBlogTagPage(tag: entry.key, posts: entry.value);
+  }
+}
+
+Future<void> _createBlogTagPage({required String tag, required List<BlogPost> posts}) async {
+  final Directory tagDir = Directory(p.join(dirBlogTags.path, cleanTag(tag)))..createSync();
+  final String tagPage = HTML(
+    lang: "en",
+    head: generateHead(
+      title: "$tag | Blog",
+      extraStyles: ["blog-index", "tags"],
+      extraLinks: [
+        //TODO: Maybe also have a feed per blog tag? But only show those if you actually go to that tag page and search for linked feeds.
+      ],
+    ),
+    body: Body(
+      header: generateHeader(
+        breadcrumbs: [
+          A(href: "/blog", children: [T("Blog")]),
+          A(href: "/blog/tags", children: [T("Tags")]),
+        ],
+        filename: tag,
+        showBlog: false,
+      ),
+      main: Main(
+        children: [
+          H1(
+            children: [
+              T("Posts with the tag"),
+              Em(children: [T(tag)]),
+            ],
+          ),
+          ...posts.map((post) => post.generateCard(showYear: true)),
+        ],
+      ),
+      footer: generateFooter(),
+    ),
+  ).build();
+  File(p.join(tagDir.path, "index.html")).writeAsStringSync(tagPage);
 }
 
 Future<Body> generateBody() async {
@@ -129,7 +180,7 @@ void generateBreadcrumbIndex({
   breadCrumbIndex.writeAsStringSync(
     HTML(
       lang: "en",
-      head: generateHead(title: "Blog ${path.join("/")}", extraStyles: ["blog-index"]),
+      head: generateHead(title: "Blog ${path.join("/")}", extraStyles: ["blog-index", "tags"]),
       body: Body(
         header: generateHeader(
           breadcrumbs: [
@@ -156,6 +207,8 @@ class BlogPost extends MdFile {
   int month;
   int day;
 
+  List<String> tags;
+
   String get year4 => year.toStringDigits(4);
 
   String get month2 => month.toStringDigits();
@@ -167,7 +220,14 @@ class BlogPost extends MdFile {
     required this.year,
     required this.month,
     required this.day,
-  });
+  }) : tags = [] {
+    final tagsMaybe = frontmatter!["tags"]!;
+    if (tagsMaybe is! List) throw Exception("Tags wasn't a list!?");
+    tags.addAll(tagsMaybe.map((e) => e.toString()));
+    for (final String tag in tags) {
+      blogTagStore.registerUsageForTag(tag: tag, usage: this);
+    }
+  }
 
   String get path => p.withoutExtension(p.relative(file.path, from: dirBlog.path));
 
@@ -182,9 +242,21 @@ class BlogPost extends MdFile {
     final buildPostDir = Directory(p.join(dirBuildBlog.path, path))..createSync(recursive: true);
     final postHtml = File(p.join(buildPostDir.path, "index.html"));
 
+    final published = generatePublished(showYear: true);
+    final tagsList = blogTagStore.generateTagsList(hrefPrefix: "/blog/tags", tags: tags);
+    final fixedElements = elements.toList()
+      ..replace(
+        test: (element) => element == h1
+            ? [
+                element,
+                Div(classes: ["below-title"], children: [tagsList, published]),
+              ]
+            : null,
+      );
+
     final String indexHTML = HTML(
       lang: "en",
-      head: generateHead(title: title, extraStyles: ["blog-post"]),
+      head: generateHead(title: title, extraStyles: ["blog-post", "tags"]),
       body: Body(
         header: generateHeader(
           breadcrumbs: [
@@ -197,7 +269,7 @@ class BlogPost extends MdFile {
           showBlog: false,
         ),
         main: Main(
-          children: elements,
+          children: fixedElements,
         ),
         footer: generateFooter(),
       ),
@@ -234,19 +306,35 @@ class BlogPost extends MdFile {
     }
   }
 
-  Element generateCard() {
+  Element generateCard({bool showYear = false}) {
     final String allText = Div(children: elements.where((e) => e is! Nav && e is! Hn)).innerText;
     final String teaser =
         "${allText.split(" ").getRange(0, 20).join(" ").replaceFirst(RegExp(r"[\s:,.]*$"), "")}...";
-    final String monthName = monthNames[month - 1];
-    return A(
-      href: "/${dirBlog.path}/$path",
+    return Div(
       classes: ["post"],
       children: [
-        H3.text(title!, autoLink: false),
-        P.text("Published on $day $monthName", classes: ["published"]),
+        H3(children: [A.text(title!, href: "/${dirBlog.path}/$path")], autoLink: false),
+        generatePublished(showYear: showYear),
+        blogTagStore.generateTagsList(hrefPrefix: "/blog/tags", tags: tags),
         P.text(teaser, classes: ["teaser"]),
       ],
     );
+  }
+
+  P generatePublished({bool showYear = false}) {
+    final String monthName = monthNames[month - 1];
+    final String datetime = "$year4-$month2-$day2";
+    return P(
+        classes: ["published"],
+        children: [
+          T("Published on "),
+          Time.text(
+            "$day $monthName${showYear ? " $year4" : ""}",
+            datetime: datetime,
+          ),
+        ],
+      )
+      ..args ??= {}
+      ..args!["title"] = datetime;
   }
 }

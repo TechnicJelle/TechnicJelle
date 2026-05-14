@@ -179,6 +179,12 @@ class MdFile {
           );
           return [newSpan];
         },
+      )
+      ..replace(
+        test: (element) {
+          if (element is! Hn) return null;
+          return [element.copyWith(autoLink: false)];
+        },
       );
 
     final String content = Div(

@@ -1,7 +1,7 @@
 import "package:path/path.dart" as p;
 import "package:techs_html_bindings/elements.dart";
 
-Header generateHeader({required String filename, List<A> breadcrumbs = const [], bool showBlog = true}) {
+Header generateHeader({required String filename, List<A> breadcrumbs = const [], bool showBlog = false}) {
   return Header(
     classes: ["mono-font"],
     children: [
@@ -17,8 +17,7 @@ Header generateHeader({required String filename, List<A> breadcrumbs = const [],
           Span.text(p.extension(filename), classes: ["small"]),
         ],
       ),
-      //TODO: Re-enable once ready
-      // if (showBlog) A.text("Blog", href: "/blog"),
+      if (showBlog) A.text("Blog", href: "/blog"),
     ],
   );
 }

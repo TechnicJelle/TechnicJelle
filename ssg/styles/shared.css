@@ -189,34 +189,3 @@ pre, :not(pre) > code {
 pre { padding: 1em 1.25em; }
 
 :not(pre) > code { padding: 0.2em 0.4em; }
-
-/* Tag colours */
-/* Language colours from: https://github.com/github-linguist/linguist/blob/main/lib/linguist/languages.yml */
-.tags > .Android {color: #32DE84;}
-.tags > .AutoHotKey {color: #6594B9;}
-.tags > .C {color: #555555;}
-.tags > .Cpp {color: #F34B7D;}
-.tags > .Cs {color: #178600;}
-.tags > .Dart {color: #00B4AB;}
-.tags > .Fonts {color: #A7C957;}
-.tags > .Flutter {color: #02569B;}
-.tags > .GXP-Engine {color: #8F70B8;}
-.tags > .Java {color: #B07219;}
-.tags > .JavaScript {color: #F1E05A;}
-.tags > .Processing {color: #0096D8;}
-.tags > .Python {color: #3572A5;}
-.tags > .Stylus {color: #FF6347;}
-.tags > .BlueMap {color: #006EDE;}
-.tags > .Minecraft {color: #3CA92E;}
-.tags > .CSS {color: #663399;}
-.tags > .HTML {color: #e34c26;}
-.tags > .Prize {color: #FFD701;}
-.tags > .Premake, .tags > .Lua {color: #000080;}
-.tags > .SFML {color: #8BC34B;}
-.tags > .p5js {color: #ED225D;}
-.tags > .Vulkan {color: #AC162C;}
-.tags > .SDL_GPU {color: #6595b6;}
-.tags > .Unreal-Engine {color: #313b7e;}
-.tags > .Unity {color: #888888;}
-.tags > .GitHub {color: #888888;}
-.tags > .Discord {color: #5661EB;}

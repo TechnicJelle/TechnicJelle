@@ -7,7 +7,7 @@ main > :last-child {
 	margin-bottom: 0;
 }
 
-.post, .post:visited {
+.post {
 	display: block;
 	margin-block: 1em;
 	padding: var(--card-padding-block) var(--card-padding-inline);
@@ -19,20 +19,8 @@ main > :last-child {
 	position: relative;
 }
 
-.post:hover {
-	text-decoration: none;
+.post:hover, .post:focus-within {
 	background-color: #ffffff05;
-}
-
-/* This happens when clicked/tapped to go to a post, and then the browser's back button is pressed */
-.post:focus-within {
-	text-decoration: none;
-}
-
-/* Tab navigation */
-.post:focus-visible {
-	text-decoration: none;
-	outline: 2px var(--main-text-colour) solid;
 }
 
 .post > * {
@@ -49,6 +37,11 @@ main > :last-child {
 	font-size: 0.8em;
 	margin-bottom: 0.5em;
 	color: #aaaaaa;
+}
+
+.post .tags {
+	font-size: 0.9em;
+	padding: 0.3em 0 0.7em;
 }
 
 .post p.teaser {
