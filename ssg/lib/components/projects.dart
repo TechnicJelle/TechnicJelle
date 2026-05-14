@@ -1,7 +1,6 @@
 import "dart:io";
 
 import "package:path/path.dart" as p;
-import "package:ssg/components/tags.dart";
 import "package:ssg/constants.dart";
 import "package:ssg/log.dart";
 import "package:ssg/projects_loading.dart";
@@ -134,7 +133,7 @@ Future<Element> _generateProjectCard(Project project) async {
           classes: ["blog-link"],
           children: [T("Read about this project on my blog →")],
         ),
-      generateTagsList(tags: project.tags),
+      projectTagStore.generateTagsList(hrefPrefix: "/tags", tags: project.tags),
     ],
   );
 }

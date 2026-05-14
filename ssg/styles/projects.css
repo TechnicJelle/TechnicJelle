@@ -68,27 +68,3 @@
 		gap: 4px;
 	}
 }
-
-.tags {
-	margin-top: auto;
-	padding: 0.8em 0 0.4em;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	gap: 1.0em 0.3em;
-}
-
-.tags li {
-	display: inline;
-}
-
-.tags a, .tags a:visited {
-	background: black;
-	border-radius: 100vw;
-	padding: 0.4em 0.8em;
-	color: unset;
-}
-
-.tags a:hover, .tags a:focus-within {
-	background: #333;
-}

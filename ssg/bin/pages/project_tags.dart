@@ -5,43 +5,34 @@ import "package:ssg/components/footer.dart";
 import "package:ssg/components/head.dart";
 import "package:ssg/components/header.dart";
 import "package:ssg/components/projects.dart";
-import "package:ssg/components/tags.dart";
 import "package:ssg/constants.dart";
 import "package:ssg/projects_loading.dart";
+import "package:ssg/tag_store.dart";
 import "package:techs_html_bindings/elements.dart";
 
-final Directory dirTags = Directory(p.join(dirBuild.path, "tags"));
+final Directory dirProjectTags = Directory(p.join(dirBuild.path, "tags"));
 
-Future<void> createTagsPages() async {
-  final String tagsPage = HTML(
-    lang: "en",
-    head: generateHead(title: "Tags", extraStyles: ["projects"]),
-    body: Body(
-      header: generateHeader(filename: "Tags"),
-      main: Main(
-        children: [
-          H1(children: [T("All tags")]),
-          generateTagsList(withUsageAmount: true),
-        ],
-      ),
-      footer: generateFooter(),
-    ),
-  ).build();
-  dirTags.createSync(recursive: true);
-  File(p.join(dirTags.path, "index.html")).writeAsStringSync(tagsPage);
+Future<void> createProjectsTagsPages() async {
+  projectTagStore.writeTagsPage(
+    title: "Project Tags",
+    h1Text: "All project tags",
+    dir: dirProjectTags,
+    hrefPrefix: "/tags",
+    extraStyles: ["projects"]
+  );
 
-  for (final MapEntry<String, List<Project>> entry in tagsAndTheirUsages.entries) {
-    await _createTagPage(tag: entry.key, projects: entry.value);
+  for (final MapEntry<String, List<Project>> entry in projectTagStore.entries) {
+    await _createProjectTagPage(tag: entry.key, projects: entry.value);
   }
 }
 
-Future<void> _createTagPage({required String tag, required List<Project> projects}) async {
-  final Directory tagDir = Directory(p.join(dirTags.path, cleanTag(tag)))..createSync();
+Future<void> _createProjectTagPage({required String tag, required List<Project> projects}) async {
+  final Directory tagDir = Directory(p.join(dirProjectTags.path, cleanTag(tag)))..createSync();
   final String tagPage = HTML(
     lang: "en",
     head: generateHead(
       title: tag,
-      extraStyles: ["projects"],
+      extraStyles: ["projects", "tags"],
       extraLinks: [
         //TODO: Maybe a feed per project tag? But only show if you actually go to this tag page and search for linked feeds.
       ],

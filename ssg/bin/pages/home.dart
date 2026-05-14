@@ -6,7 +6,6 @@ import "package:ssg/components/head.dart";
 import "package:ssg/components/header.dart";
 import "package:ssg/components/projects.dart";
 import "package:ssg/components/table_of_contents.dart";
-import "package:ssg/components/tags.dart";
 import "package:ssg/components/webrings.dart";
 import "package:ssg/constants.dart";
 import "package:ssg/projects_loading.dart";
@@ -18,7 +17,7 @@ Future<void> createHomePage() async {
   final String indexHTML = HTML(
     lang: "en",
     head: generateHead(
-      extraStyles: ["home", "projects"],
+      extraStyles: ["home", "projects", "tags"],
     ),
     body: await generateBody(),
   ).build();
@@ -128,7 +127,7 @@ Future<Body> generateBody() async {
 Future<List<Element>> generateProjects() async {
   final List<Element> elements = [
     H2(children: [T("Projects")]),
-    generateTagsList(withUsageAmount: true),
+    projectTagStore.generateTagsList(hrefPrefix: "/tags", withUsageAmount: true),
   ];
   for (final MapEntry<String, List<Project>> entry in categoriesProjectsMap.entries) {
     final String category = entry.key;

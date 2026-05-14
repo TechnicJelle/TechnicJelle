@@ -9,7 +9,7 @@ import "package:uuid/uuid.dart";
 
 import "pages/blog.dart";
 import "pages/home.dart";
-import "pages/tags.dart";
+import "pages/project_tags.dart";
 
 Future<void> main(List<String> arguments) async {
   if (arguments.isNotEmpty && arguments[0] == "new-blog-post") {
@@ -57,7 +57,7 @@ atom-id: "${const Uuid().v7()}"
   copy("ssg/styles", "styles");
 
   await createHomePage();
-  await createTagsPages();
+  await createProjectsTagsPages();
   await createBlog();
 
   github.dispose();
