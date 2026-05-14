@@ -30,12 +30,13 @@ Future<void> main() async {
   await Future.wait(futures, eagerError: true);
   await io.stdout.flush();
 
+  io.stdout.writeln("Done checking exif data on blog assets.");
   if (changesWereMade) {
-    io.stdout.writeln("Done with changes!");
+    io.stdout.writeln("Changes were made that you should look over!");
     await io.stdout.flush();
     exit(1);
   }
-  io.stdout.writeln("Done without changes!");
+  io.stdout.writeln("No changes were made.");
   await io.stdout.flush();
 }
 
