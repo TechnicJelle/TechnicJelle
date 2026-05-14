@@ -16,13 +16,13 @@ extension P on FileSystemEntity {
 bool changesWereMade = false;
 
 Future<void> main() async {
-  final Directory current = Directory.current;
-  if (current.name != "blog") exit(2);
+  final Directory cwd = Directory.current;
+  final Directory dirBlog = Directory("${cwd.path}/blog");
+  if (!dirBlog.existsSync()) exit(2);
 
-  final List<File> files = current
+  final List<File> files = dirBlog
       .listSync(recursive: true)
       .whereType<File>()
-      .map((File f) => File(f.path.replaceFirst("${current.path}/", "")))
       .where((File f) => supportedFileTypes.contains(f.ext.toLowerCase()))
       .toList();
 
