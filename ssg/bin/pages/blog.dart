@@ -323,15 +323,18 @@ class BlogPost extends MdFile {
 
   P generatePublished({bool showYear = false}) {
     final String monthName = monthNames[month - 1];
+    final String datetime = "$year4-$month2-$day2";
     return P(
-      classes: ["published"],
-      children: [
-        T("Published on "),
-        Time.text(
-          "$day $monthName${showYear ? " $year4" : ""}",
-          datetime: "$year4-$month2-$day2",
-        ),
-      ],
-    );
+        classes: ["published"],
+        children: [
+          T("Published on "),
+          Time.text(
+            "$day $monthName${showYear ? " $year4" : ""}",
+            datetime: datetime,
+          ),
+        ],
+      )
+      ..args ??= {}
+      ..args!["title"] = datetime;
   }
 }
