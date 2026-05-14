@@ -1,10 +1,11 @@
 ---
 tags: [ Blog Meta ]
 prev: /blog/2026/04/18/new-blog-site
+next: /blog/2026/05/14/new-blog-milestone-2
 atom-id: "019dfa0a-608e-78b6-a505-72db8b7f652a"
 ---
 
-# New Blog: Milestone 1
+# New Blog: Milestone 1: Basic Infrastructure
 
 Today, I have completed what I call "milestone 1" of my new blog!
 
