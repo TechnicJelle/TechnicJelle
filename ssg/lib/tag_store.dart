@@ -52,7 +52,8 @@ class TagStore<R> {
               href: "$hrefPrefix/${cleanTag(tag)}",
               children: [
                 T(tag),
-                if (withUsageAmount) T("(${getUsageAmount(tag: tag)})"),
+                // &ZeroWidthSpace; to prevent ligatures between C# and (1) like #(
+                if (withUsageAmount) T("​(${getUsageAmount(tag: tag)})"),
               ],
             ),
           ],
