@@ -19,10 +19,6 @@ main > :last-child {
 	position: relative;
 }
 
-.post:hover, .post:focus-within {
-	background-color: #ffffff05;
-}
-
 .post > * {
 	margin: 0;
 }
