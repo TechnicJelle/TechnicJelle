@@ -162,7 +162,7 @@ Future<Body> generateBody() async {
       children: [
         H1.text("Blog"),
         P.text(
-          "This is my (TechnicJelle) blog! On this blog I write about things I make, which can be games, art or something else entirely",
+          "My name is TechnicJelle, and this is my blog! Here I write about things I make, which can be games, tools, art, or something else entirely",
         ),
         blogTagStore.generateTagsList(hrefPrefix: blogHrefPrefix, withUsageAmount: true),
         ...postCards,
