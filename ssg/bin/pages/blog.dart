@@ -164,6 +164,7 @@ Future<Body> generateBody() async {
         P.text(
           "This is my (TechnicJelle) blog! On this blog I write about things I make, which can be games, art or something else entirely",
         ),
+        blogTagStore.generateTagsList(hrefPrefix: blogHrefPrefix, withUsageAmount: true),
         ...postCards,
       ],
     ),
