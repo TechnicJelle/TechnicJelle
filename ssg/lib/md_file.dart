@@ -11,7 +11,7 @@ import "package:techs_html_bindings/utils.dart";
 import "package:uuid/uuid.dart";
 
 class MdFile {
-  static const String navCenterClass = "center";
+  static const String navCenterClass = "prev-next";
 
   final File file;
   final String content;
@@ -70,13 +70,9 @@ class MdFile {
         final nav = Nav(
           classes: [navCenterClass],
           children: [
-            P(
-              children: [
-                if (prev != null) A.text("← Previous Post", href: prev),
-                if (prev != null && next != null) T(" | "),
-                if (next != null) A.text("Next Post →", href: next),
-              ],
-            ),
+            if (prev != null) A.text("← Previous Post in Series", href: prev),
+            if (prev != null && next != null) Span.text(" | "),
+            if (next != null) A.text("Next Post in Series →", href: next),
           ],
         );
         _elements

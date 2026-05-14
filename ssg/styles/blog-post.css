@@ -14,10 +14,6 @@ div.img-list > p {
 	gap: 1em;
 }
 
-.center {
-	text-align: center;
-}
-
 .below-title {
 	display: flex;
 	flex-wrap: wrap;
@@ -35,4 +31,42 @@ div.img-list > p {
 	color: #aaaaaa;
 	margin-left: auto;
 	margin-block: 0;
+}
+
+nav.prev-next {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin-block: 1em;
+
+	--mobile-vertical-spacing: 0.25em;
+}
+
+nav.prev-next span {
+	padding-inline: 0.5em;
+}
+
+@media screen and (max-width: 500px) {
+	nav.prev-next {
+		flex-direction: column;
+	}
+
+	nav.prev-next span {
+		display: none;
+	}
+
+	nav.prev-next a {
+		padding-inline: 1em;
+	}
+
+	nav.prev-next:has(span) a:first-child {
+		border-bottom: 1px solid var(--main-text-colour);
+
+		padding-bottom: var(--mobile-vertical-spacing);
+	}
+
+	nav.prev-next:has(span) a:last-child {
+		padding-top: var(--mobile-vertical-spacing);
+	}
 }
