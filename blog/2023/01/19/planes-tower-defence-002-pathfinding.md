@@ -1,5 +1,5 @@
 ---
-tags: [ Code, GameDev, Unity, Planes Tower Defence ]
+tags: [ Code, GameDev, Unity, How I did a thing, Planes Tower Defence ]
 prev: /blog/2023/01/14/planes-tower-defence-001-level
 next: /blog/2023/01/28/planes-tower-defence-003-the-rest
 original: https://technicjelle.tumblr.com/post/706828880324050944/planes-tower-defence-pathfinding
