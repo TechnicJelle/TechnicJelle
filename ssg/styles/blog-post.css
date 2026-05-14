@@ -40,7 +40,7 @@ nav.prev-next {
 
 	margin-block: 1em;
 
-	--mobile-vertical-spacing: 0.25em;
+	--thin-vertical-spacing: 0.25em;
 }
 
 nav.prev-next span {
@@ -63,10 +63,10 @@ nav.prev-next span {
 	nav.prev-next:has(span) a:first-child {
 		border-bottom: 1px solid var(--main-text-colour);
 
-		padding-bottom: var(--mobile-vertical-spacing);
+		padding-bottom: var(--thin-vertical-spacing);
 	}
 
 	nav.prev-next:has(span) a:last-child {
-		padding-top: var(--mobile-vertical-spacing);
+		padding-top: var(--thin-vertical-spacing);
 	}
 }
