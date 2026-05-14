@@ -242,9 +242,17 @@ class BlogPost extends MdFile {
     final buildPostDir = Directory(p.join(dirBuildBlog.path, path))..createSync(recursive: true);
     final postHtml = File(p.join(buildPostDir.path, "index.html"));
 
+    final published = generatePublished(showYear: true);
     final tagsList = blogTagStore.generateTagsList(hrefPrefix: "/blog/tags", tags: tags);
     final fixedElements = elements.toList()
-      ..replace(test: (element) => element == h1 ? [element, tagsList] : null);
+      ..replace(
+        test: (element) => element == h1
+            ? [
+                element,
+                Div(classes: ["below-title"], children: [tagsList, published]),
+              ]
+            : null,
+      );
 
     final String indexHTML = HTML(
       lang: "en",
@@ -302,14 +310,27 @@ class BlogPost extends MdFile {
     final String allText = Div(children: elements.where((e) => e is! Nav && e is! Hn)).innerText;
     final String teaser =
         "${allText.split(" ").getRange(0, 20).join(" ").replaceFirst(RegExp(r"[\s:,.]*$"), "")}...";
-    final String monthName = monthNames[month - 1];
     return Div(
       classes: ["post"],
       children: [
         H3(children: [A.text(title!, href: "/${dirBlog.path}/$path")], autoLink: false),
-        P.text("Published on $day $monthName${showYear ? " $year4" : ""}", classes: ["published"]),
+        generatePublished(showYear: showYear),
         blogTagStore.generateTagsList(hrefPrefix: "/blog/tags", tags: tags),
         P.text(teaser, classes: ["teaser"]),
+      ],
+    );
+  }
+
+  P generatePublished({bool showYear = false}) {
+    final String monthName = monthNames[month - 1];
+    return P(
+      classes: ["published"],
+      children: [
+        T("Published on "),
+        Time.text(
+          "$day $monthName${showYear ? " $year4" : ""}",
+          datetime: "$year4-$month2-$day2",
+        ),
       ],
     );
   }
