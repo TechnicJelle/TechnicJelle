@@ -155,9 +155,10 @@ class MdFile {
           if (element is! Nav) return null;
           final classes = element.classes;
           if (classes == null) return null;
-          if (!classes.contains("center")) return null;
+          const String classToReplace = "center";
+          if (!classes.contains(classToReplace)) return null;
 
-          final newClasses = classes.where((strClass) => strClass != "center");
+          final newClasses = classes.where((strClass) => strClass != classToReplace);
           final newNav = element.copyWith(
             classes: newClasses.isEmpty ? null : newClasses,
             inlineStyles: ["text-align: center", ...?element.inlineStyles],
