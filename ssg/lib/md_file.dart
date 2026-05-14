@@ -11,6 +11,8 @@ import "package:techs_html_bindings/utils.dart";
 import "package:uuid/uuid.dart";
 
 class MdFile {
+  static const String navCenterClass = "center";
+
   final File file;
   final String content;
   final List<Element> _elements;
@@ -66,7 +68,7 @@ class MdFile {
       final String? next = frontmatter?["next"] as String?;
       if (prev != null || next != null) {
         final nav = Nav(
-          classes: ["center"],
+          classes: [navCenterClass],
           children: [
             P(
               children: [
@@ -155,10 +157,9 @@ class MdFile {
           if (element is! Nav) return null;
           final classes = element.classes;
           if (classes == null) return null;
-          const String classToReplace = "center";
-          if (!classes.contains(classToReplace)) return null;
+          if (!classes.contains(navCenterClass)) return null;
 
-          final newClasses = classes.where((strClass) => strClass != classToReplace);
+          final newClasses = classes.where((strClass) => strClass != navCenterClass);
           final newNav = element.copyWith(
             classes: newClasses.isEmpty ? null : newClasses,
             inlineStyles: ["text-align: center", ...?element.inlineStyles],
