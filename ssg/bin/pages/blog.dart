@@ -320,8 +320,8 @@ class BlogPost extends MdFile {
       children: [
         H3(children: [A.text(title!, href: "/${dirBlog.path}/$path")], autoLink: false),
         generatePublished(showYear: showYear),
-        blogTagStore.generateTagsList(hrefPrefix: blogHrefPrefix, tags: tags),
         P.text(teaser, classes: ["teaser"]),
+        blogTagStore.generateTagsList(hrefPrefix: blogHrefPrefix, tags: tags),
       ],
     );
   }
