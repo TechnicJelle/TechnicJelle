@@ -14,7 +14,7 @@ The homepage of my website already had a tagging system for the projects,
 so I was able to take that system, make it a bit more generic, and then use it for the blog tags as well.
 
 I'm not quite ready to publicise the blog fully, just quite yet,
-as I would like to get some more testing in first.
+as I would like to get some more testing done first.
 
 I'll ask my friends to look through (the whole blog section of) my site and provide feedback.
 
