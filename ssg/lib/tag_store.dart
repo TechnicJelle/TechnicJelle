@@ -89,6 +89,19 @@ class TagStore<R> {
   }
 }
 
+Element generateTagCropper() {
+  return P(classes: ["tag-list-cropper"], children: [Checkbox()]);
+}
+
+class Checkbox extends Element {
+  Checkbox() : super(children: []);
+
+  @override
+  String build() {
+    return '<input type="checkbox" autocomplete="off">';
+  }
+}
+
 String cleanTag(String tag) {
   return tag.replaceAll(" ", "-").replaceAll("#", "s").replaceAll("+", "p").replaceAll("/", "_");
 }

@@ -9,6 +9,7 @@ import "package:ssg/components/table_of_contents.dart";
 import "package:ssg/components/webrings.dart";
 import "package:ssg/constants.dart";
 import "package:ssg/projects_loading.dart";
+import "package:ssg/tag_store.dart";
 import "package:techs_html_bindings/elements.dart";
 import "package:techs_html_bindings/markdown.dart";
 import "package:techs_html_bindings/utils.dart";
@@ -128,6 +129,7 @@ Future<List<Element>> generateProjects() async {
   final List<Element> elements = [
     H2(children: [T("Projects")]),
     projectTagStore.generateTagsList(hrefPrefix: projectsHrefPrefix, withUsageAmount: true),
+    generateTagCropper(),
   ];
   for (final MapEntry<String, List<Project>> entry in categoriesProjectsMap.entries) {
     final String category = entry.key;

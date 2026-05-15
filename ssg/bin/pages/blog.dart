@@ -165,6 +165,7 @@ Future<Body> generateBody() async {
           "My name is TechnicJelle, and this is my blog! Here I write about things I make, which can be games, tools, art, or something else entirely",
         ),
         blogTagStore.generateTagsList(hrefPrefix: blogHrefPrefix, withUsageAmount: true),
+        generateTagCropper(),
         ...postCards,
       ],
     ),
