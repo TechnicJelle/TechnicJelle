@@ -112,6 +112,7 @@
 
 			position: relative;
 			--col: var(--main-text-colour);
+			cursor: pointer;
 		}
 
 		.tag-list-cropper input[type="checkbox"]::after {
