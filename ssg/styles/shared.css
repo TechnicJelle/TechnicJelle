@@ -174,9 +174,16 @@ main {
 	border-radius: 6px;
 }
 
+@media screen and (max-width: 800px) {
+	main {
+		padding: 12px;
+	}
+}
+
 footer {
 	text-align: right;
 	font-size: 14px;
+	padding-inline: 7px;
 }
 
 pre, :not(pre) > code {
