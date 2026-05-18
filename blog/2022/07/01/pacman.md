@@ -8,7 +8,7 @@ atom-id: "019dc1ff-801c-7c3c-a452-ac0b4c785f97"
 
 I made a Pacman!
 
-Blender YouTuber Default Cube uploaded [a video tutorial](https://www.youtube.com/watch?v=AM_HYYY6VII)
+Blender YouTuber Default Cube uploaded [a video tutorial](https://youtube.com/watch?v=AM_HYYY6VII)
 on how to make a Pacman with Blender Geometry Nodes.
 
 Before watching how he did it, I tried my own hand at doing it and this is the result!
@@ -23,4 +23,4 @@ Here is the final node-tree:
 ![A screenshot of Blender 3.2.0, showing a node-tree at the bottom, and the pacman at the top](pacman_nodes.png)
 
 I posted it on ArtStation, too, so give me a like and a follow over there if you want:
-https://www.artstation.com/artwork/KO9Y1o
+https://artstation.com/artwork/KO9Y1o

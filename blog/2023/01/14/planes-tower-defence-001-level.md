@@ -25,7 +25,7 @@ So I found [this nice Kenney pack](https://kenney.nl/assets/pixel-shmup):
 
 So then I got to work importing this into Unity, to make a nice level with these tiles.
 This is the first time I'm making a 2D game in Unity, so I had to look up how to make tile grids work and found
-[this great tutorial](https://www.youtube.com/watch?v=g83_gwEO0kM).
+[this great tutorial](https://youtube.com/watch?v=g83_gwEO0kM).
 
 I made good use of the auto-tiling feature that Unity provides,
 so I could just simply draw where I wanted the roads to be,

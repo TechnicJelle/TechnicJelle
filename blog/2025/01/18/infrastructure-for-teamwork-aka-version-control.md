@@ -37,7 +37,7 @@ Though that might also have been due to the fact that they barely used any of it
 
 Unreal Engine itself recommends using Perforce Helix Core.  
 (Perforce is the company, Helix Core is the VCS, but the term "Perforce" is usually used to refer to the VCS itself,
-due to historical reasons. [Source](https://www.youtube.com/watch?v=jIQEjDiSe0g))  
+due to historical reasons. [Source](https://youtube.com/watch?v=jIQEjDiSe0g))  
 So I looked into it, and indeed, it seemed very suitable!
 
 We requested a computer from the XR Lab to use as server for this project,

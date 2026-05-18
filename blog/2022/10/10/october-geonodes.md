@@ -23,7 +23,7 @@ There is currently no way to spawn points randomly inside a volume, so I made a 
 With the GeoNodes setup, you can easily add more points on the curve and change the radius of the curve.
 
 I posted this on ArtStation, too, so give me a like and a follow over there if you want:
-https://www.artstation.com/artwork/eJn9ew
+https://artstation.com/artwork/eJn9ew
 
 ## Cracks
 

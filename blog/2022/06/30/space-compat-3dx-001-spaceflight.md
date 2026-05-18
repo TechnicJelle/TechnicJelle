@@ -8,7 +8,7 @@ atom-id: "019de611-44c9-7c94-8b03-7cb50baf4db7"
 
 _(This post was written years later, because I found some more early footage)_
 
-<iframe src="https://www.youtube-nocookie.com/embed/cKj2shehFGs" title="YouTube video player" allow="fullscreen; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin"></iframe>
+<iframe src="https://youtube-nocookie.com/embed/cKj2shehFGs" title="YouTube video player" allow="fullscreen; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin"></iframe>
 
 The space environment has been created with Blender, and rendered out using the excellent
 [Cube Map Creation Toolkit](https://blendswap.com/blend/17087).
