@@ -292,7 +292,8 @@
   - Discord Inviter: https://github.com/TechnicJelle/DiscordInviter
     tags: [ Minecraft, Java ]
     visuals:
-      - https://raw.githubusercontent.com/TechnicJelle/DiscordInviter/main/.github/Java%20Edition.png
+      - https://raw.githubusercontent.com/TechnicJelle/DiscordInviter/main/.github/JavaEdition.png
+      - https://raw.githubusercontent.com/TechnicJelle/DiscordInviter/main/.github/BedrockEdition(Floodgate).png
   - BlueMap Offline Player Markers: https://github.com/TechnicJelle/BlueMapOfflinePlayerMarkers
     tags: [ Minecraft, Java, BlueMap ]
     visuals:
