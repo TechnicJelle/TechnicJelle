@@ -37,7 +37,7 @@ main > :last-child {
 
 .post .tags {
 	font-size: 0.9em;
-	padding: 0.9em 0 0.5em;
+	margin-top: 0.4em;
 }
 
 .post p.teaser {

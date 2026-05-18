@@ -61,6 +61,10 @@
 	font-size: 0.9em;
 }
 
+.card .tags {
+	margin-top: 0.4em;
+}
+
 @media screen and (min-width: 1000px) {
 	.two-col {
 		display: grid;
