@@ -122,13 +122,14 @@ body {
 header {
 	display: flex;
 	justify-content: space-between;
+	gap: 2em;
 
 	font-size: 16px;
 	padding: 12px 4px 10px;
 }
 
 /* For very thin screens, put the items in the header below each other */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 450px) {
 	header {
 		flex-direction: column;
 		gap: 0.5em;
