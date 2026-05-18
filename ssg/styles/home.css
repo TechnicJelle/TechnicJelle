@@ -56,6 +56,12 @@ a:focus-visible .badge {
 	outline: rgb(16, 16, 16) auto 1px;
 }
 
+/* Some extra spacing between project categories */
+section.two-col + h3 {
+	margin-top: 5em;
+}
+
+/* Webrings */
 .webrings {
 	text-align: center;
 }
@@ -65,7 +71,6 @@ a:focus-visible .badge {
 	margin-bottom: 0.2em;
 }
 
-/* Webrings */
 .webring {
 	display: flex;
 	gap: 0.25rem;
@@ -102,8 +107,4 @@ aside li {
 		top: 0;
 		left: 2em;
 	}
-}
-
-section.two-col + h3 {
-	margin-top: 5em;
 }
