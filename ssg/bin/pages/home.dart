@@ -4,6 +4,7 @@ import "package:path/path.dart" as p;
 import "package:ssg/components/footer.dart";
 import "package:ssg/components/head.dart";
 import "package:ssg/components/header.dart";
+import "package:ssg/components/icons.dart";
 import "package:ssg/components/projects.dart";
 import "package:ssg/components/table_of_contents.dart";
 import "package:ssg/components/webrings.dart";
@@ -88,7 +89,6 @@ Element generateBadge({
   // ignore: parameter_assignments
   if (logo == "openjdk") logo = "java";
 
-  final File icon = File("images/icons/$logo.svg");
   return Span(
     classes: ["badge"],
     inlineStyles: [
@@ -96,15 +96,7 @@ Element generateBadge({
       "--background-colour: $backgroundColour",
     ],
     children: [
-      T(
-        icon
-            .readAsStringSync()
-            .replaceAll(
-              ' xmlns="http://www.w3.org/2000/svg">',
-              ' xmlns="http://www.w3.org/2000/svg" width=24 height=24>',
-            )
-            .replaceAll('"/></svg>', '" fill="currentColor"/></svg>'),
-      ),
+      getLogo(logo),
       T(label),
     ],
   );

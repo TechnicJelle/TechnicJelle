@@ -94,11 +94,12 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 <!--- region: connect -->
 ## Find me on other platforms
 [![E-Mail](https://img.shields.io/badge/EMail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:technicjelleplay@gmail.com)
-[![Blog](https://img.shields.io/badge/Blog-36465D?style=for-the-badge&logo=tumblr&logoColor=white)](https://technicjelle.tumblr.com/)
-[![Linkedin](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/technicjelle/)
-[![ArtStation](https://img.shields.io/badge/ArtStation-13AFF0?style=for-the-badge&logo=artstation&logoColor=white)](https://www.artstation.com/TechnicJelle)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@TechnicJelle)
+[![Blog Feed](https://img.shields.io/badge/Blog%20Feed-FFA500?style=for-the-badge&logo=rss&logoColor=white)](https://technicjelle.com/blog/feed.xml)
+[![GitHub](https://img.shields.io/badge/GitHub-303030?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TechnicJelle)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/technicjelle)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@TechnicJelle)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white)](https://ko-fi.com/technicjelle)
+[![ArtStation](https://img.shields.io/badge/ArtStation-13AFF0?style=for-the-badge&logo=artstation&logoColor=white)](https://artstation.com/TechnicJelle)
 [![Steam](https://img.shields.io/badge/Steam-101010?style=for-the-badge&logo=steam&logoColor=white)](https://steamcommunity.com/id/TechnicJelle)
 
 <!--- region: experiences -->
@@ -112,7 +113,6 @@ Check out my other art on my [ArtStation](https://www.artstation.com/TechnicJell
 ![Unreal Engine](https://img.shields.io/badge/Unreal-0E1128?style=for-the-badge&logo=unrealengine&logoColor=white)
 
 ![Git](https://img.shields.io/badge/git-F05033?style=for-the-badge&logo=git&logoColor=white)
-[![GitHub](https://img.shields.io/badge/GitHub-303030?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TechnicJelle)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-2671E5?style=for-the-badge&logo=githubactions&logoColor=white)
 ![Subversion](https://img.shields.io/badge/subversion-304870?style=for-the-badge&logo=subversion&logoColor=white)
 ![Perforce](https://img.shields.io/badge/perforce-4C00FF?style=for-the-badge&logo=perforce&logoColor=white)

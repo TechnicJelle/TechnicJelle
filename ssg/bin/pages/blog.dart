@@ -6,6 +6,7 @@ import "package:ssg/atom/generate.dart";
 import "package:ssg/components/footer.dart";
 import "package:ssg/components/head.dart";
 import "package:ssg/components/header.dart";
+import "package:ssg/components/icons.dart";
 import "package:ssg/constants.dart";
 import "package:ssg/log.dart";
 import "package:ssg/md_file.dart";
@@ -23,7 +24,7 @@ const String blogHrefPrefix = "/blog/tags";
 Future<void> createBlog() async {
   final String indexHTML = HTML(
     lang: "en",
-    head: generateHead(title: "Blog", extraStyles: ["blog-index", "tags"]),
+    head: generateHead(title: "Blog", extraStyles: ["blog-shared", "blog-index", "tags"]),
     body: await generateBody(),
   ).build();
   File(p.join(dirBuildBlog.path, "index.html")).writeAsStringSync(indexHTML);
@@ -34,7 +35,7 @@ Future<void> createBlog() async {
     dir: dirBlogTags,
     breadcrumbs: [A.text("Blog", href: "/blog")],
     hrefPrefix: blogHrefPrefix,
-    extraStyles: ["blog-index"],
+    extraStyles: ["blog-shared", "blog-index"],
   );
 
   for (final MapEntry<String, List<BlogPost>> entry in blogTagStore.entries) {
@@ -48,7 +49,7 @@ Future<void> _createBlogTagPage({required String tag, required List<BlogPost> po
     lang: "en",
     head: generateHead(
       title: "$tag | Blog",
-      extraStyles: ["blog-index", "tags"],
+      extraStyles: ["blog-shared", "blog-index", "tags"],
       extraLinks: [
         //TODO: Maybe also have a feed per blog tag? But only show those if you actually go to that tag page and search for linked feeds.
       ],
@@ -61,6 +62,7 @@ Future<void> _createBlogTagPage({required String tag, required List<BlogPost> po
         ],
         filename: tag,
         showBlog: false,
+        showBlogFeed: true,
       ),
       main: Main(
         children: [
@@ -157,12 +159,30 @@ Future<Body> generateBody() async {
   );
 
   return Body(
-    header: generateHeader(filename: "Blog", showBlog: false),
+    header: generateHeader(
+      filename: "Blog",
+      showBlog: false,
+      showBlogFeed: true,
+    ),
     main: Main(
       children: [
         H1.text("Blog"),
         P.text(
           "My name is TechnicJelle, and this is my blog! Here I write about things I make, which can be games, tools, art, or something else entirely",
+        ),
+        P(
+          children: [
+            T("Subscribe to the "),
+            A.newTab(
+              href: "/blog/feed.xml",
+              classes: ["feed-with-icon"],
+              children: [
+                T("Atom Feed"),
+                getLogo("rss"),
+              ],
+            ),
+            T(" to stay up-to-date on my posts! :)")
+          ],
         ),
         blogTagStore.generateTagsList(hrefPrefix: blogHrefPrefix, withUsageAmount: true),
         generateTagCropper(),
@@ -184,7 +204,7 @@ void generateBreadcrumbIndex({
   breadCrumbIndex.writeAsStringSync(
     HTML(
       lang: "en",
-      head: generateHead(title: "Blog ${path.join("/")}", extraStyles: ["blog-index", "tags"]),
+      head: generateHead(title: "Blog ${path.join("/")}", extraStyles: ["blog-shared", "blog-index", "tags"]),
       body: Body(
         header: generateHeader(
           breadcrumbs: [
@@ -193,6 +213,7 @@ void generateBreadcrumbIndex({
           ],
           filename: path.last,
           showBlog: false,
+          showBlogFeed: true,
         ),
         main: Main(
           children: [
@@ -265,7 +286,7 @@ class BlogPost extends MdFile {
 
     final String indexHTML = HTML(
       lang: "en",
-      head: generateHead(title: title, extraStyles: ["blog-post", "tags"]),
+      head: generateHead(title: title, extraStyles: ["blog-shared", "blog-post", "tags"]),
       body: Body(
         header: generateHeader(
           breadcrumbs: [
@@ -276,6 +297,7 @@ class BlogPost extends MdFile {
           ],
           filename: filename,
           showBlog: false,
+          showBlogFeed: true,
         ),
         main: Main(
           children: fixedElements,
