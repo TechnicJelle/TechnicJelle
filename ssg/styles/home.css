@@ -59,10 +59,6 @@ a .badge:hover::before {
 	translate: 0 0.55em;
 }
 
-details img[alt*="Saxion diploma"] {
-	height: unset;
-}
-
 .webrings {
 	text-align: center;
 }
