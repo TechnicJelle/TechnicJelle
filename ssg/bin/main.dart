@@ -7,6 +7,7 @@ import "package:ssg/log.dart";
 import "package:ssg/projects_loading.dart";
 import "package:uuid/uuid.dart";
 
+import "pages/404.dart";
 import "pages/blog.dart";
 import "pages/home.dart";
 import "pages/project_tags.dart";
@@ -59,6 +60,7 @@ atom-id: "${const Uuid().v7()}"
   await createHomePage();
   await createProjectsTagsPages();
   await createBlog();
+  await create404();
 
   github.dispose();
   http.close();

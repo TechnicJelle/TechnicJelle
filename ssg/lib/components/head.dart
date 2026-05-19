@@ -6,6 +6,7 @@ Head generateHead({
   String description = "On this website you'll find info about me and my projects",
   List<String> extraStyles = const [],
   List<Link> extraLinks = const [],
+  List<String> extraInlineStyles = const [],
 }) {
   String fullTitle = "TechnicJelle";
   if (title != null) {
@@ -42,6 +43,7 @@ Head generateHead({
     ],
     styles: [
       Style(css: "body { background: #151515; }"),
+      ...extraInlineStyles.map((str) => Style(css: str)),
     ],
   );
 }
