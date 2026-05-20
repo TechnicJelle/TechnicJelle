@@ -14,13 +14,13 @@ Future<void> create404() async {
       extraInlineStyles: [
         """
 h1 {
-	text-align: center;
 	font-size: clamp(8em, min(20vw, 50vh), 20em);
 	margin-bottom: 1rem;
 }
 
-p {
+h1, h2, p {
 	text-align: center;
+	border: none;
 }
 """,
       ],
@@ -31,7 +31,7 @@ p {
         children: [
           H1.text("404"),
           P.text("This page could not be found!"),
-          P.text("Please double-check your URL."),
+          H2.text("Please double-check your URL.", autoLink: false),
           P(
             children: [
               T("Or go back to the "),
