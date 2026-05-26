@@ -126,6 +126,7 @@ Future<void> setupProjectRepository() async {
 
   log.info("Retrieving project repository information...");
 
+  int allDownloadCount = 0;
   for (final projects in categoriesProjectsMap.values) {
     allProjectsList.addAll(projects);
 
@@ -156,13 +157,18 @@ Future<void> setupProjectRepository() async {
         }
       }
       Project._projectDownloadCounts[project] = downloadCount;
-
+      allDownloadCount += downloadCount;
 
       log.info("Retrieved information for ${repo.slug()}");
     }
   }
 
-  log.info("Finished retrieving project repository information!");
+  log
+    ..info("Finished retrieving project repository information!")
+    ..info(
+      "In total, all projects together have been starred ${allProjectsList.map((e) => e.starCount).reduce((int a, int b) => a + b)} times, "
+      "and downloaded ${allDownloadCount.toStringLargeNumber()} times!",
+    );
 
   // Record tag usages
   for (final String tag in allTagsSet) {
