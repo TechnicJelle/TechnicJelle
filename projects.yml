@@ -97,7 +97,7 @@
       - https://raw.githubusercontent.com/TechnicJelle/Tetsaw/main/.github/readme_assets/algorithm.mp4
 
 ⚙️ Game Engines:
-  - NeoGXP: https://github.com/NeoGXP/NeoGXP/
+  - NeoGXP: https://github.com/NeoGXP/NeoGXP
     tags: [ Game Engine, C# ]
     visuals:
       - https://raw.githubusercontent.com/NeoGXP/NeoGXP/main/.github/readme_assets/demo0.png
@@ -216,7 +216,7 @@
       - https://raw.githubusercontent.com/TechnicJelle/BlueMapMarkerGenerator/main/.github/readme_assets/colour_picker.png
       - https://raw.githubusercontent.com/TechnicJelle/BlueMapMarkerGenerator/main/.github/readme_assets/pois.png
       - https://raw.githubusercontent.com/TechnicJelle/BlueMapMarkerGenerator/main/.github/readme_assets/shape.png
-  - GPU For Beginners: https://github.com/TechnicJelle/GPUForBeginners/
+  - GPU For Beginners: https://github.com/TechnicJelle/GPUForBeginners
     tags: [ Website, Graphics Programming, SDL_GPU, Tutorial ]
     visuals:
       - https://raw.githubusercontent.com/TechnicJelle/GPUForBeginners/main/.github/readme_assets/first_triangle.png

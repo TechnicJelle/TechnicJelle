@@ -61,6 +61,7 @@ Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
       final projectName = mapEntry.key;
       final projectUrl = mapEntry.value;
       if (projectName is! String || projectUrl is! String) throw Exception('Expected the first entry of a project in category "$key" to contain a project name and URL as strings.');
+      if (projectUrl.endsWith("/")) throw Exception('Project URL for project "$projectName" ends with a slash!');
 
       //Tags
       final tags = projectMap["tags"];
