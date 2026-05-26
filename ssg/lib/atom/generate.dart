@@ -19,7 +19,7 @@ Future<void> generateAtomFeed({
   final builder = XmlBuilder()..declaration(encoding: "utf-8");
   builder.element(
     "feed",
-    namespaces: {"http://www.w3.org/2005/Atom": ""},
+    attributes: {"xmlns": "http://www.w3.org/2005/Atom"},
     nest: () {
       builder
         ..element("title", nest: title)
