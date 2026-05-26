@@ -56,6 +56,10 @@ a:focus-visible .badge {
 	outline: rgb(16, 16, 16) auto 1px;
 }
 
+p:has(.badge) {
+	line-height: 2;
+}
+
 /* Some extra spacing between project categories */
 section.two-col + h3 {
 	margin-top: 5em;
