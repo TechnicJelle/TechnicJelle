@@ -1,3 +1,4 @@
+// dart format width=185
 import "dart:io";
 
 import "package:checked_yaml/checked_yaml.dart";
@@ -76,7 +77,9 @@ Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
       final visuals = projectMap["visuals"];
       if (visuals is! List?) throw Exception('Expected "visuals" for project "$projectName" to be a list of strings or omitted.');
       final List<String> projectVisuals = [];
-      if (!key.contains("Libraries")) { //Do not require visuals for libraries
+
+      //Do not require visuals for libraries
+      if (!key.contains("Libraries")) {
         if (visuals == null) throw Exception("Project $projectName does not have any visuals!");
         for (final visual in visuals) {
           if (visual is! String) throw Exception('Expected every visual for project "$projectName" to be a string URL.');
