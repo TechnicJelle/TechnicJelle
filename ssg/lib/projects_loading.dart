@@ -27,14 +27,19 @@ class Project {
   });
 
   static final Map<Project, Repository> _projectRepository = {};
+  static final Map<Project, int> _projectDownloadCounts = {};
 
   Repository? get _repository => _projectRepository[this];
 
   String? get description => descriptionOverride ?? _repository?.description;
 
-  int get stars => _repository?.stargazersCount ?? 0;
+  int get starCount => _repository?.stargazersCount ?? 0;
 
   String? get starsUrl => "$url/stargazers";
+
+  int get downloadCount => _projectDownloadCounts[this] ?? 0;
+
+  String? get downloadUrl => "$url/releases";
 }
 
 final Map<String, List<Project>> categoriesProjectsMap = checkedYamlDecode(
@@ -138,6 +143,20 @@ Future<void> setupProjectRepository() async {
       final owner = parts.removeLast();
       final repo = await github.repositories.getRepository(RepositorySlug(owner, name));
       Project._projectRepository[project] = repo;
+
+      final List<Release> releases = await github.repositories.listReleases(repo.slug()).toList();
+      int downloadCount = 0;
+      for (final Release release in releases) {
+        final List<ReleaseAsset>? assets = release.assets;
+        if (assets == null) continue;
+        for (final ReleaseAsset asset in assets) {
+          final int? assetDownloadCount = asset.downloadCount;
+          if (assetDownloadCount == null) continue;
+          downloadCount += assetDownloadCount;
+        }
+      }
+      Project._projectDownloadCounts[project] = downloadCount;
+
 
       log.info("Retrieved information for ${repo.slug()}");
     }

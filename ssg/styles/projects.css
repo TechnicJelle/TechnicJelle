@@ -48,10 +48,14 @@
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 0.2em;
+	flex-wrap: wrap;
+	column-gap: 5em;
 }
 
-.card .stars {
+.card .statistics {
 	font-weight: 500;
+	display: flex;
+	gap: 1ch;
 }
 
 .card .blog-link {

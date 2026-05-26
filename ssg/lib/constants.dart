@@ -30,6 +30,20 @@ extension SortFiles on List<FileSystemEntity> {
 
 extension NumString on int {
   String toStringDigits([int digits = 2]) => toString().padLeft(digits, "0");
+
+  String toStringLargeNumber() {
+    final str = toString();
+    final StringBuffer sb = StringBuffer();
+
+    for (int i = 0; i < str.length; i++) {
+      if (i > 0 && (str.length - i) % 3 == 0) {
+        sb.write(" ");
+      }
+      sb.write(str[i]);
+    }
+
+    return sb.toString();
+  }
 }
 
 extension TimeFormat on DateTime {

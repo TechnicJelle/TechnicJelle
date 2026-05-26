@@ -95,6 +95,13 @@ Future<String> _downloadVisualIfNecessary(Project project, String link) async {
 
 Future<Element> _generateProjectCard(Project project) async {
   final String projectID = project.name.clean();
+
+  final int starCount = project.starCount;
+  final bool showStars = starCount > 0;
+
+  final int downloadCount = project.downloadCount;
+  final bool showDownloads = downloadCount > 0;
+
   return Section(
     id: projectID,
     classes: ["card"],
@@ -114,15 +121,22 @@ Future<Element> _generateProjectCard(Project project) async {
               ),
             ],
           ),
-          if (project.stars > 0)
+          if (showStars || showDownloads)
             P(
-              classes: ["stars"],
+              classes: ["statistics"],
               children: [
-                A(
-                  classes: ["stealth-link"],
-                  href: project.starsUrl!,
-                  children: [T("⭐${project.stars}")],
-                ),
+                if (showStars)
+                  A.text(
+                    "⭐${starCount.toStringLargeNumber()}",
+                    href: project.starsUrl!,
+                    classes: ["stealth-link"],
+                  ),
+                if (showDownloads)
+                  A.text(
+                    "📥${downloadCount.toStringLargeNumber()}",
+                    href: project.downloadUrl!,
+                    classes: ["stealth-link"],
+                  ),
               ],
             ),
         ],
