@@ -197,6 +197,7 @@
 🌐 Websites:
   - TechnicJelle: https://github.com/TechnicJelle/TechnicJelle
     tags: [ Website, Dart, HTML, CSS, Static Site Generator ]
+    blog: /blog/tags/Blog-Meta
     visuals:
       - https://raw.githubusercontent.com/TechnicJelle/TechnicJelle/main/.github/readme_assets/demo.png
   - CMGTwitch: https://github.com/TechnicJelle/CMGTwitch
@@ -271,6 +272,7 @@
       - https://raw.githubusercontent.com/TechnicJelle/SolarSystem/main/.github/images/pc_anim1-classic.gif
   - Fireworks Display (PGE): https://github.com/TechnicJelle/FireworksPGE
     tags: [ Simulations, C++, olcPixelGameEngine ]
+    blog: /blog/2022/09/01/pixelgameengine-fireworks-display
     visuals:
       - https://raw.githubusercontent.com/TechnicJelle/FireworksPGE/main/.github/readme_assets/v2.gif
 
