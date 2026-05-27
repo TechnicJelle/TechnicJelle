@@ -4,7 +4,7 @@
 🎮 Games:
   - Space Combat 3DX: https://github.com/TechnicJelle/SpaceCombat3DX
     tags: [ Game, C#, Unity ]
-    blog: https://technicjelle.tumblr.com/tagged/Space%20Game%203DX
+    blog: /blog/tags/Space-Combat-3DX
     visuals:
       - /blog/2022/07/13/space-combat-3dx-003-second-level-and-sounds/Screenshot_(8).png
       - /blog/2022/07/10/space-combat-3dx-002-enemies/Image3.png
@@ -60,7 +60,7 @@
       - https://raw.githubusercontent.com/TechnicJelle/Phurey/main/.github/readme_assets/2.png
       - https://raw.githubusercontent.com/TechnicJelle/Phurey/main/.github/readme_assets/3.png
   - Planes Tower Defence: https://github.com/TechnicJelle/PlanesTowerDefence
-    blog: https://technicjelle.tumblr.com/tagged/Planes%20Tower%20Defence
+    blog: /blog/tags/Planes-Tower-Defence
     tags: [ Game, Tech Demo, C#, Unity ]
     visuals:
       - /blog/2023/01/19/planes-tower-defence-002-pathfinding/path-links.png
@@ -134,9 +134,9 @@
       - https://raw.githubusercontent.com/TechnicJelle/UE5_GHActions_VRTemplate/main/.github/readme_assets/log_build_start.png
       - https://raw.githubusercontent.com/TechnicJelle/UE5_GHActions_VRTemplate/main/.github/readme_assets/log_build_end.png
       - https://raw.githubusercontent.com/TechnicJelle/UE5_GHActions_VRTemplate/main/.github/readme_assets/workflow.png
-  - Weaving Factory: https://technicjelle.tumblr.com/tagged/Weaving%20Factory
+  - Weaving Factory: /blog/tags/Weaving-Factory
     description: "Not on GitHub, because this was locally hosted with Perforce, managed by me"
-    blog: https://technicjelle.tumblr.com/tagged/Weaving%20Factory
+    blog: /blog/tags/Weaving-Factory
     tags: [ Tech Demo, Unreal Engine, Team, CI/CD, VCS, VR ]
     visuals:
       - /blog/2024/12/17/weaving-factory-screenshots/1.png
