@@ -95,6 +95,8 @@ Map<String, List<Project>> _parse(Map<dynamic, dynamic>? m) {
       //Blog
       final projectBlog = projectMap["blog"];
       if (projectBlog is! String?) throw Exception('Expected "blog" for project "$projectName" to be a string or omitted.');
+      if (projectBlog != null && projectBlog.endsWith("/")) throw Exception('Blog URL for project "$projectName" ends with a slash!');
+      if (projectBlog != null && !projectBlog.startsWith("/blog/")) throw Exception('Blog URL for project "$projectName" does not start with `/blog/`!');
 
       //Description Override
       final projectDescriptionOverride = projectMap["description"];
