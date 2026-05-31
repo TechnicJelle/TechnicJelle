@@ -8,7 +8,7 @@ atom-id: "019dc1ff-801e-7d68-bf34-8f48cb7679a6"
 
 # Enemy AI in my Space Shooter Game
 
-<iframe src="https://youtube-nocookie.com/embed/61txGXSI4q8" title="YouTube video player" allow="fullscreen; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/61txGXSI4q8" title="YouTube video player" allow="fullscreen; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin"></iframe>
 
 Today, I felt motivated to make the movement AI for the enemies in my in-development Space Shooter game in Unity.
 

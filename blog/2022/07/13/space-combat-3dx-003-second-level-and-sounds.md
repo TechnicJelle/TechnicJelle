@@ -7,7 +7,7 @@ atom-id: "019dc1ff-801e-74dc-9432-d4595cbff6c3"
 
 # Space Combat 3DX Updates
 
-<iframe src="https://youtube-nocookie.com/embed/aCmfekB2mho" title="YouTube video player" allow="fullscreen; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/aCmfekB2mho" title="YouTube video player" allow="fullscreen; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin"></iframe>
 
 Since the last post, I've been hard at work adding more and more features! Mainly the second level and sounds,
 but there's a lot more that went into it all!
