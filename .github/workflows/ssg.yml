@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Setup Dart SDK
-        uses: dart-lang/setup-dart@v1
+        uses: dart-lang/setup-dart@v1.7.2
 
       - name: Download SSG dependencies
         run: cd ssg && dart pub get
