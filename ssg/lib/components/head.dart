@@ -23,6 +23,7 @@ Head generateHead({
       Meta.name("theme-color", content: "#001FF1"),
       Meta.property("og:image", content: "$baseUrl/images/logo-128.gif"),
       Meta.httpEquiv("X-Clacks-Overhead", content: "GNU Terry Pratchett"),
+      Meta.name("darkreader-lock", content: null),
     ],
     links: [
       Link.icon(
