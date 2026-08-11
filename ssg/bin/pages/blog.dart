@@ -1,4 +1,5 @@
 import "dart:io";
+import "dart:math";
 
 import "package:path/path.dart" as p;
 import "package:ssg/atom/entry.dart";
@@ -263,7 +264,7 @@ class BlogPost extends MdFile {
 
   String get teaser {
     final String allText = Div(children: elements.where((e) => e is! Nav && e is! Hn)).innerText;
-    return "${allText.split(" ").getRange(0, 20).join(" ").replaceFirst(RegExp(r"[\s:,.]*$"), "")}...";
+    return "${allText.split(" ").getRange(0, min(allText.length, 20)).join(" ").replaceFirst(RegExp(r"[\s:,.]*$"), "")}...";
   }
 
   Future<void> writeHtml() async {
