@@ -14,7 +14,12 @@ import "pages/project_tags.dart";
 
 Future<void> main(List<String> arguments) async {
   if (arguments.isNotEmpty && arguments[0] == "new-blog-post") {
-    if (arguments.length < 2 || arguments[1].isEmpty) {
+    final filename = arguments[1]
+        .toLowerCase()
+        .replaceAll(RegExp(r"[^a-z0-9]"), " ")
+        .trim()
+        .replaceAll(RegExp(r"\s+"), "-");
+    if (arguments.length < 2 || filename.isEmpty) {
       log.severe("Provide the name of the new blog post");
       exit(1);
     }
@@ -27,7 +32,7 @@ Future<void> main(List<String> arguments) async {
         now.day.toStringDigits(),
       ),
     )..createSync(recursive: true);
-    final fileNewPost = File(p.join(dirNewPost.path, "${arguments[1]}.md"));
+    final fileNewPost = File(p.join(dirNewPost.path, "$filename.md"));
     if (fileNewPost.existsSync()) {
       log.severe("File ${fileNewPost.path} already exists!");
       exit(1);
@@ -38,7 +43,7 @@ tags: [ ]
 atom-id: "${const Uuid().v7()}"
 ---
 
-# ${arguments[1]}
+# ${arguments[1].trim()}
 """);
     log.info("Generated ${fileNewPost.path}");
     exit(0);
