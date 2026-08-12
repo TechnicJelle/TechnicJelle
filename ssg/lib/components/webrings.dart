@@ -5,7 +5,7 @@ Section generateWebrings() {
     classes: ["webrings"],
     children: [
       H2.text("Webrings"),
-      ...generateWebring(
+      ..._generateWebring(
         name: "Graphics Programming",
         linkPrev: "https://graphics-programming.org/webring/frogs/technicjelle/prev",
         linkRoot: "https://graphics-programming.org/webring/",
@@ -17,7 +17,7 @@ Section generateWebrings() {
   );
 }
 
-List<Element> generateWebring({
+List<Element> _generateWebring({
   required String name,
   required String linkPrev,
   required String linkRoot,
@@ -26,7 +26,7 @@ List<Element> generateWebring({
   required String imageAlt,
 }) {
   return [
-    H3.text(name),
+    H3.text(name, autoLink: false),
     Div(
       classes: ["webring"],
       children: [
