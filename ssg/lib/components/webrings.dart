@@ -4,7 +4,7 @@ Section generateWebrings() {
   return Section(
     classes: ["webrings"],
     children: [
-      H2(children: [T("Webrings")]),
+      H2.text("Webrings"),
       ...generateWebring(
         name: "Graphics Programming",
         linkPrev: "https://graphics-programming.org/webring/frogs/technicjelle/prev",
@@ -26,16 +26,16 @@ List<Element> generateWebring({
   required String imageAlt,
 }) {
   return [
-    H3(children: [T(name)]),
+    H3.text(name),
     Div(
       classes: ["webring"],
       children: [
-        A(href: linkPrev, children: [T("⬅️")]),
+        A.text("⬅️", href: linkPrev),
         A(
           href: linkRoot,
           children: [Image(src: imageUrl, alt: imageAlt)],
         ),
-        A(href: linkNext, children: [T("➡️")]),
+        A.text("➡️", href: linkNext),
       ],
     ),
   ];
