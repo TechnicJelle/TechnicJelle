@@ -100,6 +100,9 @@ class Checkbox extends Element {
   String build() {
     return '<input type="checkbox" autocomplete="off">';
   }
+
+  @override
+  Element clone() => Checkbox();
 }
 
 String cleanTag(String tag) {
