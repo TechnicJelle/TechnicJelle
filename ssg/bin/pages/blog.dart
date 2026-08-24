@@ -309,7 +309,7 @@ class BlogPost extends MdFile {
 
     await postHtml.writeAsString(indexHTML);
 
-    //Copy linked assets in the mdFile
+    //Copy linked images in the mdFile
     final List<Image> images = [];
     elements.collectOfType(into: images);
     for (final Image img in images) {

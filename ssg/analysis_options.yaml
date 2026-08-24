@@ -17,3 +17,4 @@ linter:
     avoid_escaping_inner_quotes: true
     avoid_types_on_closure_parameters: false
     unnecessary_raw_strings: false
+    file_names: false
