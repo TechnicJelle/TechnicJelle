@@ -16,7 +16,6 @@ Head generateHead({
   return Head(
     title: fullTitle,
     metas: [
-      Meta.name("viewport", content: "width=device-width, initial-scale=1"),
       Meta.property("og:title", content: fullTitle),
       Meta.name("description", content: description),
       Meta.property("og:description", content: description),
