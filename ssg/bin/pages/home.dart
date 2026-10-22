@@ -38,6 +38,7 @@ Section generateHero(Table table) {
   final Image img = ths.first.children.whereType<Image>().first;
   final Iterable<Element> haiku = ths.last.children;
   return Section(
+    id: "haiku",
     classes: ["hero"],
     children: [
       img,
