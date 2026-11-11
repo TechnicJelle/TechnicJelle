@@ -3,7 +3,6 @@
 	--main-text-colour: #EEEEEE;
 	--link-colour: #58A6FF;
 	--border-colour: #1C2229;
-	--website-width: 1280px;
 }
 
 html {
@@ -110,7 +109,7 @@ summary {
 
 /* Specific styles */
 body {
-	max-width: var(--website-width);
+	max-width: 1280px;
 	margin: auto;
 	padding: 0 2px;
 
@@ -174,7 +173,7 @@ main {
 }
 
 /* Show border around website on wide screens, to make it feel a bit more cohesive, rather than just floating in nothingness */
-@media screen and (min-width: var(--website-width)) {
+@media screen and (min-width: 1280px) {
 	main {
 		border: solid 2px;
 		border-radius: 6px;
